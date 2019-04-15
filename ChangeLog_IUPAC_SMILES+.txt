@@ -1,0 +1,11 @@
+2019-04-15 // Vincent F. Scalfani
+
+* Created derivative of OpenSMILES Document, IUPAC SMILES+ Specification
+Working Draft.
+
+* Updated formatting of opensmiles asciidoc*
+The opensmiles.asciidoc was not rendering correctly in GitHub and Atom asciidoc
+preview. So, I fixed a variety of asciidoc syntax issues including: headings,
+removing open blocks, and table formatting (they must have symmetric number
+of '=' to begin and close tables). I did not make any changes to the
+OpenSMILES specification.

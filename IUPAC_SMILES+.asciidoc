@@ -1,0 +1,1653 @@
+= IUPAC SMILES+ Specification [working draft]
+:toc:
+:toclevels: 5
+:sectnums:
+
+v1.0,2019-04-15: Working Draft                                   +
+
+https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
+Copyright &copy; 2019, XXXXXXX    +
+Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]     +
+
+*IUPAC SMILES+ Contributors:* Vincent F. Scalfani (Chair), Evan Bolton, Helen Cooke, Chris Grulke, John Irwin, Oliver Koepler, Gregory Landrum, José L. Medina-Franco, Miguel Quirós Olozábal, Susan Richardson, and Issaku Yamada.
+
+This IUPAC SMILES+ Specification [working draft] document is a modified derivative
+of the OpenSMILES Specification. We have endeavored to maintain
+all prior author names, contributor names, copyright notices, and <<revhist,revision history>>.
+
+http://www.opensmiles.org[OpenSMILES Specification]      +
+Craig A. James                +
+v1.0,2016-05-15: Current specification
+
+Copyright &copy; 2007-2016, Craig A. James        +
+Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]
+
+*OpenSMILES Contributors:* Richard Apodaca, Noel O'Boyle, Andrew Dalke, John van Drie, Peter Ertl,
+Geoff Hutchison, Craig A. James, Greg Landrum, Chris Morley, Egon Willighagen, Hans De Winter, Tim Vandermeersch, John May
+
+== Introduction
+
+****
+"... we cannot improve the language of any science, without, at the
+same time improving the science itself; neither can we, on the other
+hand, improve a science, without improving the language or nomenclature
+which belongs to it ..."
+
+http://en.wikipedia.org/wiki/Antoine_Lavoisier[Antoine Lavoiser, 1787]
+****
+
+=== Purpose
+
+This document formally defines an
+http://en.wikipedia.org/wiki/Open_specifications[open specification] version of the
+http://en.wikipedia.org/wiki/Simplified_molecular_input_line_entry_specification[SMILES]
+language, a typographical http://en.wikipedia.org/wiki/Line_notation[line notation]
+for specifying chemical structure.  It is hosted under the banner of the
+http://blueobelisk.sourceforge.net[Blue Obelisk]
+project, with the intent to solicit contributions and comments from the
+entire computational chemistry community.
+
+=== Motivation
+
+
+SMILES was originally developed as a proprietary specification by
+http://www.daylight.com[Daylight Chemical Information Systems]
+Since the introduction of SMILES in the late 1980's, it has
+become widely accepted as a defacto standard for exchange of molecular structures.  Many independent
+SMILES software packages have been written in `C`, `C++`, `Java`, `Python`, `LISP`, and probably even
+`FORTRAN`.
+
+At this point in the history of SMILES, it is appropriate for the chemistry community
+to develop a new, non-proprietary specification for the SMILES language.  Daylight's
+http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html[SMILES Theory Manual]
+has long been the "gold standard" for the SMILES language, but as a
+proprietary specification, it limits the universal adoption of SMILES, and has no
+mechanism for contributions from the chemistry community.  We salute Daylight for
+their past contributions, and the excellent SMILES documentation they provided free
+of charge for the past two decades.
+
+=== Audience
+
+This document is intended for developers designing or improving a SMILES
+parser or writer. **Readers are expected to be acquainted with
+SMILES.** Due to the formality of this document, it is not a good
+tutorial for those trying to learn SMILES. This document is written with
+*precision* as the primary goal; *readability* is secondary.
+
+=== What is a Molecule? The Valence Model of Chemistry
+
+Before defining the SMILES language, it is important to state the physical model on which it is
+based: the valence model of chemistry, which uses a mathematician's
+http://en.wikipedia.org/wiki/Graph_%28mathematics%29[graph] to
+represent a molecule.  In a chemical graph, the *nodes*
+are atoms, and the *edges* are semi-rigid bonds that can be single, double, or
+triple according to the rules of
+http://en.wikipedia.org/wiki/Valence_bond_theory[valence bond theory].
+
+This simple mental model has little resemblance to the underlying quantum-mechanical reality of
+electrons, protons and neutrons, yet it has proved to be a remarkably useful approximation of how
+atoms behave in close proximity to one another.  However, the valence model is an imperfect
+representation of molecular structure, and the SMILES language inherits these imperfections.
+Chemical bonds are often tautomeric, aromatic or otherwise fractional rather than neat integer
+multiples.  Delocalized bonds, bond-centered bonds, hydrogen bonds and various other inter-atom
+forces that are well characterized by a quantum-mechanics description simply don't fit into the
+valence model.
+
+****
+"If you can build a molecule from a modeling kit, you can name it."
+
+http://www.daylight.com/meetings/mug03/McLeod/MUG03McLeodPeters.pdf[McLeod Peters]
+****
+
+McLeod and Peters' quip captures the deficiencies of SMILES well: if you
+*can't* build a molecule from a modeling kit, the deficiencies of SMILES and other
+connection-table formats become apparent.
+
+== Formal Grammar
+
+=== Syntax versus Semantics
+
+This SMILES specification is divided into two distinct parts: A
+*syntactic specification* specifies how the atoms,
+bonds, parentheses, digits and so forth are represented, and a *semantic
+specification* that describes how those symbols are interpreted as a sensible
+molecule.  For example, the syntax specifies how <<ringclosure,ring closures>>
+are written, but the semantics require that they come in pairs.
+Likewise, the syntax specifies how <<atomicsymbol,atomic elements>>
+are written, but the semantics determines whether a particular ring system
+is actually aromatic.
+
+For this specification, the syntax and semantics are explained
+separately; in practice, the syntax and semantics are usually mixed
+together in the code that implements a SMILES parser.  This chapter is only
+concerned with syntax.
+
+=== Grammar
+
+[options="header",frame="topbot",grid="rows",cols="1,4"]
+|============================
+| Section                  | Formal Grammar
+2+| **ATOMS**
+| <<inatoms,Atoms>>           | _atom_ ::= _bracket_atom_ \| _aliphatic_organic_ \| _aromatic_organic_ \| `'*'`
+2+| **ORGANIC SUBSET ATOMS**
+.2+| <<orgsbst,Organic Subset>>        | _aliphatic_organic_ ::= `'B'` \| `'C'` \| `'N'` \| `'O'` \| `'S'` \| `'P'` \| `'F'` \| `'Cl'` \| `'Br'` \| `'I'`
+|                            _aromatic_organic_ ::= `'b'` \| `'c'` \| `'n'` \| `'o'` \| `'s'` \| `'p'`
+2+| **BRACKET ATOMS**
+.5+| <<inatoms,Bracket Atoms>>      | _bracket_atom_ ::= `'['` _isotope_? _symbol_ _chiral_? _hcount_? _charge_? _class_? `']'`
+|                            _symbol_ ::= _element_symbols_ \| _aromatic_symbols_ \| `'*'`
+|                            _isotope_ ::= _NUMBER_
+|                            _element_symbols_ ::= `'H'` \| `'He'` \| `'Li'` \| `'Be'` \| `'B'` \| `'C'` \| `'N'` \| `'O'` \| `'F'` \| `'Ne'` \| `'Na'` \| `'Mg'` \| `'Al'` \| `'Si'` \| `'P'` \| `'S'` \| `'Cl'` \| `'Ar'` \| `'K'` \| `'Ca'` \| `'Sc'` \| `'Ti'` \| `'V'` \| `'Cr'` \| `'Mn'` \| `'Fe'` \| `'Co'` \| `'Ni'` \| `'Cu'` \| `'Zn'` \| `'Ga'` \| `'Ge'` \| `'As'` \| `'Se'` \| `'Br'` \| `'Kr'` \| `'Rb'` \| `'Sr'` \| `'Y'` \| `'Zr'` \| `'Nb'` \| `'Mo'` \| `'Tc'` \| `'Ru'` \| `'Rh'` \| `'Pd'` \| `'Ag'` \| `'Cd'` \| `'In'` \| `'Sn'` \| `'Sb'` \| `'Te'` \| `'I'` \| `'Xe'` \| `'Cs'` \| `'Ba'` \| `'Hf'` \| `'Ta'` \| `'W'` \| `'Re'` \| `'Os'` \| `'Ir'` \| `'Pt'` \| `'Au'` \| `'Hg'` \| `'Tl'` \| `'Pb'` \| `'Bi'` \| `'Po'` \| `'At'` \| `'Rn'` \| `'Fr'` \| `'Ra'` \| `'Rf'` \| `'Db'` \| `'Sg'` \| `'Bh'` \| `'Hs'` \| `'Mt'` \| `'Ds'` \| `'Rg'` \| `'Cn'` \| `'Fl'` \| `'Lv'` \| `'La'` \| `'Ce'` \| `'Pr'` \| `'Nd'` \| `'Pm'` \| `'Sm'` \| `'Eu'` \| `'Gd'` \| `'Tb'` \| `'Dy'` \| `'Ho'` \| `'Er'` \| `'Tm'` \| `'Yb'` \| `'Lu'` \| `'Ac'` \| `'Th'` \| `'Pa'` \| `'U'` \| `'Np'` \| `'Pu'` \| `'Am'` \| `'Cm'` \| `'Bk'` \| `'Cf'` \| `'Es'` \| `'Fm'` \| `'Md'` \| `'No'` \| `'Lr'`
+|                            _aromatic_symbols_ ::= `'b'` \| `'c'` \| `'n'` \| `'o'` \| `'p'` \| `'s'` \| `'se'` \| `'as'`
+2+| **CHIRALITY**
+| <<chirality,Chirality>>  | _chiral_ ::= `'@'` \| `'@@'` \| `'@TH1'` \| `'@TH2'` \| `'@AL1'` \| `'@AL2'` \| `'@SP1'` \| `'@SP2'` \| `'@SP3'` \| `'@TB1'` \| `'@TB2'` \| `'@TB3'` \| ... \| `'@TB20'` \| `'@OH1'` \| `'@OH2'` \| `'@OH3'` \| ... \| `'@OH30'` \| `'@TB'` _DIGIT_ _DIGIT_ \| `'@OH'` _DIGIT_ _DIGIT_
+2+| **HYDROGENS**
+| <<hydrogens,Hydrogens>>  | _hcount_ ::= `'H'` \| `'H'` _DIGIT_
+2+| **CHARGES**
+| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _DIGIT_? _DIGIT_ \| `'+'` \| `'+'` _DIGIT_? _DIGIT_ \| `'--'` *deprecated*  \| `'++'` *deprecated*
+2+| **ATOM CLASS**
+| <<atomclass,Atom Class>> | _class_ ::= `':'` _NUMBER_
+2+| **BONDS AND CHAINS**
+.6+| <<bonds,Bonds>>       | _bond_ ::= `'-'` \| `'='` \| `'#'` \| `'$'` \| `':'` \| `'/'` \| `'\'`
+|                            _ringbond_ ::= _bond_? _DIGIT_ \| _bond_? `'%'` _DIGIT_ _DIGIT_
+|                            _branched_atom_ ::= _atom_ _ringbond_* _branch_*
+|                            _branch_ ::= `'('` _chain_ `')'` \| `'('` _bond_ _chain_ `')'` \| `'('` _dot_ _chain_ `')'`
+|                            _chain_ ::= _branched_atom_ \| _chain_ _branched_atom_ \| _chain_ _bond_ _branched_atom_ \| _chain_ _dot_ _branched_atom_
+|                            _dot_ ::= `'.'`
+2+| **SMILES STRINGS**
+.2+|                       | _smiles_ ::= _terminator_ \| _chain_ _terminator_
+|                            _terminator_ ::= _SPACE_ \| _TAB_ \| _LINEFEED_ \| _CARRIAGE_RETURN_ \| _END_OF_STRING_
+|============================
+
+== Reading SMILES
+
+[[inatoms]]
+
+=== Atoms
+
+[[atomicsymbol]]
+
+==== Atomic Symbol
+
+An atom is represented by its atomic symbol, enclosed in square brackets, +[]+.
+The first character of the symbol is uppercase and the second (if any) is lowercase,
+except that for aromatic atoms (see below), the first character is lowercase.  There are
+http://www.iupac.org/reports/provisional/abstract04/RB-prs310804/TableI-3.04.pdf[114 valid atomic symbols]
+, as defined by http://www.iupac.org[IUPAC] (see also
+http://www.webelements.com[Web Elements]).
+
+The symbol `'*'` is also accepted as a valid atomic symbol, and represents a "wildcard" or unknown atom.
+
+Examples:
+
+[options="header",frame="topbot",grid="rows",width="30%",cols="1,2"]
+|============================
+| SMILES      | Atomic Symbol
+| `[U]`       | Uranium
+| `[Pb]`      | Lead
+| `[He]`      | Helium
+| `[*]`       | Unkwown atom
+|============================
+
+[[hydrogens]]
+
+==== Hydrogens
+
+Hydrogens inside of brackets are specified as `Hn` where `n` is a number such as `H3`.  If no
+`Hn` is specified, it is identical to `H0`. If `H` is
+specified without a number, it is identical to `H1`.  For example, `[C]` and
+`[CH0]` are identical, and `[CH]` and `[CH1]` are identical.
+
+Hydrogens that are specified in brackets with this notation have undefined isotope, no chirality,
+no other bound hydrogen, neutral charge, and an undefined atom class.
+
+Examples:
+
+[options="header",frame="topbot",grid="rows",width="50%",cols="1,2,2"]
+|=================================================
+| SMILES    | Name                  | Comments
+| `[CH4]`   | methane               |
+| `[ClH]`   | hydrochloric acid     | `H1` implied
+| `[ClH1]`  | hydrochloric acid     |
+|=================================================
+
+A hydrogen atom cannot have a hydrogen count, for example, `[HH1]` is illegal.  Hydrogens connected
+to other hydrogens must be represented as explicit atoms in square brackets. For example molecular
+hydrogen must be written as `[H][H]`.
+
+_Question: are more than 9 hydrogens possible?  Should they be
+supported?_
+
+[[charge]]
+
+==== Charge
+
+Charge is specified by a `+n` or `-n` where `n` is a number; if the
+number is missing, it means either `+1` or `-1` as appropriate.
+
+For backwards compatibility, a general-purpose SMILES parser should
+accept the symbols `--` and `++` to mean charges of `-2` and `+2`, but this
+is a deprecated form and should be avoided.
+
+Examples:
+
+[options="header",frame="topbot",grid="rows",width="60%",cols="1,2,3"]
+|==============================================================
+| SMILES    | Name                  | Comments
+| `[Cl-]`   | chloride anion        | `-1` charge, `H0` implied
+| `[OH1-]`  | hydroxyl anion        | `-1` charge, `H1`
+| `[OH-1]`  | hydroxyl anion        | `-1` charge, `H1`
+| `[Cu+2]`  | copper cation         | `+2` charge, `H0` implied
+| `[Cu++]`  | copper cation         | `+2` charge, `H0` implied
+|==============================================================
+
+An implementation is required to accept charges in the range `-15` to `+15`.
+
+==== Isotopes
+
+Isotopic specification is placed inside the square brackets for an atom
+preceding the atomic symbol; for example:
+
+[options="header",frame="topbot",grid="rows",width="40%"]
+|=============================
+| SMILES    | Atomic Symbol
+| `[13CH4]` | methane
+| `[2H+]`   | deuterium ion
+| `[238U]`  | Uranium 238 atom
+|=============================
+
+An isotope is interpreted as a number, so that `[2H]`,
+`[02H]` and `[002H]` all mean deuterium.  If the isotope field
+is not specified then the atom is assumed to have the naturally-occurring isotopic ratios.  The
+isotope value 0 also indicates an isotope of zero, that is
+`[0S]` is *not* the same as `[S]`.
+
+There is no requirement that the isotope is a genuine isotope of the element.  Thus,
+`[36Cl]` is allowed even though ^35^Cl and
+^37^Cl are the actual known stable isotopes of chlorine.
+
+A general-purpose SMILES parser must accept at least three digits for the isotope and values
+from 0 to 999.
+
+[[orgsbst]]
+
+==== Organic Subset
+
+A special subset of elements called the "organic subset" of
+**B**, **C**, **N**, **O**, **P**, **S**, **F**,
+**Cl**, **Br**, **I**, and ***** (the "wildcard" atom) can be
+written using the only the atomic symbol (that is, without the square
+brackets, H-count, etc.).  An atom is specified this way has the
+following properties:
+
+* "implicit hydrogens" are added such that valence of the atom is in
+  the lowest normal state for that element
+* the atom's charge is zero
+* the atom has no isotopic specification
+* the atom has no chiral specification
+
+The implicit hydrogen count is determined by summing the bond orders
+of the bonds connected to the atom.  If that sum is equal to a known
+valence for the element or is greater than any known valence then the
+implicit hydrogen count is 0.  Otherwise the implicit hydrogen count is the
+difference between that sum and the next highest known valence.
+
+The "normal valence" for these elements is defined as:
+
+[options="header",frame="topbot",grid="rows",width="30%"]
+|============================
+| Element       | Valence
+| B             | 3
+| C             | 4
+| N             | 3 or 5
+| O             | 2
+| P             | 3 or 5
+| S             | 2, 4 or 6
+| halogens      | 1
+| *             | unspecified
+|============================
+
+Examples:
+
+[options="header",frame="topbot",grid="rows",width="30%",cols="1,3"]
+|==============================
+| SMILES    | Name
+| `C`       | methane
+| `N`       | ammonia
+| `Cl`      | hydrochloric acid
+|==============================
+
+_Note: The remaining atom properties, chirality and ring-closures, are discussed in later sections._
+
+==== The Wildcard `'*'` Atomic Symbol
+
+The `'*'` atom represents an atom whose atomic number is unknown or unspecified.  If it occurs
+inside brackets, it can have its isotope, chirality, hydrogen count and charge specified.  If it
+occurs outside of brackets, it has no assumed isotope, a mass of zero, unspecified chirality, a
+hydrogen count of zero, and a charge of zero.
+
+[options="header",frame="topbot",grid="rows",width="40%",cols="2,3"]
+|==============================================
+| SMILES              | Name
+| `Oc1c(*)cccc1`      | ortho-substituted phenol
+|==============================================
+
+The `'*'` atom does not have any specific electronic properties or
+valence.  If specified outside of square brackets, it takes on the valence
+implied by its bonds.  If it is inside square brackets, it takes on the
+valence implied by its bonds, hydrogens and/or charge.
+
+A `'*'` atom can be part of an aromatic ring.  When deducing the
+aromaticity of a ring system, the ring system is considered aromatic if
+there is an element which could replace the `'*'` and make the ring system
+meet the aromaticity rules (see <<inaromaticity,Aromaticity>>, below).
+
+[[atomclass]]
+
+==== Atom Class
+
+An "atom class" is an arbitrary integer, a number that has no chemical
+meaning.  It is used by applications to mark atoms in ways that are
+meaningful only to the application.  Multiple atoms may be labeled with the
+same atom class.
+
+The atom class is specified after all other properties in square brackets. For example:
+
+[options="header",frame="topbot",grid="rows",width="40%",cols="1,3"]
+|========================================
+| SMILES     | Name
+| `[CH4:2]`  | methane, atom's class is 2
+|========================================
+
+If the atom class is not specified then the atom class is zero.
+The atom class is interpreted as a number, so both `[CH2:5]`
+and `[NH4+:005]` have an atom class of 5.
+
+[[bonds]]
+
+=== Bonds
+
+Atoms that are adjacent in a SMILES string are assumed to
+be joined by a single or aromatic bond (see <<inaromaticity,Aromaticity>>). For example:
+
+[options="header",frame="topbot",grid="rows",width="30%"]
+|===================================
+| SMILES              | Name
+| `CC`                | ethane
+| `CCO`               | ethanol
+| `NCCCC`             | n-butylamine
+| `CCCCN`             | n-butylamine
+|===================================
+
+Double, triple and quadruple bonds are represented by `'='`, `'#'`, and `'$'` respectively:
+
+[options="header",frame="topbot",grid="rows",width="80%",cols="2,1"]
+|========================================================================
+| SMILES                                      | Name
+| `C=C`                                       | ethene
+| `C#N`                                       | hydrogen cyanide
+| `CC#CC`                                     | 2-butyne
+| `CCC=O`                                     | propanol
+| `[Rh-](Cl)(Cl)(Cl)(Cl)$[Rh-](Cl)(Cl)(Cl)Cl` | octachlorodirhenate (III)
+|========================================================================
+
+A single bond can be explicitely represented with `'-'`, but it is rarely
+necessary.
+
+[options="header",frame="topbot",grid="rows",width="40%"]
+|===================================
+| SMILES          |
+| `C-C`           | same as: `CC`
+| `C-C-O`         | same as: `CCO`
+| `C-C=C-C`       | same as: `CC=CC`
+|===================================
+
+Note: The remaining bond symbols, `':\/'`, are discussed in
+later sections.
+
+=== Branches
+
+An atom with three or more bonds is called a *branched atom*, and is
+represented using parentheses.
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|============================================================================
+| Depiction                                 | SMILES      | Name
+| image:depict/2-ethyl-1-butanol.gif[]      | `CCC(CC)CO` | 2-ethyl-1-butanol
+|============================================================================
+
+Branches can be nested or "stacked" to any depth:
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|============================================================================================================
+| Depiction                                   | SMILES                      | Name
+| image:depict/2-4-dimethyl-3-pentanone.gif[] | `CC(C)C(=O)C(C)C`           | 2,4-dimethyl-3-pentanone
+| pic here                                    | `OCC(CCC)C(C(C)C)CCC`       | 2-propyl-3-isopropyl-1-propanol
+| image:depict/thiosulfate.gif[]              | `OS(=O)(=S)O`               | thiosulfate
+|============================================================================================================
+
+The SMILES branch/chain rules allow nested parenthetical expressions (branches) to an arbitrary
+depth. For example, the following SMILES, though peculiar, is legal:
+
+[options="header",frame="topbot",grid="rows",width="90%",cols="6,1"]
+|==============================================================================
+| SMILES                                                              | Formula
+| `C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C))))))))))))))))))))C`    | C22H46
+|==============================================================================
+
+[[ringclosure]]
+
+=== Rings
+
+In a SMILES string such as "C1CCCCC1", the first occurrence of a ring-closure
+number (an "rnum") creates an "open bond" to the atom that precedes the
+ring-closure number (the "rnum").  When that same rnum is encountered
+later in the string, a bond is made between the two atoms, which typically
+forms a cyclic structure.
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|==================================================================================
+| Depiction                               | SMILES           | Name
+| image:depict/cyclohexane.gif[]          | `C1CCCCC1`       | cyclohexane
+| image:depict/perhydroisoquinoline.gif[] | `N1CC2CCCC2CC1`  | perhydroisoquinoline
+|==================================================================================
+
+If a bond symbol is present between the atom and rnum, it can be
+present on *either or both* bonded atoms.  However, if it appears on
+both bonded atoms, the two bond symbols must be the same.
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|=================================================================================================
+| Depiction                                     | SMILES          | Name
+.4+| image:depict/cyclohexene.gif[]             | `C=1CCCCC=1`    | cyclohexene
+|                                                 `C=1CCCCC1`     | cyclohexene *(preferred form)*
+|                                                 `C1CCCCC=1`     | cyclohexene
+|                                                 `C-1CCCCC=1`    | *invalid*
+|=================================================================================================
+
+Ring closures must be matched pairs in a SMILES string, for example, `C1CCC`
+is not a valid SMILES.
+
+It is permissible to re-use ring-closure numbers.  Once a particular number
+has been encountered twice, that number is available again for subsequent ring closures.
+
+[options="header",frame="topbot",grid="rows",width="90%",cols="2,2,1,2"]
+|=================================================================================================
+| Depiction                          | SMILES              | Name          | Comment
+.2+| image:depict/dicyclohexyl.gif[] | `C1CCCCC1C1CCCCC1`  | bicyclohexyl  | both SMILES are valid
+|                                      `C1CCCCC1C2CCCCC2`  | bicyclohexyl  |
+|=================================================================================================
+
+Note that the ring number zero is valid, for example cyclohexane can be
+written `C0CCCCC0`.
+
+Two-digit ring numbers are permitted, but must be preceded by the percent
+`'%'` symbol, such as `C%25CCCCC%25` for cyclohexane. Three-digit numbers and
+larger are never permitted.  However, note that three digits are not invalid; for
+example, `C%123` is the same as `C3%12`, that is, an atom with two rnum
+specifications.
+
+The digit(s) representing a ring-closure are interpreted as a number, not a
+symbol, and two rnums match if their numbers match.  Thus, `C1CCCCC%01` is a
+valid SMILES and is the same as `C1CCCCC1`.  Likewise, `C%00CCCCC%00` is a
+valid SMILES.
+
+A single atom can have several ring-closure numbers, such as this spiro
+atom:
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|========================================================================
+| Depiction                  | SMILES                | Name
+| image:depict/spiro.gif[]   | `C12(CCCCC1)CCCCC2`   | spiro[5.5]undecane
+|========================================================================
+
+Two atoms cannot be joined by more than one bond, and an atom cannot be bonded to itself. For
+example, the following are not allowed:
+
+[options="header",frame="topbot",grid="rows",width="70%",cols="1,2"]
+|=====================================================================
+| SMILES              | Comments
+| `C12CCCCC12`        | *illegal, two bonds between one pair of atoms*
+| `C12C2CCC1`         | *illegal, two bonds between one pair of atoms*
+| `C11`               | *illegal, atom bonded to itself*
+|=====================================================================
+
+[[inaromaticity]]
+
+=== Aromaticity
+
+==== The Meaning of "Aromaticity" in SMILES
+
+"Aromaticity" in SMILES is primarily for
+http://www.emolecules.com/doc/cheminformatics-101.htm[cheminformatics] purposes.
+In a cheminformatics system, we'd like to have a single representation for each molecule.  The
+Kekule form masks the inherent uniformity of the bonds in an aromatic ring.  SMILES uses a
+simplified definition of aromaticity that facilitates substructure and exact-structure
+searches, as well as <<normalization,Normalization>> and <<canonicalization,Canonicalization>> of SMILES.
+
+The definition of "aromaticity" in SMILES is *not* intended to imply anything about the
+physical or chemical properties of a substance.  In many or most cases, the SMILES definition of
+aromaticity will match the chemist's notion of what is aromatic, but in some cases it will not.
+
+==== Kekule and Aromatic Representations
+
+Aromaticity can be represented in one of two ways in a SMILES.
+
+* In the Kekule form, using alternating single and double bonds, with
+  uppercase symbols for the atoms.
+* An atomic symbol that begins with a lowercase letter is an aromatic atom, such as `'c'`
+  for aromatic carbon.  When aromatic symbols are used, no bond symbols are needed.
+
+A lowercase aromatic symbol is defined as an atom in the sp^2^ configuration in an
+aromatic or anti-aromatic ring system.  For example:
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|=========================================================================================
+| Depiction                                 | SMILES                      | Name
+.2+| image:depict/benzene.gif[]             | `c1ccccc1`               .2+| benzene
+|                                             `C1=CC=CC=C1`
+.2+| image:depict/indane.gif[]              | `c1ccc2CCCc2c1`          .2+| indane
+|                                             `C1=CC=CC(CCC2)=C12`
+.2+| image:depict/furan.gif[]               | `c1occc1`                .2+| furan
+|                                             `C1OC=CC=1`
+.2+| image:depict/cyclobutadiene.gif[]      | `c1ccc1`                 .2+| cyclobutadiene
+|                                             `C1=CC=C1`
+|=========================================================================================
+
+The Kekule form is always acceptable for SMILES input.  For output, the aromatic form
+(using lowercase letters) <<outaromaticity,is preferred>>.  The lowercase
+symbols eliminate the arbitrary choice of how to assign the single and double bonds, and provide a
+<<normalization,normalized form>> that more accurately reflects the electronic configuration.
+
+==== Extended Hueckel's Rule
+
+[red]*THIS SECTION IS UNDER MAJOR REVISION, AND AT THIS POINT IS ONLY FOR
+DISCUSSION PURPOSES.*
+
+[red]*This proposed section is an attempt to simplify the rule-based
+system by enumerating all atom/bond configurations that are known to
+participate in aromatic systems.*
+
+A single, isolated ring that meets the following criteria is aromatic:
+
+* All atoms must be sp^2^ hybridized.
+* The number of available "shared" http://en.wikipedia.org/wiki/Pi_electron[&#960; electrons]
+  must equal 4N+2 where N &ge; 0 (http://en.wikipedia.org/wiki/H%C3%BCckel's_rule[Huckel's rule]).
+
+Each element that can participate in an aromatic ring is defined to have the following
+number of &#960; electrons:
+
+:valign: middle
+:halign: center
+
+[options="header",frame="topbot",grid="rows",width="60%",cols="1,1,1,<3e"]
+|===========================================================================================================================================
+| Configuration                       | &#960; Electrons | Example                             | Comment
+|                                     |                  |                                     |
+| image:depict/aromtype/BX3v3n.svg[]  | 0                | image:depict/arom/BX3v3n_ex1.svg[]  | OpenSMILES extension
+| image:depict/aromtype/BX2v3n.svg[]  | 1                | image:depict/arom/BX2v3n_ex1.svg[]  | OpenSMILES extension
+|                                     |                  |                                     |
+| image:depict/aromtype/CX3v3m.svg[]  | 2                | image:depict/arom/CX3v3m_ex1.svg[]  |
+| image:depict/aromtype/CX3v4o.svg[]  | 0                | image:depict/arom/CX3v4o_ex1.svg[]  |
+| image:depict/aromtype/CX3v3p.svg[]  | 0                | image:depict/arom/CX3v3p_ex1.svg[]  |
+| image:depict/aromtype/CX2v3m.svg[]  | 1                | image:depict/arom/CX2v3m_ex1.svg[]  |
+| image:depict/aromtype/CX3v4.svg[]   | 1                | image:depict/arom/CX3v4_ex1.svg[]   |
+| image:depict/aromtype/CX2v3p.svg[]  | 1                | image:depict/arom/CX2v3p_ex1.svg[]  |
+|                                     |                  |                                     |
+| image:depict/aromtype/NX2v2.svg[]   | 2                | image:depict/arom/NX2v2_ex1.svg[]   |
+| image:depict/aromtype/NX3v3.svg[]   | 2                | image:depict/arom/NX3v3_ex1.svg[]   |
+| image:depict/aromtype/NX2v3.svg[]   | 1                | image:depict/arom/NX2v3_ex1.svg[]   |
+| image:depict/aromtype/NX3v4.svg[]   | 1                | image:depict/arom/NX3v4_ex1.svg[]   |
+| image:depict/aromtype/NX3v5.svg[]   | 1                | image:depict/arom/NX3v5_ex1.svg[]   | Non-oxide contributes 2 in Daylight toolkit
+|                                     |                  |                                     |
+| image:depict/aromtype/PX2v2.svg[]   | 2                | image:depict/arom/PX2v2_ex1.svg[]   |
+| image:depict/aromtype/PX3v3.svg[]   | 2                | image:depict/arom/PX3v3_ex1.svg[]   |
+| image:depict/aromtype/PX2v3.svg[]   | 1                | image:depict/arom/PX2v3_ex1.svg[]   |
+| image:depict/aromtype/PX3v4.svg[]   | 1                | image:depict/arom/PX3v4_ex1.svg[]   |
+| image:depict/aromtype/PX3v5.svg[]   | 1                | image:depict/arom/PX3v5_ex1.svg[]   | Non-oxide contributes 2 in Daylight toolkit
+|                                     |                  |                                     |
+| image:depict/aromtype/AsX3v3.svg[]  | 2                | image:depict/arom/AsX3v3_ex1.svg[]  |
+| image:depict/aromtype/AsX2v3.svg[]  | 1                | image:depict/arom/AsX2v3_ex1.svg[]  | OpenSMILES extension
+| image:depict/aromtype/AsX3v4.svg[]  | 1                | image:depict/arom/AsX3v4_ex1.svg[]  | OpenSMILES extension
+|                                     |                  |                                     |
+| image:depict/aromtype/OX2v2.svg[]   | 2                | image:depict/arom/OX2v2_ex1.svg[]   |
+| image:depict/aromtype/OX2v3.svg[]   | 1                | image:depict/arom/OX2v3_ex1.svg[]   |
+|                                     |                  |                                     |
+| image:depict/aromtype/SX2v2.svg[]   | 2                | image:depict/arom/SX2v2_ex1.svg[]   |
+| image:depict/aromtype/SX2v3.svg[]   | 1                | image:depict/arom/SX2v3_ex1.svg[]   |
+| image:depict/aromtype/SX3v4.svg[]   | 2                | image:depict/arom/SX3v4_ex1.svg[]   | Possibly chiral
+| image:depict/aromtype/SX3v3p.svg[]  | 2                | image:depict/arom/SX3v3p_ex1.svg[]  | Possibly chiral, OpenSMILES extension
+|                                     |                  |                                     |
+| image:depict/aromtype/SeX2v2.svg[]  | 2                | image:depict/arom/SeX2v2_ex1.svg[]  |
+| image:depict/aromtype/SeX2v3.svg[]  | 1                | image:depict/arom/SeX2v3_ex1.svg[]  |
+| image:depict/aromtype/SeX3v4.svg[]  | 2                | image:depict/arom/SeX3v4_ex1.svg[]  | Possibly chiral
+| image:depict/aromtype/SeX3v3p.svg[] | 2                | image:depict/arom/SeX3v3p_ex1.svg[] | Possibly chiral, OpenSMILES extension
+|                                     |                  |                                     |
+|===========================================================================================================================================
+
+==== Aromaticity Algorithm
+
+In an aromatic system, all of the aromatic atoms must be sp^2^ hybridized, and the
+number of http://en.wikipedia.org/wiki/Pi_electron[&#960; electrons]
+must meet http://en.wikipedia.org/wiki/H%C3%BCckel's_rule[Huckel's 4n+2 criterion]
+When parsing a SMILES, a parser must note the aromatic designation of each atom on
+input, then when the parsing is complete, the SMILES software must verify that electrons can be
+assigned without violating the valence rules, consistent with the sp^2^ markings, the
+specified or implied hydrogens, external bonds, and charges on the atoms.
+
+The aromatic-bond symbol `':'` can be used between aromatic atoms, but it is never necessary; a
+bond between two aromatic atoms is assumed to be aromatic unless it is explicitly represented as a
+single bond `'-'`.  However, a single bond (nonaromatic bond) between two aromatic atoms *must*
+be explicitly represented.  For example:
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|================================================================
+| Depiction                   | SMILES                 | Name
+| image:depict/biphenyl.gif[] | `c1ccccc1-c2ccccc2`   | biphenyl
+|================================================================
+
+_Note: Some SMILES parsers interpret a lowercase letter as sp^2^ anywhere it appears;
+for example, `CccccC` would be interpreted as `CC=CC=CC`.
+The OpenSMILES specification does not allow this interpretation unless
+<<nonstandard,nonstandard parsing>> is explicitely allowed by the user._
+
+=== More about Hydrogen
+
+Hydrogens in a SMILES can be represented in three different ways:
+
+[options="header",frame="topbot",grid="rows",width="100%",cols="2,2,1,3"]
+|======================================================================================================
+| Method                | SMILES              | Name          | Comments
+| implicit hydrogen     | `C`                 | methane       | h-count deduced from normal valence (4)
+| atom property         | `[CH4]`             | methane       | h-count specified for heavy atom
+| explicit hydrogen     | `[H]C([H])([H])[H]` | methane       | hydrogens represented as normal atoms
+|======================================================================================================
+
+All three forms are equivalent.  However, some situations require that one form must be used:
+
+* Implicit hydrogen count may only be used for elements of the <<orgsbst,organic elements>> subset.
+* Any atom that is specified with square brackets *must* have its attached hydrogens
+  explicitly represented, either as a hydrogen count or as normal atoms.
+
+A hydrogen that meets one of the following criteria must be represented as an explicit atom:
+
+* hydrogens with charge (`[H+]`)
+* a hydrogen connected to another hydrogen (such as molecular hydrogen, `[H][H]`)
+* hydrogens with more than one bond (bridging hydrogens)
+* Deuterium `[2H]` and tritium `[3H]`
+
+It is permissible to use a mixture of an atom h-count and explicit hydrogen.  In such a case,
+the atom's hydrogen count is the sum of the atomic h-count property and the number of attached
+hydrogens.  For example:
+
+[options="header",frame="topbot",grid="rows",width="40%"]
+|====================================
+| SMILES              | Name
+| `[CH4]`             | methane
+| `[H][CH2][H]`       | methane
+| `[2H][CH2]C`        | deuteroethane
+|====================================
+
+=== Disconnected Structures
+
+The dot `'.'` symbol (also called a "dot bond") is legal most places where
+a bond symbol would occur, but indicates that the atoms are *not*
+bonded.  The most common use of the dot-bond symbol is to represent
+disconnected and ionic compounds.
+
+[options="header",frame="topbot",grid="rows",width="90%",cols="2,3,2"]
+|============================================================================================================
+| Depiction                                     | SMILES                            | Name
+| image:depict/sodium-chloride.gif[]            | `[Na+].[Cl-]`                     | sodium chloride
+| image:depict/phenol-2-amino-ethanol.gif[]     | `Oc1ccccc1.NCCO`                  | phenol, 2-amino ethanol
+| image:depict/diammonium-thiosulfate.gif[]     | `[NH4+].[NH4+].[O-]S(=O)(=O)[S-]` | diammonium thiosulfate
+|============================================================================================================
+
+The dot can appear most places that a bond symbol is allowed, for example, the phenol example above
+can also be written:
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|======================================================================================================
+| Depiction                                     | SMILES                      | Name
+.2+| image:depict/phenol-2-amino-ethanol.gif[]  | `c1cc(O.NCCO)ccc1`          | phenol, 2-amino ethanol
+|                                                 `Oc1cc(.NCCO)ccc1`          | phenal, 2-amino ethanol
+|======================================================================================================
+
+The second example above is an odd, but legal, use of parentheses and the dot bond, since the
+syntax allows a dot most places a regular bond could appear (the exception
+is that a dot can't appear before a ring-closure digit).
+
+Although dot-bonds are commonly used to represent compounds with disconnected parts, a dot-bond
+does *not* in itself mean that there are disconnected parts in the compound.   See the
+following section regarding ring digits for some examples that illustrate this.
+
+The dot bond cannot be used in front of a ring-closure digit.  For example, `C.1CCCCC.1` is illegal.
+
+==== Other Uses of Ring Numbers and Dot Bond
+
+A ring-number specifications ("rnum") is most commonly used to specify a ring-closure bond, but
+when used with the `'.'` dot-bond symbol, it can also specify a non-ring bond.  Two rnums in a SMILES
+mean that the two atoms that precede the rnums are bonded.  A dot-bond `'.'` means that the atoms to
+which it is adjacent in the SMILES string are *not* bonded to each other.  By combining these
+two constructs, one can "piece together" fragments of SMILES into a whole molecule.  The following
+SMILES illustrate this:
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|=========================================================================================================
+| SMILES/Depiction                               | Fragment SMILES           | Name
+| `CC`                                           | `C1.C1`                   | ethane
+| `CCC`                                          | `C1.C12.C2`               | propane
+| image:depict/1-bromo-2-3-dichlorobenzene.gif[] | `c1c2c3c4cc1.Br2.Cl3.Cl4` | 1-bromo-2,3-dichlorobenzene
+|=========================================================================================================
+
+This feature of SMILES provides a convenient method of enumerating the
+molecules of a combinatorial library using string concatenation.
+
+[[chirality]]
+
+=== Stereochemistry
+
+==== Scope of Stereochemistry in SMILES
+
+A SMILES string can specify the cis/trans configuration around a double bond,
+and can specify the chiral configuration of specific atoms in a molecule.
+
+SMILES strings do *not* represent all types of stereochemistry.  Examples of
+stereochemistry that cannot be encoded into a SMILES include:
+
+* Gross conformational left or right handedness such as helices
+* Mechanical interferences, such as rotatable bonds that are
+  constrained by mechanical interferences
+* Gross conformational stereochemistry such as the shape of a protein after folding
+
+==== Tetrahedral Centers
+
+SMILES uses an atom-centered chirality specification, in which the atom's left-to-right order in
+the SMILES string itself is used as the basis for the chirality marking.
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|=========================================================================
+2+| **Tetrahedral Chirality**
+| look from N towards C (chiral center) | list the neighbors anticlockwise
+.3+| image:depict/tetrahedral.gif[]     | `N[C@](Br)(O)C`
+|                                         ...or clockwise
+|                                         `N[C@@](Br)(C)O`
+|=========================================================================
+
+For the structure above, starting with the nitrogen atom, one "looks" toward the chiral
+center. The remaining three neighbor atoms are written by listing them in anticlockwise order using the `'@'`
+chiral property on the atom, or in clockwise order using the `'@@'` chiral property, as illustrated
+above.  The `'@'` symbol is a "visual mnemonic" in that the spiral around the character goes in the
+anticlockwise direction, and means "anticlockwise" in the SMILES string (thus, `'@@'` can be thought of
+as anti-anti-clockwise).
+
+A chiral center can be written starting anywhere in the SMILES string, and the choice of
+whether to list the remaining neighbor in clockwise or anticlockwise order is also arbitrary. The
+following SMILES are all equivalent and all specify the exact same chiral center illustrated above:
+
+[options="header",frame="topbot",grid="rows",width="50%"]
+|========================================
+| Equivalent SMILES  |
+| `N[C@](Br)(O)C`    | `Br[C@](O)(N)C`
+| `O[C@](Br)(C)N`    | `Br[C@](C)(O)N`
+| `C[C@](Br)(N)O`    | `Br[C@](N)(C)O`
+| `C[C@@](Br)(O)N`   | `Br[C@@](N)(O)C`
+| `[C@@](C)(Br)(O)N` | `[C@@](Br)(N)(O)C`
+|========================================
+
+One exception to the atom order is when these atoms are bonded to the chiral center via a
+ring bond. In these cases, it is to order of the bonds to these atoms that should be considered.
+The two SMILES below are equivalent:
+
+[options="header",frame="topbot",grid="rows",width="50%"]
+|=========================
+| Equivalent SMILES      |
+| `FC1C[C@](Br)(Cl)CCC1` | `[C@]1(Br)(Cl)CCCC(F)C1`
+|=========================
+
+If one of the neighbor atoms is a hydrogen and is represented as an atomic property of the
+chiral center (rather than explicitly as `[H]`), then it is considered to be the first atom in the
+clockwise or anticlockwise accounting.  For example, if we replaced the bromine in the illustration
+above with a hydrogen atom, its SMILES would be:
+
+[options="header",frame="topbot",grid="rows",width="25%"]
+|==================
+| Implicit Hydrogen
+| `N[C@H](O)C`
+|==================
+
+==== Cis/Trans configuration of Double Bonds
+
+The configuration of atoms around double bonds is specified by the bond symbols `'/'` and `'\'`.
+These symbols always come in pairs, and indicate cis or trans with a visual "same side" or
+"opposite side" concept.  That is:
+
+[options="header",frame="topbot",grid="rows",width="90%",cols="2,1,4"]
+|=========================================================================================================================
+| Depiction                                     | SMILES            | Name
+.2+| image:depict/trans-difluoroethene.gif[]    | `F/C=C/F`      .2+| trans-difluoroethane *(both SMILES are equivalent)*
+|                                                 `F\C=C\F`
+.2+| image:depict/cis-difluoroethene.gif[]      | `F\C=C/F`      .2+| cis-difluoroethane *(both SMILES are equivalent)*
+|                                                 `F/C=C\F`
+|=========================================================================================================================
+
+The "visual interpretation" of the `'/'` and `'\'` symbol is that they are thought of as bonds that
+"point" above or below the alkene bond.  That is, `F/C=C/Br` means "The `F` is below the first carbon,
+and the `Br` is above the second carbon," leading to the interpretation of a trans configuration.
+
+This notation can be confusing when parentheses follow one of the alkene carbons:
+
+[options="header",frame="topbot",grid="rows",width="40%"]
+|===========================================
+| SMILES              | Name
+| `F/C=C/F`        .2+| trans-difluoroethane
+| `C(\F)=C/F`
+| `F\C=C/F`        .2+| cis-difluoroethane
+| `C(/F)=C/F`
+|===========================================
+
+The "visual interpretation" of the "up-ness" or "down-ness" of each single
+bond is *relative to the carbon atom*, not the double bond, so the sense of the symbol changes
+when the fluorine atom moved from the left to the right side of the alkene carbon atom.
+
+_Note: This point was not well documented in earlier SMILES specifications, and several SMILES
+interpreters are known to interpret the `'/'` and `'\'` symbols incorrectly._
+
+A SMILES with conflicting up/down specifications is invalid:
+
+[options="header",frame="topbot",grid="rows",width="70%",cols="1,3"]
+|=============================================================================================================
+| SMILES        | Comment
+| `C/C(\F)=C/F` | Invalid SMILES: Both the methyl and fluorine are "down" relative to the first allenal carbon
+|=============================================================================================================
+
+It is permissible, but not required, that every atom attached to a double bond be marked.  As
+long as at least two neighbor atoms, one on each end of the double bond, is marked, the "up-ness" or
+"down-ness" of the unmarked neighbors can be deduced.
+
+[options="header",frame="topbot",grid="rows",width="75%",cols="1,3"]
+|============================================================================
+| SMILES        | Comment
+| `F/C(CC)=C/F` | trans-difluoro configuration, position of methyl is implied
+|============================================================================
+
+Extended cis and trans configurations can be specified for conjugated allenes with an odd number
+of double bonds:
+
+[options="header",frame="topbot",grid="rows",width="50%"]
+|==============================================
+| SMILES             | Name
+| `F/C=C=C=C/F`      | trans-difluorobutatriene
+| `F/C=C=C=C\F`      | cis-difluorobutatriene
+|==============================================
+
+==== Tetrahedral Allene-like Systems
+
+Extended tetrahedral configurations can be specified for conjugated allenes with an even number
+of double bonds.  The normal tetrahedral rules using `'@'` and `'@@'` apply, but the "neighbor" atoms
+to which the chirality refers are at the ends of the allene system.  For example:
+
+[options="header",frame="topbot",grid="rows",width="70%",cols="2,1"]
+|============================================================
+| Depiction                             | SMILES
+| image:depict/tetrahedral-allene.gif[] | `NC(Br)=[C@]=C(O)C`
+|============================================================
+
+To determine the correct clockwise or anticlockwise specification, the allene is conceptually
+"collapsed" into a single tetrahedral chiral center, and the resulting chirality is marked as a
+property of the center atom of the extended allene system.
+
+==== Square Planar Centers
+
+There are three tags to represent square planar stereochemistry: `@SP1`, `@SP2`
+and `@SP3`. Since there is no way to determine to what chirality class an atom
+belongs based on the SMILES alone, the SP class is not the default class for
+tetravalent stereocenters. Therefore are the shorthand notations (`@`, `@@`) not
+equivalent to `@SP1` and `@SP2`. That is, the full specification must be there
+(`@SP` followed by 1, 2 or 3). The square planar also differs from the other
+chiral primitives in that it does not use the notion of (anti-)clockwise.
+Instead, each primitive represents a shape that is formed by drawing a line
+starting from the atom that is first in the SMILES pattern to the next until
+the end atom is reached. This may result in 3 possible shaped which are
+referred to by a character with identical shape: `'U'` for `@SP1`, `'4'` for `@SP2` and
+`'Z'` for `@SP3`. The graphical from of these shapes is illustrated in the image
+below.
+
+image:images/SPshapes.png[]
+
+*Background:*
+
+_Also note that each shape starts and ends at specific positions. Both U and Z
+start from atoms that are successors or predecessors when arranging the atoms
+in the plane in anti-clockwise or clockwise order. The start and end atoms for
+the Z shape are never adjacent in such an ordering. For each shape there are
+4 possible ways to start (and end) drawing the line. Also, for all the drawn
+lines, the start and end point can be exchanged. Thus 3 shapes, 4 ways to
+start/end and 2 ways to order the atoms for a shape results in 3 * 4 * 2 or
+24 combinations. This is the same as the number of permutations that can be
+made with 4 numbers (i.e. P(n) = n!). This allows for canonical SMILES
+writers to use any ordering to output the atoms._
+
+==== Trigonal Bipyramidal Centers
+
+The chiral atom's neighbors are labeled a, `b`, `c`, `d`, and `e` in the order that they
+are parsed. For example, for `S[As@@](F)(Cl)(Br)N` `S` corresponds to `a`, `F` to `b`, `Cl`
+to `c`, `Br` to `d` and `N` to `e`. This order is the unit permutation, represented as the
+ordered set `(a, b, c, d, e)`. In the simplest case `@TB1` viewing from a towards `e`,
+`(b, c, d)` are anti-clockwise (`@`). Likewise, `@TB2` is specified as viewing from `a`
+towards `e`, `(b, c, d)` are ordered clockwise (`@@`). The remaining TB's permute the
+axis as indicated in the table below. A final example, for `@TB6` the viewing axis is from
+`a` towards `c` and `(b, d, e)` are clockwise (`@@`).
+
+[options="header",frame="topbot",grid="rows",width="40%"]
+|=====================================
+2+| Viewing Axis   | TB Number | Order
+| From | Towards 2+|
+.2+| `a` .2+| `e`  | TB1       | @
+|                    TB2       | @@
+.2+| `a` .2+| `d`  | TB3       | @
+|                    TB4       | @@
+.2+| `a` .2+| `c`  | TB5       | @
+|                    TB6       | @@
+.2+| `a` .2+| `b`  | TB7       | @
+|                    TB8       | @@
+.2+| `b` .2+| `e`  | TB9       | @
+|                    TB11      | @@
+.2+| `b` .2+| `d`  | TB10      | @
+|                    TB12      | @@
+.2+| `b` .2+| `c`  | TB13      | @
+|                    TB14      | @@
+.2+| `c` .2+| `e`  | TB15      | @
+|                    TB20      | @@
+.2+| `c` .2+| `d`  | TB16      | @
+|                    TB19      | @@
+.2+| `d` .2+| `e`  | TB17      | @
+|                    TB18      | @@
+|=====================================
+
+The following SMILES are all equivalent:
+
+[options="header",frame="topbot",grid="rows",width="70%"]
+|===================================================
+| Equivalent SMILES        |
+| `S[As@TB1](F)(Cl)(Br)N`  | `S[As@TB2](Br)(Cl)(F)N`
+| `S[As@TB5](F)(N)(Cl)Br`  | `F[As@TB10](S)(Cl)(N)Br`
+| `F[As@TB15](Cl)(S)(Br)N` | `Br[As@TB20](Cl)(S)(F)N`
+|===================================================
+
+_A tool like http://www.daylight.com/daycgi_tutorials/depictmatch.cgi[Daylight's depict match] can help debugging_
+
+*Background:*
+
+_The trigonal Bipyramidal chirality is considerably more complex than any of the
+previous classes since the chiral atom has an extra neighbor. This increases the
+number of combinations to order the neighbors in a SMILES string from 24
+to 120. Since every order of the atoms should be representable by a SMILES
+string, the 20 TB primitives suffice for this. In the trigonal bipyramidal
+geometry, 3 atoms lie in a plane and the remaining 2 atoms are perpendicular
+to this plane and are on the opposite sides of the plane forming an axis. The
+anti-clockwise and clockwise refers to the order of the 3 plane atoms when
+viewing along the axis in the specified direction. Unlike tetrahedral geometry,
+reordering the 3 atoms does not require that the axis be changed. Given an order
+of the axis atoms the 3 plane atoms are ordered either anti-clockwise or
+clockwise. Although there are P(3) = 3! or 6 possible permutations of 3 numbers,
+exchanging a pair inverts the parity and the 6 permutations are therefore
+divided in two groups (@, @@) containing 3 permutations each. Because there are
+now two atoms that determine the viewing direction along the axis, these atoms
+too can be in any of the 5 positions in a permutation. Given the atoms
+as the set {a, b, c, d, e}, there are C(5, 2) = 20 possible combinations
+of 5 things taken 2 at a time. However, the use of the @ and @@ symbols halve
+this to 10. These 10 combinations are the ordered sets (a, e), (a, d) (a, c),
+(a, b), (b, e), (b, d), (b, c), (c, e), (c, d) and (d, e). Each of these pairs
+correspond to an TB primitive._
+
+==== Octahedral Centers
+
+For 6 atoms, the unit permutation is `(a, b, c ,d ,e ,f)`. `@OH1` means when viewing
+from `a` towards `f`, `(b, c, d, e)` are ordered anti-clockwise (`@`). `@OH2` uses the same
+axis but the 4 intermediate atoms are ordered clockwise. The interpretation of the 28
+remaining numbers is more complex though. The concept of shapes (see square planar
+stereochemistry) to describe the orientation of 4 atoms in a plane is reused. However,
+this time these shapes also have a clockwise or anti-clockwise winding. For the U shape,
+this is trivial since it means that the 4 atoms are listed clockwise or anti-clockwise.
+For the Z shape, the connection between the first two atoms determines the winding.
+Finally, for the 4 shape, the connection between the second and third atom determines
+the winding. The table below lists the shapes, axes and orders.
+
+[options="header",frame="topbot",grid="rows",width="40%"]
+|=====================================
+|Shape 2+| Viewing Axis   | OH Number | Order
+| | From | Towards 2+|
+.10+| `U` .2+| `a` .2+| `f` | OH1   | @
+|                             OH2   | @@
+.2+| `a` .2+| `e`           | OH3   | @
+|                             OH16  | @@
+.2+| `a` .2+| `d`           | OH6   | @
+|                             OH18  | @@
+.2+| `a` .2+| `c`           | OH19  | @
+|                             OH24  | @@
+.2+| `a` .2+| `b`           | OH25  | @
+|                             OH30  | @@
+.10+| `Z` .2+| `a` .2+| `f` | OH4   | @
+|                             OH14  | @@
+.2+| `a` .2+| `e`           | OH5   | @
+|                             OH15  | @@
+.2+| `a` .2+| `d`           | OH7   | @
+|                             OH17  | @@
+.2+| `a` .2+| `c`           | OH20  | @
+|                             OH23  | @@
+.2+| `a` .2+| `b`           | OH26  | @
+|                             OH29  | @@
+.10+| `4` .2+| `a` .2+| `f` | OH10  | @
+|                             OH8   | @@
+.2+| `a` .2+| `e`           | OH11  | @
+|                             OH9   | @@
+.2+| `a` .2+| `d`           | OH13  | @
+|                             OH12  | @@
+.2+| `a` .2+| `c`           | OH22  | @
+|                             OH21  | @@
+.2+| `a` .2+| `b`           | OH28  | @
+|                             OH27  | @@
+|=====================================
+
+The following SMILES are all equivalent:
+
+[options="header",frame="topbot",grid="rows",width="70%"]
+|==========================================================
+| Equivalent SMILES           |
+| `C[Co@](F)(Cl)(Br)(I)S`     | `F[Co@@](S)(I)(C)(Cl)Br`
+| `S[Co@OH5](F)(I)(Cl)(C)Br`  | `Br[Co@OH9](C)(S)(Cl)(F)I`
+| `Br[Co@OH12](Cl)(I)(F)(S)C` | `Cl[Co@OH15](C)(Br)(F)(I)S`
+| `Cl[Co@OH19](C)(I)(F)(S)Br` | `I[Co@OH27](Cl)(Br)(F)(S)C`
+|==========================================================
+
+*Background:*
+
+_Octahedral stereochemistry is even more complicated since there is yet another
+extra neighboring atom. This raises the number of permutations to P(6) = 720.
+There are three axis that can be chosen and the orientation of the remaining
+4 atoms has to be described. To describe these 4 atoms, P(4) = 24 permutations
+are used together with a shape. An axis always starts from the first neighbor
+atom and can end at any of the other neighbor atoms giving rise to 5 axis.
+As a result, each OH number encodes the axis positions, a shape and an order.
+Since all 3 axis can be placed in this positions, the start/end can be exchanged
+and each shape can start from any of the 4 atoms, each number represents
+3 * 2 * 4 = 24 of the 720 permutations. Finally, 24 * 30 = 720 so all permutations
+can be used to write a canonical SMILES._
+
+==== Partial Stereochemistry
+
+SMILES allows partial stereochemical specifications.  It is permissible for some chiral centers
+or double bonds to have stereochemical markings in the SMILES, while others in the same SMILES
+string do not.  For example:
+
+[options="header",frame="topbot",grid="rows",width="60%",cols="2,1"]
+|===========================================================
+| SMILES                              | Comment
+| `F/C=C/C/C=C\C`                     | completely specified
+| `F/C=C/CC=CC`                       | partially specified
+| `N1[C@H](Cl)[C@@H](Cl)C(Cl)CC1`     | partially specified
+|===========================================================
+
+==== Other Chiral Configurations
+
+The SMILES language supports a number of atom-centered chiral
+configurations:
+
+[options="header",frame="topbot",grid="rows",width="40%"]
+|==============================
+| SMILES | Configuration
+| `TH`	 | Tetrahedral
+| `AL`	 | Allenal
+| `SP`   | Square Planar
+| `TB`   | Trigonal Bipyramidal
+| `OH`   | Octahedral
+|==============================
+
+The shorthand notations `'@'` and `'@@'` correspond to anti-clockwise and
+clockwise tetrahedral chirality, and are the same a `'@TH1'` and
+`'@TH2'`, respectively.  Likewise, in an allenal configuration, the shorthand
+notations `'@'` and `'@@'` correspond to `'@AL1'` and `'@AL2'`, respectively.
+
+Very few SMILES systems actually implement the rules for `SP`, `TB` or `OH` chirality.
+
+== Parsing Termination
+
+A SMILES string is terminated by a whitespace terminator character (space, tab, newline,
+carriage-return), or by the end of the string.
+
+Other data or information, such as a name, properties, registration number, etc., may follow the
+SMILES on a line after the whitespace character.  SMILES parsers will ignore this data, although
+applications that use the SMILES parser will often make use of it.
+
+== Programming Practices
+
+OpenSMILES is designed to facilitate exchange of chemical information.  To achieve that goal, it
+SMILES parsers should impose as few limits as possible on the language.
+
+There is no formal limit to the length of a SMILES string; SMILES of over 1 million characters
+have been assembled for various purposes.  There is no requirement that a SMILES parser must be able
+to parse these exceptionally long SMILES, but as a guideline, all implementations of SMILES parsers
+should, at a minimum, accept and correctly parse SMILES strings of 100,000 characters.  If a SMILES
+parser encounters a string that is too long to parse, it should generate a relevant error
+message.
+
+A SMILES parser should accept at least four digits for the <<atomclass,atom class>>,
+and the values 0 to 9999.
+
+There is no formal limit to the number of rings a molecule can contain.  There are only
+100 ring-closure numbers, but since numbers can be reused, a molecule can potentially have more
+than 100 rings.  SMILES parsers should accept and correctly parse molecules with at least 1000 rings;
+it is preferable to place no limits on the number of rings a molecule can contain.
+
+Branches (parentheses) can be nested to an arbitrary depth.  Some SMILES strings in standard
+databases contain over 30 levels of branches, and much deeper nesting is possible.  A general
+purpose parser must handle at least 100 levels; it is preferable to place no limits on nesting
+depth for parentheses.
+
+There is no formal limit on the number of bonds an atom can have.  SMILES parsers should allow at
+least ten bonds to each atom; it is preferable to place no limits on the number of bonds to each
+atom.
+
+There is no limit to the number of "dot-disconnected" fragments in a SMILES.  A SMILES of 100,000
+atoms could in principle contain no bonds at all; SMILES parsers should place no limits on the
+number of fragments allowed (except that it is limited to the number of atoms the parser can
+manage).
+
+Programmers are *strongly* encouraged to provide detailed and clear error messages.  If
+possible, the error message should show exactly which character or "phrase" of the SMILES string
+triggered the error message.
+
+[[normalization]]
+
+== Writing SMILES: Normalizations
+
+=== What is Normalization?
+
+A wide variety of SMILES strings are acceptable as input.  For example, all of the following
+represent ethanol:
+
+[options="header",frame="topbot",grid="rows",width="60%",cols="3,1"]
+|==============================================
+| SMILES                              | Name
+| `CCO`                               | ethanol
+| `OCC`                               | ethanol
+| `C(O)C`                             | ethanol
+| `[CH3][CH2][OH]`                    | ethanol
+| `[H][C]([H])([H])C([H])([H])[O][H]` | ethanol
+|==============================================
+
+However, it is desirable to write SMILES in more standard forms; the first two forms above are
+preferred by most chemists, and require fewer bytes to store on a computer. Several levels of
+normalization of SMILES are recommended for systems that generate SMILES strings.  Although these are not
+mandatory in any sense, they should be considered guidelines for software engineers creating SMILES systems.
+
+=== No Normalization
+
+The simplest "normalization" is no normalization.  SMILES can be written in any form whatsoever,
+as long as they meet the rules for SMILES.  Some examples of systems that might produce
+un-normalized SMILES are:
+
+* A system that enumerates combinatorial libraries using the rnum/dot-bond technique
+  <<inatoms,discussed above>>.  SMILES produced by such a system will typically be a series
+  of partial SMILES that are concatenated with dots into a complete molecule.
+* Simple pass-through "filters" that don't have a full SMILES writer, but merely copy the input
+  SMILES to the output.  An example might be a molecular modeling program that reads SMILES to
+  generates logP values, but has no capability to convert its molecular data structures back to a
+  SMILES; instead it just copies its input SMILES to its output.
+
+[[standardform]]
+
+=== Standard Form
+
+The "standard form" of a SMILES is designed to produce a compact SMILES,
+and one that is human readable (for smaller molecules).
+
+In addition, a normalized SMILES has the important property that it
+matches itself as a
+http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html[SMARTS]
+string.  This is a very important feature of normalized SMILES in
+cheminformatics systems.
+
+_Note: In the example below, the "Wrong" SMILES examples are all valid SMILES, but are "wrong"
+in the sense that they are not the preferred form for standard normalization._
+
+==== Atoms
+
+[options="header",frame="topbot",grid="rows",width="90%",cols="1,1,3"]
+|==============================================
+| Correct        | Wrong             | Normalization Rule
+| `CC`           | `[CH3][CH3]`      | Write atoms in the "organic subset" as bare atomic symbols whenever possible.
+| `[CH3-]`       | `[CH3-1]`         | If the charge is `+1` or `-1`, leave off the digit.
+| `C[13CH](C)C`  | `C[13CH1](C)C`    | If the hydrogen count is 1, leave off the digit.
+| `[CH3-]`       | `[C-H3]`       .2+| Always write the atom properties in the order: Chirality, hydrogen-count, charge.
+| `C[C@H](Br)Cl` | `C[CH@](Br)Cl`
+| `[CH3-]`       | `[H][C-]([H])[H]` | Represent hydrogens as a property of the heavy atom rather than as explicit atoms, unless other rules (e.g. `[2H]`) require that the hydrogen be explicit.
+|==============================================
+
+==== Bonds
+
+[options="header",frame="topbot",grid="rows",width="100%",cols="1,1,3"]
+|==============================================
+| Correct             | Wrong    | Normalization Rule
+| `CC`                | `C-C` .3+| Only write `'-'` (single bond) when it is between two aromatic atoms.  Never write the `':'` (aromatic bond) symbol.  Bonds are single or aromatic by default (as appropriate).
+| `c1ccccc1`          | `c:1:c:c:c:c:c:1`
+| `c1ccccc1-c2ccccc2` | `c1ccccc1c2ccccc2`
+|==============================================
+
+==== Cycles
+
+[options="header",frame="topbot",grid="rows",width="100%",cols="1,1,3"]
+|==============================================
+| Correct           | Wrong               | Normalization Rule
+| `c1ccccc1C2CCCC2` | `c1ccccc1C1CCCC1`   | Don't reuse ring-closure digits.
+| `c1ccccc1C2CCCC2` | `c0ccccc0C1CCCC1`   | Begin ring numbering with 1, not zero (or any other number)
+| `CC1=CCCCC1`      | `CC=1CCCCC=1`       | Avoid making a ring-closure on a double or triple bond.  For the ring-closure digits, choose a single bond whenever possible.
+| `C1CC2CCCCC2CC1`  | `C12(CCCCC1)CCCCC2` | Avoid starting a ring system on an atom that is in two or more rings, such that two ring-closure bonds will be on the same atom.
+| `C1CCCCC1`        | `C%01CCCCC%01`      | Use the simpler single-digit form for rnums less than 10.
+|==============================================
+
+==== Starting Atom and Branches
+
+[options="header",frame="topbot",grid="rows",width="90%",cols="1,1,4"]
+|==============================================
+| Correct       | Wrong          | Normalization Rule
+| `OCc1ccccc1`  | `c1cc(CO)ccc1` | Start on a terminal atom if possible.
+| `CC(C)CCCCCC` | `CC(CCCCCC)C`  | Try to make "side chains" short; pick the longest chains as the "main branch" of the SMILES.
+| `OCCC`        | `CCCO`         | Start on a heteroatom if possible.
+| `CC`          | `C1.C1`        | Only use dots for disconnected components.
+|==============================================
+
+[[outaromaticity]]
+
+==== Aromaticity
+
+[options="header",frame="topbot",grid="rows",width="90%",cols="1,1,4"]
+|==============================================
+| Correct    | Wrong         | Normalization Rule
+| `c1ccccc1` | `C1=CC=CC=C1` | Write the aromatic form in preference to the Kekule form.
+|==============================================
+
+==== Chirality
+
+[options="header",frame="topbot",grid="rows",width="90%",cols="1,1,4"]
+|==============================================
+| Correct    | Wrong          | Normalization Rule
+| `BrC(Br)C` | `Br[C@H](Br)C` | Remove chiral markings for atoms that are not chiral.
+| `FC(F)=CF` | `F/C(/F)=C/F`  | Remove cis/trans markings for double bonds that are not cis or trans.
+|==============================================
+
+[[canonicalization]]
+
+=== Canonical SMILES
+
+A _Canonical SMILES_ is one that follows the <<standardform,Standard Form>>
+above, and additionally, always writes the atoms and bonds of any particular molecule in
+the _exact same order_, regardless of the source of the molecule or its history in the
+computer.  Here are a few examples of Canonical versus non-Canonical SMILES:
+
+[options="header",frame="topbot",grid="rows",width="50%"]
+|==============================================
+| Canonical SMILES | Non-canonical  | Name
+.2+| `OCC`         | `CCO`       .2+| ethanol
+|                    `C(C)O`
+.3+| `Oc1ccccc1`   | `c1ccccc1O` .3+| phenol
+|                    `c1(O)ccccc1`
+|                    `c1(ccccc1)O`
+|==============================================
+
+The primary use of Canonical SMILES is in
+http://www.emolecules.com/doc/cheminformatics-101.htm[cheminformatics]
+systems.  A molecule's structure, when expressed as a canonical SMILES,
+will always yield the same SMILES string, which allows a chemical database
+system to:
+
+* Create a unique name (the SMILES) for each molecule in the system
+* Consolidate data about one molecule from a variety of sources into a single record
+* Given a molecule, find its record in the database
+
+Canonical SMILES should _not_ be considered a universal, global
+identifier (such as a permanent name that spans the WWW).  Two
+systems that produces a canonical SMILES may use different rules in their
+code, or the same system may be improved or have bugs fixed as time passes,
+thus changing the SMILES it produces.  A Canonical SMILES is primarily
+useful in a single database, or a system of related databases or information,
+in which all molecules were created using a single canonicalizer.
+
+The rules (algorithms) by which the canonical ordering of the atoms in a
+SMILES are generated are quite complex, and beyond the scope of this
+document.  There are many chemistry and mathematical graph-theory
+papers describing the canonical labeling of a graph, and writing a
+canonical SMILES string.  See the <<appendix,Appendix>> for further
+information.
+
+Those considering Canonical SMILES for a database system should also investigate
+http://www.iupac.org/inchi[InChI], a canonical naming system for chemicals that is an
+approved IUPAC naming convention.
+
+=== SMILES Files
+
+_SMILES file_ consists of zero or more SMILES strings, one per line, optionally followed
+by at least one whitespace character (space or tab), and other data.  There can be no leading
+whitespace before the SMILES string on a line.  The optional whitespace character and data that
+follows it are not part of the SMILES specification, and interpretation of this data is up to
+applications that use the SMILES file.  Each line of the file is terminated by either a singe LF
+character, or by a CR/LF pair of characters (commonly called the "Unix" and "Windows" line
+terminators, respectively).  A SMILES parser must accept either line terminator.  A blank line in
+the SMILES file, or a line that begins with a whitespace character, should be completely ignored by
+a SMILES parser.
+
+[[nonstandard]]
+
+== Nonstandard Forms of SMILES
+
+Several SMILES-generating systems are in use that either generate
+incorrect SMILES, or that interpreted some of the ambiguous features of the
+original SMILES specification in different ways.  Although these SMILES are
+illegal according to this formal OpenSMILES specification, it is often useful to
+parse them, in order to make use of the information that accompanies these
+SMILES.
+
+These "relaxed" SMILES rules should only be allowed when the user
+(presumably after thinking about the consequences) requests it.  A SMILES
+parser that allows any or all of these "relaxed" rules _must
+not do it by default_.  The user must specifically request these relaxed
+rules before a parser can accept such SMILES.
+
+The following table lists "relaxed" rules that SMILES parsers may
+accept.
+
+[options="header",frame="topbot",grid="rows",width="100%",cols="3,2,3,6"]
+|==========================================================================================
+| Rule                 | Example         | Interpreted as ...    | Details
+.3+| Extra parentheses | `C((C))O` | `C(C)O` .3+| Extra parentheses are ignored in places where there is no ambiguity as to the meaning.  Note that the form `(CO)N` is never allowed, since it isn't clear which atom the nitrogen should connect to.
+|                        `C((C))O` | `C(C)O`
+|                        `(N1CCCC1)` | `N1CCCCC1`
+.3+| Misplaced dots | `[Na+]..[Cl-]` | `[Na+].[Cl-]` .3+| Two or more dot-bonds in a row are condensed into one.  A leading or trailing dot-bond is ignored.  Note that a dot that starts a branch is _legal_ in strict SMILES; for example, `C1CC(.[Na+])CC1[O-]` is a legal (though strange) SMILES.
+|                     `.CCO` | `CCO`
+|                     `CCO.` | `CCO`
+| Mismatched Ring Bonds | `C1CCC` | `CCCC` | Mismatched ring bonds are ignored.  Note that this is almost always a bad idea.  For example, `C1CCCCC2` is almost certainly supposed to be cyclohexane `C1CCCCC1`, but with "relaxed" parsing would be interpreted as hexane.
+.3+| Invalid Cis/Trans specification | `C/C=C` | `CC=C` .3+| Mismatched or incomplete cis/trans bonds are ignored.
+|                                      `C/C=CC` | `CC=CC`
+|                                      `CC/=C/C` | `CC=CC`
+| Conflicting cis/trans specification | `C/C(\F)=C/C` | `CC(F)=CC` | Conflicting cis/trans bonds are ignored. (In this case, both the methyl and fluorine on the left are shown as _trans_ to the methyl on the right, an impossible configuration.)
+.2+| D and T | `D[CH3]` | `[2H][CH3]` .2+| The symbols `D` and `T` are treated as synonyms for `[2H]` and `[3H]`.
+|              `T[CH3]` | `[3H][CH3]`
+.2+| Lowercase as sp^2^ | `CccccC` | `CC=CC=CC` 2,4-hexadiene .2+| Lowercase letters are interpreted as sp^2^, even outside of ring systems.
+|                         `Ccc` | `CC=C` propene
+|==========================================================================================
+
+== SMILES Flavors
+
+It is an unfortunately common misconception that a Canonical SMILES does not
+contain stereochemistry (http://www.mdpi.com/1420-3049/22/12/2075/htm[Minkiewicz et al. 2017]) or alternatively that all SMILES must be canonical (http://pubs.acs.org/doi/abs/10.1021/ci800135h[Sykora and Leahy, 2008]). SMILES flavors as described by Daylight are summarised below.
+
+[options="header",frame="topbot",grid="rows",cols="6,3,3,3"]
+|===============================================================
+| Flavor           | Atoms and Bonds Distinctly Ordered | Stereochemistry | Isotopes
+| Canonical SMILES | Y    | Y/N             | Y/N
+| Arbitrary SMILES | N    | Y/N             | Y/N
+| Isomeric SMILES  | Y/N  | Y               | Y
+| Unique SMILES    | Y    | N               | N
+| Absolute SMILES  | Y    | Y               | Y
+| Generic SMILES   | N    | N               | N
+|===============================================================
+
+These terms can be confusing and *should be avoided* due to conflicting definitions between vendors and toolkits. For example ChemAxon use the term *Isomeric SMILES* to mean a non-canonical SMILES with stereochemistry and isotopic information specified (see https://docs.chemaxon.com/display/docs/SMILES[SMILES, ChemAxon Documentation]). OEChem use the term *Isomeric SMILES* to mean a canonical SMILES with stereochemistry and isotopic information specified (see https://docs.eyesopen.com/toolkits/cpp/oechemtk/OEChemFunctions/OECreateIsoSmiString.html[+OECreateIsoSmiString+]), *Absolute SMILES* to mean a non-canonical SMILES with stereochemistry and isotopic information specified (see https://docs.eyesopen.com/toolkits/cpp/oechemtk/OEChemFunctions/OECreateAbsSmiString.html[+OECreateAbsSmiString+]), and *Canonical SMILES* to mean a canonical SMILES *without* stereochemistry and isotopic information specified (see https://docs.eyesopen.com/toolkits/cpp/oechemtk/OEChemFunctions/OECreateCanSmiString.html[+OECreateCanSmiString+]).
+
+In general the properties encoded in a SMILES can be chosen by a program to suit a particular purpose. You may have the option to independently include or omit stereochemistry, isotopes, or atom map/class in a generated SMILES. When referencing a particular SMILES flavor confusion can be avoided by including the toolkit, version, and options used.
+
+== Proposed Extensions
+
+=== External R-Groups
+
+Daylight proposed, and OpenEye actually implemented, an extension that
+specifies bonds to external R-groups.  An external R-group is specified
+using ampersand `'&'` followed by a ring-closure specification (either a
+digit, or `'%'` and two digits).  However, unlike ring-closures, the bond is to
+an external, unspecified R-group.  Example: `n1c(&1)c(&2)cccc1` - 2,3-substituted pyridine.
+
+=== Polymers and Crystals
+
+Daylight (Weininger) proposed, but never implemented, an extension for crystals and
+polymers.  Daylight also used the ampersand `'&'` character, (which may
+conflict with the R-group proposal, above), but with the added rule that
+if a number appears more than once, it creates a repeating unit.
+
+[options="header",frame="topbot",grid="rows",width="40%"]
+|==============================
+| SMILES          | Name
+| `c1ccccc1C&1&1` | polystyrene
+| `C&1&1&1&1`     | diamond
+| `c&1&1&1`       | graphite
+|==============================
+
+=== Atom-based Double Bond Configuration
+
+The directional `'/'` and `'\'` marks for cis/trans bonds seem simple on
+the surface but are problematic for complex systems. The issue is that
+in conjugated systems one directional bond _can_ be used in defining the
+configuration of two double bonds. When assigning the directional bonds the
+existing labels must be considered or rewritten.  In a long series of
+conjugated double bonds, changing the configuration of one bond can require
+rewriting dozens of bond symbols.
+
+More importantly, there is a theoretical flaw with the use of `'/'` and
+`'\'`.  It is possible to write valid SMILES for the molecule
+http://en.wikipedia.org/wiki/Cyclooctatetraene[cyclooctatetraene] by alternating
+directional assignments for the cis configurations. However, as shown below attempting
+to change one configuration is not possible. Reassigning the directional labels for
+adjacent double bonds will not work as it reassignment propagates around the ring
+and the conflict is not resolved.
+
+Including directional labels to explicit hydrogen atoms is a possible resolution but
+does not follow standard-form and complicates the assignment procedure.
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|=====================================================================================
+| Depiction                            | SMILES                | Comment
+| image:depict/cyclooctatetraene.gif[] | `C/1=C/C=C\C=C/C=C\1` | cyclooctatetraene
+| Todo								   | `C/1=C/C=C/C=C/C=C\1` | one bond changes two configurations
+|=====================================================================================
+
+The proposed syntax for double bond configurations uses the `'@'` and `'@@'` atom-based
+specification. For example:
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|=======================================================================================
+| Depiction                                  | SMILES              | Name
+.2+| image:depict/trans-difluoroethene.gif[] | `F[C@@H]=[C@H]F` .2+| trans-difluoroethene
+|                                              `F[C@H]=[C@@H]F`
+.2+| image:depict/cis-difluoroethene.gif[]   | `F[C@H]=[C@H]F`  .2+| cis-difluoroethene
+|                                              `F[C@@H]=[C@@H]F`
+|=======================================================================================
+
+
+Interpretation of `'@'` and `'@@'` follows the tetrahedral convention:
+The atoms, as encountered in the SMILES string, are either in anticlockwise
+`'@'` or clockwise `'@@'` order as viewed on the page.  Since cis/trans
+configurations are planar, they can also be "viewed from underneath the
+page", which results in the two valid SMILES shown for each compound,
+above.
+
+As with the other atom-bases specifications one must consider the relative
+position of implicit atoms. It is not always true that a trans form has
+opposite "clock-ness" (`'@'`,`'@@'` or `'@@'`,`'@'`), and the cis form
+has the same "clock-ness" (`'@'`,`'@'` or `'@@'`,`'@@'`).
+
+[options="header",frame="topbot",grid="rows",width="90%"]
+|=======================================================================================
+| Depiction                                  | SMILES              | Name
+.2+| image:depict/trans-difluoroethene.gif[] | `F[C@@H]=[C@H]F` .2+| trans-difluoroethene
+|                                              `[C@H](F)=[C@H]F`
+.2+| image:depict/cis-difluoroethene.gif[]   | `F[C@H]=[C@H]F`  .2+| cis-difluoroethene
+|                                              `[C@@H](F)=[C@H]F`
+|=======================================================================================
+
+Atom-based `'@'` and `'@@'` for the stereo-specification of double bonds does not
+suffer from the theoretical flaw illustrated with cyclooctatetraene. The assignments
+are not-shared and adjacent configurations do not need to be considered. This is more
+flexible and and simplifies generation of canonical SMILES.
+
+[options="header",frame="topbot",grid="rows",width="100%",cols="1,4,1"]
+|===================================================================================================================
+| Depiction                            | SMILES                                                  | Name
+| image:depict/cyclooctatetraene.gif[] | `[C@H]1=[C@@H][C@@H]=[C@@H][C@@H]=[C@@H][C@@H]=[C@@H]1` | cyclooctatetraene
+|===================================================================================================================
+
+Note that the first stereo-specification carbon must be represented as `'@'` since the
+`'1'` follows the `H`, whereas the rest of the carbons use `'@@'` to characterize the
+cis configuration of each bond.  Since this is a specification on the atom, rather than
+the single bond, no conflict arises at the ring-closure bond.
+
+=== Radical
+
+_This section needs considerable work.  The following text is courtesy Chris Morley, who
+commented: "I guess the last paragraph doesn't look too good in a formal specification. There are
+two reasons for the frailty: lack of proof that the radical and aromatic uses can always be
+unambigous (I doubt anybody has tried); and a known deficiency in the parser."  However, it is a
+good starting point..._
+
+A single lowercase symbol is interpreted as a radical center. `CCc` is an alternative to `CC[CH2]` and
+is the 1-propyl radical; `CcC` or `C[CH]C` is the 2-propyl radical, `Co` is the methoxy radical. An odd
+number of adjacent lowercase symbols is a delocalized conjugated radical. So `Cccccc` is `CC=CC=C[CH2]`
+or `CC=C[CH]C=C` or `C[CH]C=CC=C` Lowercase `'c'` or `'n'` can be used in a ring: `C1cCCCC1` is the cyclohexyl
+radical.
+
+The use of the non-aromatic lowercase symbol is a shorted form with improved intelligibility that
+allows the use of implicit hydrogen in radicals. However it is intended only for simple unambiguous
+molecules and is not reliable when combined with aromatic atoms.
+
+=== Twisted SMILES
+
+An interesting extension that specifies conformational information via
+bond dihedral angles and bond lengths was proposed by McLeod and Peters:
+
+****
+http://www.daylight.com/meetings/mug03/McLeod/MUG03McLeodPeters.pdf[http://www.daylight.com/meetings/mug03/McLeod/MUG03McLeodPeters.pdf]
+****
+
+[[appendix]]
+
+== APPENDIX 1: References and Citations
+
+=== Groups
+
+*Blue Obelisk*
+
+http://blueobelisk.sourceforge.net/[http://blueobelisk.sourceforge.net/]
+
+=== Documentation
+
+*Daylight*
+
+http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html[http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html]
+
+The most-referenced definition of SMILES on the web.
+
+http://www.daylight.com/meetings/mug01/Sayle/m4xbondage.html[http://www.daylight.com/meetings/mug01/Sayle/m4xbondage.html]
+
+Article by Roger Sayle about converting PDB files to SMILES with thorough treatment of aromaticity.
+
+*OpenEye*
+
+http://www.eyesopen.com/docs/html/pyprog/TheSMILESLineNotation.html[http://www.eyesopen.com/docs/html/pyprog/TheSMILESLineNotation.html]
+
+http://www.eyesopen.com/docs/html/pyprog/DaylightSMILES.html[http://www.eyesopen.com/docs/html/pyprog/DaylightSMILES.html]
+
+*OpenBabel*
+
+http://openbabel.sourceforge.net/wiki/Radicals_and_SMILES_extensions[http://openbabel.sourceforge.net/wiki/Radicals_and_SMILES_extensions]
+
+http://openbabel.sourceforge.net/wiki/SMILES[http://openbabel.sourceforge.net/wiki/SMILES]
+
+*Wikipedia*
+
+http://en.wikipedia.org/wiki/Simplified_molecular_input_line_entry_specification[http://en.wikipedia.org/wiki/Simplified_molecular_input_line_entry_specification]
+
+Toolkits
+~~~~~~~~
+
+*OpenBabel*
+
+http://openbabel.sourceforge.net/wiki/Main_Page[http://openbabel.sourceforge.net/wiki/Main_Page]
+
+*The Chemistry Development Kit*
+
+http://cdk.sourceforge.net/[http://cdk.sourceforge.net/]
+
+*Marvin*
+
+http://www.chemaxon.com/marvin/doc/user/smiles-doc.html[http://www.chemaxon.com/marvin/doc/user/smiles-doc.html]
+
+*RDKit*
+
+http://www.rdkit.org/[http://www.rdkit.org/]
+
+*Frowns*
+
+http://frowns.sourceforge.net/frowns.html[http://frowns.sourceforge.net/frowns.html]
+
+*PerlMol.org*
+
+http://search.cpan.org/\~itub/Chemistry-File-SMILES-0.45/SMILES.pm[http://search.cpan.org/\~itub/Chemistry-File-SMILES-0.45/SMILES.pm]
+
+*InChI*
+
+http://www.iupac.org/inchi/[http://www.iupac.org/inchi/]
+
+http://inchi.info/[http://inchi.info/]
+
+http://en.wikipedia.org/wiki/International_Chemical_Identifier[http://en.wikipedia.org/wiki/International_Chemical_Identifier]
+
+=== Some Key Scientific Papers
+
+* David Weininger, SMILES, a Chemical Language and Information System. 1. Introduction to Methodology and Encoding Rules,
+Journal of Chemical Information and Computer Sciences, 1988, 28:31-36.
+
+* David Weininger, Arthur Weininger, and Joseph L Weininger,
+SMILES 2. Algorithm for Generation of Unique SMILES Notation
+Journal of Chemical Information and Computer Sciences, 1989, 29:97-101.
+
+* Morgan's original canonicalization paper: Morgan, H.L. J.Chem.Doc. 1965, 5, 107
+
+* G.M. Downs et al, Review of Ring Perception Algorithms for Chemical Graphs, J. Chem. Inf. Comput. Cci. 1989, 29, 172-187
+
+* R.Balducci and R, Pearlman, Novel Algorithms for the Rapid Perception of a Unique Optimal Set of Rings, J. Am. Chem. Soc. (date?)
+
+=== Molecule Editors that can produce SMILES
+
+* JME
+* CACTVS
+* ISISDraw?
+* ChemDraw
+* ACD/ChemSketch
+* http://www.chemaxon.com/product/msketch.html[MarvinSketch]
+
+== Revision History
+
+[[revhist]]
+
+=== OpenSMILES Specification Document
+[options="header",frame="topbot",grid="rows",cols="1,1,4,2"]
+|======================
+| Revision | Date | Description | Name
+| 1.0 | 2007-11-13 | Draft | Craig A. James
+| 1.0 | 2012-09-29 | Reformatting | Tim Vandermeersch
+| 1.0 | 2012-09-29 | Corrections | Andrew Dalke & Tim Vandermeersch
+| 1.0 | 2012-11-17 | SP, TB and OH stereochemistry | Tim Vandermeersch
+| 1.0 | 2013-09-06 | Corrections | Richard Apodaca
+| 1.0 | 2013-09-17 | Corrections | John May
+|======================
+
+* link:https://github.com/timvdm/OpenSMILES/blob/master/ChangeLog[ChangeLog (OpenSMILES)]
+* link:https://github.com/timvdm/OpenSMILES/blob/master/discussion_summary.txt[Discussion Summary (OpenSMILES)]
+
+=== IUPAC SMILES+ Specification Document
+[options="header",frame="topbot",grid="rows",cols="1,1,4,2"]
+|======================
+| Revision | Date | Description | Name
+| 1.0 | 2019-04-15 | Fixed asciidoc formatting and created derivative of OpenSMILES Document, IUPAC SMILES+ Specification Working Draft   | Vincent F. Scalfani
+|======================
+
+Add ChangeLog (IUPAC SMILES+)
+Add Discussion notes
