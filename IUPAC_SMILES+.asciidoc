@@ -3,7 +3,7 @@
 
 *IUPAC SMILES+ Contributors:* Vincent F. Scalfani (Chair), Evan Bolton, Helen Cooke, Chris Grulke, John Irwin, Oliver Koepler, Gregory Landrum, José L. Medina-Franco, Miguel Quirós Olozábal, Susan Richardson, and Issaku Yamada.
 
-v1.0,2019-04-15: Working Draft                                   +
+v0.1,2019-04-15: Working Draft                                   +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
 Copyright &copy; 2019, XXXXXXX    +
 Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]     +
