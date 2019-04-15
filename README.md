@@ -1,2 +1,2 @@
-# IUPAC_SMILES_plus
+# IUPAC SMILES +
 IUPAC SMILES+ Specification
