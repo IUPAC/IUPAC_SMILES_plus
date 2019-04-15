@@ -1,4 +1,5 @@
 = IUPAC SMILES+ Specification [working draft]
+:toc: macro
 
 v1.0,2019-04-15: Working Draft                                   +
 
@@ -22,7 +23,7 @@ Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documen
 *OpenSMILES Contributors:* Richard Apodaca, Noel O'Boyle, Andrew Dalke, John van Drie, Peter Ertl,
 Geoff Hutchison, Craig A. James, Greg Landrum, Chris Morley, Egon Willighagen, Hans De Winter, Tim Vandermeersch, John May
 
-:toc:
+toc::[]
 :toclevels: 5
 :sectnums:
 
