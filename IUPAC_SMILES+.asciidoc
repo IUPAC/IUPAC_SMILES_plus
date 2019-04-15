@@ -1,7 +1,4 @@
 = IUPAC SMILES+ Specification [working draft]
-:toc:
-:toclevels: 5
-:sectnums:
 
 v1.0,2019-04-15: Working Draft                                   +
 
@@ -24,6 +21,11 @@ Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documen
 
 *OpenSMILES Contributors:* Richard Apodaca, Noel O'Boyle, Andrew Dalke, John van Drie, Peter Ertl,
 Geoff Hutchison, Craig A. James, Greg Landrum, Chris Morley, Egon Willighagen, Hans De Winter, Tim Vandermeersch, John May
+
+:toc:
+:toclevels: 5
+:sectnums:
+
 
 == Introduction
 
@@ -1649,5 +1651,6 @@ Journal of Chemical Information and Computer Sciences, 1989, 29:97-101.
 | 1.0 | 2019-04-15 | Fixed asciidoc formatting and created derivative of OpenSMILES Document, IUPAC SMILES+ Specification Working Draft   | Vincent F. Scalfani
 |======================
 
-Add ChangeLog (IUPAC SMILES+)
-Add Discussion notes
+* link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
+
+* link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/DiscussionNotes_IUPAC_SMILES%2B.txt[IUPAC Project Discussion Summary and Notes (IUPAC SMILES+)]
