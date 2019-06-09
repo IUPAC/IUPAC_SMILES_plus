@@ -47,7 +47,7 @@ Open Babel implements the OpenSMILES specification.
 http://openbabel.org/docs/current/Features/Radicals.html[Open Babel v2.3.1 Radicals and SMILES extensions]
 
 Open Babel supports two SMILES radical extensions: (1) radicals can be interpreted
-without defining hydrogens explicitly (e.g., `C[O.]` or `C[O]` to describe methoxy radical CH~3~O),
+without defining hydrogens explicitly (e.g., `C[O.]` or `C[O]` for a methoxy radical CH~3~O),
 and (2) radical centers can be interpreted with lowercase atomic symbols (e.g., ethyl radical is `Cc`)
 
 There is also support for conjugated carbon chains by interpreting multiple
