@@ -1,1 +1,38 @@
-= Cheminformatics Toolkit SMILES Documention Bibliography
+= Cheminformatics Toolkit SMILES Documentation Bibliography
+
+This document is an annotated bibliography with links to current cheminformatics
+toolkit documentation on SMILES and SMILES extensions.
+
+toc::[]
+:toclevels: 5
+:sectnums:
+
+== Avalon
+
+== BIOVIADraw
+
+== CACTVS
+
+== CDK
+
+== ChemAxon
+
+== ChemDoodle
+
+== ChemDraw
+
+== KnowItAll
+
+== Indigo
+
+== OEChem
+
+== Open Babel
+
+=== SMILES
+
+=== Extensions
+
+=== Notes
+
+== RDKit
