@@ -1,7 +1,12 @@
 = Cheminformatics Toolkit SMILES Documentation Bibliography
+:toc: macro
 
 This document is an annotated bibliography with links to current cheminformatics
 toolkit documentation on SMILES and SMILES extensions.
+
+v0.1, 2019-06-09                                +
+https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
+
 
 toc::[]
 :toclevels: 5
@@ -31,8 +36,34 @@ toc::[]
 
 === SMILES
 
+http://openbabel.org/docs/current/FileFormats/SMILES_format.html[Open Babel v2.3.1 SMILES Format]
+
+Open Babel implements the OpenSMILES specification.
+
 === Extensions
 
-=== Notes
+==== Radicals and Conjugated Chains
+
+http://openbabel.org/docs/current/Features/Radicals.html[Open Babel v2.3.1 Radicals and SMILES extensions]
+
+Open Babel supports two SMILES radical extensions: (1) radicals can be interpreted
+without defining hydrogens explicitly (e.g., `C[O.]` or `C[O]` to describe methoxy radical CH~3~O),
+and (2) radical centers can be interpreted with lowercase atomic symbols (e.g., ethyl radical is `Cc`)
+
+There is also support for conjugated carbon chains by interpreting multiple
+sequential lower case c without out a ring closure (e.g., `cccc` as conjugated carbon chains.
+
+==== SMARTS
+
+https://openbabel.org/wiki/SMARTS[Open Babel SMARTS]
+
+Open Babel supports Daylight SMARTS with an additional extension to match atom
+hybridization with a `^` symbol (e.g., sp^3^ carbon hybridization, `[#6^3]`).
+
+There are several known limitations to the SMARTS support in Open Babel such as
+no support for cis/trans stereochemistry and component level grouping.
+
 
 == RDKit
+
+== Other?
