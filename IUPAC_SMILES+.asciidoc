@@ -5,7 +5,7 @@
 
 v0.1,2019-04-15: Working Draft                                   +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
-Copyright &copy; 2019, XXXXXXX    +
+Copyright &copy; 2019, IUPAC    +
 Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]     +
 
 This IUPAC SMILES+ Specification [working draft] document is a modified derivative
