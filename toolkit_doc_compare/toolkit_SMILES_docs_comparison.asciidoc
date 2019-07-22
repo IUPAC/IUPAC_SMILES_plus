@@ -43,7 +43,14 @@ Open Babel implements the OpenSMILES specification.
 
 === Aromaticity
 
-test add info here. 
+https://open-babel.readthedocs.io/en/latest/Aromaticity/Aromaticity.html[Open Babel v3.0.0rc1 Handling of Aromaticity]
+
+One aromaticity model is supported in Open Babel, which is described as similar to
+the Daylight aromaticity model. This model was discussed at the 254th ACS Meeting:
+https://www.slideshare.net/baoilleach/we-need-to-talk-about-kekulization-aromaticity-and-smiles[We need to talk about...Kekulization, Aromaticity, and SMILES by N.M. O'Boyle and J.W. Mayfield]
+
+Aromaticity in the original SMILES input can also be maintained with the `-aa` read option. 
+
 
 === Extensions
 
