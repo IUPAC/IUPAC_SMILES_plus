@@ -31,6 +31,17 @@ We could not find any public documentation describing the BIOVIA Draw Toolkit SM
 
 https://www.xemistry.de/docs/html/tcl_reference-49.htm#635324256_pgfId-624130[CACTVS Toolkit: SMILES and SMARTS Dialects]
 
+The CACTVS toolkit implements and supports Daylight SMILES, including reaction SMILES.
+
+=== Aromaticity
+
+https://www.xemistry.de/docs/cactvs_full.pdf[CACTVS Tcl Scripting Introduction]
+
+The CACTVS aromaticity model is described as more selective than the Daylight toolkit interpretation.
+(e.g., rings with exocyclic keto groups are aromatic with Daylight, but not CACTVS). However, there is
+a daylight aromaticity model available as an option for substructure matching.
+
+
 == CDK
 
 == ChemAxon
