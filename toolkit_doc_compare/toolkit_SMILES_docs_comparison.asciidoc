@@ -1,8 +1,9 @@
-= Cheminformatics Toolkit SMILES Documentation Bibliography
+= Cheminformatics Toolkit SMILES Documentation Support Comparison
 :toc: macro
 
-This document is an annotated bibliography with links to current cheminformatics
-toolkit documentation on SMILES and SMILES extensions.
+This document provides information about SMILES compatibility between toolkits
+based on their documentation (e.g., supported extensions, aromaticity models, etc.).
+
 
 v0.1, 2019-06-09                                +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
@@ -39,6 +40,10 @@ toc::[]
 http://openbabel.org/docs/current/FileFormats/SMILES_format.html[Open Babel v2.3.1 SMILES Format]
 
 Open Babel implements the OpenSMILES specification.
+
+=== Aromaticity
+
+test add info here. 
 
 === Extensions
 
