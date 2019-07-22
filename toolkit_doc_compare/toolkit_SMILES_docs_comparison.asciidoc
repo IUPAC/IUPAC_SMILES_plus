@@ -2,12 +2,12 @@
 :toc: macro
 
 This document provides information about SMILES compatibility between toolkits
-based on their documentation (e.g., supported extensions, aromaticity models, etc.).
-
+based on their documentation focusing on SMILES, aromaticity models, and SMILES extensions.
+A comparison of SMILES reaction extensions and transform queries (e.g., SMIRKS) is outside the scope of this
+document.
 
 v0.1, 2019-06-09                                +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
-
 
 toc::[]
 :toclevels: 5
@@ -15,9 +15,21 @@ toc::[]
 
 == Avalon
 
-== BIOVIADraw
+https://sourceforge.net/p/avalontoolkit/wiki/Home/[Avalon Cheminformatics Toolkit]
+
+We could not find any public documentation describing the Avalon Cheminformatics Toolkit SMILES parsing/compatibility behavior.
+
+== BIOVIA Draw
+
+https://www.3dsbiovia.com/products/collaborative-science/biovia-draw/[BIOVIA Draw]
+
+We could not find any public documentation describing the BIOVIA Draw Toolkit SMILES parsing/compatibility behavior.
 
 == CACTVS
+
+=== SMILES
+
+https://www.xemistry.de/docs/html/tcl_reference-49.htm#635324256_pgfId-624130[CACTVS Toolkit: SMILES and SMARTS Dialects]
 
 == CDK
 
@@ -39,7 +51,8 @@ toc::[]
 
 http://openbabel.org/docs/current/FileFormats/SMILES_format.html[Open Babel v2.3.1 SMILES Format]
 
-Open Babel implements the OpenSMILES specification.
+Open Babel implements the OpenSMILES specification. Open Babel also supports reading and writing of reaction SMILES (.rsmi):
+http://openbabel.org/docs/current/FileFormats/Reaction_Formats.html[Open Babel Reaction Formats]
 
 === Aromaticity
 
@@ -49,8 +62,7 @@ One aromaticity model is supported in Open Babel, which is described as similar 
 the Daylight aromaticity model. This model was discussed at the 254th ACS Meeting:
 https://www.slideshare.net/baoilleach/we-need-to-talk-about-kekulization-aromaticity-and-smiles[We need to talk about...Kekulization, Aromaticity, and SMILES by N.M. O'Boyle and J.W. Mayfield]
 
-Aromaticity in the original SMILES input can also be maintained with the `-aa` read option. 
-
+Aromaticity in the original SMILES input can also be maintained with the `-aa` read option.
 
 === Extensions
 
@@ -75,7 +87,4 @@ hybridization with a `^` symbol (e.g., sp^3^ carbon hybridization, `[#6^3]`).
 There are several known limitations to the SMARTS support in Open Babel such as
 no support for cis/trans stereochemistry and component level grouping.
 
-
 == RDKit
-
-== Other?
