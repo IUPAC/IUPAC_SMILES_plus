@@ -60,8 +60,38 @@ extended SMARTS (e.g., `/IWfss` for matching number of SSSR rings).
 There is also an option to specify the Daylight SMILES release number to use for encoding/decoding
 SMARTS (e.g., Daylight v. 4.9)
 
+== CDK v2.0
 
-== CDK
+=== SMILES
+
+https://jcheminf.biomedcentral.com/track/pdf/10.1186/s13321-017-0220-4[Willighagen et al. J Cheminform (2017) 9:33; DOI 10.1186/s13321-017-0220-4]
+
+The CDK v2.0 toolkit supports http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesGenerator.html[Daylight] and OpenSMILES.
+Unsupported features in the http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesParser.html[SmilesParser]
+include higher order stereochemistry (square planar, trigonal Bipyramidal, and octahedral), in addition to
+variable order of bracket atom attributes and atom class indication.
+
+=== Aromaticity
+
+http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/aromaticity/Aromaticity.html[CDK Class Aromaticity]
+
+There are several aromaticity models supported in CDK 2.0 that allow users to configure the model with a specific
+http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/aromaticity/ElectronDonation.html[electron donation model]
+(CDK model, CDK model allowing exocyclic contributions, pi bond model, and a variant close to Daylight)
+and http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/graph/CycleFinder.html[cycle finder] method.
+
+=== Extensions
+
+==== CXSMILES
+
+http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmiFlavor.html[CDK Class SmiFlavor]
+
+CDK v2.0 supports ChemAxon Extended SMILES
+
+==== SMARTS
+
+http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smarts/Smarts.html[CDK Class Smarts]
+Daylight SMARTS are supported as well as other extensions from CACTVS, MOE, and OEChem.
 
 == ChemAxon
 
