@@ -66,7 +66,9 @@ SMARTS (e.g., Daylight v. 4.9)
 
 https://jcheminf.biomedcentral.com/track/pdf/10.1186/s13321-017-0220-4[Willighagen et al. J Cheminform (2017) 9:33; DOI 10.1186/s13321-017-0220-4]
 
-The CDK v2.0 toolkit supports http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesGenerator.html[Daylight] and OpenSMILES.
+http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesGenerator.html[CDK Class SmilesGenerator]
+
+The CDK v2.0 toolkit supports Daylight and OpenSMILES.
 Unsupported features in the http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesParser.html[SmilesParser]
 include higher order stereochemistry (square planar, trigonal Bipyramidal, and octahedral), in addition to
 variable order of bracket atom attributes and atom class indication.
@@ -91,9 +93,23 @@ CDK v2.0 supports ChemAxon Extended SMILES
 ==== SMARTS
 
 http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smarts/Smarts.html[CDK Class Smarts]
+
 Daylight SMARTS are supported as well as other extensions from CACTVS, MOE, and OEChem.
 
 == ChemAxon
+
+=== SMILES
+
+=== Aromaticity
+
+=== Extensions
+
+==== CXSMILES
+
+==== SMARTS
+
+
+
 
 == ChemDoodle
 
