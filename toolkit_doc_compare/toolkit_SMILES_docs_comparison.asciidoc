@@ -31,7 +31,8 @@ We could not find any public documentation describing the BIOVIA Draw Toolkit SM
 
 https://www.xemistry.de/docs/html/tcl_reference-49.htm#635324256_pgfId-624130[CACTVS Toolkit: SMILES and SMARTS Dialects]
 
-The CACTVS toolkit implements and supports Daylight SMILES, including reaction SMILES.
+The CACTVS toolkit implements and supports Daylight SMILES, including reaction SMILES. Higher order stereochemistry
+including octahedral and bi-pyramidal structures can be read and written.
 
 === Aromaticity
 
@@ -40,6 +41,24 @@ https://www.xemistry.de/docs/cactvs_full.pdf[CACTVS Tcl Scripting Introduction]
 The CACTVS aromaticity model is described as more selective than the Daylight toolkit interpretation.
 (e.g., rings with exocyclic keto groups are aromatic with Daylight, but not CACTVS). However, there is
 a daylight aromaticity model available as an option for substructure matching.
+
+=== Extensions
+
+==== SMARTS
+
+https://www.xemistry.de/docs/html/tcl_reference-49.htm#635324256_pgfId-624130[CACTVS Toolkit: SMILES and SMARTS Dialects]
+
+The CACTVS toolkit supports Daylight SMARTS with the exception of higher order stereochemistry (e.g., octahedral
+and bi-pyramidal substructure matching). The default CACTVS
+SMARTS matching is less selective than Daylight, however there is an option for
+strict interpretation to more closely align with the Daylight SMARTS matching.
+
+Numerous SMARTS extensions are supported such as attribute ranges (e.g., `[X{2-3}]`), match counts,
+additional atom attributes (e.g., `X` without number for heteroatom matching), and most Eli Lilly
+extended SMARTS (e.g., `/IWfss` for matching number of SSSR rings).
+
+There is also an option to specify the Daylight SMILES release number to use for encoding/decoding
+SMARTS (e.g., Daylight v. 4.9)
 
 
 == CDK
