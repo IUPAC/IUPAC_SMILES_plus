@@ -68,7 +68,7 @@ https://jcheminf.biomedcentral.com/track/pdf/10.1186/s13321-017-0220-4[Willighag
 
 http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesGenerator.html[CDK Class SmilesGenerator]
 
-The CDK v2.0 toolkit supports Daylight and OpenSMILES.
+The CDK v2.0 toolkit supports Daylight SMILES, OpenSMILES, and reaction SMILES.
 Unsupported features in the http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesParser.html[SmilesParser]
 include higher order stereochemistry (square planar, trigonal Bipyramidal, and octahedral), in addition to
 variable order of bracket atom attributes and atom class indication.
