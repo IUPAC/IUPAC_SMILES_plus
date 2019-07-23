@@ -2,8 +2,17 @@
 :toc: macro
 
 This document provides information about SMILES compatibility between toolkits
-based on their documentation focusing on SMILES, aromaticity models, and SMILES extensions.
-A comparison of SMILES reaction extensions and transform queries (e.g., SMIRKS) is outside the scope of this
+based on their documentation focusing on SMILES, aromaticity models, and SMILES extensions. Of course, in practice,
+individual compatibility of toolkits cannot be assessed by documentation alone (e.g., two different
+aromaticity models may have identical behavior depending on the input SMILES. Despite these limitations, we have found this
+a useful exercise to "survey" current toolkit SMILES documentation and compile our findings and links to toolkit documentation pages for reference.
+
+*Two important notes:*
+
+1. We have endeavored to provide accurate information about cheminformatics toolkit SMILES support, aromaticity models, and extensions.
+If we have inferred something incorrectly from the available documentation, please let us know and we will fix it immediately.
+
+2. A comparison of SMILES reaction extensions and transform queries (e.g., SMIRKS) is outside the scope of this
 document.
 
 v0.1, 2019-06-09                                +
@@ -100,15 +109,33 @@ Daylight SMARTS are supported as well as other extensions from CACTVS, MOE, and 
 
 === SMILES
 
+https://docs.chemaxon.com/display/docs/SMILES[ChemAxon Documentation SMILES]
+
+ChemAxon Marvin implements a custom specification of SMILES, which has a few noted differences compared to Daylight (from what we can infer) such as
+the `[Z]` symbol supported for R-group attachments, and addition of radicals stored in CXSMILES (see below) upon import for certain atoms when
+implicit hydrogens can not be added. Reaction SMILES are supported. Higher level stereochemistry is not supported in SMILES parsing including
+allene like, square planar, trigonal-bipyramidal, and octahedral. In addition, branching is not supported in cases where there is no atom preceding the branch.
+
 === Aromaticity
+
+https://docs.chemaxon.com/display/docs/Methods[ChemAxon Documentation Methods]
+
+ChemAxon Marvin supports four aromaticity models including a basic aromaticity model, general aromaticity detection (incorporates mesomeric and tautomeric rearrangement,
+similar to Daylight), loose aromaticity detection, and ambiguous aromaticity detection.
 
 === Extensions
 
-==== CXSMILES
-
 ==== SMARTS
 
+https://docs.chemaxon.com/display/docs/SMARTS[ChemAxon Documentation SMARTS]
+Daylight SMARTS are supported with some noted limitations to edit SMARTS in the Marvin GUI interface, however evaluation of the query works.
 
+==== CXSMILES and CXSMARTS
+
+https://docs.chemaxon.com/display/docs/ChemAxon+Extended+SMILES+and+SMARTS+-+CXSMILES+and+CXSMARTS[ChemAxon Extended SMILES and SMARTS]
+
+ChemAxon has developed many feature extensions for SMILES and SMARTS that store information after the SMILES string. Some of the
+features include denoting information about atom properties, pseudo atoms, R-groups, enhanced stereochemistry, polymer groups, and more.
 
 
 == ChemDoodle
