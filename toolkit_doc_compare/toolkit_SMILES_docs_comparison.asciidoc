@@ -15,7 +15,13 @@ If we have inferred something incorrectly from the available documentation, plea
 2. A comparison of SMILES reaction extensions and transform queries (e.g., SMIRKS) is outside the scope of this
 document.
 
-v0.1, 2019-06-09                                +
+*Summary Tables*
+
+SMILES Daylight and Open SMILES
+Aromaticity
+Extensions
+
+v0.1, 2019-07-25                                +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
 
 toc::[]
