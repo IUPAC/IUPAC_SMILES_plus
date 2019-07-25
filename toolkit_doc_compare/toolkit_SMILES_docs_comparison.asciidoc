@@ -140,7 +140,33 @@ features include denoting information about atom properties, pseudo atoms, R-gro
 
 == ChemDoodle
 
+=== SMILES
+
+https://www.chemdoodle.com/downloads/ChemDoodleUserGuide.pdf[ChemDoodle v9.1 User Guide]
+
+ChemDoodle v9.1 supports Daylight and also follows recommendations in OpenSMILES. ChemDoodle supports custom
+atom/group abbreviations and allows the abbreviation to be expanded as SMILES.
+
+=== Aromaticity
+
+https://www.chemdoodle.com/downloads/ChemDoodleUserGuide.pdf[ChemDoodle v9.1 User Guide]
+
+ChemDoodle v9.1 supports one aromaticity model. The aromaticity model is based on the Hueckel method, where rings are assumed planar, and
+hybridized heteroatoms contribute.
+
+=== Extensions
+
+==== SMARTS
+
+https://www.chemdoodle.com/downloads/ChemDoodleUserGuide.pdf[ChemDoodle v9.1 User Guide]
+
+ChemDoodle v9.1 supports Daylight SMARTS. No limitations to syntax support is mentioned.
+
 == ChemDraw
+
+https://www.perkinelmer.com/category/chemdraw[Perkin Elmer ChemDraw]
+
+We could not find any public documentation describing the Perkin Elmer ChemDraw Toolkit SMILES parsing/compatibility behavior.
 
 == KnowItAll
 
