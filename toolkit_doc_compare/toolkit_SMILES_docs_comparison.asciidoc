@@ -187,12 +187,12 @@ and a generic model where external double bonds are allowed.
 
 === Extensions
 
-=== CXSMILES
+==== CXSMILES
 
 https://lifescience.opensource.epam.com/indigo/concepts/index.html[Indigo Toolkit Concepts: File Formats]
 ChemAxon Extended SMILES are supported in Indigo including radical numbers, stereogroups, pseudo atoms, and fragment grouping in reactions.
 
-=== CurlySMILES
+==== CurlySMILES
 
 https://lifescience.opensource.epam.com/indigo/concepts/index.html[Indigo Toolkit Concepts: File Formats]
 Indigo supports the CurlySMILES extensions for simple polymers and multiple groups.
