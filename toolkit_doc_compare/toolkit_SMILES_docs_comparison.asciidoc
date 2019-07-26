@@ -190,6 +190,7 @@ and higher level stereochemistry including square-planar, trigonal bipyramidal, 
 === Aromaticity
 
 https://lifescience.opensource.epam.com/indigo/options/aromaticity.html#aromaticity-model[Indigo Toolkit Options: Aromaticity Options]
+
 Indigo 1.3.0 beta supports two aromaticity models. A basic model where external double bonds for aromatic rings are not allowed,
 and a generic model where external double bonds are allowed.
 
@@ -198,6 +199,7 @@ and a generic model where external double bonds are allowed.
 ==== CXSMILES
 
 https://lifescience.opensource.epam.com/indigo/concepts/index.html[Indigo Toolkit Concepts: File Formats]
+
 ChemAxon Extended SMILES are supported in Indigo including radical numbers, stereogroups, pseudo atoms, and fragment grouping in reactions.
 
 ==== CurlySMILES
@@ -208,6 +210,7 @@ Indigo supports the CurlySMILES extensions for simple polymers and multiple grou
 ==== SMARTS
 
 https://lifescience.opensource.epam.com/indigo/concepts/index.html[Indigo Toolkit Concepts: File Formats]
+
 Daylight SMARTS are supported in Indigo. The only noted unsupported features are implicit hydrogen count and any features
 not supported in the SMILES parsing (see above).
 
@@ -231,6 +234,7 @@ OEChem 2.2.0 supports five different aromaticity models including a default Open
 ==== Quadruple Bonds
 
 https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OEChem Toolkit 2.2.0: SMILES Line Notation]
+
 Quadruple bonds are supported in OEChem with the `$` symbol.
 
 ==== Additional Atom Elements
@@ -311,7 +315,7 @@ no support for cis/trans stereochemistry and component level grouping.
 
 https://www.rdkit.org/docs/RDKit_Book.html#smiles-support-and-extensions[RDKit Book SMILES Support and Extensions]
 
-RDKit 2019.03.1 supports Daylight SMILES with no noted unsupported features.
+RDKit 2019.03.1 supports Daylight SMILES.
 
 === Aromaticity
 
@@ -319,7 +323,7 @@ https://www.rdkit.org/docs/RDKit_Book.html#aromaticity[RDKit Book Aromaticity]
 
 RDKit 2019.03.1 supports three aromaticity models: (1) the RDKit aromaticity model, which is based on Hueckel's rule and defined
 atom and environment electron contributions; (2) a simple aromaticity model, where only 5 and 6 membered rings are
-considered for aromaticity; and (3) the MDL aromaticity model. There is also an option for users to define their own aromaticity models. 
+considered for aromaticity; and (3) the MDL aromaticity model. There is also an option for users to define their own aromaticity models.
 
 
 
