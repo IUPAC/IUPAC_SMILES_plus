@@ -17,8 +17,10 @@ document.
 
 *Summary Tables*
 
-SMILES Daylight and Open SMILES
-Aromaticity
+SMILES Daylight and OpenSMILES
+
+Aromaticity Models
+
 Extensions
 
 v0.1, 2019-07-25                                +
@@ -68,7 +70,7 @@ and bi-pyramidal substructure matching). The default CACTVS
 SMARTS matching is less selective than Daylight, however there is an option for
 strict interpretation to more closely align with the Daylight SMARTS matching.
 
-Numerous SMARTS extensions are supported such as attribute ranges (e.g., `[X{2-3}]`), match counts,
+Numerous SMARTS extensions are supported such as attribute ranges (e.g., `[X{2-3}]`), `D` for deuterium, match counts,
 additional atom attributes (e.g., `X` without number for heteroatom matching), and most Eli Lilly
 extended SMARTS (e.g., `/IWfss` for matching number of SSSR rings).
 
@@ -211,6 +213,56 @@ not supported in the SMILES parsing (see above).
 
 == OEChem
 
+=== SMILES
+
+https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OEChem Toolkit 2.2.0: SMILES Line Notation]
+
+OEChem 2.2.0 support Daylight SMILES with a variety of noted differences and ambiguities where certain SMILES
+are either read or rejected. There is a strict mode or default relaxed mode to adjust the behavior of the SMILES parser.
+
+=== Aromaticity
+
+https://docs.eyesopen.com/toolkits/python/oechemtk/aromaticity.html[OEChem Toolkit 2.2.0: Aromaticity Perception]
+
+OEChem 2.2.0 supports five different aromaticity models including a default OpenEye model, Daylight, Tripos, MDL, and MMFF.
+
+=== Extensions
+
+==== Quadruple Bonds
+
+https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OEChem Toolkit 2.2.0: SMILES Line Notation]
+Quadruple bonds are supported in OEChem with the `$` symbol.
+
+==== Additional Atom Elements
+
+https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OEChem Toolkit 2.2.0: SMILES Line Notation]
+
+OEChem 2.2.0 supports additional unquoted (e.g., `D` for deuterium) and additional elements (e.g., `[Sg]`).
+
+==== Aromatic Extension
+
+Aromatic tellerium is supported (`[te]`)
+
+==== Atom Maps
+
+https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OEChem Toolkit 2.2.0: SMILES Line Notation]
+
+OEChem 2.2.0 allows atom maps in not only reaction SMILES, but also discrete molecules (e.g., `[Pb:1]`)
+
+==== R Groups and External Bond Attachments
+
+https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OEChem Toolkit 2.2.0: SMILES Line Notation]
+
+OEChem 2.2.0 has compatibility with R group notation (`[R2]`). The toolkit also supports unpaired external attachment points (e.g., `CC&1`) to allow
+for string concatenation of individual components.
+
+==== SMARTS
+
+https://docs.eyesopen.com/toolkits/python/oechemtk/SMARTS.html[OEChem Toolkit 2.2.0: SMARTS Pattern Matching]
+
+OEChem 2.2.0 supports Daylight SMARTS with the a noted difference of the behavior of the ring count primitive, `R`. Atomic
+hybridization queries are also supported with the symbol `^`.
+
 == Open Babel
 
 === SMILES
@@ -228,7 +280,7 @@ One aromaticity model is supported in Open Babel, which is described as similar 
 the Daylight aromaticity model. This model was discussed at the 254th ACS Meeting:
 https://www.slideshare.net/baoilleach/we-need-to-talk-about-kekulization-aromaticity-and-smiles[We need to talk about...Kekulization, Aromaticity, and SMILES by N.M. O'Boyle and J.W. Mayfield]
 
-Aromaticity in the original SMILES input can also be maintained with the `-aa` read option.
+It is possible for users to apply custom aromaticity models in Open Babel and aromaticity in the original SMILES input can be maintained with the `-aa` read option.
 
 === Extensions
 
@@ -254,3 +306,31 @@ There are several known limitations to the SMARTS support in Open Babel such as
 no support for cis/trans stereochemistry and component level grouping.
 
 == RDKit
+
+=== SMILES
+
+https://www.rdkit.org/docs/RDKit_Book.html#smiles-support-and-extensions[RDKit Book SMILES Support and Extensions]
+
+RDKit 2019.03.1 supports Daylight SMILES with no noted unsupported features.
+
+=== Aromaticity
+
+https://www.rdkit.org/docs/RDKit_Book.html#aromaticity[RDKit Book Aromaticity]
+
+RDKit 2019.03.1 supports three aromaticity models: (1) the RDKit aromaticity model, which is based on Hueckel's rule and defined
+atom and environment electron contributions; (2) a simple aromaticity model, where only 5 and 6 membered rings are
+considered for aromaticity; and (3) the MDL aromaticity model. There is also an option for users to define their own aromaticity models. 
+
+
+
+=== Extensions
+
+
+==== Aromatic Extension
+
+Aromatic tellerium is supported (`[te]`)
+
+
+
+
+==== SMARTS
