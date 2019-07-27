@@ -1,6 +1,10 @@
 = Cheminformatics Toolkit SMILES Documentation Support Comparison
 :toc: macro
 
+v0.1, 2019-07-25                                +
+https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
+Copyright © 2019, IUPAC
+
 This document provides information about SMILES compatibility between toolkits
 based on their documentation focusing on SMILES, aromaticity models, and SMILES extensions.
 Of course, in practice, individual compatibility of toolkits cannot be assessed by
@@ -26,12 +30,12 @@ document.
 |Toolkit |OpenSMILES parsing
 
 |CACTVS v3.4.8.3 | N
-|[Teal]#CDK v2.0# | [Teal]#Y#
+|[low red]#CDK v2.0# | [low red]#Y#
 |ChemAxon 2019 | N
-|[Teal]#ChemDoodle v9.1# | [Teal]#Y#
+|[low red]#ChemDoodle v9.1# | [low red]#Y#
 |Indigo 1.3.0 beta | N
 |OEChem 2.2.0 | N
-|[Teal]#Open Babel v3.0.0rc1# | [Teal]#Y#
+|[low red]#Open Babel v3.0.0rc1# | [low red]#Y#
 |RDKit v2019.03.1| N
 
 |===
@@ -44,9 +48,7 @@ Extensions (General)
 
 Specific SMARTS Extensions
 
-v0.1, 2019-07-25                                +
-https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
-Copyright © 2019, IUPAC
+
 
 
 toc::[]
