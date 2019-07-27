@@ -2,29 +2,52 @@
 :toc: macro
 
 This document provides information about SMILES compatibility between toolkits
-based on their documentation focusing on SMILES, aromaticity models, and SMILES extensions. Of course, in practice,
-individual compatibility of toolkits cannot be assessed by documentation alone (e.g., two different
-aromaticity models may have identical behavior depending on the input SMILES. Despite these limitations, we have found this
-a useful exercise to "survey" current toolkit SMILES documentation and compile our findings and links to toolkit documentation pages for reference.
+based on their documentation focusing on SMILES, aromaticity models, and SMILES extensions.
+Of course, in practice, individual compatibility of toolkits cannot be assessed by
+documentation alone (e.g., two differently named/described aromaticity models may have identical behavior
+depending on the input SMILES). As such, consider this document only as a broad survey of compatibility
+and SMILES features.
 
 *Two important notes:*
 
-1. We have endeavored to provide accurate information about cheminformatics toolkit SMILES support, aromaticity models, and extensions.
-If we have inferred something incorrectly from the available documentation, please let us know and we will fix it immediately.
+1. We have endeavored to provide accurate information about cheminformatics toolkit SMILES support,
+aromaticity models, and extensions. If we have inferred something incorrectly from the available
+documentation, please let us know and we will fix it immediately.
 
 2. A comparison of SMILES reaction extensions and transform queries (e.g., SMIRKS) is outside the scope of this
 document.
 
-*Summary Tables*
+*Selected Summary Tables*
 
-SMILES Daylight and OpenSMILES
+.OpenSMILES Support Mentioned in Docs
+[cols="2,1"]
+[width="50%"]
+|===
+|Toolkit |OpenSMILES parsing
+
+|CACTVS v3.4.8.3 | N
+|[Teal]#CDK v2.0# | [Teal]#Y#
+|ChemAxon 2019 | N
+|[Teal]#ChemDoodle v9.1# | [Teal]#Y#
+|Indigo 1.3.0 beta | N
+|OEChem 2.2.0 | N
+|[Teal]#Open Babel v3.0.0rc1# | [Teal]#Y#
+|RDKit v2019.03.1| N
+
+|===
+
+Higher Order Stereochemistry Support
 
 Aromaticity Models
 
-Extensions
+Extensions (General)
+
+Specific SMARTS Extensions
 
 v0.1, 2019-07-25                                +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
+Copyright © 2019, IUPAC
+
 
 toc::[]
 :toclevels: 5
@@ -48,24 +71,24 @@ We could not find any public documentation describing the BIOVIA Draw Toolkit SM
 
 https://www.xemistry.de/docs/html/tcl_reference-49.htm#635324256_pgfId-624130[CACTVS Toolkit: SMILES and SMARTS Dialects]
 
-The CACTVS toolkit implements and supports Daylight SMILES, including reaction SMILES. Higher order stereochemistry
+The CACTVS v3.4.8.3 toolkit implements and supports Daylight SMILES. Higher order stereochemistry
 including octahedral and bi-pyramidal structures can be read and written.
 
 === Aromaticity
 
 https://www.xemistry.de/docs/cactvs_full.pdf[CACTVS Tcl Scripting Introduction]
 
-The CACTVS aromaticity model is described as more selective than the Daylight toolkit interpretation.
+The CACTVS v3.4.8.3 aromaticity model is described as more selective than the Daylight toolkit interpretation.
 (e.g., rings with exocyclic keto groups are aromatic with Daylight, but not CACTVS). However, there is
 a daylight aromaticity model available as an option for substructure matching.
 
 === Extensions
 
-==== SMARTS
-
 https://www.xemistry.de/docs/html/tcl_reference-49.htm#635324256_pgfId-624130[CACTVS Toolkit: SMILES and SMARTS Dialects]
 
-The CACTVS toolkit supports Daylight SMARTS with the exception of higher order stereochemistry (e.g., octahedral
+==== SMARTS
+
+The CACTVS v3.4.8.3 toolkit supports Daylight SMARTS with the exception of higher order stereochemistry (e.g., octahedral
 and bi-pyramidal substructure matching). The default CACTVS
 SMARTS matching is less selective than Daylight, however there is an option for
 strict interpretation to more closely align with the Daylight SMARTS matching.
@@ -85,7 +108,7 @@ https://jcheminf.biomedcentral.com/track/pdf/10.1186/s13321-017-0220-4[Willighag
 
 http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesGenerator.html[CDK Class SmilesGenerator]
 
-The CDK v2.0 toolkit supports Daylight SMILES, OpenSMILES, and reaction SMILES.
+The CDK v2.0 toolkit supports Daylight SMILES and OpenSMILES.
 Unsupported features in the http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesParser.html[SmilesParser]
 include higher order stereochemistry (square planar, trigonal Bipyramidal, and octahedral), in addition to
 variable order of bracket atom attributes and atom class indication.
@@ -111,7 +134,7 @@ CDK v2.0 supports ChemAxon Extended SMILES
 
 http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smarts/Smarts.html[CDK Class Smarts]
 
-Daylight SMARTS are supported as well as other extensions from CACTVS, MOE, and OEChem.
+Daylight SMARTS are supported as well as other selected extensions from CACTVS, MOE, and OEChem.
 
 == ChemAxon
 
@@ -119,24 +142,28 @@ Daylight SMARTS are supported as well as other extensions from CACTVS, MOE, and 
 
 https://docs.chemaxon.com/display/docs/SMILES[ChemAxon Documentation SMILES]
 
-ChemAxon Marvin implements a custom specification of SMILES, which has a few noted differences compared to Daylight (from what we can infer) such as
-the `[Z]` symbol supported for R-group attachments, and addition of radicals stored in CXSMILES (see below) upon import for certain atoms when
-implicit hydrogens can not be added. Reaction SMILES are supported. Higher level stereochemistry is not supported in SMILES parsing including
-allene like, square planar, trigonal-bipyramidal, and octahedral. In addition, branching is not supported in cases where there is no atom preceding the branch.
+ChemAxon Marvin implements a custom specification of SMILES, which has a few noted differences
+compared to Daylight (from what we can infer) such as the `[Z]` symbol supported for R-group attachments,
+and addition of radicals stored in CXSMILES (see below) upon import for certain atoms when
+implicit hydrogens can not be added. Higher level stereochemistry is not supported in SMILES parsing including
+allene like, square planar, trigonal-bipyramidal, and octahedral. In addition, branching is not supported in
+cases where there is no atom preceding the branch.
 
 === Aromaticity
 
 https://docs.chemaxon.com/display/docs/Methods[ChemAxon Documentation Methods]
 
-ChemAxon Marvin supports four aromaticity models including a basic aromaticity model, general aromaticity detection (incorporates mesomeric and tautomeric rearrangement,
-similar to Daylight), loose aromaticity detection, and ambiguous aromaticity detection.
+ChemAxon Marvin supports four aromaticity models including a basic aromaticity model, general aromaticity detection
+(incorporates mesomeric and tautomeric rearrangement, similar to Daylight), loose aromaticity detection,
+and ambiguous aromaticity detection.
 
 === Extensions
 
 ==== SMARTS
 
 https://docs.chemaxon.com/display/docs/SMARTS[ChemAxon Documentation SMARTS]
-Daylight SMARTS are supported with some noted limitations to edit SMARTS in the Marvin GUI interface, however evaluation of the query works.
+Daylight SMARTS are supported with some noted limitations to edit SMARTS in the Marvin GUI interface,
+however evaluation of the query works.
 
 ==== CXSMILES and CXSMARTS
 
@@ -144,7 +171,6 @@ https://docs.chemaxon.com/display/docs/ChemAxon+Extended+SMILES+and+SMARTS+-+CXS
 
 ChemAxon has developed many feature extensions for SMILES and SMARTS that store information after the SMILES string. Some of the
 features include denoting information about atom properties, pseudo atoms, R-groups, enhanced stereochemistry, polymer groups, and more.
-
 
 == ChemDoodle
 
@@ -164,9 +190,9 @@ hybridized heteroatoms contribute.
 
 === Extensions
 
-==== SMARTS
-
 https://www.chemdoodle.com/downloads/ChemDoodleUserGuide.pdf[ChemDoodle v9.1 User Guide]
+
+==== SMARTS
 
 ChemDoodle v9.1 supports Daylight SMARTS. No limitations to syntax support is mentioned.
 
@@ -196,20 +222,17 @@ and a generic model where external double bonds are allowed.
 
 === Extensions
 
-==== CXSMILES
-
 https://lifescience.opensource.epam.com/indigo/concepts/index.html[Indigo Toolkit Concepts: File Formats]
+
+==== CXSMILES
 
 ChemAxon Extended SMILES are supported in Indigo including radical numbers, stereogroups, pseudo atoms, and fragment grouping in reactions.
 
 ==== CurlySMILES
 
-https://lifescience.opensource.epam.com/indigo/concepts/index.html[Indigo Toolkit Concepts: File Formats]
 Indigo supports the CurlySMILES extensions for simple polymers and multiple groups.
 
 ==== SMARTS
-
-https://lifescience.opensource.epam.com/indigo/concepts/index.html[Indigo Toolkit Concepts: File Formats]
 
 Daylight SMARTS are supported in Indigo. The only noted unsupported features are implicit hydrogen count and any features
 not supported in the SMILES parsing (see above).
@@ -231,15 +254,13 @@ OEChem 2.2.0 supports five different aromaticity models including a default Open
 
 === Extensions
 
-==== Quadruple Bonds
-
 https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OEChem Toolkit 2.2.0: SMILES Line Notation]
+
+==== Quadruple Bonds
 
 Quadruple bonds are supported in OEChem with the `$` symbol.
 
 ==== Additional Atom Elements
-
-https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OEChem Toolkit 2.2.0: SMILES Line Notation]
 
 OEChem 2.2.0 supports additional unquoted (e.g., `D` for deuterium) and additional elements (e.g., `[Sg]`).
 
@@ -249,16 +270,12 @@ Aromatic tellerium is supported (`[te]`)
 
 ==== Atom Maps
 
-https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OEChem Toolkit 2.2.0: SMILES Line Notation]
-
 OEChem 2.2.0 allows atom maps in not only reaction SMILES, but also discrete molecules (e.g., `[Pb:1]`)
 
 ==== R Groups and External Bond Attachments
 
-https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OEChem Toolkit 2.2.0: SMILES Line Notation]
-
-OEChem 2.2.0 has compatibility with R group notation (`[R2]`). The toolkit also supports unpaired external attachment points (e.g., `CC&1`) to allow
-for string concatenation of individual components.
+OEChem 2.2.0 has compatibility with R group notation (`[R2]`). The toolkit also supports unpaired external
+attachment points (e.g., `CC&1`) to allow for string concatenation of individual components.
 
 ==== SMARTS
 
@@ -273,8 +290,7 @@ hybridization queries are also supported with the symbol `^`.
 
 http://openbabel.org/docs/current/FileFormats/SMILES_format.html[Open Babel v2.3.1 SMILES Format]
 
-Open Babel implements the OpenSMILES specification. Open Babel also supports reading and writing of reaction SMILES (.rsmi):
-http://openbabel.org/docs/current/FileFormats/Reaction_Formats.html[Open Babel Reaction Formats]
+Open Babel implements the OpenSMILES specification.
 
 === Aromaticity
 
@@ -325,16 +341,33 @@ RDKit 2019.03.1 supports three aromaticity models: (1) the RDKit aromaticity mod
 atom and environment electron contributions; (2) a simple aromaticity model, where only 5 and 6 membered rings are
 considered for aromaticity; and (3) the MDL aromaticity model. There is also an option for users to define their own aromaticity models.
 
-
-
 === Extensions
 
+https://www.rdkit.org/docs/RDKit_Book.html#smiles-support-and-extensions[RDKit Book SMILES Support and Extensions]
 
 ==== Aromatic Extension
 
-Aromatic tellerium is supported (`[te]`)
+RDKit supports aromatic tellerium (`[te]`)
 
+==== Dative Bonds
 
+The symbols `->` and `<-` can be used in RDKit to specify dative bonds.
 
+==== Atomic Number
+
+Carbon can be specified with SMARTS notation `[#6]` in RDKit SMILES.
+
+==== CXSMILES
+
+RDKit supports a variety of ChemAxon Extended SMILES including reading and writing of atomic coordinates,
+atomic values, atomic labels, atomic properties, radicals, and enhanced stereo. The coordinate bond extension
+can be read, but not written in RDKit.
 
 ==== SMARTS
+
+RDKit supports Daylight SMARTS with the following unsupported features: non-tetrahedral chiral classes,
+the `@?` operator, explicit atomic masses, and component level grouping.
+
+There are several extensions to SMARTS that are supported in RDKit including hybridization queries with
+the symbol (e.g., `^2`, for SP^2^), dative bonds (e.g., `->`), heteroatom neighbor queries with the symbol `z`,
+and range queries.
