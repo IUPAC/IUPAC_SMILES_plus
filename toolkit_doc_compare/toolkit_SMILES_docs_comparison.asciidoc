@@ -27,15 +27,15 @@ document.
 [cols="2,1"]
 [width="50%"]
 |===
-|Toolkit |OpenSMILES parsing
+|Toolkit |OpenSMILES
 
 |CACTVS v3.4.8.3 | N
-|[low red]#CDK v2.0# | [low red]#Y#
+|*CDK v2.0* | *Y*
 |ChemAxon 2019 | N
-|[low red]#ChemDoodle v9.1# | [low red]#Y#
+|*ChemDoodle v9.1* | *Y*
 |Indigo 1.3.0 beta | N
 |OEChem 2.2.0 | N
-|[low red]#Open Babel v3.0.0rc1# | [low red]#Y#
+|*Open Babel v3.0.0rc1* | *Y*
 |RDKit v2019.03.1| N
 
 |===
@@ -48,9 +48,6 @@ Extensions (General)
 
 Specific SMARTS Extensions
 
-
-
-
 toc::[]
 :toclevels: 5
 :sectnums:
@@ -59,13 +56,15 @@ toc::[]
 
 https://sourceforge.net/p/avalontoolkit/wiki/Home/[Avalon Cheminformatics Toolkit]
 
-We could not find any public documentation describing the Avalon Cheminformatics Toolkit SMILES parsing/compatibility behavior.
+We could not find any public documentation describing the Avalon Cheminformatics Toolkit SMILES
+parsing/compatibility behavior.
 
 == BIOVIA Draw
 
 https://www.3dsbiovia.com/products/collaborative-science/biovia-draw/[BIOVIA Draw]
 
-We could not find any public documentation describing the BIOVIA Draw Toolkit SMILES parsing/compatibility behavior.
+We could not find any public documentation describing the BIOVIA Draw Toolkit SMILES
+parsing/compatibility behavior.
 
 == CACTVS
 
@@ -100,7 +99,7 @@ additional atom attributes (e.g., `X` without number for heteroatom matching), a
 extended SMARTS (e.g., `/IWfss` for matching number of SSSR rings).
 
 There is also an option to specify the Daylight SMILES release number to use for encoding/decoding
-SMARTS (e.g., Daylight v. 4.9)
+SMARTS (e.g., Daylight v. 4.9).
 
 == CDK v2.0
 
@@ -121,7 +120,7 @@ http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/aromaticity/Aromaticit
 
 There are several aromaticity models supported in CDK 2.0 that allow users to configure the model with a specific
 http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/aromaticity/ElectronDonation.html[electron donation model]
-(CDK model, CDK model allowing exocyclic contributions, pi bond model, and a variant close to Daylight)
+(CDK model, CDK model allowing exocyclic contributions, pi bond model, variant close to Daylight)
 and http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/graph/CycleFinder.html[cycle finder] method.
 
 === Extensions
@@ -144,7 +143,7 @@ Daylight SMARTS are supported as well as other selected extensions from CACTVS, 
 
 https://docs.chemaxon.com/display/docs/SMILES[ChemAxon Documentation SMILES]
 
-ChemAxon Marvin implements a custom specification of SMILES, which has a few noted differences
+ChemAxon supports Daylight SMILES. ChemAxon implements a custom specification of SMILES, which has a few noted differences
 compared to Daylight (from what we can infer) such as the `[Z]` symbol supported for R-group attachments,
 and addition of radicals stored in CXSMILES (see below) upon import for certain atoms when
 implicit hydrogens can not be added. Higher level stereochemistry is not supported in SMILES parsing including
