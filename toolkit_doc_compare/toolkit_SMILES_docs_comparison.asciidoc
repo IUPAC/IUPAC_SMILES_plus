@@ -29,18 +29,33 @@ document.
 |===
 |Toolkit |OpenSMILES
 
-|CACTVS v3.4.8.3 | N
-|*CDK v2.0* | *Y*
-|ChemAxon 2019 | N
-|*ChemDoodle v9.1* | *Y*
-|Indigo 1.3.0 beta | N
-|OEChem 2.2.0 | N
-|*Open Babel v3.0.0rc1* | *Y*
-|RDKit v2019.03.1| N
+|CACTVS v3.4.8.3 | No
+|*CDK v2.0* | *Yes*
+|ChemAxon 2019 | No
+|*ChemDoodle v9.1* | *Yes*
+|Indigo 1.3.0 beta | No
+|OEChem 2.2.0 | No
+|*Open Babel v3.0.0rc1* | *Yes*
+|RDKit v2019.03.1| No
 
 |===
 
-Higher Order Stereochemistry Support
+.SMILES Higher Order Stereochemistry Support (e.g., allenal (AL), square planar (SP), trigonal Bipyramidal (TB), and octahedral (OH))
+[cols="2,2"]
+[width="50%"]
+|===
+|Toolkit | SMILES Higher Order Stereochemistry Support
+
+|*CACTVS v3.4.8.3* | *AL, SP, TB, OH*
+|*CDK v2.0* | *AL*
+|ChemAxon 2019 | No
+|ChemDoodle v9.1 | ?
+|*Indigo 1.3.0 beta* | *AL*
+|OEChem 2.2.0 | No
+|*Open Babel v3.0.0rc1* | *AL, SP, TB, OH*
+|RDKit v2019.03.1| No
+
+|===
 
 Aromaticity Models
 
@@ -73,7 +88,8 @@ parsing/compatibility behavior.
 https://www.xemistry.de/docs/html/tcl_reference-49.htm#635324256_pgfId-624130[CACTVS Toolkit: SMILES and SMARTS Dialects]
 
 The CACTVS v3.4.8.3 toolkit implements and supports Daylight SMILES. Higher order stereochemistry
-including octahedral and bi-pyramidal structures can be read and written.
+including octahedral and bi-pyramidal structures can be read and written. There is also support for
+allenes and square planar stereochemistry.
 
 === Aromaticity
 
@@ -111,8 +127,9 @@ http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesGenerator
 
 The CDK v2.0 toolkit supports Daylight SMILES and OpenSMILES.
 Unsupported features in the http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesParser.html[SmilesParser]
-include higher order stereochemistry (square planar, trigonal Bipyramidal, and octahedral), in addition to
-variable order of bracket atom attributes and atom class indication.
+include higher order stereochemistry (square planar supported(?), but not trigonal bipyramidal and octahedral), in addition to
+variable order of bracket atom attributes and atom class indication. Note that the latest CDK paper cited above mentions only support for
+allenal stereochemistry.
 
 === Aromaticity
 
@@ -211,7 +228,7 @@ We could not find any public documentation describing the Perkin Elmer ChemDraw 
 
 https://lifescience.opensource.epam.com/indigo/concepts/index.html[Indigo Toolkit Concepts: File Formats]
 
-Indigo 1.3.0 beta supports Daylight SMILES. Noted unsupported features include unspecified up or down notation (`/?` or `\?`)
+Indigo 1.3.0 beta supports Daylight SMILES. Allenal stereochemistry is supported. Noted unsupported features include unspecified up or down notation (`/?` or `\?`)
 and higher level stereochemistry including square-planar, trigonal bipyramidal, and octahedral.
 
 === Aromaticity
@@ -246,6 +263,8 @@ https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles[OE
 
 OEChem 2.2.0 support Daylight SMILES with a variety of noted differences and ambiguities where certain SMILES
 are either read or rejected. There is a strict mode or default relaxed mode to adjust the behavior of the SMILES parser.
+According to the https://docs.eyesopen.com/toolkits/python/oechemtk/stereochemistry.html[stereochemistry perception docs],
+only tetrahedral and cis/trans configurations are supported.
 
 === Aromaticity
 
@@ -291,7 +310,8 @@ hybridization queries are also supported with the symbol `^`.
 
 http://openbabel.org/docs/current/FileFormats/SMILES_format.html[Open Babel v2.3.1 SMILES Format]
 
-Open Babel implements the OpenSMILES specification.
+Open Babel implements the OpenSMILES specification. There is also a specific parser, https://open-babel.readthedocs.io/en/latest/FileFormats/SMILES_format_using_Smiley_parser.html[Smiley parser],
+which includes strict support for the OpenSMILES specification, including higher order stereochemistry (from what we can infer).
 
 === Aromaticity
 
@@ -332,7 +352,7 @@ no support for cis/trans stereochemistry and component level grouping.
 
 https://www.rdkit.org/docs/RDKit_Book.html#smiles-support-and-extensions[RDKit Book SMILES Support and Extensions]
 
-RDKit 2019.03.1 supports Daylight SMILES.
+RDKit 2019.03.1 supports Daylight SMILES. Higher order stereochemistry is not supported.
 
 === Aromaticity
 
