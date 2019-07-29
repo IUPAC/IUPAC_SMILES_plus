@@ -29,39 +29,71 @@ document.
 |===
 |Toolkit |OpenSMILES
 
-|CACTVS v3.4.8.3 | No
-|*CDK v2.0* | *Yes*
-|ChemAxon 2019 | No
-|*ChemDoodle v9.1* | *Yes*
-|Indigo 1.3.0 beta | No
-|OEChem 2.2.0 | No
-|*Open Babel v3.0.0rc1* | *Yes*
-|RDKit v2019.03.1| No
+|CACTVS v3.4.8.3 | -
+|*CDK v2.0* | *✓*
+|ChemAxon 2019 | -
+|*ChemDoodle v9.1* | *✓*
+|Indigo 1.3.0 beta | -
+|OEChem 2.2.0 | -
+|*Open Babel v3.0.0rc1* | *✓*
+|RDKit v2019.03.1| -
 
 |===
 
 .SMILES Higher Order Stereochemistry Support (e.g., allenal (AL), square planar (SP), trigonal Bipyramidal (TB), and octahedral (OH))
-[cols="2,2"]
+[cols="2,3"]
 [width="50%"]
 |===
 |Toolkit | SMILES Higher Order Stereochemistry Support
 
 |*CACTVS v3.4.8.3* | *AL, SP, TB, OH*
 |*CDK v2.0* | *AL*
-|ChemAxon 2019 | No
+|ChemAxon 2019 | -
 |ChemDoodle v9.1 | ?
 |*Indigo 1.3.0 beta* | *AL*
-|OEChem 2.2.0 | No
+|OEChem 2.2.0 | -
 |*Open Babel v3.0.0rc1* | *AL, SP, TB, OH*
-|RDKit v2019.03.1| No
+|RDKit v2019.03.1| -
 
 |===
 
-Aromaticity Models
+.Specific Aromaticity Models Supported as Mentioned by Name
+[cols="2,1,1,1,1,1,1"]
+[width="70%"]
+|===
+|Toolkit | Internal Model(s) |  Daylight (like) | Tripos | MDL | MMFF | Customizable
 
-Extensions (General)
+|CACTVS v3.4.8.3 | ✓ | ✓ | - | - | - | -
+|CDK v2.0 | ✓ | ✓ | - |  - | - | ✓
+|ChemAxon 2019 | ✓  | ✓  | -  | -  | - | -
+|ChemDoodle v9.1 | ✓ | - | - | - | - | -
+|Indigo 1.3.0 beta | ✓ | - | - | - | - | -
+|OEChem 2.2.0 | ✓ | ✓ | ✓ | ✓ | ✓ | -
+|Open Babel v3.0.0rc1 | ✓ | ✓ | - | - | - | ✓
+|RDKit v2019.03.1| ✓ | - | - | ✓ | - | ✓
 
-Specific SMARTS Extensions
+|===
+
+.SMILES Extensions Supported as noted in documentation (selected overview, included extensions that two or more toolkits support*)
+[cols="2,1,1,3,1"]
+[width="70%"]
+|===
+|Toolkit | Daylight SMARTS** | CXSMILES | R Groups `[Z]` or `[R]` | Aromatic `[te]`
+
+|CACTVS v3.4.8.3 | ✓ | - | - | -
+|CDK v2.0 | ✓ | ✓ | - | -
+|ChemAxon 2019 |  ✓ | ✓ | ✓ | -
+|ChemDoodle v9.1 | ✓ | - | - | -
+|Indigo 1.3.0 beta | ✓ | ✓ | - | -
+|OEChem 2.2.0 | ✓ | - | ✓ | ✓
+|Open Babel v3.0.0rc1 | ✓ | - | - | -
+|RDKit v2019.03.1| ✓ | - | - | ✓
+
+|===
+
+*see below notes for other extensions that individual toolkits support such as RDKit's extensions for dative bonds (`->` and `<-`).
+
+**some toolkits note features of Daylight SMARTS that they do not support and additional extensions to SMARTS that they do support (see below notes and resource links).
 
 toc::[]
 :toclevels: 5
