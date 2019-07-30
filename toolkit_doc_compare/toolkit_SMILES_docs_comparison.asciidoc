@@ -34,6 +34,7 @@ document.
 |ChemAxon 2019 | -
 |*ChemDoodle v9.1* | *✓*
 |Indigo 1.3.0 beta | -
+|*Jmol 14.29* | *✓*
 |OEChem 2.2.0 | -
 |*Open Babel v3.0.0rc1* | *✓*
 |RDKit v2019.03.1| -
@@ -51,6 +52,7 @@ document.
 |ChemAxon 2019 | -
 |ChemDoodle v9.1 | ?
 |*Indigo 1.3.0 beta* | *AL*
+|*Jmol 14.29* | *AL, SP, TB, OH*
 |OEChem 2.2.0 | -
 |*Open Babel v3.0.0rc1* | *AL, SP, TB, OH*
 |RDKit v2019.03.1| -
@@ -70,6 +72,7 @@ Note that CACTVS has partial support for TB and OH, see notes below.
 |ChemAxon 2019 | ✓  | ✓  | -  | -  | - | -
 |ChemDoodle v9.1 | ✓ | - | - | - | - | -
 |Indigo 1.3.0 beta | ✓ | - | - | - | - | -
+|Jmol 14.29 | ✓ | - | - | - | ✓ | -
 |OEChem 2.2.0 | ✓ | ✓ | ✓ | ✓ | ✓ | -
 |Open Babel v3.0.0rc1 | ✓ | ✓ | - | - | - | ✓
 |RDKit v2019.03.1| ✓ | - | - | ✓ | - | ✓
@@ -77,19 +80,20 @@ Note that CACTVS has partial support for TB and OH, see notes below.
 |===
 
 .SMILES Extensions Supported as noted in documentation (selected overview, included extensions that two or more toolkits support*)
-[cols="2,1,1,3,1"]
+[cols="2,1,1,3,1,1,1"]
 [width="70%"]
 |===
-|Toolkit | Daylight SMARTS** | CXSMILES | R Groups `[Z]` or `[R]` | Aromatic `[te]`
+|Toolkit | Daylight SMARTS** | CXSMILES | R Groups `[Z]` or `[R]` | Aromatic `[te]` | Quadruple Bonds `$` | Ring Closures > 100 (`%(nnn)`)
 
-|CACTVS v3.4.8.3 | ✓ | - | ✓ | ✓
-|CDK v2.0 | ✓ | ✓ | ✓ | ✓
-|ChemAxon 2019 |  ✓ | ✓ | ✓ | -
-|ChemDoodle v9.1 | ✓ | - | - | -
-|Indigo 1.3.0 beta | ✓ | ✓ | - | -
-|OEChem 2.2.0 | ✓ | - | ✓ | ✓
-|Open Babel v3.0.0rc1 | ✓ | - | - | -
-|RDKit v2019.03.1| ✓ | ✓ | - | ✓
+|CACTVS v3.4.8.3 | ✓ | - | ✓ | ✓ | - | -
+|CDK v2.0 | ✓ | ✓ | ✓ | ✓ | - | -
+|ChemAxon 2019 |  ✓ | ✓ | ✓ | - | - | -
+|ChemDoodle v9.1 | ✓ | - | - | - | - | -
+|Indigo 1.3.0 beta | ✓ | ✓ | - | - | - | -
+|Jmol 14.29 | ✓ | - | - | - | ✓ | ✓
+|OEChem 2.2.0 | ✓ | - | ✓ | ✓ | ✓ | -
+|Open Babel v3.0.0rc1 | ✓ | - | - | - | - | ✓
+|RDKit v2019.03.1| ✓ | ✓ | - | ✓ | - | ✓
 
 |===
 
@@ -307,6 +311,49 @@ not supported in the SMILES parsing (see above).
 
 == Jmol
 
+=== SMILES
+
+https://chemapps.stolaf.edu/jmol/docs/#jmolsmarts/smiles[Jmol/JSmol interactive scripting documentation: Jmol SMARTS/SMILES]
+
+https://jcheminf.biomedcentral.com/track/pdf/10.1186/s13321-016-0160-4[Hanson J. Cheminform. (2016) 8:50; DOI: 10.1186/s13321-016-0160-4]
+
+Jmol 14.29 supports OpenSMILES. There is full support for higher order stereochemistry including
+allenal, square planar, trigonal Bipyramidal, and octahedral. The Jmol SMILES extensions support
+additional stereochemistry notations (see below).
+
+=== Aromaticity
+
+https://chemapps.stolaf.edu/jmol/docs/misc/Jmol-OpenSmiles.pdf[Jmol SMILES Aromaticity Algorithm]
+
+Jmol supports four aromaticity models including an internal Jmol 3D model (5-7 atom flat ring, with sp^2^ hybridization),
+OpenSMILES (Hueckel's rule allowing exocylic double bonds), strict (no exocyclic double bonds), and MMFF94 model (excludes contributing
+heteroatoms).
+
+=== Extensions
+
+==== Jmol SMILES
+
+https://jcheminf.biomedcentral.com/track/pdf/10.1186/s13321-016-0160-4[Hanson J. Cheminform. (2016) 8:50; DOI: 10.1186/s13321-016-0160-4]
+
+Jmol SMILES is a superset of OpenSMILES and includes a variety of extensions such as
+dummy atoms (`[Xx]`), unlimited connectivity numbers (`%(nnn)`), and advanced notation for
+T-shape, see-saw, and atropisomer stereochemistry. Note also that Jmol supports quadruple bonds,
+`$` (as defined in OpenSMILES specification).
+
+==== SMARTS
+
+Jmol supports https://github.com/timvdm/OpenSMARTS[OpenSMARTS] and
+https://www.daylight.com/dayhtml/doc/theory/theory.smarts.html[Daylight SMARTS]
+with a few noted exceptions such as no support for unspecified designations (`/?`,`\?`, and `@...?`),
+interpretation of `>>` as `.`, and differing behavior related to ring-membership primitives
+(`r<n>` and `R<n>``).
+
+==== Jmol SMARTS
+
+Jmol significantly extends and modifies OpenSMARTS with a variety of additions to the syntax such as
+querying for atom index (`=<n>`), a variable number of pattern occurrences (`$min-max(pattern)`), and
+angles within an x-y range (`A(.a:x-y)BC`).
+
 == KnowItAll
 
 == OEChem
@@ -390,6 +437,12 @@ and (2) radical centers can be interpreted with lowercase atomic symbols (e.g., 
 There is also support for conjugated carbon chains by interpreting multiple
 sequential lower case c without a ring closure (e.g., `cccc` as conjugated carbon chains.
 
+==== Ring Closures > 100
+
+https://github.com/openbabel/openbabel/pull/1677[Open Babel Pull Request #1677]
+
+Open Babel supports ring closures up to 5 digits `%(NNNNN)`
+
 ==== SMARTS
 
 https://openbabel.org/wiki/SMARTS[Open Babel SMARTS]
@@ -431,6 +484,11 @@ The symbols `- >` and `< -` can be used in RDKit to specify dative bonds.
 ==== Atomic Number
 
 Carbon can be specified with SMARTS notation `[#6]` in RDKit SMILES.
+
+==== Ring Closures > 100
+
+https://github.com/rdkit/rdkit/pull/1624[RDKit Pull Request #1624]
+RDKit supports ring closures up to 5 digits `%(NNNNN)`
 
 ==== CXSMILES
 
