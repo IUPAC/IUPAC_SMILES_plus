@@ -87,7 +87,7 @@ document.
 |Indigo 1.3.0 beta | ✓ | ✓ | - | -
 |OEChem 2.2.0 | ✓ | - | ✓ | ✓
 |Open Babel v3.0.0rc1 | ✓ | - | - | -
-|RDKit v2019.03.1| ✓ | - | - | ✓
+|RDKit v2019.03.1| ✓ | ✓ | - | ✓
 
 |===
 
@@ -159,9 +159,8 @@ http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesGenerator
 
 The CDK v2.0 toolkit supports Daylight SMILES and OpenSMILES.
 Unsupported features in the http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesParser.html[SmilesParser]
-include higher order stereochemistry (square planar supported(?), but not trigonal bipyramidal and octahedral), in addition to
-variable order of bracket atom attributes and atom class indication. Note that the latest CDK paper cited above mentions only support for
-allenal stereochemistry.
+include variable order of bracket atom attributes and atom class indication. Higher order
+http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/stereo/package-summary.html[stereochemistry] is fully supported.
 
 === Aromaticity
 
@@ -169,10 +168,19 @@ http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/aromaticity/Aromaticit
 
 There are several aromaticity models supported in CDK 2.0 that allow users to configure the model with a specific
 http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/aromaticity/ElectronDonation.html[electron donation model]
-(CDK model, CDK model allowing exocyclic contributions, pi bond model, variant close to Daylight)
+(CDK model, CDK model allowing exocyclic contributions, pi bond model (MDL-like), variant close to Daylight)
 and http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/graph/CycleFinder.html[cycle finder] method.
 
 === Extensions
+
+==== Aromatic Extension
+
+Aromatic tellerium is supported (`[te]`) in CDK for reading, but not writing (see https://github.com/vfscalfani/IUPAC_SMILES_plus/pull/1[pull request #1]).
+
+==== R Groups
+
+CDK supports [R1] on read, but not write. R Groups can, however, be written as CXSMILES wtih CDK.
+(see https://github.com/vfscalfani/IUPAC_SMILES_plus/pull/1[pull request #1]).
 
 ==== CXSMILES
 
