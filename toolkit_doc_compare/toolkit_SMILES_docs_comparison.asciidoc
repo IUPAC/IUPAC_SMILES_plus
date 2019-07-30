@@ -47,7 +47,7 @@ document.
 |Toolkit | SMILES Higher Order Stereochemistry Support
 
 |*CACTVS v3.4.8.3* | *AL, SP, TB, OH*
-|*CDK v2.0* | *AL*
+|*CDK v2.0* | *AL, SP, TB, OH*
 |ChemAxon 2019 | -
 |ChemDoodle v9.1 | ?
 |*Indigo 1.3.0 beta* | *AL*
@@ -64,7 +64,7 @@ document.
 |Toolkit | Internal Model(s) |  Daylight (like) | Tripos | MDL | MMFF | Customizable
 
 |CACTVS v3.4.8.3 | ✓ | ✓ | - | - | - | -
-|CDK v2.0 | ✓ | ✓ | - |  - | - | ✓
+|CDK v2.0 | ✓ | ✓ | - |  ✓ | - | ✓
 |ChemAxon 2019 | ✓  | ✓  | -  | -  | - | -
 |ChemDoodle v9.1 | ✓ | - | - | - | - | -
 |Indigo 1.3.0 beta | ✓ | - | - | - | - | -
@@ -81,7 +81,7 @@ document.
 |Toolkit | Daylight SMARTS** | CXSMILES | R Groups `[Z]` or `[R]` | Aromatic `[te]`
 
 |CACTVS v3.4.8.3 | ✓ | - | - | -
-|CDK v2.0 | ✓ | ✓ | - | -
+|CDK v2.0 | ✓ | ✓ | ✓ | ✓
 |ChemAxon 2019 |  ✓ | ✓ | ✓ | -
 |ChemDoodle v9.1 | ✓ | - | - | -
 |Indigo 1.3.0 beta | ✓ | ✓ | - | -
