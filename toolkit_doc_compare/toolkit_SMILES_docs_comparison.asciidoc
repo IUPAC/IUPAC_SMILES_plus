@@ -35,6 +35,7 @@ document.
 |*ChemDoodle v9.1* | *✓*
 |Indigo 1.3.0 beta | -
 |*Jmol 14.29* | *✓*
+|KnowItAll 2018 | -
 |OEChem 2.2.0 | -
 |*Open Babel v3.0.0rc1* | *✓*
 |RDKit v2019.03.1| -
@@ -53,6 +54,7 @@ document.
 |ChemDoodle v9.1 | ?
 |*Indigo 1.3.0 beta* | *AL*
 |*Jmol 14.29* | *AL, SP, TB, OH*
+|*KnowItAll 2018* | *AL*
 |OEChem 2.2.0 | -
 |*Open Babel v3.0.0rc1* | *AL, SP, TB, OH*
 |RDKit v2019.03.1| -
@@ -72,7 +74,8 @@ Note that CACTVS has partial support for TB and OH, see notes below.
 |ChemAxon 2019 | ✓  | ✓  | -  | -  | - | -
 |ChemDoodle v9.1 | ✓ | - | - | - | - | -
 |Indigo 1.3.0 beta | ✓ | - | - | - | - | -
-|Jmol 14.29 | ✓ | - | - | - | ✓ | -
+|Jmol 14.29 | ✓ | - | - | - | - | ✓
+|KnowItAll 2018 | ✓ | - | - | - | - | -
 |OEChem 2.2.0 | ✓ | ✓ | ✓ | ✓ | ✓ | -
 |Open Babel v3.0.0rc1 | ✓ | ✓ | - | - | - | ✓
 |RDKit v2019.03.1| ✓ | - | - | ✓ | - | ✓
@@ -91,6 +94,7 @@ Note that CACTVS has partial support for TB and OH, see notes below.
 |ChemDoodle v9.1 | ✓ | - | - | - | - | -
 |Indigo 1.3.0 beta | ✓ | ✓ | - | - | - | -
 |Jmol 14.29 | ✓ | - | - | - | ✓ | ✓
+|KnowItAll 2018 | - | - | ✓ | ✓ | ✓ | -
 |OEChem 2.2.0 | ✓ | - | ✓ | ✓ | ✓ | -
 |Open Babel v3.0.0rc1 | ✓ | - | - | - | - | ✓
 |RDKit v2019.03.1| ✓ | ✓ | - | ✓ | - | ✓
@@ -323,11 +327,11 @@ additional stereochemistry notations (see below).
 
 === Aromaticity
 
-https://chemapps.stolaf.edu/jmol/docs/misc/Jmol-OpenSmiles.pdf[Jmol SMILES Aromaticity Algorithm]
+https://jcheminf.biomedcentral.com/track/pdf/10.1186/s13321-016-0160-4[Hanson J. Cheminform. (2016) 8:50; DOI: 10.1186/s13321-016-0160-4]
 
-Jmol supports four aromaticity models including an internal Jmol 3D model (5-7 atom flat ring, with sp^2^ hybridization),
-OpenSMILES (Hueckel's rule allowing exocylic double bonds), strict (no exocyclic double bonds), and MMFF94 model (excludes contributing
-heteroatoms).
+Jmol supports two aromaticity models including an open (OpenSMILES definition, Hueckel's rule
+allowing exocyclic double bonds) and strict option (3D planarity, no exocyclic double bonds).
+There is also an option to have no aromaticity checks.
 
 === Extensions
 
@@ -355,6 +359,39 @@ querying for atom index (`=<n>`), a variable number of pattern occurrences (`$mi
 angles within an x-y range (`A(.a:x-y)BC`).
 
 == KnowItAll
+
+http://www.bio-rad.com/en-us/product/knowitall-academic-edition-free-chemistry-software?ID=NH29WJ15[KnowItAll 2018]
+
+Note: documentation about KnowItAll 2018 SMILES parsing and support is not available, however
+Bio-Rad kindly provided the following information.
+
+=== SMILES
+
+KnowItAll 2018 supports Daylight SMILES. Allenal stereochemistry is fully supported. There is not
+currently support for square planar, trigonal bipyramidal, and octahedral stereochemistry.
+
+=== Aromaticity
+
+KnowItAll 2018 has an internal aromaticity model, however no aromaticity model is applied to
+SMILES parsing and writing. 
+
+=== Extensions
+
+==== R Groups
+
+KnowItAll 2018 supports SMILES R groups (`[Z]` and `[R]`).
+
+==== Aromatic Extension
+
+Aromatic `[te]` is supported in KnowItAll 2018.
+
+==== Quadruple Bonds
+
+Quadruple bonds are supported in KnowItAll with the `$` symbol.
+
+==== Ring Closures > 100
+
+Ring closures, `%(NNN)`, will be supported in the next version of KnowItAll.
 
 == OEChem
 
