@@ -96,7 +96,7 @@ Note that CACTVS has partial support for TB and OH, see notes below.
 |Jmol 14.29 | ✓ | - | - | - | ✓ | ✓
 |KnowItAll 2018 | - | - | ✓ | ✓ | ✓ | -
 |OEChem 2.2.0 | ✓ | - | ✓ | ✓ | ✓ | -
-|Open Babel v3.0.0rc1 | ✓ | - | - | - | - | ✓
+|Open Babel v3.0.0rc1 | ✓ | - | - | ✓ | ✓ | ✓
 |RDKit v2019.03.1| ✓ | ✓ | - | ✓ | - | ✓
 
 |===
