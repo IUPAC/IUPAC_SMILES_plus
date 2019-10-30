@@ -1,0 +1,12 @@
+C(=N\I)/F 1
+C(=N/I)\F 1
+C(\F)=N/I 1
+C(/F)=N\I 1
+F/C=N/I 1
+F\C=N\I 1
+I/N=C/F 1
+I\N=C\F 1
+N(=C\F)/I 1
+N(=C/F)\I 1
+N(\I)=C/F 1
+N(/I)=C\F 1

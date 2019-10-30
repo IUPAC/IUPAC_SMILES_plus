@@ -1,0 +1,4 @@
+# Command Line Application
+# Run on Windows 10
+
+molconvert -g "inchi:SAbs,AuxNone" input_SMILES.smi -o output_InChIs.inchi -v

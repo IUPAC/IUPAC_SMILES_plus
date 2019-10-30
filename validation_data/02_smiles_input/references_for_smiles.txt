@@ -1,0 +1,21 @@
+NextMove benchmark
+https://github.com/nextmovesoftware/smilesreading
+
+charges
+
+elements_isotopes
+
+N. E. Holden, T. B. Coplen, J. K. Böhlke, L. V. Tarbox, J. Benefield, J. R. de Laeter, P. G.
+Mahaffy, G. O’Connor, E. Roth, D. H. Tepper, T. Walczyk, M. E. Wieser, S. Yoneda. IUPAC Periodic Table of
+the Elements and Isotopes (IPTEI) for the Education Community—Update 2019 (IUPAC Technical Report), 260
+p. (2019), https://iupac.org/iptei.
+
+
+Holden, N., Coplen, T., Böhlke, J., et al. (2018). IUPAC Periodic Table of the Elements and Isotopes (IPTEI) 
+for the Education Community (IUPAC Technical Report). 
+Pure and Applied Chemistry, 90(12), pp. 1833-2092. Retrieved 25 Sep. 2019, from doi:10.1515/pac-2015-0703
+
+nonstandard
+http://opensmiles.org/opensmiles.html
+https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles
+
