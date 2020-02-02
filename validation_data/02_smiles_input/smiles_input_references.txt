@@ -1,0 +1,39 @@
+01_elements_isotopes
+
+N. E. Holden, T. B. Coplen, J. K. Böhlke, L. V. Tarbox, J. Benefield, J. R. de Laeter, P. G.
+Mahaffy, G. O'Connor, E. Roth, D. H. Tepper, T. Walczyk, M. E. Wieser, S. Yoneda. IUPAC Periodic Table of
+the Elements and Isotopes (IPTEI) for the Education Community Update 2019 (IUPAC Technical Report), 260
+p. (2019), https://iupac.org/iptei.
+
+Holden, N., Coplen, T., Böhlke, J., et al. (2018). IUPAC Periodic Table of the Elements and Isotopes (IPTEI) 
+for the Education Community (IUPAC Technical Report). 
+Pure and Applied Chemistry, 90(12), pp. 1833-2092. Retrieved 25 Sep. 2019, from doi:10.1515/pac-2015-0703
+
+02_oxidation_states
+
+https://en.wikipedia.org/wiki/Oxidation_state
+License: CC BY-SA 3.0: https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+
+03_NextMove_Benchmark
+
+https://github.com/nextmovesoftware/smilesreading
+License: BSD2: https://github.com/nextmovesoftware/smilesreading/blob/master/LICENSE
+
+04_nonstandard
+
+http://opensmiles.org/opensmiles.html
+https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles
+
+05_CIPValidationSuite
+
+Robert M. Hanson, John W. Mayfield, Mikko J. Vainio, Andrey Yerin, Sophia Musacchio, and Dmitry Redkin. (2018). Algorithmic analysis of Cahn-Ingold-Prelog rules of stereochemistry: Proposals for revised rules and a guide for machine implementation Journal of Chemical Information and Modeling. 58. 10.1021/acs.jcim.8b00324.
+
+https://github.com/CIPValidationSuite/ValidationSuite
+https://chemrxiv.org/articles/Algorithmic_Analysis_of_Cahn-Ingold-Prelog_Rules_of_Stereochemistry_Proposals_for_Revised_Rules_and_a_Guide_for_Machine_Implementation/6342881/1
+License: CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
+
+06_NCC_PilotThesisCompounds
+
+Andrews, D. M.; Broad, L. M.; Edwards, P. J.; Fox, D. N. A.; Gallagher, T.; Garland, S. L.; Kidd, R.; Sweeney, J. B. The Creation and Characterisation of a National Compound Collection: The Royal Society of Chemistry Pilot. Chem. Sci. 2016, 7 (6), 3869–3878. https://doi.org/10.1039/C6SC00264A.
+
+License: CC0
