@@ -1,0 +1,1442 @@
+molconvert -g "inchi:SAbs,AuxNone" oxidation_states.smi -o CAmolconvert_19.27.0_InChIs_oxidation_states.inchi
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 3 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 6 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Se+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Se+1(1))
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Se+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Se+1(1))
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Se+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Se+1(1))
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Se+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Se+1(1))
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Se+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Se+1(1))
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Se+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Se+1(1))
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 716 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 719 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 723 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 726 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 729 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 732 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 735 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:56 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 738 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Te+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Te+1(1))
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Te+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Te+1(1))
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Te+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Te+1(1))
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Te+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Te+1(1))
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Te+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Te+1(1))
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Te+1(1). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Te+1(1))
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Pb+1(1); Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Pb+1(1); Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Pb+1(1); Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Pb+1(1); Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Pb+1(1); Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Pb+1(1); Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Pb+1(1); Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Pb+1(1); Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Po+1(1); Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Po+1(1); Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Po+1(1); Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Po+1(1); Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Po+1(1); Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Po+1(1); Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Po+1(1); Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Po+1(1); Metal was disconnected)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+SEVERE: Unknown error occured
+java.io.IOException: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:52)
+	at org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall.call(InChINativeGenerateInChICall.java:13)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+oxidation_states.smi: cannot convert molecule 1369 to inchi: Native GetStructFromINCHI(Structure: 
+Atoms: 
+	Atom(0):  [A]  at (0.0, 0.0, 0.0),
+Bonds: 
+Stereo: 
+) call reurned with an error. Error code is: 2. Message: Unknown element(s): A. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Error 64 (no InChI; Unknown element(s): A) inp
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Proton(s) added/removed. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Proton(s) added/removed)
+Feb 02, 2020 11:00:57 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): B+1(7). Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+

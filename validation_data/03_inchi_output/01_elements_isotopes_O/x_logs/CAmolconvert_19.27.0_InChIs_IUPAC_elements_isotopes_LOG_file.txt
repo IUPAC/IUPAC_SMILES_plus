@@ -1,0 +1,57 @@
+molconvert -g "inchi:SAbs,AuxNone" IUPAC_elements_isotopes.smi -o CAmolconvert_19.27.0_InChIs_IUPAC_elements_isotopes.inchi
+Feb 02, 2020 10:56:02 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 10:56:02 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+Feb 02, 2020 10:56:02 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Mc(3); Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Mc(3); Metal was disconnected)
+Feb 02, 2020 10:56:02 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Accepted unusual valence(s): Lv(2); Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Accepted unusual valence(s): Lv(2); Metal was disconnected)
+Feb 02, 2020 10:56:02 AM org.chemaxon.inchi.connector.natives.InChINativeGenerateInChICall call
+WARNING: Native GetStructFromINCHI call reurned with a warning. Message: Metal was disconnected. Log: Unrecognized option: "SAbs".
+Generating standard InChI
+Issue warning on empty structure
+Input format: MOLfile
+Output format: Plain text
+Aux. info suppressed
+No timeout
+Up to 1024 atoms per structure
+
+Warning (Metal was disconnected)
+
