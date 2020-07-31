@@ -1,36 +1,88 @@
-C(/Br)=C\\I
-C((C))O
-C((C))O
-(N1CCCC1)
-[Na+]..[Cl-]
-.CCO
-CCO.
-C1CCC
-C/C=C
-C/C=CC
-CC/=C/C
-C/C(\F)=C/C
-D[CH3]
-T[CH3]
-CccccC
-Ccc
-C1.C1
-C%00CC%00
-C(C.C)C
-C(C)1CC1
-C(.C)
-C()
-(CO)=O
-(C)
-.c
-c..c
-c.
-C=(O)C
-C((C))
-C.(C)
-C1CC(=1)
-C1CC(1)
-C(C.)
-C==C
-C(1CC1)
-C(1)CC1
+C1.C1	0
+C%00CC%00	1
+C(C.C)C	2
+C(C)1CC1	3
+C(.C)	4
+C()	5
+(CO)=O	6
+(C)	7
+.c	8
+c..c	9
+c.	10
+C=(O)C	11
+C((C))	12
+C.(C)	13
+C1CC(=1)	14
+C1CC(1)	15
+C(C.)	16
+C==C	17
+C(1CC1)	18
+C(1)CC1	19
+C(/Br)=C\\I	20
+C((C))O	21
+(N1CCCC1)	22
+[Na+]..[Cl-]	23
+.CCO	24
+CCO.	25
+C1CCC	26
+C/C=C	27
+C/C=CC	28
+CC/=C/C	29
+C/C(\F)=C/C	30
+D[CH3]	31
+T[CH3]	32
+CccccC	33
+Ccc	34
+C1ccCCC1	35
+C=1CCCCC#1	36
+C=1CCCCC1	37
+C1CCCCC=1	38
+C=1CCCCC=1	39
+CccC	40
+Cccccc	41
+C.1CCCCC.1	42
+C=1.C1	43
+C=1.C=1	44
+c1ccccc1Oc2ccccc2	45
+c1ccccc1Oc1ccccc1	46
+C11	47
+C1C1	48
+c1=ccccc1	49
+c1=cc=ccc1	50
+c1=cc=cc=c1	51
+c1=c:c:c:c:c1	52
+c1=c:c=c:c:c1	53
+c1=c:c=c:c=c1	54
+c1=c-c=c:c:c1	55
+Cco	56
+ccc	57
+C(CC)	58
+C(CC).	59
+C.1.1	60
+c1ccc*c1	61
+*1*****1	62
+[cH]1[cH][cH][cH][cH][cH]1	63
+[CH]1[CH][CH][CH][CH][CH]1	64
+c1cc1	65
+cc0	66
+1ccccc1	67
+[cH]CC	68
+[CH0]	69
+[C-0]	70
+[C+0]	71
+C1=C/C.C\1	72
+C/1=C/C.C/1	73
+C/1=C/C.C\1	74
+C/1=C\CCCC\1	75
+C/1=C\CCCC/1	76
+c1cc1	77
+c(O)1ccccc1	78
+[C-2+3]	79
+C-1-2-3-4.C1.C2.C3.C4	80
+C1.02.C12	81
+C((C))C	82
+(C)	83
+C()C	84
+[N+H4]	85
+C(.)1.C(.)1	86
+C(1).C(1)	87

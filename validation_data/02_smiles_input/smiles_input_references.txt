@@ -21,8 +21,33 @@ License: BSD2: https://github.com/nextmovesoftware/smilesreading/blob/master/LIC
 
 04_nonstandard
 
-http://opensmiles.org/opensmiles.html
-https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles
+0-19: https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html#chapter-smiles
+20: personal communication with Roger Sayle
+21-34: http://opensmiles.org/opensmiles.html
+35: https://sourceforge.net/p/blueobelisk/mailman/message/843302/
+36-39: https://sourceforge.net/p/blueobelisk/mailman/message/843294/
+40-41: https://sourceforge.net/p/blueobelisk/mailman/message/843293/
+42: https://sourceforge.net/p/blueobelisk/mailman/message/843290/
+43-48: https://sourceforge.net/p/blueobelisk/mailman/message/843463/
+49-55: https://sourceforge.net/p/blueobelisk/mailman/message/843508/
+56: https://sourceforge.net/p/blueobelisk/mailman/message/843387/
+57: https://sourceforge.net/p/blueobelisk/mailman/message/843385/
+58-60: https://sourceforge.net/p/blueobelisk/mailman/message/843329/
+61-62: https://sourceforge.net/p/blueobelisk/mailman/message/843621/
+63-64: https://sourceforge.net/p/blueobelisk/mailman/message/843620/
+65-66: https://sourceforge.net/p/blueobelisk/mailman/message/843585/
+67: https://sourceforge.net/p/blueobelisk/mailman/message/843580/
+68: https://sourceforge.net/p/blueobelisk/mailman/message/843642/
+69-71: https://sourceforge.net/p/blueobelisk/mailman/message/18972330/
+72-76: https://sourceforge.net/p/blueobelisk/mailman/message/25483564/
+77: https://sourceforge.net/p/blueobelisk/mailman/message/26914769/
+78: https://sourceforge.net/p/blueobelisk/mailman/message/29705711/
+79: https://sourceforge.net/p/blueobelisk/mailman/message/31168130/
+80: https://sourceforge.net/p/blueobelisk/mailman/message/31384389/
+81: https://sourceforge.net/p/blueobelisk/mailman/message/34962293/
+82-84: https://sourceforge.net/p/blueobelisk/mailman/message/36511884/
+85: https://github.com/rdkit/rdkit/issues/2632
+86-87: https://github.com/rdkit/rdkit/issues/1395
 
 05_CIPValidationSuite
 
