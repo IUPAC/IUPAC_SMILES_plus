@@ -12,12 +12,12 @@ Pure and Applied Chemistry, 90(12), pp. 1833-2092. Retrieved 25 Sep. 2019, from 
 02_oxidation_states
 
 https://en.wikipedia.org/wiki/Oxidation_state
-License: CC BY-SA 3.0: https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
+License: CC BY-SA 3.0, https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License
 
 03_NextMove_Benchmark
 
 https://github.com/nextmovesoftware/smilesreading
-License: BSD2: https://github.com/nextmovesoftware/smilesreading/blob/master/LICENSE
+License: BSD2, https://github.com/nextmovesoftware/smilesreading/blob/master/LICENSE
 
 04_nonstandard
 
@@ -62,3 +62,16 @@ License: CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
 Andrews, D. M.; Broad, L. M.; Edwards, P. J.; Fox, D. N. A.; Gallagher, T.; Garland, S. L.; Kidd, R.; Sweeney, J. B. The Creation and Characterisation of a National Compound Collection: The Royal Society of Chemistry Pilot. Chem. Sci. 2016, 7 (6), 3869–3878. https://doi.org/10.1039/C6SC00264A.
 
 License: CC0
+
+07_Toolkit_UnitTests
+
+\01_smilez
+
+https://bitbucket.org/dalke/smilez/src/default/
+License: BSD, https://bitbucket.org/dalke/smilez/src/default/COPYING
+
+\02_rdkit
+
+https://github.com/rdkit/rdkit/blob/master/Code/GraphMol/SmilesParse/test.cpp
+License: BSD-3, https://github.com/rdkit/rdkit/blob/master/license.txt
+

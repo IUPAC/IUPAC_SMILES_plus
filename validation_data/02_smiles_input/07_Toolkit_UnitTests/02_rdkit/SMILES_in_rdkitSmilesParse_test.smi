@@ -1,0 +1,418 @@
+C1CC2C1CC2	0	Testing molecules which should parse
+c1cccn(=O)c1	1	Testing molecules which should parse
+C	2	Testing molecules which should parse
+CC	3	Testing molecules which should parse
+C-C	4	Testing molecules which should parse
+C=C	5	Testing molecules which should parse
+[CH2+]C[CH+2]	6	Testing molecules which should parse
+C1CC1	7	Testing molecules which should parse
+C1CC=1	8	Testing molecules which should parse
+C=1CC1	9	Testing molecules which should parse
+C=C-O	10	Testing molecules which should parse
+C1CC1	11	Testing molecules which should parse
+C1NC1	12	Testing molecules which should parse
+C1=CC1	13	Testing molecules which should parse
+C1CCC1	14	Testing molecules which should parse
+CC(C)CC	15	Testing molecules which should parse
+CC(=O)O	16	Testing molecules which should parse
+C1C(=O)C1	17	Testing molecules which should parse
+C1C(N)C1	18	Testing molecules which should parse
+CC(O)C	19	Testing molecules which should parse
+OC=CCC	20	Testing molecules which should parse
+CC([O-])O	21	Testing molecules which should parse
+C1CC2C1CC2	22	Testing molecules which should parse
+Cl/C=C/Cl	23	Testing molecules which should parse
+Cl/C=C\\Cl	24	Testing molecules which should parse
+Cl/C=C/Cl	25	Testing molecules which should parse
+Cl/C=C\\Cl	26	Testing molecules which should parse
+Cl/C=C\\\\Cl	27	Testing molecules which should parse
+C1CC.CC1	28	Testing molecules which should parse
+C1C(C2CC2).C2CC2C1	29	Testing molecules which should parse
+[Na+].[Cl-].[NH4+].[Cl-]	30	Testing molecules which should parse
+C[35Cl]	31	Testing molecules which should parse
+C%10CC%10	32	Testing molecules which should parse
+[H][H]	33	Testing molecules which should parse
+[H+]	34	Testing molecules which should parse
+C[N+](=O)[O-]	35	Testing molecules which should parse
+N1C(=N)SC=C1	36	Testing molecules which should parse
+[O-][N+](=O)C1=CNC(=N)S1	37	Testing molecules which should parse
+CN(=O)=O	38	Testing molecules which should parse
+C1=CC=C[N+]([O-])=C1	39	Testing molecules which should parse
+C1=CC=CN(=O)=C1	40	Testing molecules which should parse
+  C1=CC=CN(=O)=C1	41	Test white space tolerance
+C1=CC=CN(=O)=C1  	42	Test white space tolerance
+  C1=CC=CN(=O)=C1  	43	Test white space tolerance
+\tC1=CC=CN(=O)=C1\r\n	44	Test white space tolerance
+c1ccccc1[*]	45	test dummy atoms
+c1ccccc1[1*]	46	test dummy atoms
+S1cccc1	47	test dummy atoms
+*1ccccc1	48	test dummy atoms
+C1=CC=CC=C1	49	test dummy atoms
+*1=CC=CC=C1	50	test dummy atoms
+*1*cccc1	51	test dummy atoms
+*1**ccc1	52	test dummy atoms
+c1ccc[se]1	53	test aromatic se and te
+c1ccc[te]1	54	test aromatic se and te
+C0CC0	55	test zeros as ring indices, issue 2690982
+C/C(/C=C2\\Sc1ccc(cc1N\\2C))=C5\\SC4=NccN4C\\5=O	56	test canonization error, issue 3018558
+[HH]	57	the most common molecule in the universe
+[2HH]	58	the most common molecule in the universe
+[HH2-]	59	issue 3535669
+[2HH2-]	60	issue 3535669
+b1ccccc1	61	problems handling aromatic boron, issue 3480481
+C[Rf]C	62	issue 3535668
+[C:1]	63	issue 3535669
+[C:0]	64	issue 3525776
+[si]1cccc[si]1	65	aromatic Si (github issue #5)
+[asH]1cccc1	66	aromatic As (github issue #682)
+[Db][Sg][Bh][Hs][Mt][Ds][Rg][Cn][Nh][Fl][Mc][Lv][Ts][Og]	67	new elements
+[Uun][Uuu][Uub][Uut][Uuq][Uup][Uuh][Uus][Uuo]	68	old names
+['Db']['Sg']['Bh']['Hs']['Mt']['Ds']['Rg']['Cn']['Nh']['Fl']['Mc']['Lv']['Ts']['Og']	69	a biovia pathology
+[#6]	70	feature borrowed from SMARTS
+[12#6]	71	feature borrowed from SMARTS
+CC=(CO)C	72	alternate good and bad smiles
+CC(=CO)C	73	alternate good and bad smiles
+C1CC	74	alternate good and bad smiles
+C1CC1	75	alternate good and bad smiles
+Ccc   	76	alternate good and bad smiles
+CCC	77	alternate good and bad smiles
+fff	78	alternate good and bad smiles; tests the situation where the parser cannot do anything at all
+CCC	79	alternate good and bad smiles
+N(=O)(=O)=O	80	alternate good and bad smiles; bad sanitization failure
+C1CC1	81	alternate good and bad smiles
+C=0	82	alternate good and bad smiles; part of sf.net issue 2525792
+C1CC1	83	alternate good and bad smiles
+C0	84	alternate good and bad smiles; part of sf.net issue 2525792
+C1CC1	85	alternate good and bad smiles
+C-0	86	alternate good and bad smiles; part of sf.net issue 2525792
+C1CC1	87	alternate good and bad smiles
+C+0	88	alternate good and bad smiles; part of sf.net issue 2525792
+C1CC1	89	alternate good and bad smiles
+[H2H]	90	alternate good and bad smiles
+C1CC1	91	alternate good and bad smiles
+[HH2]	92	alternate good and bad smiles
+C1CC1	93	alternate good and bad smiles
+OC([OH])C[O-]	94	implicit/explicit H handling
+C1(CC1CC1CC1)	95	ring closure handling with branches/fragments
+C1.C1CC1CC1	96	ring closure handling with branches/fragments
+C1CC11CC1	97	ring closure handling with branches/fragments
+C1OCCCC1	98	Testing basic SMILES canonicalization
+C1COCCC1	99	Testing basic SMILES canonicalization
+O1CCCCC1	100	Testing basic SMILES canonicalization
+OC=CC	101	Testing basic SMILES canonicalization
+CC=CO	102	Testing basic SMILES canonicalization
+C(C)=CO	103	Testing basic SMILES canonicalization
+C(O)=CC	104	Testing basic SMILES canonicalization
+C([H])Cl	105	Testing basic SMILES canonicalization; These are related to Issue 109
+CCl	106	Testing basic SMILES canonicalization; These are related to Issue 109
+P#[Ga]	107	Testing basic SMILES canonicalization; These are related to Issue 131
+O=[Ba]	108	Testing basic SMILES canonicalization; These are related to Issue 131
+	109	empty molecule
+F[C@](Cl)(Br)I	110	Testing handling of stereochemical smiles
+F[C@](Br)(I)Cl	111	Testing handling of stereochemical smiles
+F[C@](I)(Cl)Br	112	Testing handling of stereochemical smiles
+Cl[C@](Br)(F)I	113	Testing handling of stereochemical smiles
+Cl[C@](F)(I)Br	114	Testing handling of stereochemical smiles
+I[C@](F)(Br)Cl	115	Testing handling of stereochemical smiles
+I[C@](Br)(Cl)F	116	Testing handling of stereochemical smiles
+F[C@@](Br)(Cl)I	117	Testing handling of stereochemical smiles
+F[C@@](Cl)(I)Br	118	Testing handling of stereochemical smiles
+Cl[C@@](Br)(I)F	119	Testing handling of stereochemical smiles
+Cl[C@@](F)(Br)I	120	Testing handling of stereochemical smiles
+[C@@](Cl)(F)(Br)I	121	Testing handling of stereochemical smiles
+F[C@H](Cl)Br	122	Testing handling of stereochemical smiles
+Br[C@H](F)Cl	123	Testing handling of stereochemical smiles
+Br[C@]([H])(F)Cl	124	Testing handling of stereochemical smiles
+Br[C@](F)(Cl)[H]	125	Testing handling of stereochemical smiles
+Br[C@]1(F)(Cl).[H]1	126	Testing handling of stereochemical smiles
+Br[C@H]1Cl.F1	127	Testing handling of stereochemical smiles
+Br[C@]12Cl.F2.[H]1	128	Testing handling of stereochemical smiles
+Br[C@]21Cl.F1.[H]2	129	Testing handling of stereochemical smiles
+[C@@H](Br)(F)Cl	130	Testing handling of stereochemical smiles
+[H][C@@](Br)(F)Cl	131	Testing handling of stereochemical smiles
+F[C@]([H])(O)C	132	Testing handling of stereochemical smiles
+F[C@]1([H])OC1	133	Testing handling of stereochemical smiles
+F[C@H](O)C	134	Testing handling of stereochemical smiles
+F[C@@H]1OC1	135	Testing handling of stereochemical smiles
+[C@](F)([H])(O)C	136	Testing handling of stereochemical smiles
+[C@@]1(F)([H])OC1	137	Testing handling of stereochemical smiles
+[C@@H](F)(O)C	138	Testing handling of stereochemical smiles
+[C@@H]1(F)OC1	139	Testing handling of stereochemical smiles
+C1O[C@H]1F	140	Testing handling of stereochemical smiles
+C1O[C@@]1([H])F	141	Testing handling of stereochemical smiles
+F\\C=C/Br	142	test double-bond containing molecules
+Br\\C=C/F	143	test double-bond containing molecules
+Br/C=C\\F	144	test double-bond containing molecules
+F/C=C\\Br	145	test double-bond containing molecules
+F\\C=C\\Br	146	test double-bond containing molecules
+Br\\C=C\\F	147	test double-bond containing molecules
+Br/C=C/F	148	test double-bond containing molecules
+F/C=C/Br	149	test double-bond containing molecules
+F\\C=C(/Cl)\\Br	150	test double-bond containing molecules
+F/C=C(\\Cl)/Br	151	test double-bond containing molecules
+F/C=C(\\Cl)Br	152	test double-bond containing molecules
+F/C=C(Cl)/Br	153	test double-bond containing molecules
+F[C@H](Cl)\\C=C(/F)	154	combine chirality with cis/trans
+F[C@H](Cl)/C=C(\\F)	155	combine chirality with cis/trans
+Cl[C@@H](F)/C=C(\\F)	156	combine chirality with cis/trans
+Cl[C@@H](F)\\C=C(/F)	157	combine chirality with cis/trans
+Cl[C@]12[Si]C(C2)O1	158	Testing Issue 127 (chiral smiles with fused rings)
+C[C@](C)(C)C	159	Testing Issue 143 (removing chiral tags for non-chiral centers)
+CC[C@](C)(C)C=O	160	Testing Issue 143 (removing chiral tags for non-chiral centers)
+C1S[C@H]1O	161	Testing Issue 151 (Chiral centers in rings with hydrogen on them not handled correctly
+O[C@H]1CS1	162	Testing Issue 151 (Chiral centers in rings with hydrogen on them not handled correctly
+F[C@@H]1O[C@H](Cl)S1	163	Testing Issue 151 (Chiral centers in rings with hydrogen on them not handled correctly
+Cl[C@@H]1S[C@@H](O1)F	164	Testing Issue 151 (Chiral centers in rings with hydrogen on them not handled correctly
+Cl[C@@H]1O[C@H](F)S1	165	Testing Issue 151 (Chiral centers in rings with hydrogen on them not handled correctly
+C1(O[C@H]12)S2	166	Testing Issue 153 (Incorrect order of ring-closure bonds from SMILES)
+O1C2S[C@H]12	167	Testing Issue 153 (Incorrect order of ring-closure bonds from SMILES)
+C1(O[C@H]21)S2	168	Testing Issue 153 (Incorrect order of ring-closure bonds from SMILES)
+O1C2S[C@@H]12	169	Testing Issue 153 (Incorrect order of ring-closure bonds from SMILES)
+O[C@](C)(Cl)[C@@](O)(Cl)C	170	Testing Issue 157 (Symmetric molecules with multiple chiral centers badly canonicalized)
+Cl[C@@](C)1CC[C@@](C)(C1)Cl	171	Testing Issue 157 (Symmetric molecules with multiple chiral centers badly canonicalized)
+[H][C@@]12CC(CO1)CN2	172	Testing Issue 157 (Symmetric molecules with multiple chiral centers badly canonicalized)
+[H][C@@]12C[14C@@](C=C1)(C3C2C(NC3=O)=O)[H]	173	Testing Issue 157 (Symmetric molecules with multiple chiral centers badly canonicalized)
+C1=C[C@@H]2C[C@H]1C1C(=O)NC(=O)C21	174	Testing Issue 157 (Symmetric molecules with multiple chiral centers badly canonicalized)
+C/C=C/O	175	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(\\C)=C/O	176	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(\\\\C)=C/O	177	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(=C/O)\\C	178	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(\\C/C=C/Cl)=C/O	179	Testing Issue 159 (cis/trans wrong in some branched systems)
+O=C\\C=C/F	180	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(/C=O)=C/F	181	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(=C/F)/C=O	182	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(=O)\\C=C/Br	183	Testing Issue 159 (cis/trans wrong in some branched systems)
+CC(=O)\\C=C/Br	184	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(=O)\\N=C\\Br	185	Testing Issue 159 (cis/trans wrong in some branched systems)
+CC(=O)\\N=C\\Br	186	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(/Br)(=C/Cl)Cl	187	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(=C/Cl)(/Br)Cl	188	Testing Issue 159 (cis/trans wrong in some branched systems)
+Cl\\C=C(\\Br)	189	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(/C=C/C)	190	Testing Issue 159 (cis/trans wrong in some branched systems)
+C(/C)=C/C	191	Testing Issue 159 (cis/trans wrong in some branched systems)
+Cl/C=C(/C=C/C)\\C=C\\Br	192	Test propagation of bond flips
+C(/C=C/C)(\\C=C\\Br)=C\\Cl	193	Test propagation of bond flips
+Br/C=C/C(/C=C/C)=C\\Cl	194	Test propagation of bond flips
+Cl/C=C(/C=C/C=C\\F)\\C=C\\Br	195	Test propagation of bond flips
+Cl\\C=C1.F/1	196	Testing Issue 175 (cis/trans wrong on ring closures)
+Cl\\C=C1CN/1	197	Testing Issue 175 (cis/trans wrong on ring closures)
+C/1=C/F.F1	198	Testing Issue 175 (cis/trans wrong on ring closures)
+C1CC1C1CC1	199	Testing Issue 176 (problems with 'mol BOND ring_number)
+C1CC1C1CC-1	200	Testing Issue 176 (problems with 'mol BOND ring_number)
+C1CC1C1CC=1	201	Testing Issue 176 (problems with 'mol BOND ring_number)
+C1CC1C=1CC1	202	Testing Issue 176 (problems with 'mol BOND ring_number)
+Cl/C(=N\\O)/C(=N\\O)Br	203	Testing Issue 180: Z/E problems
+Cl/C(/C(Br)=N\\O)=N\\O	204	Testing Issue 180: Z/E problems
+C1NC(Cl)C(=N\\O)/C1=N\\O	205	Testing Issue 184: Cis/Trans incorrect on ring-closure bonds
+C(/C)=N/O	206	Testing Issue 185: Cis/Trans incorrect on writing branches
+C(\\C)=N\\O	207	Testing Issue 185: Cis/Trans incorrect on writing branches
+CC(=N\\O)/C=P/N	208	Testing Issue 185: Cis/Trans incorrect on writing branches
+N/P=C/C(C)=N/O	209	Testing Issue 185: Cis/Trans incorrect on writing branches
+C2=NNC(N=C2)=N\\N=C\\c1ccccc1	210	Testing Issue 191: Bad bond directions in a branch
+C1CC[C+]1=1CCC1	211	Testing Issue 256: SMILES yields incorrect structure
+C1CC[C+]=11CCC1	212	Testing Issue 256: SMILES yields incorrect structure
+c1ccccc1	213	Testing Issue 266: kekulized SMILES output
+C1=CC=CC=C1	214	Testing Issue 266: kekulized SMILES output
+c1ccccc1c1ccccc1	215	Testing Issue 266: kekulized SMILES output
+c1ccc(-c2ccccc2)cc1	216	Testing Issue 266: kekulized SMILES output
+C1=CC=C(C2=CC=CC=C2)C=C1	217	Testing Issue 266: kekulized SMILES output
+CN(C)C	218	Testing rootedAtAtom functionality
+N(C)(C)C	219	Testing rootedAtAtom functionality
+CN(C)C	220	Testing rootedAtAtom functionality
+C[13C](C)(C)C	221	Testing isotope handling
+CC(C)(C)C	222	Testing isotope handling
+C[12C](C)(C)C	223	Testing isotope handling
+CC[U]	224	Testing isotope handling
+CC[238U]	225	Testing isotope handling
+CCCCS(=[18O])(=O)CCCCl	226	Testing isotope handling
+CCCCS(=[24O])(=O)CCCCl	227	Testing isotope handling
+CCCCS(=O)(=O)CCCCl	228	Testing isotope handling
+CCCCS(=O)(=[24O])CCCCl	229	Testing isotope handling
+CCCCS(=O)(=O)CCCCl	230	Testing isotope handling
+C1[NH2+]CCC1	231	Testing SF.net bug 1670149
+C1CC[NH2+]C1	232	Testing SF.net bug 1670149
+Cl[CH]1CCCCC1	233	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+Cl[C@H]1CCCCC1	234	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+ClC1CCCCC1	235	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+Cl[C@H]1C(Br)CCCC1	236	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+ClC1CCCCC1Br	237	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+[CH]1=[CH][CH]=[CH][CH]=[CH]1	238	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+c1ccccc1	239	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+c1ccccn1	240	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+C1=CNC=C1	241	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+c1cc[nH]c1	242	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+[CH]1=[CH][NH][CH]=[CH]1	243	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+c1cc[nH]c1	244	Testing SF.net bug 1719046: explicit Hs in canonical smiles
+P1C=CC=C1	245	this was Issue 35525671
+c1cc[pH]c1	246	this was Issue 35525671
+F/C=N/Cl	247	Testing SF.net bug 1842174: bad bond dirs in branches
+C(\\F)=N/Cl	248	Testing SF.net bug 1842174: bad bond dirs in branches
+C(\\C=C\\F)=C(/Cl)Br	249	Testing SF.net bug 1842174: bad bond dirs in branches
+F/C=C/C=C(/Cl)Br	250	Testing SF.net bug 1842174: bad bond dirs in branches
+C(/C=C/F)=C(\\Cl)Br	251	Testing SF.net bug 1842174: bad bond dirs in branches
+O=NC1=NOC(=N\\O)/C1=N\\O	252	Testing SF.net bug 1842174: bad bond dirs in branches
+O/N=C/1COCC1=N\\O	253	Testing SF.net bug 1842174: bad bond dirs in branches
+O/N=C1\\COC\\C1=N\\O	254	Testing SF.net bug 1842174: bad bond dirs in branches
+O/N=C/1COC[N+]1=N\\O	255	Testing SF.net bug 1842174: bad bond dirs in branches
+O/N=C1\\COC\\[N+]1=N\\O	256	Testing SF.net bug 1842174: bad bond dirs in branches
+O=C1C2OCC[C@@]22C(CC1)CNCC2	257	Testing SF.net bug 1844617: oscillating chirality in canonical smiles
+O=C1CC[C@@]2(O)[C@@H]3N(C)CC[C@]22[C@H]1OC[C@H]2CC3	258	Testing SF.net bug 1844617: oscillating chirality in canonical smiles
+O=C1CC[C@@]2(O)[C@@H]3N(CC4CC4)CC[C@]22[C@H]1OC[C@H]2CC3	259	Testing SF.net bug 1844617: oscillating chirality in canonical smiles
+C[C@]12CNOC2.F1	260	Testing SF.net bug 1844959: bad handling of Hs in chiral smiles
+C[C@]12CNOC1.F2	261	Testing SF.net bug 1844959: bad handling of Hs in chiral smiles
+C[C@@]12CNOC2.F1	262	Testing SF.net bug 1844959: bad handling of Hs in chiral smiles
+C[C@@]12CNOC1.F2	263	Testing SF.net bug 1844959: bad handling of Hs in chiral smiles
+C[C@]12CNOC2.[H]1	264	Testing SF.net bug 1844959: bad handling of Hs in chiral smiles
+C[C@]12CNOC1.[H]2	265	Testing SF.net bug 1844959: bad handling of Hs in chiral smiles
+C[C@@]12CNOC2.[H]1	266	Testing SF.net bug 1844959: bad handling of Hs in chiral smiles
+C[C@@]12CNOC1.[H]2	267	Testing SF.net bug 1844959: bad handling of Hs in chiral smiles
+[C](Cl)Br	268	Testing sf.net bug 1942220
+[CH2](Cl)Br	269	Testing sf.net bug 1942220
+C(Cl)Br	270	Testing sf.net bug 1942220
+OS(=O)=O	271	Testing sf.net bug 1942220
+O=[SH](=O)O	272	Testing sf.net bug 1942220
+C[C@H]1CC[C@@H](C)CC1	273	Testing error reporting with ring stereochem
+c(:c:c:1):c:c:c:1	274	Testing sf.net issue 3127883 (kekulization failing)
+c1(:c(:c(:c(-C(-c2:c(:c(:c(:c(:c:2)))))=C):c(:c:1))))	275	Testing sf.net issue 3127883 (kekulization failing)
+C1COC/C=C\\CCC1	276	Issue 3139534: stereochemistry in larger rings
+C1=C\\COCCCCC/1	277	Issue 3139534: stereochemistry in larger rings
+C1COC/C=C/CCC1	278	Issue 3139534: stereochemistry in larger rings
+C1=C/COCCCCC/1	279	Issue 3139534: stereochemistry in larger rings
+C1CC/C=C/C=C/CCC1	280	Issue 3139534: stereochemistry in larger rings
+C1=C/CCCCCC/C=C/1	281	Issue 3139534: stereochemistry in larger rings
+C/1=C/C=C/CCCCCC1	282	Issue 3139534: stereochemistry in larger rings
+C1=C\\CCCCCC/C=C/1	283	Issue 3139534: stereochemistry in larger rings
+C1COC/C=C/C=C/C1	284	Issue 3139534: stereochemistry in larger rings
+C1=C/CCCOC/C=C/1	285	Issue 3139534: stereochemistry in larger rings
+C1=C/OCC/C=C\\CC\\1	286	Issue 3139534: stereochemistry in larger rings
+C1CCCCN/C=C/1	287	Issue 3139534: stereochemistry in larger rings
+C1=C/NCCCCC/1	288	Issue 3139534: stereochemistry in larger rings
+C1CCCCN/C=C/1	289	Issue 3139534: stereochemistry in larger rings
+CCC/[N+]/1=C/c2ccccc2OC(=O)/C=C1/O	290	Issue 3139534: stereochemistry in larger rings
+(CCC[N+]1=C/c2ccccc2OC(=O)/C=C\1O)	291	Issue 3139534: stereochemistry in larger rings
+(CO/C1=C/C=C\C=C/C=N\1)	292	Github #2023 (James Davidson examples)
+(COC1=C/C=C\C=C/C=N\1)	293	Github #2023 (James Davidson examples)
+NC(=O)O[C@H]1C(/C)=C/[C@H](C)[C@@H](O)[C@@H](OC)C[C@H](C)C\\C2=C(/OC)C(=O)\\C=C(\\NC(=O)C(\\C)=C\\C=C/[C@@H]1OC)C2=O	294	Github #2023 (James Davidson examples)
+CC(O[C@@H]1C=C(C)[C@H]2[C@H]([C@H]3O[C@@H]2C/C(C)=C\\CC[C@@]3(C)OC(C)=O)[C@H]1C(OC(C)=O)(C)C)=O	295	Github #2023 (James Davidson examples)
+CC(O[C@@H]1C=C(C)[C@H]2[C@H]([C@H]3O[C@@H]2C/C(C)=C/CC[C@@]3(C)OC(C)=O)[C@H]1C(OC(C)=O)(C)C)=O	296	Github #2023 (James Davidson examples)
+CC(=O)[C@@H]1CC=C(C)[C@@H]2[C@@H]3O[C@@H]([C@@H](O)C/C=C\\CC3)[C@@H]12	297	Github #2023 (James Davidson examples)
+[*:1]CCC([C:200])C	298	test adding atom-map information
+C1.C11.C1	299	Issue 3145697 repeated ring labels in disconnected structures
+C1.C11.O1	300	Issue 3145697 repeated ring labels in disconnected structures
+C1.C1=1.O1	301	Issue 3145697 repeated ring labels in disconnected structures
+C1.C=11.O1	302	Issue 3145697 repeated ring labels in disconnected structures
+C1C.CC11CCC1	303	Issue 3145697 repeated ring labels in disconnected structures
+c1cccc[te+]1	304	Issue 3152751 cannot roundtrip charged aromatic Se and Te
+c1cccc[se+]1	305	Issue 3152751 cannot roundtrip charged aromatic Se and Te
+c1ccc[te]1	306	Issue 3152751 cannot roundtrip charged aromatic Se and Te
+c1ccc[se]1	307	Issue 3152751 cannot roundtrip charged aromatic Se and Te
+CC*	308	Issue 3525799: bad smiles for r groups
+*CC	309	Issue 3525799: bad smiles for r groups
+C1SCCSCCCSCCSCC1	310	Issue 3526810: canonical smiles failure in symmetric heterocycles
+C1NCCNCCCNCCNCC1	311	Issue 3526810: canonical smiles failure in symmetric heterocycles
+C1CNCCCNCCNCCCNC1	312	Issue 3526810: canonical smiles failure in symmetric heterocycles
+C1CCNCCCNCCNCCCN1	313	Issue 3526810: canonical smiles failure in symmetric heterocycles
+N12.N13.C24.C35.C46.C56	314	Issue 3528556: canonical smiles failure in cycle
+N1NCCCC1	315	Issue 3528556: canonical smiles failure in cycle
+C1CCCC1CCC1CCCCC11CCCCC1	316	do not repeat ring closure digits on the same atom
+C1CCC2(CC1)CCCCC2CCC1CCCC1	317	do not repeat ring closure digits on the same atom
+N#Cc1ccc2[nH]cc([C@H]3CC[C@@H](N4CCN(c5cccc6nccnc65)CC4)CC3)c2c1	318	Testing handling of ring stereochemistry; TJ O’Donnell examples
+N#Cc1ccc2[nH]cc([C@@H]3CC[C@H](N4CCN(c5cccc6nccnc65)CC4)CC3)c2c1	319	Testing handling of ring stereochemistry; TJ O’Donnell examples
+N#Cc1ccc2[nH]cc([C@@H]3CC[C@@H](N4CCN(c5cccc6nccnc65)CC4)CC3)c2c1	320	Testing handling of ring stereochemistry; TJ O’Donnell examples
+N#Cc1ccc2[nH]cc([C@H]3CC[C@H](N4CCN(c5cccc6nccnc65)CC4)CC3)c2c1	321	Testing handling of ring stereochemistry; TJ O’Donnell examples
+N#Cc1ccc2[nH]cc([C@@H]3CC[C@@H](N4CCN(c5cccc6nccnc65)CC4)CC3)c2c1	322	Testing handling of ring stereochemistry; TJ O’Donnell examples
+N#Cc1ccc2[nH]cc([C@H]3CC[C@H](N4CCN(c5cccc6nccnc65)CC4)CC3)c2c1	323	Testing handling of ring stereochemistry; TJ O’Donnell examples
+O=C(N[C@@H]1CC[C@@H](CCN2CCN(c3cccc(Cl)c3Cl)CC2)CC1)c1cccs1	324	Testing handling of ring stereochemistry; TJ O’Donnell examples
+O=C(N[C@H]1CC[C@H](CCN2CCN(c3cccc(Cl)c3Cl)CC2)CC1)c1cccs1	325	Testing handling of ring stereochemistry; TJ O’Donnell examples
+Cn1ccc2ccc3c4[nH]c5c(cccc5CCN[C@H]5CC[C@H](O)CC5)c4c4c(c3c21)C(=O)NC4=O	326	Testing handling of ring stereochemistry; TJ O’Donnell examples
+Cn1ccc2ccc3c4[nH]c5c(cccc5CCN[C@@H]5CC[C@@H](O)CC5)c4c4c(c3c21)C(=O)NC4=O	327	Testing handling of ring stereochemistry; TJ O’Donnell examples
+N=C(N)Nc1ccc(CNC(=O)N2CCN(C(=O)O[C@@H]3CCC[C@H](OC(=O)N4CCN(C(=O)	328	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CCCCn5ccnc5)CC4)CCC3)CC2)cc1	329	Testing handling of ring stereochemistry; TJ O’Donnell examples
+N=C(N)Nc1ccc(CNC(=O)N2CCN(C(=O)O[C@H]3CCC[C@@H](OC(=O)N4CCN(C(=O)CCCCn5ccnc5)CC4)CCC3)CC2)cc1	330	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CC(C)c1cc(C(C)C)c(S(=O)(=O)NC[C@H]2CC[C@H](C(=O)NNC(=O)c3cc4ccccc4s3)CC2)c(C(C)C)c1	331	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CC(C)c1cc(C(C)C)c(S(=O)(=O)NC[C@@H]2CC[C@@H](C(=O)NNC(=O)c3cc4ccccc4s3)CC2)c(C(C)C)c1	332	Testing handling of ring stereochemistry; TJ O’Donnell examples
+O=C(CCC[C@@H]1OO[C@H](CCCC(=O)c2ccccc2)OO1)c1ccccc1	333	Testing handling of ring stereochemistry; TJ O’Donnell examples
+O=C(CCC[C@@H]1OO[C@H](CCCC(=O)c2ccccc2)OO1)c1ccccc1	334	Testing handling of ring stereochemistry; TJ O’Donnell examples
+O=C(CCC[C@@H]1OO[C@@H](CCCC(=O)c2ccccc2)OO1)c1ccccc1	335	Testing handling of ring stereochemistry; TJ O’Donnell examples
+O=C(CCC[C@H]1OO[C@H](CCCC(=O)c2ccccc2)OO1)c1ccccc1	336	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CCCn1c2[nH]c([C@@H]3CC[C@@H](CNC(C)=O)CC3)nc2c(=O)n(CCC)c1=O	337	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CCCn1c2[nH]c([C@H]3CC[C@H](CNC(C)=O)CC3)nc2c(=O)n(CCC)c1=O	338	Testing handling of ring stereochemistry; TJ O’Donnell examples
+c1cc2c(cccc2N2CCN([C@H]3CC[C@@H](c4c[nH]c5ccccc54)CC3)CC2)[nH]1	339	Testing handling of ring stereochemistry; TJ O’Donnell examples
+c1cc2c(cccc2N2CCN([C@@H]3CC[C@H](c4c[nH]c5ccccc54)CC3)CC2)[nH]1	340	Testing handling of ring stereochemistry; TJ O’Donnell examples
+c1cc2c(cccc2N2CCN([C@H]3CC[C@@H](c4c[nH]c5ccccc54)CC3)CC2)[nH]1	341	Testing handling of ring stereochemistry; TJ O’Donnell examples
+c1cc2c(cccc2N2CCN([C@@H]3CC[C@H](c4c[nH]c5ccccc54)CC3)CC2)[nH]1	342	Testing handling of ring stereochemistry; TJ O’Donnell examples
+c1cc2c(cccc2N2CCN([C@@H]3CC[C@@H](c4c[nH]c5ccccc54)CC3)CC2)[nH]1	343	Testing handling of ring stereochemistry; TJ O’Donnell examples
+c1cc2c(cccc2N2CCN([C@H]3CC[C@H](c4c[nH]c5ccccc54)CC3)CC2)[nH]1	344	Testing handling of ring stereochemistry; TJ O’Donnell examples
+c1cc2c(cccc2N2CCN([C@@H]3CC[C@@H](c4c[nH]c5ccccc54)CC3)CC2)[nH]1	345	Testing handling of ring stereochemistry; TJ O’Donnell examples
+c1cc2c(cccc2N2CCN([C@H]3CC[C@H](c4c[nH]c5ccccc54)CC3)CC2)[nH]1	346	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CCCCC(=O)N[C@@]1(C(=O)N[C@H](Cc2ccccc2)C(=O)N[C@@H](CCCN=C(N)N)C(=O)N[C@@H](Cc2c[nH]c3ccccc23)C(=O)NCC(N)=O)CC[C@@H](c2ccc(C)cc2)CC1	347	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CCCCC(=O)N[C@]1(C(=O)N[C@H](Cc2ccccc2)C(=O)N[C@@H](CCCN=C(N)N)C(=O)N[C@@H](Cc2c[nH]c3ccccc23)C(=O)NCC(N)=O)CC[C@H](c2ccc(C)cc2)CC1	348	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CC(C)Oc1ccccc1N1CCN([C@H]2CC[C@@H](NS(=O)(=O)c3cnc(Cl)c(Br)c3)CC2)CC1	349	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CC(C)Oc1ccccc1N1CCN([C@@H]2CC[C@H](NS(=O)(=O)c3cnc(Cl)c(Br)c3)CC2)CC1	350	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CC(C)Oc1ccccc1N1CCN([C@H]2CC[C@@H](NS(=O)(=O)c3cnc(Cl)c(Br)c3)CC2)CC1	351	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CC(C)Oc1ccccc1N1CCN([C@@H]2CC[C@H](NS(=O)(=O)c3cnc(Cl)c(Br)c3)CC2)CC1	352	Testing handling of ring stereochemistry; TJ O’Donnell examples
+CC1CCC[13C]2(C)C1CC[14CH]2C(C)=O	353	Testing Github 45: stereochemistry information influencing non-stereo SMILES
+CC1CCC[C]2(C)C1CC[CH]2C(C)=O	354	Testing Github 45: stereochemistry information influencing non-stereo SMILES
+CC1CCC[C@@]2(C)C1CC[C@@H]2C(C)=O	355	Testing Github 45: stereochemistry information influencing non-stereo SMILES
+CC1CCC[C]2(C)C1CC[CH]2C(C)=O	356	Testing Github 45: stereochemistry information influencing non-stereo SMILES
+O=[PH3]	357	Testing Github 206: Problems round-tripping P
+O=P	358	Testing Github 206: Problems round-tripping P
+O=[PH]	359	Testing Github 206: Problems round-tripping P
+C1.C1CO1.N1	360	Testing Github 378: SMILES parser doing the wrong thing for odd dot-disconnected construct
+C1(O.C1)CO1.N1	361	Testing Github 378: SMILES parser doing the wrong thing for odd dot-disconnected construct
+C[S@](Cl)=O	362	testing github issue 760: reversed stereochemistry with sulfoxides and ring closures
+C[S@]2=O.Cl2	363	testing github issue 760: reversed stereochemistry with sulfoxides and ring closures
+C1CN[C@H]1O	364	testing github issue 786: chiral order for ring closure after branch
+C1CN[C@@H](O)1	365	testing github issue 786: chiral order for ring closure after branch
+C1CN[C@]1(O)N	366	testing github issue 786: chiral order for ring closure after branch
+C1CN[C@](O)(N)1	367	testing github issue 786: chiral order for ring closure after branch
+C1CN[C@]12(O).N2	368	testing github issue 786: chiral order for ring closure after branch
+C1CN[C@](O)12.N2	369	testing github issue 786: chiral order for ring closure after branch
+C1CN[C@@]1(O)2.N2	370	testing github issue 786: chiral order for ring closure after branch
+C1CN[C@]2(O)1.N2	371	testing github issue 786: chiral order for ring closure after branch
+C[C@]1(O)NCC1	372	testing github issue 786: chiral order for ring closure after branch
+C[C@@](O)1NCC1	373	testing github issue 786: chiral order for ring closure after branch
+C[C@]1(NCC1)O	374	testing github issue 786: chiral order for ring closure after branch
+C[C@](NCC1)(O)1	375	testing github issue 786: chiral order for ring closure after branch
+CC(C)[C@]1(N)CC[C@]2([C@@H](O2)CCC(=C)[C@H](CC[C@@](/C=C1)(C)O)O)C	376	testing github issue 786: chiral order for ring closure after branch
+CC(C)[C@@](N)1CC[C@]2([C@@H](O2)CCC(=C)[C@H](CC[C@@](/C=C1)(C)O)O)C	377	testing github issue 786: chiral order for ring closure after branch
+Cl[C@](F)1CC[C@H](F)CC1	378	testing github issue 1652: chiral order for ring closure after branch for the first atom in the SMILES string
+[C@](Cl)(F)1CC[C@H](F)CC1	379	testing github issue 1652: chiral order for ring closure after branch for the first atom in the SMILES string
+F[C@@]1(C)CCO1	380	testing github issue 1652: chiral order for ring closure after branch for the first atom in the SMILES string
+[C@@](F)1(C)CCO1	381	testing github issue 1652: chiral order for ring closure after branch for the first atom in the SMILES string
+c1ccccc1	382	Testing the %(....) notation for SMILES ring closure numbers
+c%(1)ccccc%(1)	383	Testing the %(....) notation for SMILES ring closure numbers
+c%(12)ccccc%(12)	384	Testing the %(....) notation for SMILES ring closure numbers
+c%(123)ccccc%(123)	385	Testing the %(....) notation for SMILES ring closure numbers
+c%(1234)ccccc%(1234)	386	Testing the %(....) notation for SMILES ring closure numbers
+c%(99999)ccccc%(99999)	387	Testing the %(....) notation for SMILES ring closure numbers
+c%()ccccc%()	388	Testing the %(....) notation for SMILES ring closure numbers
+c%(100000)ccccc%(100000)	389	Testing the %(....) notation for SMILES ring closure numbers
+C1CC111	390	Testing Github #1925: Atom with bond to itself is accepted by the SMILES parser
+[C@@]1(Cl)(F)(I).Br1	391	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Br)(Cl)(F)(I)	392	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(F)(I)1.Br1	393	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(F)(I)Br	394	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)1(F)(I).Br1	395	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(Br)(F)(I)	396	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(F)1(I).Br1	397	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(F)(Br)(I)	398	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@]1(Cl)2(I).Br1.F2	399	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Br)(Cl)(F)(I)	400	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)2(I)1.Br1.F2	401	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(F)(I)Br	402	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@]12(Cl)(I).Br1.F2	403	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Br)(F)(Cl)(I)	404	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@]21(Cl)(I).Br1.F2	405	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](F)(Br)(Cl)(I)	406	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)12(I).Br1.F2	407	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(Br)(F)(I)	408	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)21(I).Br1.F2	409	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(F)(Br)(I)	410	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(I)21.Br1.F2	411	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(I)(F)(Br)	412	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(I)12.Br1.F2	413	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+[C@@](Cl)(I)(Br)(F)	414	Testing Github #1972: Incorrect tetrahedral stereo when reading SMILES with ring closure as last neighbor
+O[C@H]1CC2CCC(C1)[N@@]2C	415	Testing github issue #1028: Alternating canonical SMILES for ring with chiral N
+C[N@]1C2CCC1C[C@H](O)C2	416	Testing github issue #1028: Alternating canonical SMILES for ring with chiral N
+C[N@]1C[C@@H](O)C1	417	Testing github issue #1028: Alternating canonical SMILES for ring with chiral N
