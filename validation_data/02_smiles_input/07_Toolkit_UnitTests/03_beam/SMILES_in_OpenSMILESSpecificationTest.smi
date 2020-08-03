@@ -1,0 +1,170 @@
+[U]	Atomic Symbol
+[Pb]	Atomic Symbol
+[He]	Atomic Symbol
+[*]	Atomic Symbol
+[CH4]	Hydrogens
+[ClH]	Hydrogens
+[ClH1]	Hydrogens
+[ClH]	Hydrogens
+[Cl-]	Charge
+[OH1-]	Charge
+[OH-]	Charge
+[OH-1]	Charge
+[Cu+2]	Charge
+[Cu++]	Charge
+[13CH4]	Isotopes
+[238U]	Isotopes
+Oc1c(*)cccc1	wildcard
+[CH4:2]	Atom Class
+CC	Bonds
+CCO	Bonds
+NCCCC	Bonds
+CCCCN	Bonds
+C=C	Bonds
+C#N	Bonds
+CC#CC	Bonds
+CCC=O	Bonds
+[Rh-](Cl)(Cl)(Cl)(Cl)$[Rh-](Cl)(Cl)(Cl)Cl	Bonds
+C-C	Bonds
+C-C-O	Bonds
+C-C=C-C	Bonds
+CCC(CC)CO	Bonds
+CC(C)C(=O)C(C)C	Bonds
+OCC(CCC)C(C(C)C)CCC	Bonds
+OS(=O)(=S)O	Bonds
+C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C))))))))))))))))))))C	Bonds
+C(CCCCCCCCCCCCCCCCCCCC)C	Bonds
+C1CCCCC1	Rings
+N1CC2CCCC2CC1	Rings
+C=1CCCCC=1	Rings
+C=1CCCCC1	Rings
+C1CCCCC=1	Rings
+C=1CCCCC1	Rings
+C-1CCCCC=1	Rings
+C=1CCCCC1	Rings
+C1CCCCC1C1CCCCC1	Rings
+C1CCCCC1C2CCCCC2	Rings
+C1CCCCC1C2CCCCC2	Rings
+C0CCCCC0	Rings
+C1CCCCC1	Rings
+C%25CCCCC%25	Rings
+C1CCCCC1	Rings
+C%123CCCCC%12CCC3	Rings
+C12CCCCC1CCC2	Rings
+C0CCCCC%0	Rings
+C1CCCCC1	Rings
+C1CCCCC%01	Rings
+C12(CCCCC1)CCCCC2	Rings
+C12CCCCC12	Rings
+C12C2CCC1	Rings
+C11	Rings
+c1ccccc1	Aromaticity
+C1=CC=CC=C1	Aromaticity
+c1ccc2CCCc2c1	Aromaticity
+C1=CC=CC(CCC2)=C12	Aromaticity
+C1=CC=CC=2CCCC21	Aromaticity
+c1occc1	Aromaticity
+C1OC=CC=1	Aromaticity
+C=1OC=CC1	Aromaticity
+c1ccc1	Aromaticity
+C1=CC=C1	Aromaticity
+c1ccccc1-c2ccccc2	Aromaticity
+C	More about Hydrogen
+[CH4]	More about Hydrogen
+[H]C([H])([H])[H]	More about Hydrogen
+[H][CH2][H]	More about Hydrogen
+[2H][CH2]C	More about Hydrogen
+[Na+].[Cl-]	Disconnected
+Oc1ccccc1.NCCO	Disconnected
+[NH4+].[NH4+].[O-]S(=O)(=O)[S-]	Disconnected
+c1cc(O.NCCO)ccc1	Disconnected
+c1cc(O)ccc1.NCCO	Disconnected
+Oc1cc(.NCCO)ccc1	Disconnected
+Oc1ccccc1.NCCO	Disconnected
+C.1CCCCC.1	Disconnected
+C1.C1	Disconnected
+c1c2c3c4cc1.Br2.Cl3.Cl4	Disconnected
+c1c(c(c(cc1)Cl)Cl)Br	Disconnected
+N[C@](Br)(O)C	Stereochemistry
+N[C@@](Br)(O)C	Stereochemistry
+N[C@](Br)(O)C	Stereochemistry
+Br[C@](O)(N)C	Stereochemistry
+O[C@](Br)(C)N	Stereochemistry
+Br[C@](C)(O)N	Stereochemistry
+C[C@](Br)(N)O	Stereochemistry
+Br[C@](N)(C)O	Stereochemistry
+C[C@@](Br)(O)N	Stereochemistry
+Br[C@@](N)(O)C	Stereochemistry
+[C@@](C)(Br)(O)N	Stereochemistry
+[C@@](Br)(N)(O)C	Stereochemistry
+FC1C[C@](Br)(Cl)CCC1	Stereochemistry
+[C@]1(Br)(Cl)CCCC(F)C1	Stereochemistry
+N[C@H](O)C	Stereochemistry
+F/C=C/F	Stereochemistry
+F\\C=C\\F	Stereochemistry
+C(\\F)=C/F	Stereochemistry
+C(\\\\F)=C/F	Stereochemistry
+F/C=C\\F	Stereochemistry
+F\\C=C/F	Stereochemistry
+C(/F)=C/F	Stereochemistry
+F/C(CC)=C/F	Stereochemistry
+F/C=C=C=C/F	Stereochemistry
+F\\C=C=C=C\\F	Stereochemistry
+F/C=C/C/C=C\\C	other stereo not yet supported
+F/C=C/CC=CC	other stereo not yet supported
+N1[C@H](Cl)[C@@H](Cl)C(Cl)CC1	other stereo not yet supported
+CCO ethanol	Parsing termination
+CCO\tethanol	Parsing termination
+CCO\nethanol	Parsing termination
+CCO\r\nethanol	Parsing termination
+CC	Standard form
+[CH3][CH3]	Standard form
+[CH3-1]	Standard form
+[CH3-]	Standard form
+C[13CH1](C)C	Standard form
+C[13CH](C)C	Standard form
+[C-H3]	accepted by daylight but doesn't match OpenSMILES grammar
+C[CH@](Br)Cl	accepted by daylight but doesn't match OpenSMILES grammar
+[H][C-]([H])[H]	methanide_wrong
+[CH3-]	methanide_right
+C-C	Bonds
+CC	Bonds
+c:1:c:c:c:c:c:1	Bonds
+c:1:c:c:c:c:c1	Bonds
+c1ccccc1	Bonds
+c1ccccc1c2ccccc2	Bonds
+c1ccccc1-c2ccccc2	Bonds
+c1ccccc1C1CCCC1	Cycles
+c1ccccc1C2CCCC2	Cycles
+c0ccccc0C1CCCC1	Cycles
+c1ccccc1C2CCCC2	Cycles
+CC=1CCCCC=1	Cycles
+CC=1CCCCC1	Cycles
+C12(CCCCC1)CCCCC2	Cycles
+C12(CCCCC1)CCCCC2	Cycles
+c1cc(CO)ccc1	starting branches
+OCc1ccccc1	starting branches
+CC(CCCCCC)C	starting branches
+CC(C)CCCCCC	starting branches
+CCCO	starting branches
+OCCC	starting branches
+Br[C@H](Br)C	starting branches
+BrC(Br)C	starting branches
+F/C(/F)=C/F	starting branches
+FC(F)=CF	starting branches
+C((C))O	Non-standard forms
+(N1CCCC1)	Non-standard forms
+.CCO	Non-standard forms
+CCO.	Non-standard forms
+C1CCC	Non-standard forms
+D[CH3]	Non-standard forms
+T[CH3]	Non-standard forms
+[2H][CH3]	Non-standard forms
+[3H][CH3]	Non-standard forms
+C/1=C/C=C\\C=C/C=C\\1	Extensions
+C/1=C/C=C\\C=C/C=C1	Extensions
+F[C@@H]=[C@H]F	Extensions
+F[C@H]=[C@@H]F	Extensions
+F[C@H]=[C@H]F	Extensions
+F[C@@H]=[C@@H]F	Extensions
+[C@H]1=[C@@H][C@@H]=[C@@H][C@@H]=[C@@H][C@@H]=[C@@H]1	Extensions

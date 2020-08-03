@@ -75,3 +75,8 @@ License: BSD, https://bitbucket.org/dalke/smilez/src/default/COPYING
 https://github.com/rdkit/rdkit/blob/master/Code/GraphMol/SmilesParse/test.cpp
 License: BSD-3, https://github.com/rdkit/rdkit/blob/master/license.txt
 
+\03_beam
+
+https://github.com/johnmay/beam/blob/master/core/src/test/java/uk/ac/ebi/beam/OpenSMILESSpecificationTest.java
+License: https://github.com/johnmay/beam/blob/master/LICENSE
+
