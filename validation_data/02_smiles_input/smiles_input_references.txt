@@ -9,6 +9,8 @@ Holden, N., Coplen, T., Böhlke, J., et al. (2018). IUPAC Periodic Table of the 
 for the Education Community (IUPAC Technical Report). 
 Pure and Applied Chemistry, 90(12), pp. 1833-2092. Retrieved 25 Sep. 2019, from doi:10.1515/pac-2015-0703
 
+zero isotopes: https://sourceforge.net/p/blueobelisk/mailman/message/36153314/
+
 02_oxidation_states
 
 https://en.wikipedia.org/wiki/Oxidation_state
