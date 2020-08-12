@@ -1,6 +1,6 @@
-# ChemDraw ChemScript 18 SMILES to InChi
-# 18.1.0.535
-from ChemScript18 import *
+# ChemDraw ChemScript 19 SMILES to InChi
+# 19.0.1.28
+from ChemScript19 import *
 from io import StringIO
 import sys
 
