@@ -796,7 +796,7 @@ following SMILES are all equivalent and all specify the exact same chiral center
 |========================================
 | Equivalent SMILES  |
 | `N[C@](Br)(O)C`    | `Br[C@](O)(N)C`
-| `O[C@](Br)(C)N`    | `Br[C@]\(C)(O)N`
+| `O[C@](Br)\(C)N`    | `Br[C@]\(C)(O)N`
 | `C[C@](Br)(N)O`    | `Br[C@](N)\(C)O`
 | `C[C@@](Br)(O)N`   | `Br[C@@](N)(O)C`
 | `[C@@](C)(Br)(O)N` | `[C@@](Br)(N)(O)C`
@@ -1377,8 +1377,8 @@ accept.
 [options="header",frame="topbot",grid="rows",width="100%",cols="3,2,3,6"]
 |==========================================================================================
 | Rule                 | Example         | Interpreted as ...    | Details
-.3+| Extra parentheses | `C(\(C))O` | `C\(C)O` .3+| Extra parentheses are ignored in places where there is no ambiguity as to the meaning.  Note that the form `(CO)N` is never allowed, since it isn't clear which atom the nitrogen should connect to.
-|                        `C(\(C))O` | `C\(C)O`
+.3+| Extra parentheses | `C\(\(C))O` | `C\(C)O` .3+| Extra parentheses are ignored in places where there is no ambiguity as to the meaning.  Note that the form `(CO)N` is never allowed, since it isn't clear which atom the nitrogen should connect to.
+|                        `C\(\(C))O` | `C\(C)O`
 |                        `(N1CCCC1)` | `N1CCCCC1`
 .3+| Misplaced dots | `[Na+]..[Cl-]` | `[Na+].[Cl-]` .3+| Two or more dot-bonds in a row are condensed into one.  A leading or trailing dot-bond is ignored.  Note that a dot that starts a branch is _legal_ in strict SMILES; for example, `C1CC(.[Na+])CC1[O-]` is a legal (though strange) SMILES.
 |                     `.CCO` | `CCO`
