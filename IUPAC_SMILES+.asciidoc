@@ -799,7 +799,7 @@ following SMILES are all equivalent and all specify the exact same chiral center
 | `O[C@](Br)\(C)N`    | `Br[C@]\(C)(O)N`
 | `C[C@](Br)(N)O`    | `Br[C@](N)\(C)O`
 | `C[C@@](Br)(O)N`   | `Br[C@@](N)(O)C`
-| `[C@@](C)(Br)(O)N` | `[C@@](Br)(N)(O)C`
+| `[C@@]\(C)(Br)(O)N` | `[C@@](Br)(N)(O)C`
 |========================================
 
 // The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
@@ -1065,7 +1065,7 @@ The following SMILES are all equivalent:
 |==========================================================
 | Equivalent SMILES           |
 | `C[Co@](F)(Cl)(Br)(I)S`     | `F[Co@@](S)(I)\(C)(Cl)Br`
-| `S[Co@OH5](F)(I)(Cl)(C)Br`  | `Br[Co@OH9]\(C)(S)(Cl)(F)I`
+| `S[Co@OH5](F)(I)(Cl)\(C)Br`  | `Br[Co@OH9]\(C)(S)(Cl)(F)I`
 | `Br[Co@OH12](Cl)(I)(F)(S)C` | `Cl[Co@OH15]\(C)(Br)(F)(I)S`
 | `Cl[Co@OH19]\(C)(I)(F)(S)Br` | `I[Co@OH27](Cl)(Br)(F)(S)C`
 |==========================================================
