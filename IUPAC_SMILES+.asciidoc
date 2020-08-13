@@ -450,7 +450,7 @@ forms a cyclic structure.
 |==================================================================================
 | Depiction                               | SMILES           | Name
 | image:depict/cyclohexane.gif[]          | `C1CCCCC1`       | cyclohexane
-| image:depict/perhydroisoquinoline.gif[] | `N1CC2CCCC2CC1`  | perhydroisoquinoline
+| image:depict/perhydroisoquinoline.gif[] | `N1CC2CCCCC2CC1`  | perhydroisoquinoline
 |==================================================================================
 
 If a bond symbol is present between the atom and rnum, it can be
@@ -711,7 +711,7 @@ can also be written:
 |======================================================================================================
 | Depiction                                     | SMILES                      | Name
 .2+| image:depict/phenol-2-amino-ethanol.gif[]  | `c1cc(O.NCCO)ccc1`          | phenol, 2-amino ethanol
-|                                                 `Oc1cc(.NCCO)ccc1`          | phenal, 2-amino ethanol
+|                                                 `Oc1cc(.NCCO)ccc1`          | phenol, 2-amino ethanol
 |======================================================================================================
 
 The second example above is an odd, but legal, use of parentheses and the dot bond, since the
@@ -1649,6 +1649,7 @@ Journal of Chemical Information and Computer Sciences, 1989, 29:97-101.
 |======================
 | Revision | Date | Description | Name
 | 1.0 | 2019-04-15 | Fixed asciidoc formatting and created derivative of OpenSMILES Document, IUPAC SMILES+ Specification Working Draft   | Vincent F. Scalfani
+| 1.0 | 2020-08-13 | Minor typo corrections | Contribution by Andrius Merkys
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
