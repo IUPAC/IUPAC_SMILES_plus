@@ -422,10 +422,12 @@ Branches can be nested or "stacked" to any depth:
 [options="header",frame="topbot",grid="rows",width="90%"]
 |============================================================================================================
 | Depiction                                   | SMILES                      | Name
-| image:depict/2-4-dimethyl-3-pentanone.gif[] | `CC(C)C(=O)C(C)C`           | 2,4-dimethyl-3-pentanone
-| pic here                                    | `OCC(CCC)C(C(C)C)CCC`       | 2-propyl-3-isopropyl-1-propanol
+| image:depict/2-4-dimethyl-3-pentanone.gif[] | `CC\(C)C(=O)C\(C)C`           | 2,4-dimethyl-3-pentanone
+| pic here                                    | `OCC(CCC)C(C\(C)C)CCC`       | 2-propyl-3-isopropyl-1-propanol
 | image:depict/thiosulfate.gif[]              | `OS(=O)(=S)O`               | thiosulfate
 |============================================================================================================
+
+// The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 The SMILES branch/chain rules allow nested parenthetical expressions (branches) to an arbitrary
 depth. For example, the following SMILES, though peculiar, is legal:
@@ -433,8 +435,10 @@ depth. For example, the following SMILES, though peculiar, is legal:
 [options="header",frame="topbot",grid="rows",width="90%",cols="6,1"]
 |==============================================================================
 | SMILES                                                              | Formula
-| `C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C))))))))))))))))))))C`    | C22H46
+| `C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C\(C))))))))))))))))))))C`    | C22H46
 |==============================================================================
+
+// The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 [[ringclosure]]
 
@@ -772,8 +776,10 @@ the SMILES string itself is used as the basis for the chirality marking.
 | look from N towards C (chiral center) | list the neighbors anticlockwise
 .3+| image:depict/tetrahedral.gif[]     | `N[C@](Br)(O)C`
 |                                         ...or clockwise
-|                                         `N[C@@](Br)(C)O`
+|                                         `N[C@@](Br)\(C)O`
 |=========================================================================
+
+// The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 For the structure above, starting with the nitrogen atom, one "looks" toward the chiral
 center. The remaining three neighbor atoms are written by listing them in anticlockwise order using the `'@'`
@@ -790,11 +796,13 @@ following SMILES are all equivalent and all specify the exact same chiral center
 |========================================
 | Equivalent SMILES  |
 | `N[C@](Br)(O)C`    | `Br[C@](O)(N)C`
-| `O[C@](Br)(C)N`    | `Br[C@](C)(O)N`
-| `C[C@](Br)(N)O`    | `Br[C@](N)(C)O`
+| `O[C@](Br)(C)N`    | `Br[C@]\(C)(O)N`
+| `C[C@](Br)(N)O`    | `Br[C@](N)\(C)O`
 | `C[C@@](Br)(O)N`   | `Br[C@@](N)(O)C`
 | `[C@@](C)(Br)(O)N` | `[C@@](Br)(N)(O)C`
 |========================================
+
+// The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 One exception to the atom order is when these atoms are bonded to the chiral center via a
 ring bond. In these cases, it is to order of the bonds to these atoms that should be considered.
@@ -914,7 +922,7 @@ referred to by a character with identical shape: `'U'` for `@SP1`, `'4'` for `@S
 `'Z'` for `@SP3`. The graphical from of these shapes is illustrated in the image
 below.
 
-image:images/SPshapes.png[]
+image:depict/SPshapes.png[]
 
 *Background:*
 
@@ -1056,11 +1064,13 @@ The following SMILES are all equivalent:
 [options="header",frame="topbot",grid="rows",width="70%"]
 |==========================================================
 | Equivalent SMILES           |
-| `C[Co@](F)(Cl)(Br)(I)S`     | `F[Co@@](S)(I)(C)(Cl)Br`
-| `S[Co@OH5](F)(I)(Cl)(C)Br`  | `Br[Co@OH9](C)(S)(Cl)(F)I`
-| `Br[Co@OH12](Cl)(I)(F)(S)C` | `Cl[Co@OH15](C)(Br)(F)(I)S`
-| `Cl[Co@OH19](C)(I)(F)(S)Br` | `I[Co@OH27](Cl)(Br)(F)(S)C`
+| `C[Co@](F)(Cl)(Br)(I)S`     | `F[Co@@](S)(I)\(C)(Cl)Br`
+| `S[Co@OH5](F)(I)(Cl)(C)Br`  | `Br[Co@OH9]\(C)(S)(Cl)(F)I`
+| `Br[Co@OH12](Cl)(I)(F)(S)C` | `Cl[Co@OH15]\(C)(Br)(F)(I)S`
+| `Cl[Co@OH19]\(C)(I)(F)(S)Br` | `I[Co@OH27](Cl)(Br)(F)(S)C`
 |==========================================================
+
+// The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 *Background:*
 
@@ -1220,11 +1230,13 @@ in the sense that they are not the preferred form for standard normalization._
 | Correct        | Wrong             | Normalization Rule
 | `CC`           | `[CH3][CH3]`      | Write atoms in the "organic subset" as bare atomic symbols whenever possible.
 | `[CH3-]`       | `[CH3-1]`         | If the charge is `+1` or `-1`, leave off the digit.
-| `C[13CH](C)C`  | `C[13CH1](C)C`    | If the hydrogen count is 1, leave off the digit.
+| `C[13CH]\(C)C`  | `C[13CH1]\(C)C`    | If the hydrogen count is 1, leave off the digit.
 | `[CH3-]`       | `[C-H3]`       .2+| Always write the atom properties in the order: Chirality, hydrogen-count, charge.
 | `C[C@H](Br)Cl` | `C[CH@](Br)Cl`
 | `[CH3-]`       | `[H][C-]([H])[H]` | Represent hydrogens as a property of the heavy atom rather than as explicit atoms, unless other rules (e.g. `[2H]`) require that the hydrogen be explicit.
 |==============================================
+
+// The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 ==== Bonds
 
@@ -1254,10 +1266,12 @@ in the sense that they are not the preferred form for standard normalization._
 |==============================================
 | Correct       | Wrong          | Normalization Rule
 | `OCc1ccccc1`  | `c1cc(CO)ccc1` | Start on a terminal atom if possible.
-| `CC(C)CCCCCC` | `CC(CCCCCC)C`  | Try to make "side chains" short; pick the longest chains as the "main branch" of the SMILES.
+| `CC\(C)CCCCCC` | `CC(CCCCCC)C`  | Try to make "side chains" short; pick the longest chains as the "main branch" of the SMILES.
 | `OCCC`        | `CCCO`         | Start on a heteroatom if possible.
 | `CC`          | `C1.C1`        | Only use dots for disconnected components.
 |==============================================
+
+// The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 [[outaromaticity]]
 
@@ -1291,11 +1305,13 @@ computer.  Here are a few examples of Canonical versus non-Canonical SMILES:
 |==============================================
 | Canonical SMILES | Non-canonical  | Name
 .2+| `OCC`         | `CCO`       .2+| ethanol
-|                    `C(C)O`
+|                    `C\(C)O`
 .3+| `Oc1ccccc1`   | `c1ccccc1O` .3+| phenol
 |                    `c1(O)ccccc1`
 |                    `c1(ccccc1)O`
 |==============================================
+
+// The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 The primary use of Canonical SMILES is in
 http://www.emolecules.com/doc/cheminformatics-101.htm[cheminformatics]
@@ -1361,8 +1377,8 @@ accept.
 [options="header",frame="topbot",grid="rows",width="100%",cols="3,2,3,6"]
 |==========================================================================================
 | Rule                 | Example         | Interpreted as ...    | Details
-.3+| Extra parentheses | `C((C))O` | `C(C)O` .3+| Extra parentheses are ignored in places where there is no ambiguity as to the meaning.  Note that the form `(CO)N` is never allowed, since it isn't clear which atom the nitrogen should connect to.
-|                        `C((C))O` | `C(C)O`
+.3+| Extra parentheses | `C(\(C))O` | `C\(C)O` .3+| Extra parentheses are ignored in places where there is no ambiguity as to the meaning.  Note that the form `(CO)N` is never allowed, since it isn't clear which atom the nitrogen should connect to.
+|                        `C(\(C))O` | `C\(C)O`
 |                        `(N1CCCC1)` | `N1CCCCC1`
 .3+| Misplaced dots | `[Na+]..[Cl-]` | `[Na+].[Cl-]` .3+| Two or more dot-bonds in a row are condensed into one.  A leading or trailing dot-bond is ignored.  Note that a dot that starts a branch is _legal_ in strict SMILES; for example, `C1CC(.[Na+])CC1[O-]` is a legal (though strange) SMILES.
 |                     `.CCO` | `CCO`
@@ -1377,6 +1393,8 @@ accept.
 .2+| Lowercase as sp^2^ | `CccccC` | `CC=CC=CC` 2,4-hexadiene .2+| Lowercase letters are interpreted as sp^2^, even outside of ring systems.
 |                         `Ccc` | `CC=C` propene
 |==========================================================================================
+
+// The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 == SMILES Flavors
 
@@ -1650,6 +1668,7 @@ Journal of Chemical Information and Computer Sciences, 1989, 29:97-101.
 | Revision | Date | Description | Name
 | 1.0 | 2019-04-15 | Fixed asciidoc formatting and created derivative of OpenSMILES Document, IUPAC SMILES+ Specification Working Draft   | Vincent F. Scalfani
 | 1.0 | 2020-08-13 | Minor typo corrections | Contribution by Andrius Merkys
+| 1.0 | 2020-08-13 | Added escape symbols to prevent copyright symbol rendering in SMILES and fixed broken image link | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
