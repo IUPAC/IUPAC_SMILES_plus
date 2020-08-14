@@ -1,0 +1,1548 @@
+	SMILES	CAmolconvert_19.27.0	OpenBabel_3.1.1	RDKit_2020.03.3	CDraw_cscript_19.01.28	All_InChIs_Match?
+0	[H-]	InChI=1S/H/q-1	InChI=1S/H/q-1	InChI=1S/H/q-1	InChI=1S/H/q-1	True
+1	[H-1]	InChI=1S/H/q-1	InChI=1S/H/q-1	InChI=1S/H/q-1	InChI=1S/H/q-1	True
+2	[H1-]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+3	[H+]	InChI=1S/p+1	InChI=1S/p+1	InChI=1S/p+1	InChI=1S/p+1	True
+4	[H+1]	InChI=1S/p+1	InChI=1S/p+1	InChI=1S/p+1	InChI=1S/p+1	True
+5	[H1+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+6	[He]	InChI=1S/He	InChI=1S/He	InChI=1S/He	InChI=1S/He	True
+7	[Li+]	InChI=1S/Li/q+1	InChI=1S/Li/q+1	InChI=1S/Li/q+1	InChI=1S/Li/q+1	True
+8	[Li+1]	InChI=1S/Li/q+1	InChI=1S/Li/q+1	InChI=1S/Li/q+1	InChI=1S/Li/q+1	True
+9	[Li1+]	InChI=1S/Li/q+1/i1-6	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+10	[Be]	InChI=1S/Be	InChI=1S/Be	InChI=1S/Be	InChI=1S/Be.2H	False
+11	[Be+]	InChI=1S/Be/q+1	InChI=1S/Be/q+1	InChI=1S/Be/q+1	InChI=1S/Be/q+1	True
+12	[Be+1]	InChI=1S/Be/q+1	InChI=1S/Be/q+1	InChI=1S/Be/q+1	InChI=1S/Be/q+1	True
+13	[Be1+]	InChI=1S/Be.H/q+1;/i1-8;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+14	[Be++]	InChI=1S/Be/q+2	InChI=1S/Be/q+2	InChI=1S/Be/q+2	InChI=1S/Be/q+2	True
+15	[Be+2]	InChI=1S/Be/q+2	InChI=1S/Be/q+2	InChI=1S/Be/q+2	InChI=1S/Be/q+2	True
+16	[Be2+]	InChI=1S/Be.H/q+1;/i1-7;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+17	[B-----]	InChI=1S/B/q-5	InChI=1S/B/q-5	ERROR	InChI=1S/B/q-5	False
+18	[B-5]	InChI=1S/B/q-5	InChI=1S/B/q-5	InChI=1S/B/q-5	InChI=1S/B/q-5	True
+19	[B5-]	InChI=1S/B/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+20	[B-]	InChI=1S/B/q-1	InChI=1S/B/q-1	InChI=1S/BH2/h1H2/q-1	InChI=1S/B/q-1	False
+21	[B-1]	InChI=1S/B/q-1	InChI=1S/B/q-1	InChI=1S/BH2/h1H2/q-1	InChI=1S/B/q-1	False
+22	[B1-]	InChI=1S/B/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+23	[B]	InChI=1S/B	InChI=1S/B	InChI=1S/BH2/h1H2	InChI=1S/B	False
+24	[B+]	InChI=1S/B/q+1	InChI=1S/B/q+1	InChI=1S/B/q+1	InChI=1S/B/q+1	True
+25	[B+1]	InChI=1S/B/q+1	InChI=1S/B/q+1	InChI=1S/B/q+1	InChI=1S/B/q+1	True
+26	[B1+]	InChI=1S/B/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+27	[B++]	InChI=1S/B/q+2	InChI=1S/B/q+2	InChI=1S/B/q+2	InChI=1S/B/q+2	True
+28	[B+2]	InChI=1S/B/q+2	InChI=1S/B/q+2	InChI=1S/B/q+2	InChI=1S/B/q+2	True
+29	[B2+]	InChI=1S/B/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+30	[B+++]	InChI=1S/B/q+3	InChI=1S/B/q+3	ERROR	InChI=1S/B/q+3	False
+31	[B+3]	InChI=1S/B/q+3	InChI=1S/B/q+3	InChI=1S/B/q+3	InChI=1S/B/q+3	True
+32	[B3+]	InChI=1S/B/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+33	[C----]	InChI=1S/C/q-4	InChI=1S/C/q-4	ERROR	InChI=1S/C/q-4	False
+34	[C-4]	InChI=1S/C/q-4	InChI=1S/C/q-4	InChI=1S/C/q-4	InChI=1S/C/q-4	True
+35	[C4-]	InChI=1S/C/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+36	[C---]	InChI=1S/C/q-3	InChI=1S/C/q-3	ERROR	InChI=1S/C/q-3	False
+37	[C-3]	InChI=1S/C/q-3	InChI=1S/C/q-3	InChI=1S/C/q-3	InChI=1S/C/q-3	True
+38	[C3-]	InChI=1S/C/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+39	[C--]	InChI=1S/C/q-2	InChI=1S/C/q-2	InChI=1S/C/q-2	InChI=1S/C/q-2	True
+40	[C-2]	InChI=1S/C/q-2	InChI=1S/C/q-2	InChI=1S/C/q-2	InChI=1S/C/q-2	True
+41	[C2-]	InChI=1S/C/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+42	[C-]	InChI=1S/C/q-1	InChI=1S/C/q-1	InChI=1S/CH2/h1H2/q-1	InChI=1S/C/q-1	False
+43	[C-1]	InChI=1S/C/q-1	InChI=1S/C/q-1	InChI=1S/CH2/h1H2/q-1	InChI=1S/C/q-1	False
+44	[C1-]	InChI=1S/C/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+45	[C]	InChI=1S/C	InChI=1S/C	InChI=1S/CH2/h1H2	InChI=1S/C	False
+46	[C+]	InChI=1S/C/q+1	InChI=1S/C/q+1	InChI=1S/CH2/h1H2/q+1	InChI=1S/C/q+1	False
+47	[C+1]	InChI=1S/C/q+1	InChI=1S/C/q+1	InChI=1S/CH2/h1H2/q+1	InChI=1S/C/q+1	False
+48	[C1+]	InChI=1S/C/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+49	[C++]	InChI=1S/C/q+2	InChI=1S/C/q+2	InChI=1S/C/q+2	InChI=1S/C/q+2	True
+50	[C+2]	InChI=1S/C/q+2	InChI=1S/C/q+2	InChI=1S/C/q+2	InChI=1S/C/q+2	True
+51	[C2+]	InChI=1S/C/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+52	[C+++]	InChI=1S/C/q+3	InChI=1S/C/q+3	ERROR	InChI=1S/C/q+3	False
+53	[C+3]	InChI=1S/C/q+3	InChI=1S/C/q+3	InChI=1S/C/q+3	InChI=1S/C/q+3	True
+54	[C3+]	InChI=1S/C/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+55	[C++++]	InChI=1S/C/q+4	InChI=1S/C/q+4	ERROR	InChI=1S/C/q+4	False
+56	[C+4]	InChI=1S/C/q+4	InChI=1S/C/q+4	InChI=1S/C/q+4	InChI=1S/C/q+4	True
+57	[C4+]	InChI=1S/C/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+58	[N---]	InChI=1S/N/q-3	InChI=1S/N/q-3	ERROR	InChI=1S/N/q-3	False
+59	[N-3]	InChI=1S/N/q-3	InChI=1S/N/q-3	InChI=1S/N/q-3	InChI=1S/N/q-3	True
+60	[N3-]	InChI=1S/N/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+61	[N--]	InChI=1S/N/q-2	InChI=1S/N/q-2	InChI=1S/N/q-2	InChI=1S/N/q-2	True
+62	[N-2]	InChI=1S/N/q-2	InChI=1S/N/q-2	InChI=1S/N/q-2	InChI=1S/N/q-2	True
+63	[N2-]	InChI=1S/N/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+64	[N-]	InChI=1S/N/q-1	InChI=1S/N/q-1	InChI=1S/N/q-1	InChI=1S/N/q-1	True
+65	[N-1]	InChI=1S/N/q-1	InChI=1S/N/q-1	InChI=1S/N/q-1	InChI=1S/N/q-1	True
+66	[N1-]	InChI=1S/N/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+67	[N+]	InChI=1S/N/q+1	InChI=1S/N/q+1	InChI=1S/H2N/h1H2/q+1	InChI=1S/N/q+1	False
+68	[N+1]	InChI=1S/N/q+1	InChI=1S/N/q+1	InChI=1S/H2N/h1H2/q+1	InChI=1S/N/q+1	False
+69	[N1+]	InChI=1S/N/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+70	[N++]	InChI=1S/N/q+2	InChI=1S/N/q+2	InChI=1S/H2N/h1H2/q+2	InChI=1S/N/q+2	False
+71	[N+2]	InChI=1S/N/q+2	InChI=1S/N/q+2	InChI=1S/H2N/h1H2/q+2	InChI=1S/N/q+2	False
+72	[N2+]	InChI=1S/N/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+73	[N+++]	InChI=1S/N/q+3	InChI=1S/N/q+3	ERROR	InChI=1S/N/q+3	False
+74	[N+3]	InChI=1S/N/q+3	InChI=1S/N/q+3	InChI=1S/N/q+3	InChI=1S/N/q+3	True
+75	[N3+]	InChI=1S/N/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+76	[N++++]	InChI=1S/N/q+4	InChI=1S/N/q+4	ERROR	InChI=1S/N/q+4	False
+77	[N+4]	InChI=1S/N/q+4	InChI=1S/N/q+4	InChI=1S/N/q+4	InChI=1S/N/q+4	True
+78	[N4+]	InChI=1S/N/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+79	[N+++++]	InChI=1S/N/q+5	InChI=1S/N/q+5	ERROR	InChI=1S/N/q+5	False
+80	[N+5]	InChI=1S/N/q+5	InChI=1S/N/q+5	InChI=1S/N/q+5	InChI=1S/N/q+5	True
+81	[N5+]	InChI=1S/N/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+82	[O--]	InChI=1S/O/q-2	InChI=1S/O/q-2	InChI=1S/O/q-2	InChI=1S/O/q-2	True
+83	[O-2]	InChI=1S/O/q-2	InChI=1S/O/q-2	InChI=1S/O/q-2	InChI=1S/O/q-2	True
+84	[O2-]	InChI=1S/O/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+85	[O-]	InChI=1S/O/q-1	InChI=1S/O/q-1	InChI=1S/O/q-1	InChI=1S/O/q-1	True
+86	[O-1]	InChI=1S/O/q-1	InChI=1S/O/q-1	InChI=1S/O/q-1	InChI=1S/O/q-1	True
+87	[O1-]	InChI=1S/O/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+88	[O]	InChI=1S/O	InChI=1S/O	InChI=1S/O	InChI=1S/O	True
+89	[O+]	InChI=1S/O/q+1	InChI=1S/O/q+1	InChI=1S/H2O/h1H2/q+1	InChI=1S/O/q+1	False
+90	[O+1]	InChI=1S/O/q+1	InChI=1S/O/q+1	InChI=1S/H2O/h1H2/q+1	InChI=1S/O/q+1	False
+91	[O1+]	InChI=1S/O/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+92	[O++]	InChI=1S/O/q+2	InChI=1S/O/q+2	InChI=1S/H2O/h1H2/q+2	InChI=1S/O/q+2	False
+93	[O+2]	InChI=1S/O/q+2	InChI=1S/O/q+2	InChI=1S/H2O/h1H2/q+2	InChI=1S/O/q+2	False
+94	[O2+]	InChI=1S/O/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+95	[F-]	InChI=1S/FH/h1H/p-1	InChI=1S/FH/h1H/p-1	InChI=1S/FH/h1H/p-1	InChI=1S/FH/h1H/p-1	True
+96	[F-1]	InChI=1S/FH/h1H/p-1	InChI=1S/FH/h1H/p-1	InChI=1S/FH/h1H/p-1	InChI=1S/FH/h1H/p-1	True
+97	[F1-]	InChI=1S/FH/h1H/p-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+98	[Ne]	InChI=1S/Ne	InChI=1S/Ne	InChI=1S/Ne	InChI=1S/Ne	True
+99	[Na-]	InChI=1S/Na/q-1	InChI=1S/Na/q-1	InChI=1S/Na/q-1	InChI=1S/Na/q-1	True
+100	[Na-1]	InChI=1S/Na/q-1	InChI=1S/Na/q-1	InChI=1S/Na/q-1	InChI=1S/Na/q-1	True
+101	[Na1-]	InChI=1S/H2N/h1H2/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+102	[Na]	InChI=1S/Na	InChI=1S/Na	InChI=1S/Na	InChI=1S/Na.H	False
+103	[Na+]	InChI=1S/Na/q+1	InChI=1S/Na/q+1	InChI=1S/Na/q+1	InChI=1S/Na/q+1	True
+104	[Na+1]	InChI=1S/Na/q+1	InChI=1S/Na/q+1	InChI=1S/Na/q+1	InChI=1S/Na/q+1	True
+105	[Na1+]	InChI=1S/H3N/h1H3/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+106	[Mg+]	InChI=1S/Mg/q+1	InChI=1S/Mg/q+1	InChI=1S/Mg/q+1	InChI=1S/Mg/q+1	True
+107	[Mg+1]	InChI=1S/Mg/q+1	InChI=1S/Mg/q+1	InChI=1S/Mg/q+1	InChI=1S/Mg/q+1	True
+108	[Mg1+]	InChI=1S/Mg.H/q+1;/i1-23;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+109	[Mg++]	InChI=1S/Mg/q+2	InChI=1S/Mg/q+2	InChI=1S/Mg/q+2	InChI=1S/Mg/q+2	True
+110	[Mg+2]	InChI=1S/Mg/q+2	InChI=1S/Mg/q+2	InChI=1S/Mg/q+2	InChI=1S/Mg/q+2	True
+111	[Mg2+]	InChI=1S/Mg.H/q+1;/i1-22;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+112	[Al--]	InChI=1S/Al/q-2	InChI=1S/Al/q-2	InChI=1S/Al.2H/q-2;;	InChI=1S/Al/q-2	False
+113	[Al-2]	InChI=1S/Al/q-2	InChI=1S/Al/q-2	InChI=1S/Al.2H/q-2;;	InChI=1S/Al/q-2	False
+114	[Al2-]	InChI=1S/Al/q-1/i1-25	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+115	[Al-1]	InChI=1S/Al/q-1	InChI=1S/Al/q-1	InChI=1S/Al.2H/q-1;;	InChI=1S/Al/q-1	False
+116	[Al1-]	InChI=1S/Al/q-1/i1-26	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+117	[Al]	InChI=1S/Al	InChI=1S/Al	InChI=1S/Al.2H	InChI=1S/Al	False
+118	[Al+]	InChI=1S/Al/q+1	InChI=1S/Al/q+1	InChI=1S/Al/q+1	InChI=1S/Al/q+1	True
+119	[Al+1]	InChI=1S/Al/q+1	InChI=1S/Al/q+1	InChI=1S/Al/q+1	InChI=1S/Al/q+1	True
+120	[Al1+]	InChI=1S/Al/q+1/i1-26	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+121	[Al++]	InChI=1S/Al/q+2	InChI=1S/Al/q+2	InChI=1S/Al/q+2	InChI=1S/Al/q+2	True
+122	[Al+2]	InChI=1S/Al/q+2	InChI=1S/Al/q+2	InChI=1S/Al/q+2	InChI=1S/Al/q+2	True
+123	[Al2+]	InChI=1S/Al/q+1/i1-25	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+124	[Al+++]	InChI=1S/Al/q+3	InChI=1S/Al/q+3	ERROR	InChI=1S/Al/q+3	False
+125	[Al+3]	InChI=1S/Al/q+3	InChI=1S/Al/q+3	InChI=1S/Al/q+3	InChI=1S/Al/q+3	True
+126	[Al3+]	InChI=1S/Al/q+1/i1-24	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+127	[Si----]	InChI=1S/Si/q-4	InChI=1S/Si/q-4	ERROR	InChI=1S/Si/q-4	False
+128	[Si-4]	InChI=1S/Si/q-4	InChI=1S/Si/q-4	InChI=1S/Si/q-4	InChI=1S/Si/q-4	True
+129	[Si4-]	InChI=1S/H3Si/h1H3/q-1/i1-24	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+130	[Si---]	InChI=1S/Si/q-3	InChI=1S/Si/q-3	ERROR	InChI=1S/Si/q-3	False
+131	[Si-3]	InChI=1S/Si/q-3	InChI=1S/Si/q-3	InChI=1S/Si/q-3	InChI=1S/Si/q-3	True
+132	[Si3-]	InChI=1S/H3Si/h1H3/q-1/i1-25	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+133	[Si--]	InChI=1S/Si/q-2	InChI=1S/Si/q-2	InChI=1S/Si/q-2	InChI=1S/Si/q-2	True
+134	[Si-2]	InChI=1S/Si/q-2	InChI=1S/Si/q-2	InChI=1S/Si/q-2	InChI=1S/Si/q-2	True
+135	[Si2-]	InChI=1S/H3Si/h1H3/q-1/i1-26	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+136	[Si-]	InChI=1S/Si/q-1	InChI=1S/Si/q-1	InChI=1S/H2Si/h1H2/q-1	InChI=1S/Si/q-1	False
+137	[Si-1]	InChI=1S/Si/q-1	InChI=1S/Si/q-1	InChI=1S/H2Si/h1H2/q-1	InChI=1S/Si/q-1	False
+138	[Si1-]	InChI=1S/H3Si/h1H3/q-1/i1-27	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+139	[Si]	InChI=1S/Si	InChI=1S/Si	InChI=1S/H2Si/h1H2	InChI=1S/Si	False
+140	[Si+]	InChI=1S/Si/q+1	InChI=1S/Si/q+1	InChI=1S/H2Si/h1H2/q+1	InChI=1S/Si/q+1	False
+141	[Si+1]	InChI=1S/Si/q+1	InChI=1S/Si/q+1	InChI=1S/H2Si/h1H2/q+1	InChI=1S/Si/q+1	False
+142	[Si1+]	InChI=1S/H3Si/h1H3/q+1/i1-27	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+143	[Si++]	InChI=1S/Si/q+2	InChI=1S/Si/q+2	InChI=1S/Si/q+2	InChI=1S/Si/q+2	True
+144	[Si+2]	InChI=1S/Si/q+2	InChI=1S/Si/q+2	InChI=1S/Si/q+2	InChI=1S/Si/q+2	True
+145	[Si2+]	InChI=1S/H3Si/h1H3/q+1/i1-26	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+146	[Si+++]	InChI=1S/Si/q+3	InChI=1S/Si/q+3	ERROR	InChI=1S/Si/q+3	False
+147	[Si+3]	InChI=1S/Si/q+3	InChI=1S/Si/q+3	InChI=1S/Si/q+3	InChI=1S/Si/q+3	True
+148	[Si3+]	InChI=1S/H3Si/h1H3/q+1/i1-25	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+149	[Si++++]	InChI=1S/Si/q+4	InChI=1S/Si/q+4	ERROR	InChI=1S/Si/q+4	False
+150	[Si+4]	InChI=1S/Si/q+4	InChI=1S/Si/q+4	InChI=1S/Si/q+4	InChI=1S/Si/q+4	True
+151	[Si4+]	InChI=1S/H3Si/h1H3/q+1/i1-24	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+152	[P---]	InChI=1S/P/q-3	InChI=1S/P/q-3	ERROR	InChI=1S/P/q-3	False
+153	[P-3]	InChI=1S/P/q-3	InChI=1S/P/q-3	InChI=1S/P/q-3	InChI=1S/P/q-3	True
+154	[P3-]	InChI=1S/P/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+155	[P--]	InChI=1S/P/q-2	InChI=1S/P/q-2	InChI=1S/P/q-2	InChI=1S/P/q-2	True
+156	[P-2]	InChI=1S/P/q-2	InChI=1S/P/q-2	InChI=1S/P/q-2	InChI=1S/P/q-2	True
+157	[P2-]	InChI=1S/P/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+158	[P-]	InChI=1S/P/q-1	InChI=1S/P/q-1	InChI=1S/P/q-1	InChI=1S/P/q-1	True
+159	[P-1]	InChI=1S/P/q-1	InChI=1S/P/q-1	InChI=1S/P/q-1	InChI=1S/P/q-1	True
+160	[P1-]	InChI=1S/P/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+161	[P]	InChI=1S/P	InChI=1S/P	InChI=1S/H2P/h1H2	InChI=1S/P	False
+162	[P+]	InChI=1S/P/q+1	InChI=1S/P/q+1	InChI=1S/H2P/h1H2/q+1	InChI=1S/P/q+1	False
+163	[P+1]	InChI=1S/P/q+1	InChI=1S/P/q+1	InChI=1S/H2P/h1H2/q+1	InChI=1S/P/q+1	False
+164	[P1+]	InChI=1S/P/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+165	[P++]	InChI=1S/P/q+2	InChI=1S/P/q+2	InChI=1S/H2P/h1H2/q+2	InChI=1S/P/q+2	False
+166	[P+2]	InChI=1S/P/q+2	InChI=1S/P/q+2	InChI=1S/H2P/h1H2/q+2	InChI=1S/P/q+2	False
+167	[P2+]	InChI=1S/P/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+168	[P+++]	InChI=1S/P/q+3	InChI=1S/P/q+3	ERROR	InChI=1S/P/q+3	False
+169	[P+3]	InChI=1S/P/q+3	InChI=1S/P/q+3	InChI=1S/P/q+3	InChI=1S/P/q+3	True
+170	[P3+]	InChI=1S/P/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+171	[P++++]	InChI=1S/P/q+4	InChI=1S/P/q+4	ERROR	InChI=1S/P/q+4	False
+172	[P+4]	InChI=1S/P/q+4	InChI=1S/P/q+4	InChI=1S/P/q+4	InChI=1S/P/q+4	True
+173	[P4+]	InChI=1S/P/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+174	[P+++++]	InChI=1S/P/q+5	InChI=1S/P/q+5	ERROR	InChI=1S/P/q+5	False
+175	[P+5]	InChI=1S/P/q+5	InChI=1S/P/q+5	InChI=1S/P/q+5	InChI=1S/P/q+5	True
+176	[P5+]	InChI=1S/P/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+177	[S--]	InChI=1S/S/q-2	InChI=1S/S/q-2	InChI=1S/S/q-2	InChI=1S/S/q-2	True
+178	[S-2]	InChI=1S/S/q-2	InChI=1S/S/q-2	InChI=1S/S/q-2	InChI=1S/S/q-2	True
+179	[S2-]	InChI=1S/S/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+180	[S-]	InChI=1S/S/q-1	InChI=1S/S/q-1	InChI=1S/S/q-1	InChI=1S/S/q-1	True
+181	[S-1]	InChI=1S/S/q-1	InChI=1S/S/q-1	InChI=1S/S/q-1	InChI=1S/S/q-1	True
+182	[S1-]	InChI=1S/S/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+183	[S]	InChI=1S/S	InChI=1S/S	InChI=1S/S	InChI=1S/S	True
+184	[S+]	InChI=1S/S/q+1	InChI=1S/S/q+1	InChI=1S/H2S/h1H2/q+1	InChI=1S/S/q+1	False
+185	[S+1]	InChI=1S/S/q+1	InChI=1S/S/q+1	InChI=1S/H2S/h1H2/q+1	InChI=1S/S/q+1	False
+186	[S1+]	InChI=1S/S/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+187	[S++]	InChI=1S/S/q+2	InChI=1S/S/q+2	InChI=1S/H2S/h1H2/q+2	InChI=1S/S/q+2	False
+188	[S+2]	InChI=1S/S/q+2	InChI=1S/S/q+2	InChI=1S/H2S/h1H2/q+2	InChI=1S/S/q+2	False
+189	[S2+]	InChI=1S/S/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+190	[S+++]	InChI=1S/S/q+3	InChI=1S/S/q+3	ERROR	InChI=1S/S/q+3	False
+191	[S+3]	InChI=1S/S/q+3	InChI=1S/S/q+3	InChI=1S/S/q+3	InChI=1S/S/q+3	True
+192	[S3+]	InChI=1S/S/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+193	[S++++]	InChI=1S/S/q+4	InChI=1S/S/q+4	ERROR	InChI=1S/S/q+4	False
+194	[S+4]	InChI=1S/S/q+4	InChI=1S/S/q+4	InChI=1S/S/q+4	InChI=1S/S/q+4	True
+195	[S4+]	InChI=1S/S/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+196	[S+++++]	InChI=1S/S/q+5	InChI=1S/S/q+5	ERROR	InChI=1S/S/q+5	False
+197	[S+5]	InChI=1S/S/q+5	InChI=1S/S/q+5	InChI=1S/S/q+5	InChI=1S/S/q+5	True
+198	[S5+]	InChI=1S/S/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+199	[S++++++]	InChI=1S/S/q+6	InChI=1S/S/q+6	ERROR	InChI=1S/S/q+6	False
+200	[S+6]	InChI=1S/S/q+6	InChI=1S/S/q+6	InChI=1S/S/q+6	InChI=1S/S/q+6	True
+201	[S6+]	InChI=1S/S/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+202	[Cl-]	InChI=1S/ClH/h1H/p-1	InChI=1S/ClH/h1H/p-1	InChI=1S/ClH/h1H/p-1	InChI=1S/ClH/h1H/p-1	True
+203	[Cl-1]	InChI=1S/ClH/h1H/p-1	InChI=1S/ClH/h1H/p-1	InChI=1S/ClH/h1H/p-1	InChI=1S/ClH/h1H/p-1	True
+204	[Cl1-]	InChI=1S/ClH/h1H/p-1/i1-34	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+205	[Cl+]	InChI=1S/Cl/q+1	InChI=1S/Cl/q+1	InChI=1S/Cl/q+1	InChI=1S/Cl/q+1	True
+206	[Cl+1]	InChI=1S/Cl/q+1	InChI=1S/Cl/q+1	InChI=1S/Cl/q+1	InChI=1S/Cl/q+1	True
+207	[Cl1+]	InChI=1S/ClH2/h1H2/q+1/i1-34	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+208	[Cl++]	InChI=1S/Cl/q+2	InChI=1S/Cl/q+2	InChI=1S/ClH2/h1H2/q+2	InChI=1S/Cl/q+2	False
+209	[Cl+2]	InChI=1S/Cl/q+2	InChI=1S/Cl/q+2	InChI=1S/ClH2/h1H2/q+2	InChI=1S/Cl/q+2	False
+210	[Cl2+]	InChI=1S/ClH2/h1H2/q+1/i1-33	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+211	[Cl+++]	InChI=1S/Cl/q+3	InChI=1S/Cl/q+3	ERROR	InChI=1S/Cl/q+3	False
+212	[Cl+3]	InChI=1S/Cl/q+3	InChI=1S/Cl/q+3	InChI=1S/Cl/q+3	InChI=1S/Cl/q+3	True
+213	[Cl3+]	InChI=1S/ClH2/h1H2/q+1/i1-32	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+214	[Cl++++]	InChI=1S/Cl/q+4	InChI=1S/Cl/q+4	ERROR	InChI=1S/Cl/q+4	False
+215	[Cl+4]	InChI=1S/Cl/q+4	InChI=1S/Cl/q+4	InChI=1S/Cl/q+4	InChI=1S/Cl/q+4	True
+216	[Cl4+]	InChI=1S/ClH2/h1H2/q+1/i1-31	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+217	[Cl+++++]	InChI=1S/Cl/q+5	InChI=1S/Cl/q+5	ERROR	InChI=1S/Cl/q+5	False
+218	[Cl+5]	InChI=1S/Cl/q+5	InChI=1S/Cl/q+5	InChI=1S/Cl/q+5	InChI=1S/Cl/q+5	True
+219	[Cl5+]	InChI=1S/ClH2/h1H2/q+1/i1-30	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+220	[Cl++++++]	InChI=1S/Cl/q+6	InChI=1S/Cl/q+6	ERROR	InChI=1S/Cl/q+6	False
+221	[Cl+6]	InChI=1S/Cl/q+6	InChI=1S/Cl/q+6	InChI=1S/Cl/q+6	InChI=1S/Cl/q+6	True
+222	[Cl6+]	InChI=1S/ClH2/h1H2/q+1/i1-29	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+223	[Cl+++++++]	InChI=1S/Cl/q+7	InChI=1S/Cl/q+7	ERROR	InChI=1S/Cl/q+7	False
+224	[Cl+7]	InChI=1S/Cl/q+7	InChI=1S/Cl/q+7	InChI=1S/Cl/q+7	InChI=1S/Cl/q+7	True
+225	[Cl7+]	InChI=1S/ClH2/h1H2/q+1/i1-28	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+226	[Ar]	InChI=1S/Ar	InChI=1S/Ar	InChI=1S/Ar	InChI=1S/Ar	True
+227	[K-]	InChI=1S/K/q-1	InChI=1S/K/q-1	InChI=1S/K/q-1	InChI=1S/K/q-1	True
+228	[K-1]	InChI=1S/K/q-1	InChI=1S/K/q-1	InChI=1S/K/q-1	InChI=1S/K/q-1	True
+229	[K1-]	InChI=1S/K/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+230	[K+]	InChI=1S/K/q+1	InChI=1S/K/q+1	InChI=1S/K/q+1	InChI=1S/K/q+1	True
+231	[K+1]	InChI=1S/K/q+1	InChI=1S/K/q+1	InChI=1S/K/q+1	InChI=1S/K/q+1	True
+232	[K1+]	InChI=1S/K/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+233	[Ca+]	InChI=1S/Ca/q+1	InChI=1S/Ca/q+1	InChI=1S/Ca/q+1	InChI=1S/Ca/q+1	True
+234	[Ca+1]	InChI=1S/Ca/q+1	InChI=1S/Ca/q+1	InChI=1S/Ca/q+1	InChI=1S/Ca/q+1	True
+235	[Ca1+]	InChI=1S/CH3/h1H3/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+236	[Ca++]	InChI=1S/Ca/q+2	InChI=1S/Ca/q+2	InChI=1S/Ca/q+2	InChI=1S/Ca/q+2	True
+237	[Ca+2]	InChI=1S/Ca/q+2	InChI=1S/Ca/q+2	InChI=1S/Ca/q+2	InChI=1S/Ca/q+2	True
+238	[Ca2+]	InChI=1S/CH3/h1H3/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+239	[Sc]	InChI=1S/Sc	InChI=1S/Sc	InChI=1S/Sc	InChI=1S/Sc	True
+240	[Sc+]	InChI=1S/Sc/q+1	InChI=1S/Sc/q+1	InChI=1S/Sc/q+1	InChI=1S/Sc/q+1	True
+241	[Sc+1]	InChI=1S/Sc/q+1	InChI=1S/Sc/q+1	InChI=1S/Sc/q+1	InChI=1S/Sc/q+1	True
+242	[Sc1+]	InChI=1S/Sc/q+1/i1-44	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+243	[Sc++]	InChI=1S/Sc/q+2	InChI=1S/Sc/q+2	InChI=1S/Sc/q+2	InChI=1S/Sc/q+2	True
+244	[Sc+2]	InChI=1S/Sc/q+2	InChI=1S/Sc/q+2	InChI=1S/Sc/q+2	InChI=1S/Sc/q+2	True
+245	[Sc2+]	InChI=1S/Sc/q+1/i1-43	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+246	[Sc+++]	InChI=1S/Sc/q+3	InChI=1S/Sc/q+3	ERROR	InChI=1S/Sc/q+3	False
+247	[Sc+3]	InChI=1S/Sc/q+3	InChI=1S/Sc/q+3	InChI=1S/Sc/q+3	InChI=1S/Sc/q+3	True
+248	[Sc3+]	InChI=1S/Sc/q+1/i1-42	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+249	[Ti--]	InChI=1S/Ti/q-2	InChI=1S/Ti/q-2	InChI=1S/Ti/q-2	InChI=1S/Ti/q-2	True
+250	[Ti-2]	InChI=1S/Ti/q-2	InChI=1S/Ti/q-2	InChI=1S/Ti/q-2	InChI=1S/Ti/q-2	True
+251	[Ti2-]	InChI=1S/Ti/q-1/i1-46	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+252	[Ti-]	InChI=1S/Ti/q-1	InChI=1S/Ti/q-1	InChI=1S/Ti/q-1	InChI=1S/Ti/q-1	True
+253	[Ti-1]	InChI=1S/Ti/q-1	InChI=1S/Ti/q-1	InChI=1S/Ti/q-1	InChI=1S/Ti/q-1	True
+254	[Ti1-]	InChI=1S/Ti/q-1/i1-47	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+255	[Ti]	InChI=1S/Ti	InChI=1S/Ti	InChI=1S/Ti	InChI=1S/Ti	True
+256	[Ti+]	InChI=1S/Ti/q+1	InChI=1S/Ti/q+1	InChI=1S/Ti/q+1	InChI=1S/Ti/q+1	True
+257	[Ti+1]	InChI=1S/Ti/q+1	InChI=1S/Ti/q+1	InChI=1S/Ti/q+1	InChI=1S/Ti/q+1	True
+258	[Ti1+]	InChI=1S/Ti/q+1/i1-47	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+259	[Ti++]	InChI=1S/Ti/q+2	InChI=1S/Ti/q+2	InChI=1S/Ti/q+2	InChI=1S/Ti/q+2	True
+260	[Ti+2]	InChI=1S/Ti/q+2	InChI=1S/Ti/q+2	InChI=1S/Ti/q+2	InChI=1S/Ti/q+2	True
+261	[Ti2+]	InChI=1S/Ti/q+1/i1-46	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+262	[Ti+++]	InChI=1S/Ti/q+3	InChI=1S/Ti/q+3	ERROR	InChI=1S/Ti/q+3	False
+263	[Ti+3]	InChI=1S/Ti/q+3	InChI=1S/Ti/q+3	InChI=1S/Ti/q+3	InChI=1S/Ti/q+3	True
+264	[Ti3+]	InChI=1S/Ti/q+1/i1-45	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+265	[Ti++++]	InChI=1S/Ti/q+4	InChI=1S/Ti/q+4	ERROR	InChI=1S/Ti/q+4	False
+266	[Ti+4]	InChI=1S/Ti/q+4	InChI=1S/Ti/q+4	InChI=1S/Ti/q+4	InChI=1S/Ti/q+4	True
+267	[Ti4+]	InChI=1S/Ti/q+1/i1-44	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+268	[V---]	InChI=1S/V/q-3	InChI=1S/V/q-3	ERROR	InChI=1S/V/q-3	False
+269	[V-3]	InChI=1S/V/q-3	InChI=1S/V/q-3	InChI=1S/V/q-3	InChI=1S/V/q-3	True
+270	[V3-]	InChI=1S/V/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+271	[V-]	InChI=1S/V/q-1	InChI=1S/V/q-1	InChI=1S/V/q-1	InChI=1S/V/q-1	True
+272	[V-1]	InChI=1S/V/q-1	InChI=1S/V/q-1	InChI=1S/V/q-1	InChI=1S/V/q-1	True
+273	[V1-]	InChI=1S/V/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+274	[V]	InChI=1S/V	InChI=1S/V	InChI=1S/V	InChI=1S/V	True
+275	[V+]	InChI=1S/V/q+1	InChI=1S/V/q+1	InChI=1S/V/q+1	InChI=1S/V/q+1	True
+276	[V+1]	InChI=1S/V/q+1	InChI=1S/V/q+1	InChI=1S/V/q+1	InChI=1S/V/q+1	True
+277	[V1+]	InChI=1S/V/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+278	[V++]	InChI=1S/V/q+2	InChI=1S/V/q+2	InChI=1S/V/q+2	InChI=1S/V/q+2	True
+279	[V+2]	InChI=1S/V/q+2	InChI=1S/V/q+2	InChI=1S/V/q+2	InChI=1S/V/q+2	True
+280	[V2+]	InChI=1S/V/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+281	[V+++]	InChI=1S/V/q+3	InChI=1S/V/q+3	ERROR	InChI=1S/V/q+3	False
+282	[V+3]	InChI=1S/V/q+3	InChI=1S/V/q+3	InChI=1S/V/q+3	InChI=1S/V/q+3	True
+283	[V3+]	InChI=1S/V/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+284	[V++++]	InChI=1S/V/q+4	InChI=1S/V/q+4	ERROR	InChI=1S/V/q+4	False
+285	[V+4]	InChI=1S/V/q+4	InChI=1S/V/q+4	InChI=1S/V/q+4	InChI=1S/V/q+4	True
+286	[V4+]	InChI=1S/V/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+287	[V+++++]	InChI=1S/V/q+5	InChI=1S/V/q+5	ERROR	InChI=1S/V/q+5	False
+288	[V+5]	InChI=1S/V/q+5	InChI=1S/V/q+5	InChI=1S/V/q+5	InChI=1S/V/q+5	True
+289	[V5+]	InChI=1S/V/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+290	[Cr----]	InChI=1S/Cr/q-4	InChI=1S/Cr/q-4	ERROR	InChI=1S/Cr/q-4	False
+291	[Cr-4]	InChI=1S/Cr/q-4	InChI=1S/Cr/q-4	InChI=1S/Cr/q-4	InChI=1S/Cr/q-4	True
+292	[Cr4-]	InChI=1S/CH3/h1H3/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+293	[Cr--]	InChI=1S/Cr/q-2	InChI=1S/Cr/q-2	InChI=1S/Cr/q-2	InChI=1S/Cr/q-2	True
+294	[Cr-2]	InChI=1S/Cr/q-2	InChI=1S/Cr/q-2	InChI=1S/Cr/q-2	InChI=1S/Cr/q-2	True
+295	[Cr2-]	InChI=1S/CH3/h1H3/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+296	[Cr-]	InChI=1S/Cr/q-1	InChI=1S/Cr/q-1	InChI=1S/Cr/q-1	InChI=1S/Cr/q-1	True
+297	[Cr-1]	InChI=1S/Cr/q-1	InChI=1S/Cr/q-1	InChI=1S/Cr/q-1	InChI=1S/Cr/q-1	True
+298	[Cr1-]	InChI=1S/CH3/h1H3/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+299	[Cr]	InChI=1S/Cr	InChI=1S/Cr	InChI=1S/Cr	InChI=1S/Cr	True
+300	[Cr+]	InChI=1S/Cr/q+1	InChI=1S/Cr/q+1	InChI=1S/Cr/q+1	InChI=1S/Cr/q+1	True
+301	[Cr+1]	InChI=1S/Cr/q+1	InChI=1S/Cr/q+1	InChI=1S/Cr/q+1	InChI=1S/Cr/q+1	True
+302	[Cr1+]	InChI=1S/CH3/h1H3/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+303	[Cr++]	InChI=1S/Cr/q+2	InChI=1S/Cr/q+2	InChI=1S/Cr/q+2	InChI=1S/Cr/q+2	True
+304	[Cr+2]	InChI=1S/Cr/q+2	InChI=1S/Cr/q+2	InChI=1S/Cr/q+2	InChI=1S/Cr/q+2	True
+305	[Cr2+]	InChI=1S/CH3/h1H3/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+306	[Cr+++]	InChI=1S/Cr/q+3	InChI=1S/Cr/q+3	ERROR	InChI=1S/Cr/q+3	False
+307	[Cr+3]	InChI=1S/Cr/q+3	InChI=1S/Cr/q+3	InChI=1S/Cr/q+3	InChI=1S/Cr/q+3	True
+308	[Cr3+]	InChI=1S/CH3/h1H3/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+309	[Cr++++]	InChI=1S/Cr/q+4	InChI=1S/Cr/q+4	ERROR	InChI=1S/Cr/q+4	False
+310	[Cr+4]	InChI=1S/Cr/q+4	InChI=1S/Cr/q+4	InChI=1S/Cr/q+4	InChI=1S/Cr/q+4	True
+311	[Cr4+]	InChI=1S/CH3/h1H3/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+312	[Cr+++++]	InChI=1S/Cr/q+5	InChI=1S/Cr/q+5	ERROR	InChI=1S/Cr/q+5	False
+313	[Cr+5]	InChI=1S/Cr/q+5	InChI=1S/Cr/q+5	InChI=1S/Cr/q+5	InChI=1S/Cr/q+5	True
+314	[Cr5+]	InChI=1S/CH3/h1H3/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+315	[Cr++++++]	InChI=1S/Cr/q+6	InChI=1S/Cr/q+6	ERROR	InChI=1S/Cr/q+6	False
+316	[Cr+6]	InChI=1S/Cr/q+6	InChI=1S/Cr/q+6	InChI=1S/Cr/q+6	InChI=1S/Cr/q+6	True
+317	[Cr6+]	InChI=1S/CH3/h1H3/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+318	[Mn---]	InChI=1S/Mn/q-3	InChI=1S/Mn/q-3	ERROR	InChI=1S/Mn/q-3	False
+319	[Mn-3]	InChI=1S/Mn/q-3	InChI=1S/Mn/q-3	InChI=1S/Mn/q-3	InChI=1S/Mn/q-3	True
+320	[Mn3-]	InChI=1S/Mn/q-1/i1-52	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+321	[Mn--]	InChI=1S/Mn/q-2	InChI=1S/Mn/q-2	InChI=1S/Mn/q-2	InChI=1S/Mn/q-2	True
+322	[Mn-2]	InChI=1S/Mn/q-2	InChI=1S/Mn/q-2	InChI=1S/Mn/q-2	InChI=1S/Mn/q-2	True
+323	[Mn2-]	InChI=1S/Mn/q-1/i1-53	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+324	[Mn-]	InChI=1S/Mn/q-1	InChI=1S/Mn/q-1	InChI=1S/Mn/q-1	InChI=1S/Mn/q-1	True
+325	[Mn-1]	InChI=1S/Mn/q-1	InChI=1S/Mn/q-1	InChI=1S/Mn/q-1	InChI=1S/Mn/q-1	True
+326	[Mn1-]	InChI=1S/Mn/q-1/i1-54	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+327	[Mn]	InChI=1S/Mn	InChI=1S/Mn	InChI=1S/Mn	InChI=1S/Mn	True
+328	[Mn+]	InChI=1S/Mn/q+1	InChI=1S/Mn/q+1	InChI=1S/Mn/q+1	InChI=1S/Mn/q+1	True
+329	[Mn+1]	InChI=1S/Mn/q+1	InChI=1S/Mn/q+1	InChI=1S/Mn/q+1	InChI=1S/Mn/q+1	True
+330	[Mn1+]	InChI=1S/Mn/q+1/i1-54	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+331	[Mn++]	InChI=1S/Mn/q+2	InChI=1S/Mn/q+2	InChI=1S/Mn/q+2	InChI=1S/Mn/q+2	True
+332	[Mn+2]	InChI=1S/Mn/q+2	InChI=1S/Mn/q+2	InChI=1S/Mn/q+2	InChI=1S/Mn/q+2	True
+333	[Mn2+]	InChI=1S/Mn/q+1/i1-53	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+334	[Mn+++]	InChI=1S/Mn/q+3	InChI=1S/Mn/q+3	ERROR	InChI=1S/Mn/q+3	False
+335	[Mn+3]	InChI=1S/Mn/q+3	InChI=1S/Mn/q+3	InChI=1S/Mn/q+3	InChI=1S/Mn/q+3	True
+336	[Mn3+]	InChI=1S/Mn/q+1/i1-52	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+337	[Mn++++]	InChI=1S/Mn/q+4	InChI=1S/Mn/q+4	ERROR	InChI=1S/Mn/q+4	False
+338	[Mn+4]	InChI=1S/Mn/q+4	InChI=1S/Mn/q+4	InChI=1S/Mn/q+4	InChI=1S/Mn/q+4	True
+339	[Mn4+]	InChI=1S/Mn/q+1/i1-51	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+340	[Mn+++++]	InChI=1S/Mn/q+5	InChI=1S/Mn/q+5	ERROR	InChI=1S/Mn/q+5	False
+341	[Mn+5]	InChI=1S/Mn/q+5	InChI=1S/Mn/q+5	InChI=1S/Mn/q+5	InChI=1S/Mn/q+5	True
+342	[Mn5+]	InChI=1S/Mn/q+1/i1-50	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+343	[Mn++++++]	InChI=1S/Mn/q+6	InChI=1S/Mn/q+6	ERROR	InChI=1S/Mn/q+6	False
+344	[Mn+6]	InChI=1S/Mn/q+6	InChI=1S/Mn/q+6	InChI=1S/Mn/q+6	InChI=1S/Mn/q+6	True
+345	[Mn6+]	InChI=1S/Mn/q+1/i1-49	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+346	[Mn+++++++]	InChI=1S/Mn/q+7	InChI=1S/Mn/q+7	ERROR	InChI=1S/Mn/q+7	False
+347	[Mn+7]	InChI=1S/Mn/q+7	InChI=1S/Mn/q+7	InChI=1S/Mn/q+7	InChI=1S/Mn/q+7	True
+348	[Mn7+]	InChI=1S/Mn/q+1/i1-48	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+349	[Fe----]	InChI=1S/Fe/q-4	InChI=1S/Fe/q-4	ERROR	InChI=1S/Fe/q-4	False
+350	[Fe-4]	InChI=1S/Fe/q-4	InChI=1S/Fe/q-4	InChI=1S/Fe/q-4	InChI=1S/Fe/q-4	True
+351	[Fe4-]	InChI=1S/Fe/q-1/i1-52	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+352	[Fe--]	InChI=1S/Fe/q-2	InChI=1S/Fe/q-2	InChI=1S/Fe/q-2	InChI=1S/Fe/q-2	True
+353	[Fe-2]	InChI=1S/Fe/q-2	InChI=1S/Fe/q-2	InChI=1S/Fe/q-2	InChI=1S/Fe/q-2	True
+354	[Fe2-]	InChI=1S/Fe/q-1/i1-54	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+355	[Fe-]	InChI=1S/Fe/q-1	InChI=1S/Fe/q-1	InChI=1S/Fe/q-1	InChI=1S/Fe/q-1	True
+356	[Fe-1]	InChI=1S/Fe/q-1	InChI=1S/Fe/q-1	InChI=1S/Fe/q-1	InChI=1S/Fe/q-1	True
+357	[Fe1-]	InChI=1S/Fe/q-1/i1-55	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+358	[Fe]	InChI=1S/Fe	InChI=1S/Fe	InChI=1S/Fe	InChI=1S/Fe	True
+359	[Fe+]	InChI=1S/Fe/q+1	InChI=1S/Fe/q+1	InChI=1S/Fe/q+1	InChI=1S/Fe/q+1	True
+360	[Fe+1]	InChI=1S/Fe/q+1	InChI=1S/Fe/q+1	InChI=1S/Fe/q+1	InChI=1S/Fe/q+1	True
+361	[Fe1+]	InChI=1S/Fe/q+1/i1-55	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+362	[Fe++]	InChI=1S/Fe/q+2	InChI=1S/Fe/q+2	InChI=1S/Fe/q+2	InChI=1S/Fe/q+2	True
+363	[Fe+2]	InChI=1S/Fe/q+2	InChI=1S/Fe/q+2	InChI=1S/Fe/q+2	InChI=1S/Fe/q+2	True
+364	[Fe2+]	InChI=1S/Fe/q+1/i1-54	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+365	[Fe+++]	InChI=1S/Fe/q+3	InChI=1S/Fe/q+3	ERROR	InChI=1S/Fe/q+3	False
+366	[Fe+3]	InChI=1S/Fe/q+3	InChI=1S/Fe/q+3	InChI=1S/Fe/q+3	InChI=1S/Fe/q+3	True
+367	[Fe3+]	InChI=1S/Fe/q+1/i1-53	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+368	[Fe++++]	InChI=1S/Fe/q+4	InChI=1S/Fe/q+4	ERROR	InChI=1S/Fe/q+4	False
+369	[Fe+4]	InChI=1S/Fe/q+4	InChI=1S/Fe/q+4	InChI=1S/Fe/q+4	InChI=1S/Fe/q+4	True
+370	[Fe4+]	InChI=1S/Fe/q+1/i1-52	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+371	[Fe+++++]	InChI=1S/Fe/q+5	InChI=1S/Fe/q+5	ERROR	InChI=1S/Fe/q+5	False
+372	[Fe+5]	InChI=1S/Fe/q+5	InChI=1S/Fe/q+5	InChI=1S/Fe/q+5	InChI=1S/Fe/q+5	True
+373	[Fe5+]	InChI=1S/Fe/q+1/i1-51	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+374	[Fe++++++]	InChI=1S/Fe/q+6	InChI=1S/Fe/q+6	ERROR	InChI=1S/Fe/q+6	False
+375	[Fe+6]	InChI=1S/Fe/q+6	InChI=1S/Fe/q+6	InChI=1S/Fe/q+6	InChI=1S/Fe/q+6	True
+376	[Fe6+]	InChI=1S/Fe/q+1/i1-50	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+377	[Fe+++++++]	InChI=1S/Fe/q+7	InChI=1S/Fe/q+7	ERROR	InChI=1S/Fe/q+7	False
+378	[Fe+7]	InChI=1S/Fe/q+7	InChI=1S/Fe/q+7	InChI=1S/Fe/q+7	InChI=1S/Fe/q+7	True
+379	[Fe7+]	InChI=1S/Fe/q+1/i1-49	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+380	[Co---]	InChI=1S/Co/q-3	InChI=1S/Co/q-3	ERROR	InChI=1S/Co/q-3	False
+381	[Co-3]	InChI=1S/Co/q-3	InChI=1S/Co/q-3	InChI=1S/Co/q-3	InChI=1S/Co/q-3	True
+382	[Co3-]	InChI=1S/Co/q-1/i1-56	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+383	[Co-]	InChI=1S/Co/q-1	InChI=1S/Co/q-1	InChI=1S/Co/q-1	InChI=1S/Co/q-1	True
+384	[Co-1]	InChI=1S/Co/q-1	InChI=1S/Co/q-1	InChI=1S/Co/q-1	InChI=1S/Co/q-1	True
+385	[Co1-]	InChI=1S/Co/q-1/i1-58	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+386	[Co]	InChI=1S/Co	InChI=1S/Co	InChI=1S/Co	InChI=1S/Co	True
+387	[Co+]	InChI=1S/Co/q+1	InChI=1S/Co/q+1	InChI=1S/Co/q+1	InChI=1S/Co/q+1	True
+388	[Co+1]	InChI=1S/Co/q+1	InChI=1S/Co/q+1	InChI=1S/Co/q+1	InChI=1S/Co/q+1	True
+389	[Co1+]	InChI=1S/Co/q+1/i1-58	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+390	[Co++]	InChI=1S/Co/q+2	InChI=1S/Co/q+2	InChI=1S/Co/q+2	InChI=1S/Co/q+2	True
+391	[Co+2]	InChI=1S/Co/q+2	InChI=1S/Co/q+2	InChI=1S/Co/q+2	InChI=1S/Co/q+2	True
+392	[Co2+]	InChI=1S/Co/q+1/i1-57	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+393	[Co+++]	InChI=1S/Co/q+3	InChI=1S/Co/q+3	ERROR	InChI=1S/Co/q+3	False
+394	[Co+3]	InChI=1S/Co/q+3	InChI=1S/Co/q+3	InChI=1S/Co/q+3	InChI=1S/Co/q+3	True
+395	[Co3+]	InChI=1S/Co/q+1/i1-56	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+396	[Co++++]	InChI=1S/Co/q+4	InChI=1S/Co/q+4	ERROR	InChI=1S/Co/q+4	False
+397	[Co+4]	InChI=1S/Co/q+4	InChI=1S/Co/q+4	InChI=1S/Co/q+4	InChI=1S/Co/q+4	True
+398	[Co4+]	InChI=1S/Co/q+1/i1-55	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+399	[Co+++++]	InChI=1S/Co/q+5	InChI=1S/Co/q+5	ERROR	InChI=1S/Co/q+5	False
+400	[Co+5]	InChI=1S/Co/q+5	InChI=1S/Co/q+5	InChI=1S/Co/q+5	InChI=1S/Co/q+5	True
+401	[Co5+]	InChI=1S/Co/q+1/i1-54	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+402	[Ni--]	InChI=1S/Ni/q-2	InChI=1S/Ni/q-2	InChI=1S/Ni/q-2	InChI=1S/Ni/q-2	True
+403	[Ni-2]	InChI=1S/Ni/q-2	InChI=1S/Ni/q-2	InChI=1S/Ni/q-2	InChI=1S/Ni/q-2	True
+404	[Ni2-]	InChI=1S/Ni/q-1/i1-57	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+405	[Ni-]	InChI=1S/Ni/q-1	InChI=1S/Ni/q-1	InChI=1S/Ni/q-1	InChI=1S/Ni/q-1	True
+406	[Ni-1]	InChI=1S/Ni/q-1	InChI=1S/Ni/q-1	InChI=1S/Ni/q-1	InChI=1S/Ni/q-1	True
+407	[Ni1-]	InChI=1S/Ni/q-1/i1-58	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+408	[Ni]	InChI=1S/Ni	InChI=1S/Ni	InChI=1S/Ni	InChI=1S/Ni	True
+409	[Ni+]	InChI=1S/Ni/q+1	InChI=1S/Ni/q+1	InChI=1S/Ni/q+1	InChI=1S/Ni/q+1	True
+410	[Ni+1]	InChI=1S/Ni/q+1	InChI=1S/Ni/q+1	InChI=1S/Ni/q+1	InChI=1S/Ni/q+1	True
+411	[Ni1+]	InChI=1S/Ni/q+1/i1-58	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+412	[Ni++]	InChI=1S/Ni/q+2	InChI=1S/Ni/q+2	InChI=1S/Ni/q+2	InChI=1S/Ni/q+2	True
+413	[Ni+2]	InChI=1S/Ni/q+2	InChI=1S/Ni/q+2	InChI=1S/Ni/q+2	InChI=1S/Ni/q+2	True
+414	[Ni2+]	InChI=1S/Ni/q+1/i1-57	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+415	[Ni+++]	InChI=1S/Ni/q+3	InChI=1S/Ni/q+3	ERROR	InChI=1S/Ni/q+3	False
+416	[Ni+3]	InChI=1S/Ni/q+3	InChI=1S/Ni/q+3	InChI=1S/Ni/q+3	InChI=1S/Ni/q+3	True
+417	[Ni3+]	InChI=1S/Ni/q+1/i1-56	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+418	[Ni++++]	InChI=1S/Ni/q+4	InChI=1S/Ni/q+4	ERROR	InChI=1S/Ni/q+4	False
+419	[Ni+4]	InChI=1S/Ni/q+4	InChI=1S/Ni/q+4	InChI=1S/Ni/q+4	InChI=1S/Ni/q+4	True
+420	[Ni4+]	InChI=1S/Ni/q+1/i1-55	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+421	[Cu--]	InChI=1S/Cu/q-2	InChI=1S/Cu/q-2	InChI=1S/Cu/q-2	InChI=1S/Cu/q-2	True
+422	[Cu-2]	InChI=1S/Cu/q-2	InChI=1S/Cu/q-2	InChI=1S/Cu/q-2	InChI=1S/Cu/q-2	True
+423	[Cu2-]	InChI=1S/Cu/q-1/i1-62	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+424	[Cu]	InChI=1S/Cu	InChI=1S/Cu	InChI=1S/Cu	InChI=1S/Cu	True
+425	[Cu+]	InChI=1S/Cu/q+1	InChI=1S/Cu/q+1	InChI=1S/Cu/q+1	InChI=1S/Cu/q+1	True
+426	[Cu+1]	InChI=1S/Cu/q+1	InChI=1S/Cu/q+1	InChI=1S/Cu/q+1	InChI=1S/Cu/q+1	True
+427	[Cu1+]	InChI=1S/Cu/q+1/i1-63	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+428	[Cu++]	InChI=1S/Cu/q+2	InChI=1S/Cu/q+2	InChI=1S/Cu/q+2	InChI=1S/Cu/q+2	True
+429	[Cu+2]	InChI=1S/Cu/q+2	InChI=1S/Cu/q+2	InChI=1S/Cu/q+2	InChI=1S/Cu/q+2	True
+430	[Cu2+]	InChI=1S/Cu/q+1/i1-62	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+431	[Cu+++]	InChI=1S/Cu/q+3	InChI=1S/Cu/q+3	ERROR	InChI=1S/Cu/q+3	False
+432	[Cu+3]	InChI=1S/Cu/q+3	InChI=1S/Cu/q+3	InChI=1S/Cu/q+3	InChI=1S/Cu/q+3	True
+433	[Cu3+]	InChI=1S/Cu/q+1/i1-61	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+434	[Cu++++]	InChI=1S/Cu/q+4	InChI=1S/Cu/q+4	ERROR	InChI=1S/Cu/q+4	False
+435	[Cu+4]	InChI=1S/Cu/q+4	InChI=1S/Cu/q+4	InChI=1S/Cu/q+4	InChI=1S/Cu/q+4	True
+436	[Cu4+]	InChI=1S/Cu/q+1/i1-60	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+437	[Zn--]	InChI=1S/Zn/q-2	InChI=1S/Zn/q-2	InChI=1S/Zn/q-2	InChI=1S/Zn/q-2	True
+438	[Zn-2]	InChI=1S/Zn/q-2	InChI=1S/Zn/q-2	InChI=1S/Zn/q-2	InChI=1S/Zn/q-2	True
+439	[Zn2-]	InChI=1S/Zn/q-1/i1-63	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+440	[Zn+]	InChI=1S/Zn/q+1	InChI=1S/Zn/q+1	InChI=1S/Zn/q+1	InChI=1S/Zn/q+1	True
+441	[Zn+1]	InChI=1S/Zn/q+1	InChI=1S/Zn/q+1	InChI=1S/Zn/q+1	InChI=1S/Zn/q+1	True
+442	[Zn1+]	InChI=1S/Zn/q+1/i1-64	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+443	[Zn++]	InChI=1S/Zn/q+2	InChI=1S/Zn/q+2	InChI=1S/Zn/q+2	InChI=1S/Zn/q+2	True
+444	[Zn+2]	InChI=1S/Zn/q+2	InChI=1S/Zn/q+2	InChI=1S/Zn/q+2	InChI=1S/Zn/q+2	True
+445	[Zn2+]	InChI=1S/Zn/q+1/i1-63	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+446	[Ga-----]	InChI=1S/Ga/q-5	InChI=1S/Ga/q-5	ERROR	InChI=1S/Ga/q-5	False
+447	[Ga-5]	InChI=1S/Ga/q-5	InChI=1S/Ga/q-5	InChI=1S/Ga/q-5	InChI=1S/Ga/q-5	True
+448	[Ga5-]	InChI=1S/Ga/q-1/i1-65	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+449	[Ga----]	InChI=1S/Ga/q-4	InChI=1S/Ga/q-4	ERROR	InChI=1S/Ga/q-4	False
+450	[Ga-4]	InChI=1S/Ga/q-4	InChI=1S/Ga/q-4	InChI=1S/Ga/q-4	InChI=1S/Ga/q-4	True
+451	[Ga4-]	InChI=1S/Ga/q-1/i1-66	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+452	[Ga---]	InChI=1S/Ga/q-3	InChI=1S/Ga/q-3	ERROR	InChI=1S/Ga/q-3	False
+453	[Ga-3]	InChI=1S/Ga/q-3	InChI=1S/Ga/q-3	InChI=1S/Ga/q-3	InChI=1S/Ga/q-3	True
+454	[Ga3-]	InChI=1S/Ga/q-1/i1-67	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+455	[Ga--]	InChI=1S/Ga/q-2	InChI=1S/Ga/q-2	InChI=1S/Ga.2H/q-2;;	InChI=1S/Ga/q-2	False
+456	[Ga-2]	InChI=1S/Ga/q-2	InChI=1S/Ga/q-2	InChI=1S/Ga.2H/q-2;;	InChI=1S/Ga/q-2	False
+457	[Ga2-]	InChI=1S/Ga/q-1/i1-68	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+458	[Ga-]	InChI=1S/Ga/q-1	InChI=1S/Ga/q-1	InChI=1S/Ga.2H/q-1;;	InChI=1S/Ga/q-1	False
+459	[Ga-1]	InChI=1S/Ga/q-1	InChI=1S/Ga/q-1	InChI=1S/Ga.2H/q-1;;	InChI=1S/Ga/q-1	False
+460	[Ga1-]	InChI=1S/Ga/q-1/i1-69	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+461	[Ga+]	InChI=1S/Ga/q+1	InChI=1S/Ga/q+1	InChI=1S/Ga/q+1	InChI=1S/Ga/q+1	True
+462	[Ga+1]	InChI=1S/Ga/q+1	InChI=1S/Ga/q+1	InChI=1S/Ga/q+1	InChI=1S/Ga/q+1	True
+463	[Ga1+]	InChI=1S/Ga/q+1/i1-69	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+464	[Ga++]	InChI=1S/Ga/q+2	InChI=1S/Ga/q+2	InChI=1S/Ga/q+2	InChI=1S/Ga/q+2	True
+465	[Ga+2]	InChI=1S/Ga/q+2	InChI=1S/Ga/q+2	InChI=1S/Ga/q+2	InChI=1S/Ga/q+2	True
+466	[Ga2+]	InChI=1S/Ga/q+1/i1-68	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+467	[Ga+++]	InChI=1S/Ga/q+3	InChI=1S/Ga/q+3	ERROR	InChI=1S/Ga/q+3	False
+468	[Ga+3]	InChI=1S/Ga/q+3	InChI=1S/Ga/q+3	InChI=1S/Ga/q+3	InChI=1S/Ga/q+3	True
+469	[Ga3+]	InChI=1S/Ga/q+1/i1-67	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+470	[Ge----]	InChI=1S/Ge/q-4	InChI=1S/Ge/q-4	ERROR	InChI=1S/Ge/q-4	False
+471	[Ge-4]	InChI=1S/Ge/q-4	InChI=1S/Ge/q-4	InChI=1S/Ge/q-4	InChI=1S/Ge/q-4	True
+472	[Ge4-]	InChI=1S/GeH3/h1H3/q-1/i1-69	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+473	[Ge---]	InChI=1S/Ge/q-3	InChI=1S/Ge/q-3	ERROR	InChI=1S/Ge/q-3	False
+474	[Ge-3]	InChI=1S/Ge/q-3	InChI=1S/Ge/q-3	InChI=1S/Ge/q-3	InChI=1S/Ge/q-3	True
+475	[Ge3-]	InChI=1S/GeH3/h1H3/q-1/i1-70	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+476	[Ge--]	InChI=1S/Ge/q-2	InChI=1S/Ge/q-2	InChI=1S/Ge/q-2	InChI=1S/Ge/q-2	True
+477	[Ge-2]	InChI=1S/Ge/q-2	InChI=1S/Ge/q-2	InChI=1S/Ge/q-2	InChI=1S/Ge/q-2	True
+478	[Ge2-]	InChI=1S/GeH3/h1H3/q-1/i1-71	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+479	[Ge-]	InChI=1S/Ge/q-1	InChI=1S/Ge/q-1	InChI=1S/GeH2/h1H2/q-1	InChI=1S/Ge/q-1	False
+480	[Ge-1]	InChI=1S/Ge/q-1	InChI=1S/Ge/q-1	InChI=1S/GeH2/h1H2/q-1	InChI=1S/Ge/q-1	False
+481	[Ge1-]	InChI=1S/GeH3/h1H3/q-1/i1-72	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+482	[Ge]	InChI=1S/Ge	InChI=1S/Ge	InChI=1S/GeH2/h1H2	InChI=1S/Ge	False
+483	[Ge+]	InChI=1S/Ge/q+1	InChI=1S/Ge/q+1	InChI=1S/GeH2/h1H2/q+1	InChI=1S/Ge/q+1	False
+484	[Ge+1]	InChI=1S/Ge/q+1	InChI=1S/Ge/q+1	InChI=1S/GeH2/h1H2/q+1	InChI=1S/Ge/q+1	False
+485	[Ge1+]	InChI=1S/GeH3/h1H3/q+1/i1-72	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+486	[Ge++]	InChI=1S/Ge/q+2	InChI=1S/Ge/q+2	InChI=1S/Ge/q+2	InChI=1S/Ge/q+2	True
+487	[Ge+2]	InChI=1S/Ge/q+2	InChI=1S/Ge/q+2	InChI=1S/Ge/q+2	InChI=1S/Ge/q+2	True
+488	[Ge2+]	InChI=1S/GeH3/h1H3/q+1/i1-71	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+489	[Ge+++]	InChI=1S/Ge/q+3	InChI=1S/Ge/q+3	ERROR	InChI=1S/Ge/q+3	False
+490	[Ge+3]	InChI=1S/Ge/q+3	InChI=1S/Ge/q+3	InChI=1S/Ge/q+3	InChI=1S/Ge/q+3	True
+491	[Ge3+]	InChI=1S/GeH3/h1H3/q+1/i1-70	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+492	[Ge++++]	InChI=1S/Ge/q+4	InChI=1S/Ge/q+4	ERROR	InChI=1S/Ge/q+4	False
+493	[Ge+4]	InChI=1S/Ge/q+4	InChI=1S/Ge/q+4	InChI=1S/Ge/q+4	InChI=1S/Ge/q+4	True
+494	[Ge4+]	InChI=1S/GeH3/h1H3/q+1/i1-69	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+495	[As---]	InChI=1S/As/q-3	InChI=1S/As/q-3	ERROR	InChI=1S/As/q-3	False
+496	[As-3]	InChI=1S/As/q-3	InChI=1S/As/q-3	InChI=1S/As/q-3	InChI=1S/As/q-3	True
+497	[As3-]	InChI=1S/AsH2/h1H2/q-1/i1-72	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+498	[As--]	InChI=1S/As/q-2	InChI=1S/As/q-2	InChI=1S/As/q-2	InChI=1S/As/q-2	True
+499	[As-2]	InChI=1S/As/q-2	InChI=1S/As/q-2	InChI=1S/As/q-2	InChI=1S/As/q-2	True
+500	[As2-]	InChI=1S/AsH2/h1H2/q-1/i1-73	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+501	[As-]	InChI=1S/As/q-1	InChI=1S/As/q-1	InChI=1S/As/q-1	InChI=1S/As/q-1	True
+502	[As-1]	InChI=1S/As/q-1	InChI=1S/As/q-1	InChI=1S/As/q-1	InChI=1S/As/q-1	True
+503	[As1-]	InChI=1S/AsH2/h1H2/q-1/i1-74	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+504	[As+]	InChI=1S/As/q+1	InChI=1S/As/q+1	InChI=1S/AsH2/h1H2/q+1	InChI=1S/As/q+1	False
+505	[As+1]	InChI=1S/As/q+1	InChI=1S/As/q+1	InChI=1S/AsH2/h1H2/q+1	InChI=1S/As/q+1	False
+506	[As1+]	InChI=1S/AsH4/h1H4/q+1/i1-74	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+507	[As++]	InChI=1S/As/q+2	InChI=1S/As/q+2	InChI=1S/AsH2/h1H2/q+2	InChI=1S/As/q+2	False
+508	[As+2]	InChI=1S/As/q+2	InChI=1S/As/q+2	InChI=1S/AsH2/h1H2/q+2	InChI=1S/As/q+2	False
+509	[As2+]	InChI=1S/AsH4/h1H4/q+1/i1-73	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+510	[As+++]	InChI=1S/As/q+3	InChI=1S/As/q+3	ERROR	InChI=1S/As/q+3	False
+511	[As+3]	InChI=1S/As/q+3	InChI=1S/As/q+3	InChI=1S/As/q+3	InChI=1S/As/q+3	True
+512	[As3+]	InChI=1S/AsH4/h1H4/q+1/i1-72	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+513	[As++++]	InChI=1S/As/q+4	InChI=1S/As/q+4	ERROR	InChI=1S/As/q+4	False
+514	[As+4]	InChI=1S/As/q+4	InChI=1S/As/q+4	InChI=1S/As/q+4	InChI=1S/As/q+4	True
+515	[As4+]	InChI=1S/AsH4/h1H4/q+1/i1-71	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+516	[As+++++]	InChI=1S/As/q+5	InChI=1S/As/q+5	ERROR	InChI=1S/As/q+5	False
+517	[As+5]	InChI=1S/As/q+5	InChI=1S/As/q+5	InChI=1S/As/q+5	InChI=1S/As/q+5	True
+518	[As5+]	InChI=1S/AsH4/h1H4/q+1/i1-70	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+519	[Se--]	InChI=1S/Se/q-2	InChI=1S/Se/q-2	InChI=1S/Se/q-2	InChI=1S/Se/q-2	True
+520	[Se-2]	InChI=1S/Se/q-2	InChI=1S/Se/q-2	InChI=1S/Se/q-2	InChI=1S/Se/q-2	True
+521	[Se2-]	InChI=1S/H2Se/h1H2/p-1/i1-77	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+522	[Se-]	InChI=1S/Se/q-1	InChI=1S/Se/q-1	InChI=1S/Se/q-1	InChI=1S/Se/q-1	True
+523	[Se-1]	InChI=1S/Se/q-1	InChI=1S/Se/q-1	InChI=1S/Se/q-1	InChI=1S/Se/q-1	True
+524	[Se1-]	InChI=1S/H2Se/h1H2/p-1/i1-78	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+525	[Se+]	InChI=1S/Se/q+1	InChI=1S/Se/q+1	InChI=1S/H2Se/h1H2/q+1	InChI=1S/Se/q+1	False
+526	[Se+1]	InChI=1S/Se/q+1	InChI=1S/Se/q+1	InChI=1S/H2Se/h1H2/q+1	InChI=1S/Se/q+1	False
+527	[Se1+]	InChI=1S/HSe/h1H/q+1/i1-78	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+528	[Se++]	InChI=1S/Se/q+2	InChI=1S/Se/q+2	InChI=1S/H2Se/h1H2/q+2	InChI=1S/Se/q+2	False
+529	[Se+2]	InChI=1S/Se/q+2	InChI=1S/Se/q+2	InChI=1S/H2Se/h1H2/q+2	InChI=1S/Se/q+2	False
+530	[Se2+]	InChI=1S/HSe/h1H/q+1/i1-77	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+531	[Se+++]	InChI=1S/Se/q+3	InChI=1S/Se/q+3	ERROR	InChI=1S/Se/q+3	False
+532	[Se+3]	InChI=1S/Se/q+3	InChI=1S/Se/q+3	InChI=1S/Se/q+3	InChI=1S/Se/q+3	True
+533	[Se3+]	InChI=1S/HSe/h1H/q+1/i1-76	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+534	[Se++++]	InChI=1S/Se/q+4	InChI=1S/Se/q+4	ERROR	InChI=1S/Se/q+4	False
+535	[Se+4]	InChI=1S/Se/q+4	InChI=1S/Se/q+4	InChI=1S/Se/q+4	InChI=1S/Se/q+4	True
+536	[Se4+]	InChI=1S/HSe/h1H/q+1/i1-75	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+537	[Se+++++]	InChI=1S/Se/q+5	InChI=1S/Se/q+5	ERROR	InChI=1S/Se/q+5	False
+538	[Se+5]	InChI=1S/Se/q+5	InChI=1S/Se/q+5	InChI=1S/Se/q+5	InChI=1S/Se/q+5	True
+539	[Se5+]	InChI=1S/HSe/h1H/q+1/i1-74	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+540	[Se++++++]	InChI=1S/Se/q+6	InChI=1S/Se/q+6	ERROR	InChI=1S/Se/q+6	False
+541	[Se+6]	InChI=1S/Se/q+6	InChI=1S/Se/q+6	InChI=1S/Se/q+6	InChI=1S/Se/q+6	True
+542	[Se6+]	InChI=1S/HSe/h1H/q+1/i1-73	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+543	[Br-]	InChI=1S/BrH/h1H/p-1	InChI=1S/BrH/h1H/p-1	InChI=1S/BrH/h1H/p-1	InChI=1S/BrH/h1H/p-1	True
+544	[Br-1]	InChI=1S/BrH/h1H/p-1	InChI=1S/BrH/h1H/p-1	InChI=1S/BrH/h1H/p-1	InChI=1S/BrH/h1H/p-1	True
+545	[Br1-]	InChI=1S/BH4/h1H4/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+546	[Br+]	InChI=1S/Br/q+1	InChI=1S/Br/q+1	InChI=1S/Br/q+1	InChI=1S/Br/q+1	True
+547	[Br+1]	InChI=1S/Br/q+1	InChI=1S/Br/q+1	InChI=1S/Br/q+1	InChI=1S/Br/q+1	True
+548	[Br1+]	InChI=1S/BH2/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+549	[Br+++]	InChI=1S/Br/q+3	InChI=1S/Br/q+3	ERROR	InChI=1S/Br/q+3	False
+550	[Br+3]	InChI=1S/Br/q+3	InChI=1S/Br/q+3	InChI=1S/Br/q+3	InChI=1S/Br/q+3	True
+551	[Br3+]	InChI=1S/BH2/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+552	[Br++++]	InChI=1S/Br/q+4	InChI=1S/Br/q+4	ERROR	InChI=1S/Br/q+4	False
+553	[Br+4]	InChI=1S/Br/q+4	InChI=1S/Br/q+4	InChI=1S/Br/q+4	InChI=1S/Br/q+4	True
+554	[Br4+]	InChI=1S/BH2/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+555	[Br+++++]	InChI=1S/Br/q+5	InChI=1S/Br/q+5	ERROR	InChI=1S/Br/q+5	False
+556	[Br+5]	InChI=1S/Br/q+5	InChI=1S/Br/q+5	InChI=1S/Br/q+5	InChI=1S/Br/q+5	True
+557	[Br5+]	InChI=1S/BH2/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+558	[Br+++++++]	InChI=1S/Br/q+7	InChI=1S/Br/q+7	ERROR	InChI=1S/Br/q+7	False
+559	[Br+7]	InChI=1S/Br/q+7	InChI=1S/Br/q+7	InChI=1S/Br/q+7	InChI=1S/Br/q+7	True
+560	[Br7+]	InChI=1S/BH2/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+561	[Kr]	InChI=1S/Kr	InChI=1S/Kr	InChI=1S/Kr	InChI=1S/Kr	True
+562	[Kr+]	InChI=1S/Kr/q+1	InChI=1S/Kr/q+1	InChI=1S/Kr/q+1	InChI=1S/Kr/q+1	True
+563	[Kr+1]	InChI=1S/Kr/q+1	InChI=1S/Kr/q+1	InChI=1S/Kr/q+1	InChI=1S/Kr/q+1	True
+564	[Kr1+]	InChI=1S/K/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+565	[Kr++]	InChI=1S/Kr/q+2	InChI=1S/Kr/q+2	InChI=1S/Kr/q+2	InChI=1S/Kr/q+2	True
+566	[Kr+2]	InChI=1S/Kr/q+2	InChI=1S/Kr/q+2	InChI=1S/Kr/q+2	InChI=1S/Kr/q+2	True
+567	[Kr2+]	InChI=1S/K/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+568	[Rb-]	InChI=1S/Rb/q-1	InChI=1S/Rb/q-1	InChI=1S/Rb/q-1	InChI=1S/Rb/q-1	True
+569	[Rb-1]	InChI=1S/Rb/q-1	InChI=1S/Rb/q-1	InChI=1S/Rb/q-1	InChI=1S/Rb/q-1	True
+570	[Rb1-]	InChI=1S/Rb/q-1/i1-84	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+571	[Rb+]	InChI=1S/Rb/q+1	InChI=1S/Rb/q+1	InChI=1S/Rb/q+1	InChI=1S/Rb/q+1	True
+572	[Rb+1]	InChI=1S/Rb/q+1	InChI=1S/Rb/q+1	InChI=1S/Rb/q+1	InChI=1S/Rb/q+1	True
+573	[Rb1+]	InChI=1S/Rb/q+1/i1-84	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+574	[Sr+]	InChI=1S/Sr/q+1	InChI=1S/Sr/q+1	InChI=1S/Sr/q+1	InChI=1S/Sr/q+1	True
+575	[Sr+1]	InChI=1S/Sr/q+1	InChI=1S/Sr/q+1	InChI=1S/Sr/q+1	InChI=1S/Sr/q+1	True
+576	[Sr1+]	InChI=1S/H2S/h1H2/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+577	[Sr++]	InChI=1S/Sr/q+2	InChI=1S/Sr/q+2	InChI=1S/Sr/q+2	InChI=1S/Sr/q+2	True
+578	[Sr+2]	InChI=1S/Sr/q+2	InChI=1S/Sr/q+2	InChI=1S/Sr/q+2	InChI=1S/Sr/q+2	True
+579	[Sr2+]	InChI=1S/H2S/h1H2/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+580	[Y]	InChI=1S/Y	InChI=1S/Y	InChI=1S/Y	InChI=1S/Y	True
+581	[Y+]	InChI=1S/Y/q+1	InChI=1S/Y/q+1	InChI=1S/Y/q+1	InChI=1S/Y/q+1	True
+582	[Y+1]	InChI=1S/Y/q+1	InChI=1S/Y/q+1	InChI=1S/Y/q+1	InChI=1S/Y/q+1	True
+583	[Y1+]	InChI=1S/Y/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+584	[Y++]	InChI=1S/Y/q+2	InChI=1S/Y/q+2	InChI=1S/Y/q+2	InChI=1S/Y/q+2	True
+585	[Y+2]	InChI=1S/Y/q+2	InChI=1S/Y/q+2	InChI=1S/Y/q+2	InChI=1S/Y/q+2	True
+586	[Y2+]	InChI=1S/Y/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+587	[Y+++]	InChI=1S/Y/q+3	InChI=1S/Y/q+3	ERROR	InChI=1S/Y/q+3	False
+588	[Y+3]	InChI=1S/Y/q+3	InChI=1S/Y/q+3	InChI=1S/Y/q+3	InChI=1S/Y/q+3	True
+589	[Y3+]	InChI=1S/Y/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+590	[Zr--]	InChI=1S/Zr/q-2	InChI=1S/Zr/q-2	InChI=1S/Zr/q-2	InChI=1S/Zr/q-2	True
+591	[Zr-2]	InChI=1S/Zr/q-2	InChI=1S/Zr/q-2	InChI=1S/Zr/q-2	InChI=1S/Zr/q-2	True
+592	[Zr2-]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+593	[Zr+]	InChI=1S/Zr/q+1	InChI=1S/Zr/q+1	InChI=1S/Zr/q+1	InChI=1S/Zr/q+1	True
+594	[Zr+1]	InChI=1S/Zr/q+1	InChI=1S/Zr/q+1	InChI=1S/Zr/q+1	InChI=1S/Zr/q+1	True
+595	[Zr1+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+596	[Zr++]	InChI=1S/Zr/q+2	InChI=1S/Zr/q+2	InChI=1S/Zr/q+2	InChI=1S/Zr/q+2	True
+597	[Zr+2]	InChI=1S/Zr/q+2	InChI=1S/Zr/q+2	InChI=1S/Zr/q+2	InChI=1S/Zr/q+2	True
+598	[Zr2+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+599	[Zr+++]	InChI=1S/Zr/q+3	InChI=1S/Zr/q+3	ERROR	InChI=1S/Zr/q+3	False
+600	[Zr+3]	InChI=1S/Zr/q+3	InChI=1S/Zr/q+3	InChI=1S/Zr/q+3	InChI=1S/Zr/q+3	True
+601	[Zr3+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+602	[Zr++++]	InChI=1S/Zr/q+4	InChI=1S/Zr/q+4	ERROR	InChI=1S/Zr/q+4	False
+603	[Zr+4]	InChI=1S/Zr/q+4	InChI=1S/Zr/q+4	InChI=1S/Zr/q+4	InChI=1S/Zr/q+4	True
+604	[Zr4+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+605	[Nb---]	InChI=1S/Nb/q-3	InChI=1S/Nb/q-3	ERROR	InChI=1S/Nb/q-3	False
+606	[Nb-3]	InChI=1S/Nb/q-3	InChI=1S/Nb/q-3	InChI=1S/Nb/q-3	InChI=1S/Nb/q-3	True
+607	[Nb3-]	InChI=1S/Nb/q-1/i1-90	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+608	[Nb-]	InChI=1S/Nb/q-1	InChI=1S/Nb/q-1	InChI=1S/Nb/q-1	InChI=1S/Nb/q-1	True
+609	[Nb-1]	InChI=1S/Nb/q-1	InChI=1S/Nb/q-1	InChI=1S/Nb/q-1	InChI=1S/Nb/q-1	True
+610	[Nb1-]	InChI=1S/Nb/q-1/i1-92	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+611	[Nb+]	InChI=1S/Nb/q+1	InChI=1S/Nb/q+1	InChI=1S/Nb/q+1	InChI=1S/Nb/q+1	True
+612	[Nb+1]	InChI=1S/Nb/q+1	InChI=1S/Nb/q+1	InChI=1S/Nb/q+1	InChI=1S/Nb/q+1	True
+613	[Nb1+]	InChI=1S/Nb/q+1/i1-92	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+614	[Nb++]	InChI=1S/Nb/q+2	InChI=1S/Nb/q+2	InChI=1S/Nb/q+2	InChI=1S/Nb/q+2	True
+615	[Nb+2]	InChI=1S/Nb/q+2	InChI=1S/Nb/q+2	InChI=1S/Nb/q+2	InChI=1S/Nb/q+2	True
+616	[Nb2+]	InChI=1S/Nb/q+1/i1-91	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+617	[Nb+++]	InChI=1S/Nb/q+3	InChI=1S/Nb/q+3	ERROR	InChI=1S/Nb/q+3	False
+618	[Nb+3]	InChI=1S/Nb/q+3	InChI=1S/Nb/q+3	InChI=1S/Nb/q+3	InChI=1S/Nb/q+3	True
+619	[Nb3+]	InChI=1S/Nb/q+1/i1-90	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+620	[Nb++++]	InChI=1S/Nb/q+4	InChI=1S/Nb/q+4	ERROR	InChI=1S/Nb/q+4	False
+621	[Nb+4]	InChI=1S/Nb/q+4	InChI=1S/Nb/q+4	InChI=1S/Nb/q+4	InChI=1S/Nb/q+4	True
+622	[Nb4+]	InChI=1S/Nb/q+1/i1-89	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+623	[Nb+++++]	InChI=1S/Nb/q+5	InChI=1S/Nb/q+5	ERROR	InChI=1S/Nb/q+5	False
+624	[Nb+5]	InChI=1S/Nb/q+5	InChI=1S/Nb/q+5	InChI=1S/Nb/q+5	InChI=1S/Nb/q+5	True
+625	[Nb5+]	InChI=1S/Nb/q+1/i1-88	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+626	[Mo----]	InChI=1S/Mo/q-4	InChI=1S/Mo/q-4	ERROR	InChI=1S/Mo/q-4	False
+627	[Mo-4]	InChI=1S/Mo/q-4	InChI=1S/Mo/q-4	InChI=1S/Mo/q-4	InChI=1S/Mo/q-4	True
+628	[Mo4-]	InChI=1S/Mo/q-1/i1-92	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+629	[Mo--]	InChI=1S/Mo/q-2	InChI=1S/Mo/q-2	InChI=1S/Mo/q-2	InChI=1S/Mo/q-2	True
+630	[Mo-2]	InChI=1S/Mo/q-2	InChI=1S/Mo/q-2	InChI=1S/Mo/q-2	InChI=1S/Mo/q-2	True
+631	[Mo2-]	InChI=1S/Mo/q-1/i1-94	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+632	[Mo-]	InChI=1S/Mo/q-1	InChI=1S/Mo/q-1	InChI=1S/Mo/q-1	InChI=1S/Mo/q-1	True
+633	[Mo-1]	InChI=1S/Mo/q-1	InChI=1S/Mo/q-1	InChI=1S/Mo/q-1	InChI=1S/Mo/q-1	True
+634	[Mo1-]	InChI=1S/Mo/q-1/i1-95	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+635	[Mo]	InChI=1S/Mo	InChI=1S/Mo	InChI=1S/Mo	InChI=1S/Mo	True
+636	[Mo+]	InChI=1S/Mo/q+1	InChI=1S/Mo/q+1	InChI=1S/Mo/q+1	InChI=1S/Mo/q+1	True
+637	[Mo+1]	InChI=1S/Mo/q+1	InChI=1S/Mo/q+1	InChI=1S/Mo/q+1	InChI=1S/Mo/q+1	True
+638	[Mo1+]	InChI=1S/Mo/q+1/i1-95	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+639	[Mo++]	InChI=1S/Mo/q+2	InChI=1S/Mo/q+2	InChI=1S/Mo/q+2	InChI=1S/Mo/q+2	True
+640	[Mo+2]	InChI=1S/Mo/q+2	InChI=1S/Mo/q+2	InChI=1S/Mo/q+2	InChI=1S/Mo/q+2	True
+641	[Mo2+]	InChI=1S/Mo/q+1/i1-94	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+642	[Mo+++]	InChI=1S/Mo/q+3	InChI=1S/Mo/q+3	ERROR	InChI=1S/Mo/q+3	False
+643	[Mo+3]	InChI=1S/Mo/q+3	InChI=1S/Mo/q+3	InChI=1S/Mo/q+3	InChI=1S/Mo/q+3	True
+644	[Mo3+]	InChI=1S/Mo/q+1/i1-93	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+645	[Mo++++]	InChI=1S/Mo/q+4	InChI=1S/Mo/q+4	ERROR	InChI=1S/Mo/q+4	False
+646	[Mo+4]	InChI=1S/Mo/q+4	InChI=1S/Mo/q+4	InChI=1S/Mo/q+4	InChI=1S/Mo/q+4	True
+647	[Mo4+]	InChI=1S/Mo/q+1/i1-92	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+648	[Mo+++++]	InChI=1S/Mo/q+5	InChI=1S/Mo/q+5	ERROR	InChI=1S/Mo/q+5	False
+649	[Mo+5]	InChI=1S/Mo/q+5	InChI=1S/Mo/q+5	InChI=1S/Mo/q+5	InChI=1S/Mo/q+5	True
+650	[Mo5+]	InChI=1S/Mo/q+1/i1-91	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+651	[Mo++++++]	InChI=1S/Mo/q+6	InChI=1S/Mo/q+6	ERROR	InChI=1S/Mo/q+6	False
+652	[Mo+6]	InChI=1S/Mo/q+6	InChI=1S/Mo/q+6	InChI=1S/Mo/q+6	InChI=1S/Mo/q+6	True
+653	[Mo6+]	InChI=1S/Mo/q+1/i1-90	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+654	[Tc---]	InChI=1S/Tc/q-3	InChI=1S/Tc/q-3	ERROR	InChI=1S/Tc/q-3	False
+655	[Tc-3]	InChI=1S/Tc/q-3	InChI=1S/Tc/q-3	InChI=1S/Tc/q-3	InChI=1S/Tc/q-3	True
+656	[Tc3-]	InChI=1S/Tc/q-1/i1-95	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+657	[Tc-]	InChI=1S/Tc/q-1	InChI=1S/Tc/q-1	InChI=1S/Tc/q-1	InChI=1S/Tc/q-1	True
+658	[Tc-1]	InChI=1S/Tc/q-1	InChI=1S/Tc/q-1	InChI=1S/Tc/q-1	InChI=1S/Tc/q-1	True
+659	[Tc1-]	InChI=1S/Tc/q-1/i1-97	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+660	[Tc]	InChI=1S/Tc	InChI=1S/Tc	InChI=1S/Tc	InChI=1S/Tc	True
+661	[Tc+]	InChI=1S/Tc/q+1	InChI=1S/Tc/q+1	InChI=1S/Tc/q+1	InChI=1S/Tc/q+1	True
+662	[Tc+1]	InChI=1S/Tc/q+1	InChI=1S/Tc/q+1	InChI=1S/Tc/q+1	InChI=1S/Tc/q+1	True
+663	[Tc1+]	InChI=1S/Tc/q+1/i1-97	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+664	[Tc++]	InChI=1S/Tc/q+2	InChI=1S/Tc/q+2	InChI=1S/Tc/q+2	InChI=1S/Tc/q+2	True
+665	[Tc+2]	InChI=1S/Tc/q+2	InChI=1S/Tc/q+2	InChI=1S/Tc/q+2	InChI=1S/Tc/q+2	True
+666	[Tc2+]	InChI=1S/Tc/q+1/i1-96	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+667	[Tc+++]	InChI=1S/Tc/q+3	InChI=1S/Tc/q+3	ERROR	InChI=1S/Tc/q+3	False
+668	[Tc+3]	InChI=1S/Tc/q+3	InChI=1S/Tc/q+3	InChI=1S/Tc/q+3	InChI=1S/Tc/q+3	True
+669	[Tc3+]	InChI=1S/Tc/q+1/i1-95	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+670	[Tc++++]	InChI=1S/Tc/q+4	InChI=1S/Tc/q+4	ERROR	InChI=1S/Tc/q+4	False
+671	[Tc+4]	InChI=1S/Tc/q+4	InChI=1S/Tc/q+4	InChI=1S/Tc/q+4	InChI=1S/Tc/q+4	True
+672	[Tc4+]	InChI=1S/Tc/q+1/i1-94	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+673	[Tc+++++]	InChI=1S/Tc/q+5	InChI=1S/Tc/q+5	ERROR	InChI=1S/Tc/q+5	False
+674	[Tc+5]	InChI=1S/Tc/q+5	InChI=1S/Tc/q+5	InChI=1S/Tc/q+5	InChI=1S/Tc/q+5	True
+675	[Tc5+]	InChI=1S/Tc/q+1/i1-93	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+676	[Tc++++++]	InChI=1S/Tc/q+6	InChI=1S/Tc/q+6	ERROR	InChI=1S/Tc/q+6	False
+677	[Tc+6]	InChI=1S/Tc/q+6	InChI=1S/Tc/q+6	InChI=1S/Tc/q+6	InChI=1S/Tc/q+6	True
+678	[Tc6+]	InChI=1S/Tc/q+1/i1-92	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+679	[Tc+++++++]	InChI=1S/Tc/q+7	InChI=1S/Tc/q+7	ERROR	InChI=1S/Tc/q+7	False
+680	[Tc+7]	InChI=1S/Tc/q+7	InChI=1S/Tc/q+7	InChI=1S/Tc/q+7	InChI=1S/Tc/q+7	True
+681	[Tc7+]	InChI=1S/Tc/q+1/i1-91	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+682	[Ru----]	InChI=1S/Ru/q-4	InChI=1S/Ru/q-4	ERROR	InChI=1S/Ru/q-4	False
+683	[Ru-4]	InChI=1S/Ru/q-4	InChI=1S/Ru/q-4	InChI=1S/Ru/q-4	InChI=1S/Ru/q-4	True
+684	[Ru4-]	InChI=1S/Ru/q-1/i1-97	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+685	[Ru--]	InChI=1S/Ru/q-2	InChI=1S/Ru/q-2	InChI=1S/Ru/q-2	InChI=1S/Ru/q-2	True
+686	[Ru-2]	InChI=1S/Ru/q-2	InChI=1S/Ru/q-2	InChI=1S/Ru/q-2	InChI=1S/Ru/q-2	True
+687	[Ru2-]	InChI=1S/Ru/q-1/i1-99	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+688	[Ru]	InChI=1S/Ru	InChI=1S/Ru	InChI=1S/Ru	InChI=1S/Ru	True
+689	[Ru+]	InChI=1S/Ru/q+1	InChI=1S/Ru/q+1	InChI=1S/Ru/q+1	InChI=1S/Ru/q+1	True
+690	[Ru+1]	InChI=1S/Ru/q+1	InChI=1S/Ru/q+1	InChI=1S/Ru/q+1	InChI=1S/Ru/q+1	True
+691	[Ru1+]	InChI=1S/Ru/q+1/i1-100	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+692	[Ru++]	InChI=1S/Ru/q+2	InChI=1S/Ru/q+2	InChI=1S/Ru/q+2	InChI=1S/Ru/q+2	True
+693	[Ru+2]	InChI=1S/Ru/q+2	InChI=1S/Ru/q+2	InChI=1S/Ru/q+2	InChI=1S/Ru/q+2	True
+694	[Ru2+]	InChI=1S/Ru/q+1/i1-99	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+695	[Ru+++]	InChI=1S/Ru/q+3	InChI=1S/Ru/q+3	ERROR	InChI=1S/Ru/q+3	False
+696	[Ru+3]	InChI=1S/Ru/q+3	InChI=1S/Ru/q+3	InChI=1S/Ru/q+3	InChI=1S/Ru/q+3	True
+697	[Ru3+]	InChI=1S/Ru/q+1/i1-98	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+698	[Ru++++]	InChI=1S/Ru/q+4	InChI=1S/Ru/q+4	ERROR	InChI=1S/Ru/q+4	False
+699	[Ru+4]	InChI=1S/Ru/q+4	InChI=1S/Ru/q+4	InChI=1S/Ru/q+4	InChI=1S/Ru/q+4	True
+700	[Ru4+]	InChI=1S/Ru/q+1/i1-97	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+701	[Ru+++++]	InChI=1S/Ru/q+5	InChI=1S/Ru/q+5	ERROR	InChI=1S/Ru/q+5	False
+702	[Ru+5]	InChI=1S/Ru/q+5	InChI=1S/Ru/q+5	InChI=1S/Ru/q+5	InChI=1S/Ru/q+5	True
+703	[Ru5+]	InChI=1S/Ru/q+1/i1-96	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+704	[Ru++++++]	InChI=1S/Ru/q+6	InChI=1S/Ru/q+6	ERROR	InChI=1S/Ru/q+6	False
+705	[Ru+6]	InChI=1S/Ru/q+6	InChI=1S/Ru/q+6	InChI=1S/Ru/q+6	InChI=1S/Ru/q+6	True
+706	[Ru6+]	InChI=1S/Ru/q+1/i1-95	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+707	[Ru+++++++]	InChI=1S/Ru/q+7	InChI=1S/Ru/q+7	ERROR	InChI=1S/Ru/q+7	False
+708	[Ru+7]	InChI=1S/Ru/q+7	InChI=1S/Ru/q+7	InChI=1S/Ru/q+7	InChI=1S/Ru/q+7	True
+709	[Ru7+]	InChI=1S/Ru/q+1/i1-94	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+710	[Ru++++++++]	InChI=1S/Ru/q+8	InChI=1S/Ru/q+8	ERROR	InChI=1S/Ru/q+8	False
+711	[Ru+8]	InChI=1S/Ru/q+8	InChI=1S/Ru/q+8	InChI=1S/Ru/q+8	InChI=1S/Ru/q+8	True
+712	[Ru8+]	InChI=1S/Ru/q+1/i1-93	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+713	[Rh---]	InChI=1S/Rh/q-3	InChI=1S/Rh/q-3	ERROR	InChI=1S/Rh/q-3	False
+714	[Rh-3]	InChI=1S/Rh/q-3	InChI=1S/Rh/q-3	InChI=1S/Rh/q-3	InChI=1S/Rh/q-3	True
+715	[Rh3-]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+716	[Rh-]	InChI=1S/Rh/q-1	InChI=1S/Rh/q-1	InChI=1S/Rh/q-1	InChI=1S/Rh/q-1	True
+717	[Rh-1]	InChI=1S/Rh/q-1	InChI=1S/Rh/q-1	InChI=1S/Rh/q-1	InChI=1S/Rh/q-1	True
+718	[Rh1-]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+719	[Rh]	InChI=1S/Rh	InChI=1S/Rh	InChI=1S/Rh	InChI=1S/Rh	True
+720	[Rh+]	InChI=1S/Rh/q+1	InChI=1S/Rh/q+1	InChI=1S/Rh/q+1	InChI=1S/Rh/q+1	True
+721	[Rh+1]	InChI=1S/Rh/q+1	InChI=1S/Rh/q+1	InChI=1S/Rh/q+1	InChI=1S/Rh/q+1	True
+722	[Rh1+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+723	[Rh++]	InChI=1S/Rh/q+2	InChI=1S/Rh/q+2	InChI=1S/Rh/q+2	InChI=1S/Rh/q+2	True
+724	[Rh+2]	InChI=1S/Rh/q+2	InChI=1S/Rh/q+2	InChI=1S/Rh/q+2	InChI=1S/Rh/q+2	True
+725	[Rh2+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+726	[Rh+++]	InChI=1S/Rh/q+3	InChI=1S/Rh/q+3	ERROR	InChI=1S/Rh/q+3	False
+727	[Rh+3]	InChI=1S/Rh/q+3	InChI=1S/Rh/q+3	InChI=1S/Rh/q+3	InChI=1S/Rh/q+3	True
+728	[Rh3+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+729	[Rh++++]	InChI=1S/Rh/q+4	InChI=1S/Rh/q+4	ERROR	InChI=1S/Rh/q+4	False
+730	[Rh+4]	InChI=1S/Rh/q+4	InChI=1S/Rh/q+4	InChI=1S/Rh/q+4	InChI=1S/Rh/q+4	True
+731	[Rh4+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+732	[Rh+++++]	InChI=1S/Rh/q+5	InChI=1S/Rh/q+5	ERROR	InChI=1S/Rh/q+5	False
+733	[Rh+5]	InChI=1S/Rh/q+5	InChI=1S/Rh/q+5	InChI=1S/Rh/q+5	InChI=1S/Rh/q+5	True
+734	[Rh5+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+735	[Rh++++++]	InChI=1S/Rh/q+6	InChI=1S/Rh/q+6	ERROR	InChI=1S/Rh/q+6	False
+736	[Rh+6]	InChI=1S/Rh/q+6	InChI=1S/Rh/q+6	InChI=1S/Rh/q+6	InChI=1S/Rh/q+6	True
+737	[Rh6+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+738	[Pd]	InChI=1S/Pd	InChI=1S/Pd	InChI=1S/Pd	InChI=1S/Pd	True
+739	[Pd+]	InChI=1S/Pd/q+1	InChI=1S/Pd/q+1	InChI=1S/Pd/q+1	InChI=1S/Pd/q+1	True
+740	[Pd+1]	InChI=1S/Pd/q+1	InChI=1S/Pd/q+1	InChI=1S/Pd/q+1	InChI=1S/Pd/q+1	True
+741	[Pd1+]	InChI=1S/Pd/q+1/i1-105	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+742	[Pd++]	InChI=1S/Pd/q+2	InChI=1S/Pd/q+2	InChI=1S/Pd/q+2	InChI=1S/Pd/q+2	True
+743	[Pd+2]	InChI=1S/Pd/q+2	InChI=1S/Pd/q+2	InChI=1S/Pd/q+2	InChI=1S/Pd/q+2	True
+744	[Pd2+]	InChI=1S/Pd/q+1/i1-104	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+745	[Pd+++]	InChI=1S/Pd/q+3	InChI=1S/Pd/q+3	ERROR	InChI=1S/Pd/q+3	False
+746	[Pd+3]	InChI=1S/Pd/q+3	InChI=1S/Pd/q+3	InChI=1S/Pd/q+3	InChI=1S/Pd/q+3	True
+747	[Pd3+]	InChI=1S/Pd/q+1/i1-103	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+748	[Pd++++]	InChI=1S/Pd/q+4	InChI=1S/Pd/q+4	ERROR	InChI=1S/Pd/q+4	False
+749	[Pd+4]	InChI=1S/Pd/q+4	InChI=1S/Pd/q+4	InChI=1S/Pd/q+4	InChI=1S/Pd/q+4	True
+750	[Pd4+]	InChI=1S/Pd/q+1/i1-102	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+751	[Ag--]	InChI=1S/Ag/q-2	InChI=1S/Ag/q-2	InChI=1S/Ag/q-2	InChI=1S/Ag/q-2	True
+752	[Ag-2]	InChI=1S/Ag/q-2	InChI=1S/Ag/q-2	InChI=1S/Ag/q-2	InChI=1S/Ag/q-2	True
+753	[Ag2-]	InChI=1S/Ag/q-1/i1-106	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+754	[Ag-]	InChI=1S/Ag/q-1	InChI=1S/Ag/q-1	InChI=1S/Ag/q-1	InChI=1S/Ag/q-1	True
+755	[Ag-1]	InChI=1S/Ag/q-1	InChI=1S/Ag/q-1	InChI=1S/Ag/q-1	InChI=1S/Ag/q-1	True
+756	[Ag1-]	InChI=1S/Ag/q-1/i1-107	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+757	[Ag+]	InChI=1S/Ag/q+1	InChI=1S/Ag/q+1	InChI=1S/Ag/q+1	InChI=1S/Ag/q+1	True
+758	[Ag+1]	InChI=1S/Ag/q+1	InChI=1S/Ag/q+1	InChI=1S/Ag/q+1	InChI=1S/Ag/q+1	True
+759	[Ag1+]	InChI=1S/Ag/q+1/i1-107	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+760	[Ag++]	InChI=1S/Ag/q+2	InChI=1S/Ag/q+2	InChI=1S/Ag/q+2	InChI=1S/Ag/q+2	True
+761	[Ag+2]	InChI=1S/Ag/q+2	InChI=1S/Ag/q+2	InChI=1S/Ag/q+2	InChI=1S/Ag/q+2	True
+762	[Ag2+]	InChI=1S/Ag/q+1/i1-106	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+763	[Ag+++]	InChI=1S/Ag/q+3	InChI=1S/Ag/q+3	ERROR	InChI=1S/Ag/q+3	False
+764	[Ag+3]	InChI=1S/Ag/q+3	InChI=1S/Ag/q+3	InChI=1S/Ag/q+3	InChI=1S/Ag/q+3	True
+765	[Ag3+]	InChI=1S/Ag/q+1/i1-105	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+766	[Cd--]	InChI=1S/Cd/q-2	InChI=1S/Cd/q-2	InChI=1S/Cd/q-2	InChI=1S/Cd/q-2	True
+767	[Cd-2]	InChI=1S/Cd/q-2	InChI=1S/Cd/q-2	InChI=1S/Cd/q-2	InChI=1S/Cd/q-2	True
+768	[Cd2-]	InChI=1S/Cd/q-1/i1-110	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+769	[Cd+]	InChI=1S/Cd/q+1	InChI=1S/Cd/q+1	InChI=1S/Cd/q+1	InChI=1S/Cd/q+1	True
+770	[Cd+1]	InChI=1S/Cd/q+1	InChI=1S/Cd/q+1	InChI=1S/Cd/q+1	InChI=1S/Cd/q+1	True
+771	[Cd1+]	InChI=1S/Cd/q+1/i1-111	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+772	[Cd++]	InChI=1S/Cd/q+2	InChI=1S/Cd/q+2	InChI=1S/Cd/q+2	InChI=1S/Cd/q+2	True
+773	[Cd+2]	InChI=1S/Cd/q+2	InChI=1S/Cd/q+2	InChI=1S/Cd/q+2	InChI=1S/Cd/q+2	True
+774	[Cd2+]	InChI=1S/Cd/q+1/i1-110	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+775	[In-----]	InChI=1S/In/q-5	InChI=1S/In/q-5	ERROR	InChI=1S/In/q-5	False
+776	[In-5]	InChI=1S/In/q-5	InChI=1S/In/q-5	InChI=1S/In/q-5	InChI=1S/In/q-5	True
+777	[In5-]	InChI=1S/In/q-1/i1-110	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+778	[In--]	InChI=1S/In/q-2	InChI=1S/In/q-2	InChI=1S/In.2H/q-2;;	InChI=1S/In/q-2	False
+779	[In-2]	InChI=1S/In/q-2	InChI=1S/In/q-2	InChI=1S/In.2H/q-2;;	InChI=1S/In/q-2	False
+780	[In2-]	InChI=1S/In/q-1/i1-113	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+781	[In-]	InChI=1S/In/q-1	InChI=1S/In/q-1	InChI=1S/In/q-1	InChI=1S/In/q-1	True
+782	[In-1]	InChI=1S/In/q-1	InChI=1S/In/q-1	InChI=1S/In/q-1	InChI=1S/In/q-1	True
+783	[In1-]	InChI=1S/In/q-1/i1-114	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+784	[In+]	InChI=1S/In/q+1	InChI=1S/In/q+1	InChI=1S/In/q+1	InChI=1S/In/q+1	True
+785	[In+1]	InChI=1S/In/q+1	InChI=1S/In/q+1	InChI=1S/In/q+1	InChI=1S/In/q+1	True
+786	[In1+]	InChI=1S/In/q+1/i1-114	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+787	[In++]	InChI=1S/In/q+2	InChI=1S/In/q+2	InChI=1S/In/q+2	InChI=1S/In/q+2	True
+788	[In+2]	InChI=1S/In/q+2	InChI=1S/In/q+2	InChI=1S/In/q+2	InChI=1S/In/q+2	True
+789	[In2+]	InChI=1S/In/q+1/i1-113	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+790	[In+++]	InChI=1S/In/q+3	InChI=1S/In/q+3	ERROR	InChI=1S/In/q+3	False
+791	[In+3]	InChI=1S/In/q+3	InChI=1S/In/q+3	InChI=1S/In/q+3	InChI=1S/In/q+3	True
+792	[In3+]	InChI=1S/In/q+1/i1-112	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+793	[Sn----]	InChI=1S/Sn/q-4	InChI=1S/Sn/q-4	ERROR	InChI=1S/Sn/q-4	False
+794	[Sn-4]	InChI=1S/Sn/q-4	InChI=1S/Sn/q-4	InChI=1S/Sn/q-4	InChI=1S/Sn/q-4	True
+795	[Sn4-]	InChI=1S/Sn/q-1/i1-115	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+796	[Sn---]	InChI=1S/Sn/q-3	InChI=1S/Sn/q-3	ERROR	InChI=1S/Sn/q-3	False
+797	[Sn-3]	InChI=1S/Sn/q-3	InChI=1S/Sn/q-3	InChI=1S/Sn/q-3	InChI=1S/Sn/q-3	True
+798	[Sn3-]	InChI=1S/Sn/q-1/i1-116	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+799	[Sn--]	InChI=1S/Sn/q-2	InChI=1S/Sn/q-2	InChI=1S/Sn/q-2	InChI=1S/Sn/q-2	True
+800	[Sn-2]	InChI=1S/Sn/q-2	InChI=1S/Sn/q-2	InChI=1S/Sn/q-2	InChI=1S/Sn/q-2	True
+801	[Sn2-]	InChI=1S/Sn/q-1/i1-117	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+802	[Sn-]	InChI=1S/Sn/q-1	InChI=1S/Sn/q-1	InChI=1S/Sn.2H/q-1;;	InChI=1S/Sn/q-1	False
+803	[Sn-1]	InChI=1S/Sn/q-1	InChI=1S/Sn/q-1	InChI=1S/Sn.2H/q-1;;	InChI=1S/Sn/q-1	False
+804	[Sn1-]	InChI=1S/Sn/q-1/i1-118	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+805	[Sn]	InChI=1S/Sn	InChI=1S/Sn	InChI=1S/Sn	InChI=1S/Sn	True
+806	[Sn+]	InChI=1S/Sn/q+1	InChI=1S/Sn/q+1	InChI=1S/Sn.2H/q+1;;	InChI=1S/Sn/q+1	False
+807	[Sn+1]	InChI=1S/Sn/q+1	InChI=1S/Sn/q+1	InChI=1S/Sn.2H/q+1;;	InChI=1S/Sn/q+1	False
+808	[Sn1+]	InChI=1S/Sn.3H/q+1;;;/i1-118;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+809	[Sn++]	InChI=1S/Sn/q+2	InChI=1S/Sn/q+2	InChI=1S/Sn/q+2	InChI=1S/Sn/q+2	True
+810	[Sn+2]	InChI=1S/Sn/q+2	InChI=1S/Sn/q+2	InChI=1S/Sn/q+2	InChI=1S/Sn/q+2	True
+811	[Sn2+]	InChI=1S/Sn.3H/q+1;;;/i1-117;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+812	[Sn+++]	InChI=1S/Sn/q+3	InChI=1S/Sn/q+3	ERROR	InChI=1S/Sn/q+3	False
+813	[Sn+3]	InChI=1S/Sn/q+3	InChI=1S/Sn/q+3	InChI=1S/Sn/q+3	InChI=1S/Sn/q+3	True
+814	[Sn3+]	InChI=1S/Sn.3H/q+1;;;/i1-116;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+815	[Sn++++]	InChI=1S/Sn/q+4	InChI=1S/Sn/q+4	ERROR	InChI=1S/Sn/q+4	False
+816	[Sn+4]	InChI=1S/Sn/q+4	InChI=1S/Sn/q+4	InChI=1S/Sn/q+4	InChI=1S/Sn/q+4	True
+817	[Sn4+]	InChI=1S/Sn.3H/q+1;;;/i1-115;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+818	[Sb---]	InChI=1S/Sb/q-3	InChI=1S/Sb/q-3	ERROR	InChI=1S/Sb/q-3	False
+819	[Sb-3]	InChI=1S/Sb/q-3	InChI=1S/Sb/q-3	InChI=1S/Sb/q-3	InChI=1S/Sb/q-3	True
+820	[Sb3-]	InChI=1S/Sb.2H/q-1;;/i1-119;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+821	[Sb--]	InChI=1S/Sb/q-2	InChI=1S/Sb/q-2	InChI=1S/Sb/q-2	InChI=1S/Sb/q-2	True
+822	[Sb-2]	InChI=1S/Sb/q-2	InChI=1S/Sb/q-2	InChI=1S/Sb/q-2	InChI=1S/Sb/q-2	True
+823	[Sb2-]	InChI=1S/Sb.2H/q-1;;/i1-120;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+824	[Sb-]	InChI=1S/Sb/q-1	InChI=1S/Sb/q-1	InChI=1S/Sb/q-1	InChI=1S/Sb/q-1	True
+825	[Sb-1]	InChI=1S/Sb/q-1	InChI=1S/Sb/q-1	InChI=1S/Sb/q-1	InChI=1S/Sb/q-1	True
+826	[Sb1-]	InChI=1S/Sb.2H/q-1;;/i1-121;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+827	[Sb+]	InChI=1S/Sb/q+1	InChI=1S/Sb/q+1	InChI=1S/Sb/q+1	InChI=1S/Sb/q+1	True
+828	[Sb+1]	InChI=1S/Sb/q+1	InChI=1S/Sb/q+1	InChI=1S/Sb/q+1	InChI=1S/Sb/q+1	True
+829	[Sb1+]	InChI=1S/Sb.4H/q+1;;;;/i1-121;;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+830	[Sb++]	InChI=1S/Sb/q+2	InChI=1S/Sb/q+2	InChI=1S/Sb.2H/q+2;;	InChI=1S/Sb/q+2	False
+831	[Sb+2]	InChI=1S/Sb/q+2	InChI=1S/Sb/q+2	InChI=1S/Sb.2H/q+2;;	InChI=1S/Sb/q+2	False
+832	[Sb2+]	InChI=1S/Sb.4H/q+1;;;;/i1-120;;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+833	[Sb+++]	InChI=1S/Sb/q+3	InChI=1S/Sb/q+3	ERROR	InChI=1S/Sb/q+3	False
+834	[Sb+3]	InChI=1S/Sb/q+3	InChI=1S/Sb/q+3	InChI=1S/Sb/q+3	InChI=1S/Sb/q+3	True
+835	[Sb3+]	InChI=1S/Sb.4H/q+1;;;;/i1-119;;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+836	[Sb++++]	InChI=1S/Sb/q+4	InChI=1S/Sb/q+4	ERROR	InChI=1S/Sb/q+4	False
+837	[Sb+4]	InChI=1S/Sb/q+4	InChI=1S/Sb/q+4	InChI=1S/Sb/q+4	InChI=1S/Sb/q+4	True
+838	[Sb4+]	InChI=1S/Sb.4H/q+1;;;;/i1-118;;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+839	[Sb+++++]	InChI=1S/Sb/q+5	InChI=1S/Sb/q+5	ERROR	InChI=1S/Sb/q+5	False
+840	[Sb+5]	InChI=1S/Sb/q+5	InChI=1S/Sb/q+5	InChI=1S/Sb/q+5	InChI=1S/Sb/q+5	True
+841	[Sb5+]	InChI=1S/Sb.4H/q+1;;;;/i1-117;;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+842	[Te--]	InChI=1S/Te/q-2	InChI=1S/Te/q-2	InChI=1S/Te/q-2	InChI=1S/Te/q-2	True
+843	[Te-2]	InChI=1S/Te/q-2	InChI=1S/Te/q-2	InChI=1S/Te/q-2	InChI=1S/Te/q-2	True
+844	[Te2-]	InChI=1S/H2Te/h1H2/p-1/i1-126	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+845	[Te-]	InChI=1S/Te/q-1	InChI=1S/Te/q-1	InChI=1S/Te/q-1	InChI=1S/Te/q-1	True
+846	[Te-1]	InChI=1S/Te/q-1	InChI=1S/Te/q-1	InChI=1S/Te/q-1	InChI=1S/Te/q-1	True
+847	[Te1-]	InChI=1S/H2Te/h1H2/p-1/i1-127	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+848	[Te+]	InChI=1S/Te/q+1	InChI=1S/Te/q+1	InChI=1S/H2Te/h1H2/q+1	InChI=1S/Te/q+1	False
+849	[Te+1]	InChI=1S/Te/q+1	InChI=1S/Te/q+1	InChI=1S/H2Te/h1H2/q+1	InChI=1S/Te/q+1	False
+850	[Te1+]	InChI=1S/HTe/h1H/q+1/i1-127	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+851	[Te++]	InChI=1S/Te/q+2	InChI=1S/Te/q+2	InChI=1S/Te/q+2	InChI=1S/Te/q+2	True
+852	[Te+2]	InChI=1S/Te/q+2	InChI=1S/Te/q+2	InChI=1S/Te/q+2	InChI=1S/Te/q+2	True
+853	[Te2+]	InChI=1S/HTe/h1H/q+1/i1-126	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+854	[Te+++]	InChI=1S/Te/q+3	InChI=1S/Te/q+3	ERROR	InChI=1S/Te/q+3	False
+855	[Te+3]	InChI=1S/Te/q+3	InChI=1S/Te/q+3	InChI=1S/Te/q+3	InChI=1S/Te/q+3	True
+856	[Te3+]	InChI=1S/HTe/h1H/q+1/i1-125	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+857	[Te++++]	InChI=1S/Te/q+4	InChI=1S/Te/q+4	ERROR	InChI=1S/Te/q+4	False
+858	[Te+4]	InChI=1S/Te/q+4	InChI=1S/Te/q+4	InChI=1S/Te/q+4	InChI=1S/Te/q+4	True
+859	[Te4+]	InChI=1S/HTe/h1H/q+1/i1-124	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+860	[Te+++++]	InChI=1S/Te/q+5	InChI=1S/Te/q+5	ERROR	InChI=1S/Te/q+5	False
+861	[Te+5]	InChI=1S/Te/q+5	InChI=1S/Te/q+5	InChI=1S/Te/q+5	InChI=1S/Te/q+5	True
+862	[Te5+]	InChI=1S/HTe/h1H/q+1/i1-123	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+863	[Te++++++]	InChI=1S/Te/q+6	InChI=1S/Te/q+6	ERROR	InChI=1S/Te/q+6	False
+864	[Te+6]	InChI=1S/Te/q+6	InChI=1S/Te/q+6	InChI=1S/Te/q+6	InChI=1S/Te/q+6	True
+865	[Te6+]	InChI=1S/HTe/h1H/q+1/i1-122	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+866	[I-]	InChI=1S/HI/h1H/p-1	InChI=1S/HI/h1H/p-1	InChI=1S/HI/h1H/p-1	InChI=1S/HI/h1H/p-1	True
+867	[I-1]	InChI=1S/HI/h1H/p-1	InChI=1S/HI/h1H/p-1	InChI=1S/HI/h1H/p-1	InChI=1S/HI/h1H/p-1	True
+868	[I1-]	InChI=1S/HI/h1H/p-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+869	[I+]	InChI=1S/I/q+1	InChI=1S/I/q+1	InChI=1S/I/q+1	InChI=1S/I/q+1	True
+870	[I+1]	InChI=1S/I/q+1	InChI=1S/I/q+1	InChI=1S/I/q+1	InChI=1S/I/q+1	True
+871	[I1+]	InChI=1S/I/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+872	[I+++]	InChI=1S/I/q+3	InChI=1S/I/q+3	ERROR	InChI=1S/I/q+3	False
+873	[I+3]	InChI=1S/I/q+3	InChI=1S/I/q+3	InChI=1S/I/q+3	InChI=1S/I/q+3	True
+874	[I3+]	InChI=1S/I/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+875	[I++++]	InChI=1S/I/q+4	InChI=1S/I/q+4	ERROR	InChI=1S/I/q+4	False
+876	[I+4]	InChI=1S/I/q+4	InChI=1S/I/q+4	InChI=1S/I/q+4	InChI=1S/I/q+4	True
+877	[I4+]	InChI=1S/I/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+878	[I+++++]	InChI=1S/I/q+5	InChI=1S/I/q+5	ERROR	InChI=1S/I/q+5	False
+879	[I+5]	InChI=1S/I/q+5	InChI=1S/I/q+5	InChI=1S/I/q+5	InChI=1S/I/q+5	True
+880	[I5+]	InChI=1S/I/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+881	[I++++++]	InChI=1S/I/q+6	InChI=1S/I/q+6	ERROR	InChI=1S/I/q+6	False
+882	[I+6]	InChI=1S/I/q+6	InChI=1S/I/q+6	InChI=1S/I/q+6	InChI=1S/I/q+6	True
+883	[I6+]	InChI=1S/I/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+884	[I+++++++]	InChI=1S/I/q+7	InChI=1S/I/q+7	ERROR	InChI=1S/I/q+7	False
+885	[I+7]	InChI=1S/I/q+7	InChI=1S/I/q+7	InChI=1S/I/q+7	InChI=1S/I/q+7	True
+886	[I7+]	InChI=1S/I/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+887	[Xe]	InChI=1S/Xe	InChI=1S/Xe	InChI=1S/Xe	InChI=1S/Xe	True
+888	[Xe+]	InChI=1S/Xe/q+1	InChI=1S/Xe/q+1	InChI=1S/Xe/q+1	InChI=1S/Xe/q+1	True
+889	[Xe+1]	InChI=1S/Xe/q+1	InChI=1S/Xe/q+1	InChI=1S/Xe/q+1	InChI=1S/Xe/q+1	True
+890	[Xe1+]	InChI=1S/Xe/q+1/i1+125	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+891	[Xe++]	InChI=1S/Xe/q+2	InChI=1S/Xe/q+2	InChI=1S/Xe/q+2	InChI=1S/Xe/q+2	True
+892	[Xe+2]	InChI=1S/Xe/q+2	InChI=1S/Xe/q+2	InChI=1S/Xe/q+2	InChI=1S/Xe/q+2	True
+893	[Xe2+]	InChI=1S/Xe/q+1/i1+126	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+894	[Xe++++]	InChI=1S/Xe/q+4	InChI=1S/Xe/q+4	ERROR	InChI=1S/Xe/q+4	False
+895	[Xe+4]	InChI=1S/Xe/q+4	InChI=1S/Xe/q+4	InChI=1S/Xe/q+4	InChI=1S/Xe/q+4	True
+896	[Xe4+]	InChI=1S/Xe/q+1/i1-127	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+897	[Xe++++++]	InChI=1S/Xe/q+6	InChI=1S/Xe/q+6	ERROR	InChI=1S/Xe/q+6	False
+898	[Xe+6]	InChI=1S/Xe/q+6	InChI=1S/Xe/q+6	InChI=1S/Xe/q+6	InChI=1S/Xe/q+6	True
+899	[Xe6+]	InChI=1S/Xe/q+1/i1-125	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+900	[Xe++++++++]	InChI=1S/Xe/q+8	InChI=1S/Xe/q+8	ERROR	InChI=1S/Xe/q+8	False
+901	[Xe+8]	InChI=1S/Xe/q+8	InChI=1S/Xe/q+8	InChI=1S/Xe/q+8	InChI=1S/Xe/q+8	True
+902	[Xe8+]	InChI=1S/Xe/q+1/i1-123	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+903	[Cs-]	InChI=1S/Cs/q-1	InChI=1S/Cs/q-1	InChI=1S/Cs/q-1	InChI=1S/Cs/q-1	True
+904	[Cs-1]	InChI=1S/Cs/q-1	InChI=1S/Cs/q-1	InChI=1S/Cs/q-1	InChI=1S/Cs/q-1	True
+905	[Cs1-]	InChI=1S/Cs/q-1/i1+123	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+906	[Cs+]	InChI=1S/Cs/q+1	InChI=1S/Cs/q+1	InChI=1S/Cs/q+1	InChI=1S/Cs/q+1	True
+907	[Cs+1]	InChI=1S/Cs/q+1	InChI=1S/Cs/q+1	InChI=1S/Cs/q+1	InChI=1S/Cs/q+1	True
+908	[Cs1+]	InChI=1S/Cs/q+1/i1+123	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+909	[Ba+]	InChI=1S/Ba/q+1	InChI=1S/Ba/q+1	InChI=1S/Ba/q+1	InChI=1S/Ba/q+1	True
+910	[Ba+1]	InChI=1S/Ba/q+1	InChI=1S/Ba/q+1	InChI=1S/Ba/q+1	InChI=1S/Ba/q+1	True
+911	[Ba1+]	InChI=1S/BH2/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+912	[Ba++]	InChI=1S/Ba/q+2	InChI=1S/Ba/q+2	InChI=1S/Ba/q+2	InChI=1S/Ba/q+2	True
+913	[Ba+2]	InChI=1S/Ba/q+2	InChI=1S/Ba/q+2	InChI=1S/Ba/q+2	InChI=1S/Ba/q+2	True
+914	[Ba2+]	InChI=1S/BH2/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+915	[La]	InChI=1S/La	InChI=1S/La	InChI=1S/La	InChI=1S/La	True
+916	[La+]	InChI=1S/La/q+1	InChI=1S/La/q+1	InChI=1S/La/q+1	InChI=1S/La/q+1	True
+917	[La+1]	InChI=1S/La/q+1	InChI=1S/La/q+1	InChI=1S/La/q+1	InChI=1S/La/q+1	True
+918	[La1+]	InChI=1S/La/q+1/i1+117	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+919	[La++]	InChI=1S/La/q+2	InChI=1S/La/q+2	InChI=1S/La/q+2	InChI=1S/La/q+2	True
+920	[La+2]	InChI=1S/La/q+2	InChI=1S/La/q+2	InChI=1S/La/q+2	InChI=1S/La/q+2	True
+921	[La2+]	InChI=1S/La/q+1/i1+118	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+922	[La+++]	InChI=1S/La/q+3	InChI=1S/La/q+3	ERROR	InChI=1S/La/q+3	False
+923	[La+3]	InChI=1S/La/q+3	InChI=1S/La/q+3	InChI=1S/La/q+3	InChI=1S/La/q+3	True
+924	[La3+]	InChI=1S/La/q+1/i1+119	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+925	[Ce++]	InChI=1S/Ce/q+2	InChI=1S/Ce/q+2	InChI=1S/Ce/q+2	InChI=1S/Ce/q+2	True
+926	[Ce+2]	InChI=1S/Ce/q+2	InChI=1S/Ce/q+2	InChI=1S/Ce/q+2	InChI=1S/Ce/q+2	True
+927	[Ce2+]	InChI=1S/Ce/q+1/i1+117	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+928	[Ce+++]	InChI=1S/Ce/q+3	InChI=1S/Ce/q+3	ERROR	InChI=1S/Ce/q+3	False
+929	[Ce+3]	InChI=1S/Ce/q+3	InChI=1S/Ce/q+3	InChI=1S/Ce/q+3	InChI=1S/Ce/q+3	True
+930	[Ce3+]	InChI=1S/Ce/q+1/i1+118	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+931	[Ce++++]	InChI=1S/Ce/q+4	InChI=1S/Ce/q+4	ERROR	InChI=1S/Ce/q+4	False
+932	[Ce+4]	InChI=1S/Ce/q+4	InChI=1S/Ce/q+4	InChI=1S/Ce/q+4	InChI=1S/Ce/q+4	True
+933	[Ce4+]	InChI=1S/Ce/q+1/i1+119	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+934	[Pr]	InChI=1S/Pr	InChI=1S/Pr	InChI=1S/Pr	InChI=1S/Pr	True
+935	[Pr+]	InChI=1S/Pr/q+1	InChI=1S/Pr/q+1	InChI=1S/Pr/q+1	InChI=1S/Pr/q+1	True
+936	[Pr+1]	InChI=1S/Pr/q+1	InChI=1S/Pr/q+1	InChI=1S/Pr/q+1	InChI=1S/Pr/q+1	True
+937	[Pr1+]	InChI=1S/H3P/h1H3/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+938	[Pr++]	InChI=1S/Pr/q+2	InChI=1S/Pr/q+2	InChI=1S/Pr/q+2	InChI=1S/Pr/q+2	True
+939	[Pr+2]	InChI=1S/Pr/q+2	InChI=1S/Pr/q+2	InChI=1S/Pr/q+2	InChI=1S/Pr/q+2	True
+940	[Pr2+]	InChI=1S/H3P/h1H3/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+941	[Pr+++]	InChI=1S/Pr/q+3	InChI=1S/Pr/q+3	ERROR	InChI=1S/Pr/q+3	False
+942	[Pr+3]	InChI=1S/Pr/q+3	InChI=1S/Pr/q+3	InChI=1S/Pr/q+3	InChI=1S/Pr/q+3	True
+943	[Pr3+]	InChI=1S/H3P/h1H3/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+944	[Pr++++]	InChI=1S/Pr/q+4	InChI=1S/Pr/q+4	ERROR	InChI=1S/Pr/q+4	False
+945	[Pr+4]	InChI=1S/Pr/q+4	InChI=1S/Pr/q+4	InChI=1S/Pr/q+4	InChI=1S/Pr/q+4	True
+946	[Pr4+]	InChI=1S/H3P/h1H3/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+947	[Pr+++++]	InChI=1S/Pr/q+5	InChI=1S/Pr/q+5	ERROR	InChI=1S/Pr/q+5	False
+948	[Pr+5]	InChI=1S/Pr/q+5	InChI=1S/Pr/q+5	InChI=1S/Pr/q+5	InChI=1S/Pr/q+5	True
+949	[Pr5+]	InChI=1S/H3P/h1H3/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+950	[Nd]	InChI=1S/Nd	InChI=1S/Nd	InChI=1S/Nd	InChI=1S/Nd	True
+951	[Nd++]	InChI=1S/Nd/q+2	InChI=1S/Nd/q+2	InChI=1S/Nd/q+2	InChI=1S/Nd/q+2	True
+952	[Nd+2]	InChI=1S/Nd/q+2	InChI=1S/Nd/q+2	InChI=1S/Nd/q+2	InChI=1S/Nd/q+2	True
+953	[Nd2+]	InChI=1S/Nd/q+1/i1+113	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+954	[Nd+++]	InChI=1S/Nd/q+3	InChI=1S/Nd/q+3	ERROR	InChI=1S/Nd/q+3	False
+955	[Nd+3]	InChI=1S/Nd/q+3	InChI=1S/Nd/q+3	InChI=1S/Nd/q+3	InChI=1S/Nd/q+3	True
+956	[Nd3+]	InChI=1S/Nd/q+1/i1+114	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+957	[Nd++++]	InChI=1S/Nd/q+4	InChI=1S/Nd/q+4	ERROR	InChI=1S/Nd/q+4	False
+958	[Nd+4]	InChI=1S/Nd/q+4	InChI=1S/Nd/q+4	InChI=1S/Nd/q+4	InChI=1S/Nd/q+4	True
+959	[Nd4+]	InChI=1S/Nd/q+1/i1+115	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+960	[Pm++]	InChI=1S/Pm/q+2	InChI=1S/Pm/q+2	InChI=1S/Pm/q+2	InChI=1S/Pm/q+2	True
+961	[Pm+2]	InChI=1S/Pm/q+2	InChI=1S/Pm/q+2	InChI=1S/Pm/q+2	InChI=1S/Pm/q+2	True
+962	[Pm2+]	InChI=1S/Pm/q+1/i1+112	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+963	[Pm+++]	InChI=1S/Pm/q+3	InChI=1S/Pm/q+3	ERROR	InChI=1S/Pm/q+3	False
+964	[Pm+3]	InChI=1S/Pm/q+3	InChI=1S/Pm/q+3	InChI=1S/Pm/q+3	InChI=1S/Pm/q+3	True
+965	[Pm3+]	InChI=1S/Pm/q+1/i1+113	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+966	[Sm]	InChI=1S/Sm	InChI=1S/Sm	InChI=1S/Sm	InChI=1S/Sm	True
+967	[Sm++]	InChI=1S/Sm/q+2	InChI=1S/Sm/q+2	InChI=1S/Sm/q+2	InChI=1S/Sm/q+2	True
+968	[Sm+2]	InChI=1S/Sm/q+2	InChI=1S/Sm/q+2	InChI=1S/Sm/q+2	InChI=1S/Sm/q+2	True
+969	[Sm2+]	InChI=1S/Sm/q+1/i1+107	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+970	[Sm+++]	InChI=1S/Sm/q+3	InChI=1S/Sm/q+3	ERROR	InChI=1S/Sm/q+3	False
+971	[Sm+3]	InChI=1S/Sm/q+3	InChI=1S/Sm/q+3	InChI=1S/Sm/q+3	InChI=1S/Sm/q+3	True
+972	[Sm3+]	InChI=1S/Sm/q+1/i1+108	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+973	[Eu++]	InChI=1S/Eu/q+2	InChI=1S/Eu/q+2	InChI=1S/Eu/q+2	InChI=1S/Eu/q+2	True
+974	[Eu+2]	InChI=1S/Eu/q+2	InChI=1S/Eu/q+2	InChI=1S/Eu/q+2	InChI=1S/Eu/q+2	True
+975	[Eu2+]	InChI=1S/Eu/q+1/i1+105	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+976	[Eu+++]	InChI=1S/Eu/q+3	InChI=1S/Eu/q+3	ERROR	InChI=1S/Eu/q+3	False
+977	[Eu+3]	InChI=1S/Eu/q+3	InChI=1S/Eu/q+3	InChI=1S/Eu/q+3	InChI=1S/Eu/q+3	True
+978	[Eu3+]	InChI=1S/Eu/q+1/i1+106	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+979	[Gd]	InChI=1S/Gd	InChI=1S/Gd	InChI=1S/Gd	InChI=1S/Gd	True
+980	[Gd+]	InChI=1S/Gd/q+1	InChI=1S/Gd/q+1	InChI=1S/Gd/q+1	InChI=1S/Gd/q+1	True
+981	[Gd+1]	InChI=1S/Gd/q+1	InChI=1S/Gd/q+1	InChI=1S/Gd/q+1	InChI=1S/Gd/q+1	True
+982	[Gd1+]	InChI=1S/Gd/q+1/i1+99	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+983	[Gd++]	InChI=1S/Gd/q+2	InChI=1S/Gd/q+2	InChI=1S/Gd/q+2	InChI=1S/Gd/q+2	True
+984	[Gd+2]	InChI=1S/Gd/q+2	InChI=1S/Gd/q+2	InChI=1S/Gd/q+2	InChI=1S/Gd/q+2	True
+985	[Gd2+]	InChI=1S/Gd/q+1/i1+100	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+986	[Gd+++]	InChI=1S/Gd/q+3	InChI=1S/Gd/q+3	ERROR	InChI=1S/Gd/q+3	False
+987	[Gd+3]	InChI=1S/Gd/q+3	InChI=1S/Gd/q+3	InChI=1S/Gd/q+3	InChI=1S/Gd/q+3	True
+988	[Gd3+]	InChI=1S/Gd/q+1/i1+101	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+989	[Tb]	InChI=1S/Tb	InChI=1S/Tb	InChI=1S/Tb	InChI=1S/Tb	True
+990	[Tb+]	InChI=1S/Tb/q+1	InChI=1S/Tb/q+1	InChI=1S/Tb/q+1	InChI=1S/Tb/q+1	True
+991	[Tb+1]	InChI=1S/Tb/q+1	InChI=1S/Tb/q+1	InChI=1S/Tb/q+1	InChI=1S/Tb/q+1	True
+992	[Tb1+]	InChI=1S/Tb/q+1/i1+97	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+993	[Tb++]	InChI=1S/Tb/q+2	InChI=1S/Tb/q+2	InChI=1S/Tb/q+2	InChI=1S/Tb/q+2	True
+994	[Tb+2]	InChI=1S/Tb/q+2	InChI=1S/Tb/q+2	InChI=1S/Tb/q+2	InChI=1S/Tb/q+2	True
+995	[Tb2+]	InChI=1S/Tb/q+1/i1+98	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+996	[Tb+++]	InChI=1S/Tb/q+3	InChI=1S/Tb/q+3	ERROR	InChI=1S/Tb/q+3	False
+997	[Tb+3]	InChI=1S/Tb/q+3	InChI=1S/Tb/q+3	InChI=1S/Tb/q+3	InChI=1S/Tb/q+3	True
+998	[Tb3+]	InChI=1S/Tb/q+1/i1+99	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+999	[Tb++++]	InChI=1S/Tb/q+4	InChI=1S/Tb/q+4	ERROR	InChI=1S/Tb/q+4	False
+1000	[Tb+4]	InChI=1S/Tb/q+4	InChI=1S/Tb/q+4	InChI=1S/Tb/q+4	InChI=1S/Tb/q+4	True
+1001	[Tb4+]	InChI=1S/Tb/q+1/i1+100	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1002	[Dy]	InChI=1S/Dy	InChI=1S/Dy	InChI=1S/Dy	InChI=1S/Dy	True
+1003	[Dy++]	InChI=1S/Dy/q+2	InChI=1S/Dy/q+2	InChI=1S/Dy/q+2	InChI=1S/Dy/q+2	True
+1004	[Dy+2]	InChI=1S/Dy/q+2	InChI=1S/Dy/q+2	InChI=1S/Dy/q+2	InChI=1S/Dy/q+2	True
+1005	[Dy2+]	InChI=1S/Dy/q+1/i1+94	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1006	[Dy+++]	InChI=1S/Dy/q+3	InChI=1S/Dy/q+3	ERROR	InChI=1S/Dy/q+3	False
+1007	[Dy+3]	InChI=1S/Dy/q+3	InChI=1S/Dy/q+3	InChI=1S/Dy/q+3	InChI=1S/Dy/q+3	True
+1008	[Dy3+]	InChI=1S/Dy/q+1/i1+95	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1009	[Dy++++]	InChI=1S/Dy/q+4	InChI=1S/Dy/q+4	ERROR	InChI=1S/Dy/q+4	False
+1010	[Dy+4]	InChI=1S/Dy/q+4	InChI=1S/Dy/q+4	InChI=1S/Dy/q+4	InChI=1S/Dy/q+4	True
+1011	[Dy4+]	InChI=1S/Dy/q+1/i1+96	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1012	[Ho]	InChI=1S/Ho	InChI=1S/Ho	InChI=1S/Ho	InChI=1S/Ho	True
+1013	[Ho++]	InChI=1S/Ho/q+2	InChI=1S/Ho/q+2	InChI=1S/Ho/q+2	InChI=1S/Ho/q+2	True
+1014	[Ho+2]	InChI=1S/Ho/q+2	InChI=1S/Ho/q+2	InChI=1S/Ho/q+2	InChI=1S/Ho/q+2	True
+1015	[Ho2+]	InChI=1S/Ho/q+1/i1+92	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1016	[Ho+++]	InChI=1S/Ho/q+3	InChI=1S/Ho/q+3	ERROR	InChI=1S/Ho/q+3	False
+1017	[Ho+3]	InChI=1S/Ho/q+3	InChI=1S/Ho/q+3	InChI=1S/Ho/q+3	InChI=1S/Ho/q+3	True
+1018	[Ho3+]	InChI=1S/Ho/q+1/i1+93	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1019	[Er]	InChI=1S/Er	InChI=1S/Er	InChI=1S/Er	InChI=1S/Er	True
+1020	[Er++]	InChI=1S/Er/q+2	InChI=1S/Er/q+2	InChI=1S/Er/q+2	InChI=1S/Er/q+2	True
+1021	[Er+2]	InChI=1S/Er/q+2	InChI=1S/Er/q+2	InChI=1S/Er/q+2	InChI=1S/Er/q+2	True
+1022	[Er2+]	InChI=1S/Er/q+1/i1+90	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1023	[Er+++]	InChI=1S/Er/q+3	InChI=1S/Er/q+3	ERROR	InChI=1S/Er/q+3	False
+1024	[Er+3]	InChI=1S/Er/q+3	InChI=1S/Er/q+3	InChI=1S/Er/q+3	InChI=1S/Er/q+3	True
+1025	[Er3+]	InChI=1S/Er/q+1/i1+91	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1026	[Tm++]	InChI=1S/Tm/q+2	InChI=1S/Tm/q+2	InChI=1S/Tm/q+2	InChI=1S/Tm/q+2	True
+1027	[Tm+2]	InChI=1S/Tm/q+2	InChI=1S/Tm/q+2	InChI=1S/Tm/q+2	InChI=1S/Tm/q+2	True
+1028	[Tm2+]	InChI=1S/Tm/q+1/i1+88	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1029	[Tm+++]	InChI=1S/Tm/q+3	InChI=1S/Tm/q+3	ERROR	InChI=1S/Tm/q+3	False
+1030	[Tm+3]	InChI=1S/Tm/q+3	InChI=1S/Tm/q+3	InChI=1S/Tm/q+3	InChI=1S/Tm/q+3	True
+1031	[Tm3+]	InChI=1S/Tm/q+1/i1+89	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1032	[Yb++]	InChI=1S/Yb/q+2	InChI=1S/Yb/q+2	InChI=1S/Yb/q+2	InChI=1S/Yb/q+2	True
+1033	[Yb+2]	InChI=1S/Yb/q+2	InChI=1S/Yb/q+2	InChI=1S/Yb/q+2	InChI=1S/Yb/q+2	True
+1034	[Yb2+]	InChI=1S/Yb/q+1/i1+84	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1035	[Yb+++]	InChI=1S/Yb/q+3	InChI=1S/Yb/q+3	ERROR	InChI=1S/Yb/q+3	False
+1036	[Yb+3]	InChI=1S/Yb/q+3	InChI=1S/Yb/q+3	InChI=1S/Yb/q+3	InChI=1S/Yb/q+3	True
+1037	[Yb3+]	InChI=1S/Yb/q+1/i1+85	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1038	[Lu]	InChI=1S/Lu	InChI=1S/Lu	InChI=1S/Lu	InChI=1S/Lu	True
+1039	[Lu++]	InChI=1S/Lu/q+2	InChI=1S/Lu/q+2	InChI=1S/Lu/q+2	InChI=1S/Lu/q+2	True
+1040	[Lu+2]	InChI=1S/Lu/q+2	InChI=1S/Lu/q+2	InChI=1S/Lu/q+2	InChI=1S/Lu/q+2	True
+1041	[Lu2+]	InChI=1S/Lu/q+1/i1+82	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1042	[Lu+++]	InChI=1S/Lu/q+3	InChI=1S/Lu/q+3	ERROR	InChI=1S/Lu/q+3	False
+1043	[Lu+3]	InChI=1S/Lu/q+3	InChI=1S/Lu/q+3	InChI=1S/Lu/q+3	InChI=1S/Lu/q+3	True
+1044	[Lu3+]	InChI=1S/Lu/q+1/i1+83	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1045	[Hf--]	InChI=1S/Hf/q-2	InChI=1S/Hf/q-2	InChI=1S/Hf/q-2	InChI=1S/Hf/q-2	True
+1046	[Hf-2]	InChI=1S/Hf/q-2	InChI=1S/Hf/q-2	InChI=1S/Hf/q-2	InChI=1S/Hf/q-2	True
+1047	[Hf2-]	InChI=1S/Hf/q-1/i1+79	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1048	[Hf+]	InChI=1S/Hf/q+1	InChI=1S/Hf/q+1	InChI=1S/Hf/q+1	InChI=1S/Hf/q+1	True
+1049	[Hf+1]	InChI=1S/Hf/q+1	InChI=1S/Hf/q+1	InChI=1S/Hf/q+1	InChI=1S/Hf/q+1	True
+1050	[Hf1+]	InChI=1S/Hf/q+1/i1+78	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1051	[Hf++]	InChI=1S/Hf/q+2	InChI=1S/Hf/q+2	InChI=1S/Hf/q+2	InChI=1S/Hf/q+2	True
+1052	[Hf+2]	InChI=1S/Hf/q+2	InChI=1S/Hf/q+2	InChI=1S/Hf/q+2	InChI=1S/Hf/q+2	True
+1053	[Hf2+]	InChI=1S/Hf/q+1/i1+79	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1054	[Hf+++]	InChI=1S/Hf/q+3	InChI=1S/Hf/q+3	ERROR	InChI=1S/Hf/q+3	False
+1055	[Hf+3]	InChI=1S/Hf/q+3	InChI=1S/Hf/q+3	InChI=1S/Hf/q+3	InChI=1S/Hf/q+3	True
+1056	[Hf3+]	InChI=1S/Hf/q+1/i1+80	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1057	[Hf++++]	InChI=1S/Hf/q+4	InChI=1S/Hf/q+4	ERROR	InChI=1S/Hf/q+4	False
+1058	[Hf+4]	InChI=1S/Hf/q+4	InChI=1S/Hf/q+4	InChI=1S/Hf/q+4	InChI=1S/Hf/q+4	True
+1059	[Hf4+]	InChI=1S/Hf/q+1/i1+81	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1060	[Ta---]	InChI=1S/Ta/q-3	InChI=1S/Ta/q-3	ERROR	InChI=1S/Ta/q-3	False
+1061	[Ta-3]	InChI=1S/Ta/q-3	InChI=1S/Ta/q-3	InChI=1S/Ta/q-3	InChI=1S/Ta/q-3	True
+1062	[Ta3-]	InChI=1S/Ta/q-1/i1+77	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1063	[Ta-]	InChI=1S/Ta/q-1	InChI=1S/Ta/q-1	InChI=1S/Ta/q-1	InChI=1S/Ta/q-1	True
+1064	[Ta-1]	InChI=1S/Ta/q-1	InChI=1S/Ta/q-1	InChI=1S/Ta/q-1	InChI=1S/Ta/q-1	True
+1065	[Ta1-]	InChI=1S/Ta/q-1/i1+75	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1066	[Ta+]	InChI=1S/Ta/q+1	InChI=1S/Ta/q+1	InChI=1S/Ta/q+1	InChI=1S/Ta/q+1	True
+1067	[Ta+1]	InChI=1S/Ta/q+1	InChI=1S/Ta/q+1	InChI=1S/Ta/q+1	InChI=1S/Ta/q+1	True
+1068	[Ta1+]	InChI=1S/Ta/q+1/i1+75	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1069	[Ta++]	InChI=1S/Ta/q+2	InChI=1S/Ta/q+2	InChI=1S/Ta/q+2	InChI=1S/Ta/q+2	True
+1070	[Ta+2]	InChI=1S/Ta/q+2	InChI=1S/Ta/q+2	InChI=1S/Ta/q+2	InChI=1S/Ta/q+2	True
+1071	[Ta2+]	InChI=1S/Ta/q+1/i1+76	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1072	[Ta+++]	InChI=1S/Ta/q+3	InChI=1S/Ta/q+3	ERROR	InChI=1S/Ta/q+3	False
+1073	[Ta+3]	InChI=1S/Ta/q+3	InChI=1S/Ta/q+3	InChI=1S/Ta/q+3	InChI=1S/Ta/q+3	True
+1074	[Ta3+]	InChI=1S/Ta/q+1/i1+77	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1075	[Ta++++]	InChI=1S/Ta/q+4	InChI=1S/Ta/q+4	ERROR	InChI=1S/Ta/q+4	False
+1076	[Ta+4]	InChI=1S/Ta/q+4	InChI=1S/Ta/q+4	InChI=1S/Ta/q+4	InChI=1S/Ta/q+4	True
+1077	[Ta4+]	InChI=1S/Ta/q+1/i1+78	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1078	[Ta+++++]	InChI=1S/Ta/q+5	InChI=1S/Ta/q+5	ERROR	InChI=1S/Ta/q+5	False
+1079	[Ta+5]	InChI=1S/Ta/q+5	InChI=1S/Ta/q+5	InChI=1S/Ta/q+5	InChI=1S/Ta/q+5	True
+1080	[Ta5+]	InChI=1S/Ta/q+1/i1+79	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1081	[W----]	InChI=1S/W/q-4	InChI=1S/W/q-4	ERROR	InChI=1S/W/q-4	False
+1082	[W-4]	InChI=1S/W/q-4	InChI=1S/W/q-4	InChI=1S/W/q-4	InChI=1S/W/q-4	True
+1083	[W4-]	InChI=1S/W/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1084	[W--]	InChI=1S/W/q-2	InChI=1S/W/q-2	InChI=1S/W/q-2	InChI=1S/W/q-2	True
+1085	[W-2]	InChI=1S/W/q-2	InChI=1S/W/q-2	InChI=1S/W/q-2	InChI=1S/W/q-2	True
+1086	[W2-]	InChI=1S/W/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1087	[W-]	InChI=1S/W/q-1	InChI=1S/W/q-1	InChI=1S/W/q-1	InChI=1S/W/q-1	True
+1088	[W-1]	InChI=1S/W/q-1	InChI=1S/W/q-1	InChI=1S/W/q-1	InChI=1S/W/q-1	True
+1089	[W1-]	InChI=1S/W/q-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1090	[W]	InChI=1S/W	InChI=1S/W	InChI=1S/W	InChI=1S/W	True
+1091	[W+]	InChI=1S/W/q+1	InChI=1S/W/q+1	InChI=1S/W/q+1	InChI=1S/W/q+1	True
+1092	[W+1]	InChI=1S/W/q+1	InChI=1S/W/q+1	InChI=1S/W/q+1	InChI=1S/W/q+1	True
+1093	[W1+]	InChI=1S/W/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1094	[W++]	InChI=1S/W/q+2	InChI=1S/W/q+2	InChI=1S/W/q+2	InChI=1S/W/q+2	True
+1095	[W+2]	InChI=1S/W/q+2	InChI=1S/W/q+2	InChI=1S/W/q+2	InChI=1S/W/q+2	True
+1096	[W2+]	InChI=1S/W/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1097	[W+++]	InChI=1S/W/q+3	InChI=1S/W/q+3	ERROR	InChI=1S/W/q+3	False
+1098	[W+3]	InChI=1S/W/q+3	InChI=1S/W/q+3	InChI=1S/W/q+3	InChI=1S/W/q+3	True
+1099	[W3+]	InChI=1S/W/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1100	[W++++]	InChI=1S/W/q+4	InChI=1S/W/q+4	ERROR	InChI=1S/W/q+4	False
+1101	[W+4]	InChI=1S/W/q+4	InChI=1S/W/q+4	InChI=1S/W/q+4	InChI=1S/W/q+4	True
+1102	[W4+]	InChI=1S/W/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1103	[W+++++]	InChI=1S/W/q+5	InChI=1S/W/q+5	ERROR	InChI=1S/W/q+5	False
+1104	[W+5]	InChI=1S/W/q+5	InChI=1S/W/q+5	InChI=1S/W/q+5	InChI=1S/W/q+5	True
+1105	[W5+]	InChI=1S/W/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1106	[W++++++]	InChI=1S/W/q+6	InChI=1S/W/q+6	ERROR	InChI=1S/W/q+6	False
+1107	[W+6]	InChI=1S/W/q+6	InChI=1S/W/q+6	InChI=1S/W/q+6	InChI=1S/W/q+6	True
+1108	[W6+]	InChI=1S/W/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1109	[Re---]	InChI=1S/Re/q-3	InChI=1S/Re/q-3	ERROR	InChI=1S/Re/q-3	False
+1110	[Re-3]	InChI=1S/Re/q-3	InChI=1S/Re/q-3	InChI=1S/Re/q-3	InChI=1S/Re/q-3	True
+1111	[Re3-]	InChI=1S/Re/q-1/i1+72	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1112	[Re-]	InChI=1S/Re/q-1	InChI=1S/Re/q-1	InChI=1S/Re/q-1	InChI=1S/Re/q-1	True
+1113	[Re-1]	InChI=1S/Re/q-1	InChI=1S/Re/q-1	InChI=1S/Re/q-1	InChI=1S/Re/q-1	True
+1114	[Re1-]	InChI=1S/Re/q-1/i1+70	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1115	[Re]	InChI=1S/Re	InChI=1S/Re	InChI=1S/Re	InChI=1S/Re	True
+1116	[Re+]	InChI=1S/Re/q+1	InChI=1S/Re/q+1	InChI=1S/Re/q+1	InChI=1S/Re/q+1	True
+1117	[Re+1]	InChI=1S/Re/q+1	InChI=1S/Re/q+1	InChI=1S/Re/q+1	InChI=1S/Re/q+1	True
+1118	[Re1+]	InChI=1S/Re/q+1/i1+70	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1119	[Re++]	InChI=1S/Re/q+2	InChI=1S/Re/q+2	InChI=1S/Re/q+2	InChI=1S/Re/q+2	True
+1120	[Re+2]	InChI=1S/Re/q+2	InChI=1S/Re/q+2	InChI=1S/Re/q+2	InChI=1S/Re/q+2	True
+1121	[Re2+]	InChI=1S/Re/q+1/i1+71	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1122	[Re+++]	InChI=1S/Re/q+3	InChI=1S/Re/q+3	ERROR	InChI=1S/Re/q+3	False
+1123	[Re+3]	InChI=1S/Re/q+3	InChI=1S/Re/q+3	InChI=1S/Re/q+3	InChI=1S/Re/q+3	True
+1124	[Re3+]	InChI=1S/Re/q+1/i1+72	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1125	[Re++++]	InChI=1S/Re/q+4	InChI=1S/Re/q+4	ERROR	InChI=1S/Re/q+4	False
+1126	[Re+4]	InChI=1S/Re/q+4	InChI=1S/Re/q+4	InChI=1S/Re/q+4	InChI=1S/Re/q+4	True
+1127	[Re4+]	InChI=1S/Re/q+1/i1+73	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1128	[Re+++++]	InChI=1S/Re/q+5	InChI=1S/Re/q+5	ERROR	InChI=1S/Re/q+5	False
+1129	[Re+5]	InChI=1S/Re/q+5	InChI=1S/Re/q+5	InChI=1S/Re/q+5	InChI=1S/Re/q+5	True
+1130	[Re5+]	InChI=1S/Re/q+1/i1+74	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1131	[Re++++++]	InChI=1S/Re/q+6	InChI=1S/Re/q+6	ERROR	InChI=1S/Re/q+6	False
+1132	[Re+6]	InChI=1S/Re/q+6	InChI=1S/Re/q+6	InChI=1S/Re/q+6	InChI=1S/Re/q+6	True
+1133	[Re6+]	InChI=1S/Re/q+1/i1+75	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1134	[Re+++++++]	InChI=1S/Re/q+7	InChI=1S/Re/q+7	ERROR	InChI=1S/Re/q+7	False
+1135	[Re+7]	InChI=1S/Re/q+7	InChI=1S/Re/q+7	InChI=1S/Re/q+7	InChI=1S/Re/q+7	True
+1136	[Re7+]	InChI=1S/Re/q+1/i1+76	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1137	[Os----]	InChI=1S/Os/q-4	InChI=1S/Os/q-4	ERROR	InChI=1S/Os/q-4	False
+1138	[Os-4]	InChI=1S/Os/q-4	InChI=1S/Os/q-4	InChI=1S/Os/q-4	InChI=1S/Os/q-4	True
+1139	[Os4-]	InChI=1S/Os/q-1/i1+69	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1140	[Os--]	InChI=1S/Os/q-2	InChI=1S/Os/q-2	InChI=1S/Os/q-2	InChI=1S/Os/q-2	True
+1141	[Os-2]	InChI=1S/Os/q-2	InChI=1S/Os/q-2	InChI=1S/Os/q-2	InChI=1S/Os/q-2	True
+1142	[Os2-]	InChI=1S/Os/q-1/i1+67	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1143	[Os-]	InChI=1S/Os/q-1	InChI=1S/Os/q-1	InChI=1S/Os/q-1	InChI=1S/Os/q-1	True
+1144	[Os-1]	InChI=1S/Os/q-1	InChI=1S/Os/q-1	InChI=1S/Os/q-1	InChI=1S/Os/q-1	True
+1145	[Os1-]	InChI=1S/Os/q-1/i1+66	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1146	[Os]	InChI=1S/Os	InChI=1S/Os	InChI=1S/Os	InChI=1S/Os	True
+1147	[Os+]	InChI=1S/Os/q+1	InChI=1S/Os/q+1	InChI=1S/Os/q+1	InChI=1S/Os/q+1	True
+1148	[Os+1]	InChI=1S/Os/q+1	InChI=1S/Os/q+1	InChI=1S/Os/q+1	InChI=1S/Os/q+1	True
+1149	[Os1+]	InChI=1S/Os/q+1/i1+66	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1150	[Os++]	InChI=1S/Os/q+2	InChI=1S/Os/q+2	InChI=1S/Os/q+2	InChI=1S/Os/q+2	True
+1151	[Os+2]	InChI=1S/Os/q+2	InChI=1S/Os/q+2	InChI=1S/Os/q+2	InChI=1S/Os/q+2	True
+1152	[Os2+]	InChI=1S/Os/q+1/i1+67	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1153	[Os+++]	InChI=1S/Os/q+3	InChI=1S/Os/q+3	ERROR	InChI=1S/Os/q+3	False
+1154	[Os+3]	InChI=1S/Os/q+3	InChI=1S/Os/q+3	InChI=1S/Os/q+3	InChI=1S/Os/q+3	True
+1155	[Os3+]	InChI=1S/Os/q+1/i1+68	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1156	[Os++++]	InChI=1S/Os/q+4	InChI=1S/Os/q+4	ERROR	InChI=1S/Os/q+4	False
+1157	[Os+4]	InChI=1S/Os/q+4	InChI=1S/Os/q+4	InChI=1S/Os/q+4	InChI=1S/Os/q+4	True
+1158	[Os4+]	InChI=1S/Os/q+1/i1+69	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1159	[Os+++++]	InChI=1S/Os/q+5	InChI=1S/Os/q+5	ERROR	InChI=1S/Os/q+5	False
+1160	[Os+5]	InChI=1S/Os/q+5	InChI=1S/Os/q+5	InChI=1S/Os/q+5	InChI=1S/Os/q+5	True
+1161	[Os5+]	InChI=1S/Os/q+1/i1+70	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1162	[Os++++++]	InChI=1S/Os/q+6	InChI=1S/Os/q+6	ERROR	InChI=1S/Os/q+6	False
+1163	[Os+6]	InChI=1S/Os/q+6	InChI=1S/Os/q+6	InChI=1S/Os/q+6	InChI=1S/Os/q+6	True
+1164	[Os6+]	InChI=1S/Os/q+1/i1+71	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1165	[Os+++++++]	InChI=1S/Os/q+7	InChI=1S/Os/q+7	ERROR	InChI=1S/Os/q+7	False
+1166	[Os+7]	InChI=1S/Os/q+7	InChI=1S/Os/q+7	InChI=1S/Os/q+7	InChI=1S/Os/q+7	True
+1167	[Os7+]	InChI=1S/Os/q+1/i1+72	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1168	[Os++++++++]	InChI=1S/Os/q+8	InChI=1S/Os/q+8	ERROR	InChI=1S/Os/q+8	False
+1169	[Os+8]	InChI=1S/Os/q+8	InChI=1S/Os/q+8	InChI=1S/Os/q+8	InChI=1S/Os/q+8	True
+1170	[Os8+]	InChI=1S/Os/q+1/i1+73	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1171	[Ir---]	InChI=1S/Ir/q-3	InChI=1S/Ir/q-3	ERROR	InChI=1S/Ir/q-3	False
+1172	[Ir-3]	InChI=1S/Ir/q-3	InChI=1S/Ir/q-3	InChI=1S/Ir/q-3	InChI=1S/Ir/q-3	True
+1173	[Ir3-]	InChI=1S/HI/h1H/p-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1174	[Ir-]	InChI=1S/Ir/q-1	InChI=1S/Ir/q-1	InChI=1S/Ir/q-1	InChI=1S/Ir/q-1	True
+1175	[Ir-1]	InChI=1S/Ir/q-1	InChI=1S/Ir/q-1	InChI=1S/Ir/q-1	InChI=1S/Ir/q-1	True
+1176	[Ir1-]	InChI=1S/HI/h1H/p-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1177	[Ir]	InChI=1S/Ir	InChI=1S/Ir	InChI=1S/Ir	InChI=1S/Ir	True
+1178	[Ir+]	InChI=1S/Ir/q+1	InChI=1S/Ir/q+1	InChI=1S/Ir/q+1	InChI=1S/Ir/q+1	True
+1179	[Ir+1]	InChI=1S/Ir/q+1	InChI=1S/Ir/q+1	InChI=1S/Ir/q+1	InChI=1S/Ir/q+1	True
+1180	[Ir1+]	InChI=1S/H2I/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1181	[Ir++]	InChI=1S/Ir/q+2	InChI=1S/Ir/q+2	InChI=1S/Ir/q+2	InChI=1S/Ir/q+2	True
+1182	[Ir+2]	InChI=1S/Ir/q+2	InChI=1S/Ir/q+2	InChI=1S/Ir/q+2	InChI=1S/Ir/q+2	True
+1183	[Ir2+]	InChI=1S/H2I/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1184	[Ir+++]	InChI=1S/Ir/q+3	InChI=1S/Ir/q+3	ERROR	InChI=1S/Ir/q+3	False
+1185	[Ir+3]	InChI=1S/Ir/q+3	InChI=1S/Ir/q+3	InChI=1S/Ir/q+3	InChI=1S/Ir/q+3	True
+1186	[Ir3+]	InChI=1S/H2I/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1187	[Ir++++]	InChI=1S/Ir/q+4	InChI=1S/Ir/q+4	ERROR	InChI=1S/Ir/q+4	False
+1188	[Ir+4]	InChI=1S/Ir/q+4	InChI=1S/Ir/q+4	InChI=1S/Ir/q+4	InChI=1S/Ir/q+4	True
+1189	[Ir4+]	InChI=1S/H2I/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1190	[Ir+++++]	InChI=1S/Ir/q+5	InChI=1S/Ir/q+5	ERROR	InChI=1S/Ir/q+5	False
+1191	[Ir+5]	InChI=1S/Ir/q+5	InChI=1S/Ir/q+5	InChI=1S/Ir/q+5	InChI=1S/Ir/q+5	True
+1192	[Ir5+]	InChI=1S/H2I/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1193	[Ir++++++]	InChI=1S/Ir/q+6	InChI=1S/Ir/q+6	ERROR	InChI=1S/Ir/q+6	False
+1194	[Ir+6]	InChI=1S/Ir/q+6	InChI=1S/Ir/q+6	InChI=1S/Ir/q+6	InChI=1S/Ir/q+6	True
+1195	[Ir6+]	InChI=1S/H2I/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1196	[Ir+++++++]	InChI=1S/Ir/q+7	InChI=1S/Ir/q+7	ERROR	InChI=1S/Ir/q+7	False
+1197	[Ir+7]	InChI=1S/Ir/q+7	InChI=1S/Ir/q+7	InChI=1S/Ir/q+7	InChI=1S/Ir/q+7	True
+1198	[Ir7+]	InChI=1S/H2I/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1199	[Ir++++++++]	InChI=1S/Ir/q+8	InChI=1S/Ir/q+8	ERROR	InChI=1S/Ir/q+8	False
+1200	[Ir+8]	InChI=1S/Ir/q+8	InChI=1S/Ir/q+8	InChI=1S/Ir/q+8	InChI=1S/Ir/q+8	True
+1201	[Ir8+]	InChI=1S/H2I/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1202	[Ir+++++++++]	InChI=1S/Ir/q+9	InChI=1S/Ir/q+9	ERROR	InChI=1S/Ir/q+9	False
+1203	[Ir+9]	InChI=1S/Ir/q+9	InChI=1S/Ir/q+9	InChI=1S/Ir/q+9	InChI=1S/Ir/q+9	True
+1204	[Ir9+]	InChI=1S/H2I/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1205	[Pt---]	InChI=1S/Pt/q-3	InChI=1S/Pt/q-3	ERROR	InChI=1S/Pt/q-3	False
+1206	[Pt-3]	InChI=1S/Pt/q-3	InChI=1S/Pt/q-3	InChI=1S/Pt/q-3	InChI=1S/Pt/q-3	True
+1207	[Pt3-]	InChI=1S/Pt/q-1/i1+63	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1208	[Pt--]	InChI=1S/Pt/q-2	InChI=1S/Pt/q-2	InChI=1S/Pt/q-2	InChI=1S/Pt/q-2	True
+1209	[Pt-2]	InChI=1S/Pt/q-2	InChI=1S/Pt/q-2	InChI=1S/Pt/q-2	InChI=1S/Pt/q-2	True
+1210	[Pt2-]	InChI=1S/Pt/q-1/i1+62	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1211	[Pt-]	InChI=1S/Pt/q-1	InChI=1S/Pt/q-1	InChI=1S/Pt/q-1	InChI=1S/Pt/q-1	True
+1212	[Pt-1]	InChI=1S/Pt/q-1	InChI=1S/Pt/q-1	InChI=1S/Pt/q-1	InChI=1S/Pt/q-1	True
+1213	[Pt1-]	InChI=1S/Pt/q-1/i1+61	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1214	[Pt]	InChI=1S/Pt	InChI=1S/Pt	InChI=1S/Pt	InChI=1S/Pt	True
+1215	[Pt+]	InChI=1S/Pt/q+1	InChI=1S/Pt/q+1	InChI=1S/Pt/q+1	InChI=1S/Pt/q+1	True
+1216	[Pt+1]	InChI=1S/Pt/q+1	InChI=1S/Pt/q+1	InChI=1S/Pt/q+1	InChI=1S/Pt/q+1	True
+1217	[Pt1+]	InChI=1S/Pt/q+1/i1+61	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1218	[Pt++]	InChI=1S/Pt/q+2	InChI=1S/Pt/q+2	InChI=1S/Pt/q+2	InChI=1S/Pt/q+2	True
+1219	[Pt+2]	InChI=1S/Pt/q+2	InChI=1S/Pt/q+2	InChI=1S/Pt/q+2	InChI=1S/Pt/q+2	True
+1220	[Pt2+]	InChI=1S/Pt/q+1/i1+62	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1221	[Pt+++]	InChI=1S/Pt/q+3	InChI=1S/Pt/q+3	ERROR	InChI=1S/Pt/q+3	False
+1222	[Pt+3]	InChI=1S/Pt/q+3	InChI=1S/Pt/q+3	InChI=1S/Pt/q+3	InChI=1S/Pt/q+3	True
+1223	[Pt3+]	InChI=1S/Pt/q+1/i1+63	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1224	[Pt++++]	InChI=1S/Pt/q+4	InChI=1S/Pt/q+4	ERROR	InChI=1S/Pt/q+4	False
+1225	[Pt+4]	InChI=1S/Pt/q+4	InChI=1S/Pt/q+4	InChI=1S/Pt/q+4	InChI=1S/Pt/q+4	True
+1226	[Pt4+]	InChI=1S/Pt/q+1/i1+64	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1227	[Pt+++++]	InChI=1S/Pt/q+5	InChI=1S/Pt/q+5	ERROR	InChI=1S/Pt/q+5	False
+1228	[Pt+5]	InChI=1S/Pt/q+5	InChI=1S/Pt/q+5	InChI=1S/Pt/q+5	InChI=1S/Pt/q+5	True
+1229	[Pt5+]	InChI=1S/Pt/q+1/i1+65	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1230	[Pt++++++]	InChI=1S/Pt/q+6	InChI=1S/Pt/q+6	ERROR	InChI=1S/Pt/q+6	False
+1231	[Pt+6]	InChI=1S/Pt/q+6	InChI=1S/Pt/q+6	InChI=1S/Pt/q+6	InChI=1S/Pt/q+6	True
+1232	[Pt6+]	InChI=1S/Pt/q+1/i1+66	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1233	[Au---]	InChI=1S/Au/q-3	InChI=1S/Au/q-3	ERROR	InChI=1S/Au/q-3	False
+1234	[Au-3]	InChI=1S/Au/q-3	InChI=1S/Au/q-3	InChI=1S/Au/q-3	InChI=1S/Au/q-3	True
+1235	[Au3-]	InChI=1S/Au/q-1/i1+61	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1236	[Au--]	InChI=1S/Au/q-2	InChI=1S/Au/q-2	InChI=1S/Au/q-2	InChI=1S/Au/q-2	True
+1237	[Au-2]	InChI=1S/Au/q-2	InChI=1S/Au/q-2	InChI=1S/Au/q-2	InChI=1S/Au/q-2	True
+1238	[Au2-]	InChI=1S/Au/q-1/i1+60	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1239	[Au-]	InChI=1S/Au/q-1	InChI=1S/Au/q-1	InChI=1S/Au/q-1	InChI=1S/Au/q-1	True
+1240	[Au-1]	InChI=1S/Au/q-1	InChI=1S/Au/q-1	InChI=1S/Au/q-1	InChI=1S/Au/q-1	True
+1241	[Au1-]	InChI=1S/Au/q-1/i1+59	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1242	[Au]	InChI=1S/Au	InChI=1S/Au	InChI=1S/Au	InChI=1S/Au	True
+1243	[Au+]	InChI=1S/Au/q+1	InChI=1S/Au/q+1	InChI=1S/Au/q+1	InChI=1S/Au/q+1	True
+1244	[Au+1]	InChI=1S/Au/q+1	InChI=1S/Au/q+1	InChI=1S/Au/q+1	InChI=1S/Au/q+1	True
+1245	[Au1+]	InChI=1S/Au/q+1/i1+59	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1246	[Au++]	InChI=1S/Au/q+2	InChI=1S/Au/q+2	InChI=1S/Au/q+2	InChI=1S/Au/q+2	True
+1247	[Au+2]	InChI=1S/Au/q+2	InChI=1S/Au/q+2	InChI=1S/Au/q+2	InChI=1S/Au/q+2	True
+1248	[Au2+]	InChI=1S/Au/q+1/i1+60	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1249	[Au+++]	InChI=1S/Au/q+3	InChI=1S/Au/q+3	ERROR	InChI=1S/Au/q+3	False
+1250	[Au+3]	InChI=1S/Au/q+3	InChI=1S/Au/q+3	InChI=1S/Au/q+3	InChI=1S/Au/q+3	True
+1251	[Au3+]	InChI=1S/Au/q+1/i1+61	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1252	[Au+++++]	InChI=1S/Au/q+5	InChI=1S/Au/q+5	ERROR	InChI=1S/Au/q+5	False
+1253	[Au+5]	InChI=1S/Au/q+5	InChI=1S/Au/q+5	InChI=1S/Au/q+5	InChI=1S/Au/q+5	True
+1254	[Au5+]	InChI=1S/Au/q+1/i1+63	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1255	[Hg--]	InChI=1S/Hg/q-2	InChI=1S/Hg/q-2	InChI=1S/Hg/q-2	InChI=1S/Hg/q-2	True
+1256	[Hg-2]	InChI=1S/Hg/q-2	InChI=1S/Hg/q-2	InChI=1S/Hg/q-2	InChI=1S/Hg/q-2	True
+1257	[Hg2-]	InChI=1S/Hg/q-1/i1+56	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1258	[Hg+]	InChI=1S/Hg/q+1	InChI=1S/Hg/q+1	InChI=1S/Hg/q+1	InChI=1S/Hg/q+1	True
+1259	[Hg+1]	InChI=1S/Hg/q+1	InChI=1S/Hg/q+1	InChI=1S/Hg/q+1	InChI=1S/Hg/q+1	True
+1260	[Hg1+]	InChI=1S/Hg/q+1/i1+55	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1261	[Hg++]	InChI=1S/Hg/q+2	InChI=1S/Hg/q+2	InChI=1S/Hg/q+2	InChI=1S/Hg/q+2	True
+1262	[Hg+2]	InChI=1S/Hg/q+2	InChI=1S/Hg/q+2	InChI=1S/Hg/q+2	InChI=1S/Hg/q+2	True
+1263	[Hg2+]	InChI=1S/Hg/q+1/i1+56	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1264	[Tl-----]	InChI=1S/Tl/q-5	InChI=1S/Tl/q-5	ERROR	InChI=1S/Tl/q-5	False
+1265	[Tl-5]	InChI=1S/Tl/q-5	InChI=1S/Tl/q-5	InChI=1S/Tl/q-5	InChI=1S/Tl/q-5	True
+1266	[Tl5-]	InChI=1S/Tl/q-1/i1+56	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1267	[Tl--]	InChI=1S/Tl/q-2	InChI=1S/Tl/q-2	InChI=1S/Tl.2H/q-2;;	InChI=1S/Tl/q-2	False
+1268	[Tl-2]	InChI=1S/Tl/q-2	InChI=1S/Tl/q-2	InChI=1S/Tl.2H/q-2;;	InChI=1S/Tl/q-2	False
+1269	[Tl2-]	InChI=1S/Tl/q-1/i1+53	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1270	[Tl-]	InChI=1S/Tl/q-1	InChI=1S/Tl/q-1	InChI=1S/Tl/q-1	InChI=1S/Tl/q-1	True
+1271	[Tl-1]	InChI=1S/Tl/q-1	InChI=1S/Tl/q-1	InChI=1S/Tl/q-1	InChI=1S/Tl/q-1	True
+1272	[Tl1-]	InChI=1S/Tl/q-1/i1+52	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1273	[Tl+]	InChI=1S/Tl/q+1	InChI=1S/Tl/q+1	InChI=1S/Tl/q+1	InChI=1S/Tl/q+1	True
+1274	[Tl+1]	InChI=1S/Tl/q+1	InChI=1S/Tl/q+1	InChI=1S/Tl/q+1	InChI=1S/Tl/q+1	True
+1275	[Tl1+]	InChI=1S/Tl/q+1/i1+52	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1276	[Tl++]	InChI=1S/Tl/q+2	InChI=1S/Tl/q+2	InChI=1S/Tl/q+2	InChI=1S/Tl/q+2	True
+1277	[Tl+2]	InChI=1S/Tl/q+2	InChI=1S/Tl/q+2	InChI=1S/Tl/q+2	InChI=1S/Tl/q+2	True
+1278	[Tl2+]	InChI=1S/Tl/q+1/i1+53	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1279	[Tl+++]	InChI=1S/Tl/q+3	InChI=1S/Tl/q+3	ERROR	InChI=1S/Tl/q+3	False
+1280	[Tl+3]	InChI=1S/Tl/q+3	InChI=1S/Tl/q+3	InChI=1S/Tl/q+3	InChI=1S/Tl/q+3	True
+1281	[Tl3+]	InChI=1S/Tl/q+1/i1+54	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1282	[Pb----]	InChI=1S/Pb/q-4	InChI=1S/Pb/q-4	ERROR	InChI=1S/Pb/q-4	False
+1283	[Pb-4]	InChI=1S/Pb/q-4	InChI=1S/Pb/q-4	InChI=1S/Pb/q-4	InChI=1S/Pb/q-4	True
+1284	[Pb4-]	InChI=1S/Pb/q-1/i1+52	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1285	[Pb--]	InChI=1S/Pb/q-2	InChI=1S/Pb/q-2	InChI=1S/Pb/q-2	InChI=1S/Pb/q-2	True
+1286	[Pb-2]	InChI=1S/Pb/q-2	InChI=1S/Pb/q-2	InChI=1S/Pb/q-2	InChI=1S/Pb/q-2	True
+1287	[Pb2-]	InChI=1S/Pb/q-1/i1+50	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1288	[Pb-]	InChI=1S/Pb/q-1	InChI=1S/Pb/q-1	InChI=1S/Pb.2H/q-1;;	InChI=1S/Pb/q-1	False
+1289	[Pb-1]	InChI=1S/Pb/q-1	InChI=1S/Pb/q-1	InChI=1S/Pb.2H/q-1;;	InChI=1S/Pb/q-1	False
+1290	[Pb1-]	InChI=1S/Pb/q-1/i1+49	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1291	[Pb+]	InChI=1S/Pb/q+1	InChI=1S/Pb/q+1	InChI=1S/Pb.2H/q+1;;	InChI=1S/Pb/q+1	False
+1292	[Pb+1]	InChI=1S/Pb/q+1	InChI=1S/Pb/q+1	InChI=1S/Pb.2H/q+1;;	InChI=1S/Pb/q+1	False
+1293	[Pb1+]	InChI=1S/Pb.H/q+1;/i1+49;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1294	[Pb++]	InChI=1S/Pb/q+2	InChI=1S/Pb/q+2	InChI=1S/Pb/q+2	InChI=1S/Pb/q+2	True
+1295	[Pb+2]	InChI=1S/Pb/q+2	InChI=1S/Pb/q+2	InChI=1S/Pb/q+2	InChI=1S/Pb/q+2	True
+1296	[Pb2+]	InChI=1S/Pb.H/q+1;/i1+50;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1297	[Pb+++]	InChI=1S/Pb/q+3	InChI=1S/Pb/q+3	ERROR	InChI=1S/Pb/q+3	False
+1298	[Pb+3]	InChI=1S/Pb/q+3	InChI=1S/Pb/q+3	InChI=1S/Pb/q+3	InChI=1S/Pb/q+3	True
+1299	[Pb3+]	InChI=1S/Pb.H/q+1;/i1+51;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1300	[Pb++++]	InChI=1S/Pb/q+4	InChI=1S/Pb/q+4	ERROR	InChI=1S/Pb/q+4	False
+1301	[Pb+4]	InChI=1S/Pb/q+4	InChI=1S/Pb/q+4	InChI=1S/Pb/q+4	InChI=1S/Pb/q+4	True
+1302	[Pb4+]	InChI=1S/Pb.H/q+1;/i1+52;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1303	[Bi---]	InChI=1S/Bi/q-3	InChI=1S/Bi/q-3	ERROR	InChI=1S/Bi/q-3	False
+1304	[Bi-3]	InChI=1S/Bi/q-3	InChI=1S/Bi/q-3	InChI=1S/Bi/q-3	InChI=1S/Bi/q-3	True
+1305	[Bi3-]	InChI=1S/Bi.2H/q-1;;/i1+49;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1306	[Bi--]	InChI=1S/Bi/q-2	InChI=1S/Bi/q-2	InChI=1S/Bi/q-2	InChI=1S/Bi/q-2	True
+1307	[Bi-2]	InChI=1S/Bi/q-2	InChI=1S/Bi/q-2	InChI=1S/Bi/q-2	InChI=1S/Bi/q-2	True
+1308	[Bi2-]	InChI=1S/Bi.2H/q-1;;/i1+48;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1309	[Bi-]	InChI=1S/Bi/q-1	InChI=1S/Bi/q-1	InChI=1S/Bi/q-1	InChI=1S/Bi/q-1	True
+1310	[Bi-1]	InChI=1S/Bi/q-1	InChI=1S/Bi/q-1	InChI=1S/Bi/q-1	InChI=1S/Bi/q-1	True
+1311	[Bi1-]	InChI=1S/Bi.2H/q-1;;/i1+47;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1312	[Bi+]	InChI=1S/Bi/q+1	InChI=1S/Bi/q+1	InChI=1S/Bi/q+1	InChI=1S/Bi/q+1	True
+1313	[Bi+1]	InChI=1S/Bi/q+1	InChI=1S/Bi/q+1	InChI=1S/Bi/q+1	InChI=1S/Bi/q+1	True
+1314	[Bi1+]	InChI=1S/Bi.4H/q+1;;;;/i1+47;;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1315	[Bi++]	InChI=1S/Bi/q+2	InChI=1S/Bi/q+2	InChI=1S/Bi.2H/q+2;;	InChI=1S/Bi/q+2	False
+1316	[Bi+2]	InChI=1S/Bi/q+2	InChI=1S/Bi/q+2	InChI=1S/Bi.2H/q+2;;	InChI=1S/Bi/q+2	False
+1317	[Bi2+]	InChI=1S/Bi.4H/q+1;;;;/i1+48;;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1318	[Bi+++]	InChI=1S/Bi/q+3	InChI=1S/Bi/q+3	ERROR	InChI=1S/Bi/q+3	False
+1319	[Bi+3]	InChI=1S/Bi/q+3	InChI=1S/Bi/q+3	InChI=1S/Bi/q+3	InChI=1S/Bi/q+3	True
+1320	[Bi3+]	InChI=1S/Bi.4H/q+1;;;;/i1+49;;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1321	[Bi++++]	InChI=1S/Bi/q+4	InChI=1S/Bi/q+4	ERROR	InChI=1S/Bi/q+4	False
+1322	[Bi+4]	InChI=1S/Bi/q+4	InChI=1S/Bi/q+4	InChI=1S/Bi/q+4	InChI=1S/Bi/q+4	True
+1323	[Bi4+]	InChI=1S/Bi.4H/q+1;;;;/i1+50;;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1324	[Bi+++++]	InChI=1S/Bi/q+5	InChI=1S/Bi/q+5	ERROR	InChI=1S/Bi/q+5	False
+1325	[Bi+5]	InChI=1S/Bi/q+5	InChI=1S/Bi/q+5	InChI=1S/Bi/q+5	InChI=1S/Bi/q+5	True
+1326	[Bi5+]	InChI=1S/Bi.4H/q+1;;;;/i1+51;;;;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1327	[Po--]	InChI=1S/Po/q-2	InChI=1S/Po/q-2	InChI=1S/Po/q-2	InChI=1S/Po/q-2	True
+1328	[Po-2]	InChI=1S/Po/q-2	InChI=1S/Po/q-2	InChI=1S/Po/q-2	InChI=1S/Po/q-2	True
+1329	[Po2-]	InChI=1S/Po.H/q-1;/i1+48;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1330	[Po++]	InChI=1S/Po/q+2	InChI=1S/Po/q+2	InChI=1S/Po/q+2	InChI=1S/Po/q+2	True
+1331	[Po+2]	InChI=1S/Po/q+2	InChI=1S/Po/q+2	InChI=1S/Po/q+2	InChI=1S/Po/q+2	True
+1332	[Po2+]	InChI=1S/Po.H/q+1;/i1+48;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1333	[Po++++]	InChI=1S/Po/q+4	InChI=1S/Po/q+4	ERROR	InChI=1S/Po/q+4	False
+1334	[Po+4]	InChI=1S/Po/q+4	InChI=1S/Po/q+4	InChI=1S/Po/q+4	InChI=1S/Po/q+4	True
+1335	[Po4+]	InChI=1S/Po.H/q+1;/i1+50;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1336	[Po+++++]	InChI=1S/Po/q+5	InChI=1S/Po/q+5	ERROR	InChI=1S/Po/q+5	False
+1337	[Po+5]	InChI=1S/Po/q+5	InChI=1S/Po/q+5	InChI=1S/Po/q+5	InChI=1S/Po/q+5	True
+1338	[Po5+]	InChI=1S/Po.H/q+1;/i1+51;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1339	[Po++++++]	InChI=1S/Po/q+6	InChI=1S/Po/q+6	ERROR	InChI=1S/Po/q+6	False
+1340	[Po+6]	InChI=1S/Po/q+6	InChI=1S/Po/q+6	InChI=1S/Po/q+6	InChI=1S/Po/q+6	True
+1341	[Po6+]	InChI=1S/Po.H/q+1;/i1+52;	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1342	[At-]	InChI=1S/At/q-1	InChI=1S/At/q-1	InChI=1S/At/q-1	InChI=1S/At/q-1	True
+1343	[At-1]	InChI=1S/At/q-1	InChI=1S/At/q-1	InChI=1S/At/q-1	InChI=1S/At/q-1	True
+1344	[At1-]	InChI=1S/At/q-1/i1+46	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1345	[At+]	InChI=1S/At/q+1	InChI=1S/At/q+1	InChI=1S/At/q+1	InChI=1S/At/q+1	True
+1346	[At+1]	InChI=1S/At/q+1	InChI=1S/At/q+1	InChI=1S/At/q+1	InChI=1S/At/q+1	True
+1347	[At1+]	InChI=1S/AtH2/h1H2/q+1/i1+46	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1348	[At+++]	InChI=1S/At/q+3	InChI=1S/At/q+3	ERROR	InChI=1S/At/q+3	False
+1349	[At+3]	InChI=1S/At/q+3	InChI=1S/At/q+3	InChI=1S/At/q+3	InChI=1S/At/q+3	True
+1350	[At3+]	InChI=1S/AtH2/h1H2/q+1/i1+48	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1351	[At+++++]	InChI=1S/At/q+5	InChI=1S/At/q+5	ERROR	InChI=1S/At/q+5	False
+1352	[At+5]	InChI=1S/At/q+5	InChI=1S/At/q+5	InChI=1S/At/q+5	InChI=1S/At/q+5	True
+1353	[At5+]	InChI=1S/AtH2/h1H2/q+1/i1+50	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1354	[At+++++++]	InChI=1S/At/q+7	InChI=1S/At/q+7	ERROR	InChI=1S/At/q+7	False
+1355	[At+7]	InChI=1S/At/q+7	InChI=1S/At/q+7	InChI=1S/At/q+7	InChI=1S/At/q+7	True
+1356	[At7+]	InChI=1S/AtH2/h1H2/q+1/i1+52	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1357	[Rn++]	InChI=1S/Rn/q+2	InChI=1S/Rn/q+2	InChI=1S/Rn/q+2	InChI=1S/Rn/q+2	True
+1358	[Rn+2]	InChI=1S/Rn/q+2	InChI=1S/Rn/q+2	InChI=1S/Rn/q+2	InChI=1S/Rn/q+2	True
+1359	[Rn2+]	InChI=1S/Rn/q+1/i1+35	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1360	[Rn++++++]	InChI=1S/Rn/q+6	InChI=1S/Rn/q+6	ERROR	InChI=1S/Rn/q+6	False
+1361	[Rn+6]	InChI=1S/Rn/q+6	InChI=1S/Rn/q+6	InChI=1S/Rn/q+6	InChI=1S/Rn/q+6	True
+1362	[Rn6+]	InChI=1S/Rn/q+1/i1+39	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1363	[Fr+]	InChI=1S/Fr/q+1	InChI=1S/Fr/q+1	InChI=1S/Fr/q+1	InChI=1S/Fr/q+1	True
+1364	[Fr+1]	InChI=1S/Fr/q+1	InChI=1S/Fr/q+1	InChI=1S/Fr/q+1	InChI=1S/Fr/q+1	True
+1365	[Fr1+]	InChI=1S/FH2/h1H2/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1366	[Ra++]	InChI=1S/Ra/q+2	InChI=1S/Ra/q+2	InChI=1S/Ra/q+2	InChI=1S/Ra/q+2	True
+1367	[Ra+2]	InChI=1S/Ra/q+2	InChI=1S/Ra/q+2	InChI=1S/Ra/q+2	InChI=1S/Ra/q+2	True
+1368	[Ra2+]	InChI=1S//	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1369	[Ac+++]	InChI=1S/Ac/q+3	InChI=1S/Ac/q+3	ERROR	InChI=1S/Ac/q+3	False
+1370	[Ac+3]	InChI=1S/Ac/q+3	InChI=1S/Ac/q+3	InChI=1S/Ac/q+3	InChI=1S/Ac/q+3	True
+1371	[Ac3+]	InChI=1S/Ac/q+1/i1+31	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1372	[Th+]	InChI=1S/Th/q+1	InChI=1S/Th/q+1	InChI=1S/Th/q+1	InChI=1S/Th/q+1	True
+1373	[Th+1]	InChI=1S/Th/q+1	InChI=1S/Th/q+1	InChI=1S/Th/q+1	InChI=1S/Th/q+1	True
+1374	[Th1+]	InChI=1S/Th/q+1/i1+24	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1375	[Th++]	InChI=1S/Th/q+2	InChI=1S/Th/q+2	InChI=1S/Th/q+2	InChI=1S/Th/q+2	True
+1376	[Th+2]	InChI=1S/Th/q+2	InChI=1S/Th/q+2	InChI=1S/Th/q+2	InChI=1S/Th/q+2	True
+1377	[Th2+]	InChI=1S/Th/q+1/i1+25	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1378	[Th+++]	InChI=1S/Th/q+3	InChI=1S/Th/q+3	ERROR	InChI=1S/Th/q+3	False
+1379	[Th+3]	InChI=1S/Th/q+3	InChI=1S/Th/q+3	InChI=1S/Th/q+3	InChI=1S/Th/q+3	True
+1380	[Th3+]	InChI=1S/Th/q+1/i1+26	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1381	[Th++++]	InChI=1S/Th/q+4	InChI=1S/Th/q+4	ERROR	InChI=1S/Th/q+4	False
+1382	[Th+4]	InChI=1S/Th/q+4	InChI=1S/Th/q+4	InChI=1S/Th/q+4	InChI=1S/Th/q+4	True
+1383	[Th4+]	InChI=1S/Th/q+1/i1+27	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1384	[Pa+++]	InChI=1S/Pa/q+3	InChI=1S/Pa/q+3	ERROR	InChI=1S/Pa/q+3	False
+1385	[Pa+3]	InChI=1S/Pa/q+3	InChI=1S/Pa/q+3	InChI=1S/Pa/q+3	InChI=1S/Pa/q+3	True
+1386	[Pa3+]	InChI=1S/H3P/h1H3/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1387	[Pa++++]	InChI=1S/Pa/q+4	InChI=1S/Pa/q+4	ERROR	InChI=1S/Pa/q+4	False
+1388	[Pa+4]	InChI=1S/Pa/q+4	InChI=1S/Pa/q+4	InChI=1S/Pa/q+4	InChI=1S/Pa/q+4	True
+1389	[Pa4+]	InChI=1S/H3P/h1H3/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1390	[Pa+++++]	InChI=1S/Pa/q+5	InChI=1S/Pa/q+5	ERROR	InChI=1S/Pa/q+5	False
+1391	[Pa+5]	InChI=1S/Pa/q+5	InChI=1S/Pa/q+5	InChI=1S/Pa/q+5	InChI=1S/Pa/q+5	True
+1392	[Pa5+]	InChI=1S/H3P/h1H3/p+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1393	[U+]	InChI=1S/U/q+1	InChI=1S/U/q+1	InChI=1S/U/q+1	InChI=1S/U/q+1	True
+1394	[U+1]	InChI=1S/U/q+1	InChI=1S/U/q+1	InChI=1S/U/q+1	InChI=1S/U/q+1	True
+1395	[U1+]	InChI=1S/U/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1396	[U++]	InChI=1S/U/q+2	InChI=1S/U/q+2	InChI=1S/U/q+2	InChI=1S/U/q+2	True
+1397	[U+2]	InChI=1S/U/q+2	InChI=1S/U/q+2	InChI=1S/U/q+2	InChI=1S/U/q+2	True
+1398	[U2+]	InChI=1S/U/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1399	[U+++]	InChI=1S/U/q+3	InChI=1S/U/q+3	ERROR	InChI=1S/U/q+3	False
+1400	[U+3]	InChI=1S/U/q+3	InChI=1S/U/q+3	InChI=1S/U/q+3	InChI=1S/U/q+3	True
+1401	[U3+]	InChI=1S/U/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1402	[U++++]	InChI=1S/U/q+4	InChI=1S/U/q+4	ERROR	InChI=1S/U/q+4	False
+1403	[U+4]	InChI=1S/U/q+4	InChI=1S/U/q+4	InChI=1S/U/q+4	InChI=1S/U/q+4	True
+1404	[U4+]	InChI=1S/U/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1405	[U+++++]	InChI=1S/U/q+5	InChI=1S/U/q+5	ERROR	InChI=1S/U/q+5	False
+1406	[U+5]	InChI=1S/U/q+5	InChI=1S/U/q+5	InChI=1S/U/q+5	InChI=1S/U/q+5	True
+1407	[U5+]	InChI=1S/U/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1408	[U++++++]	InChI=1S/U/q+6	InChI=1S/U/q+6	ERROR	InChI=1S/U/q+6	False
+1409	[U+6]	InChI=1S/U/q+6	InChI=1S/U/q+6	InChI=1S/U/q+6	InChI=1S/U/q+6	True
+1410	[U6+]	InChI=1S/U/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1411	[Np++]	InChI=1S/Np/q+2	InChI=1S/Np/q+2	InChI=1S/Np/q+2	InChI=1S/Np/q+2	True
+1412	[Np+2]	InChI=1S/Np/q+2	InChI=1S/Np/q+2	InChI=1S/Np/q+2	InChI=1S/Np/q+2	True
+1413	[Np2+]	InChI=1S/Np/q+1/i1+20	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1414	[Np+++]	InChI=1S/Np/q+3	InChI=1S/Np/q+3	ERROR	InChI=1S/Np/q+3	False
+1415	[Np+3]	InChI=1S/Np/q+3	InChI=1S/Np/q+3	InChI=1S/Np/q+3	InChI=1S/Np/q+3	True
+1416	[Np3+]	InChI=1S/Np/q+1/i1+21	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1417	[Np++++]	InChI=1S/Np/q+4	InChI=1S/Np/q+4	ERROR	InChI=1S/Np/q+4	False
+1418	[Np+4]	InChI=1S/Np/q+4	InChI=1S/Np/q+4	InChI=1S/Np/q+4	InChI=1S/Np/q+4	True
+1419	[Np4+]	InChI=1S/Np/q+1/i1+22	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1420	[Np+++++]	InChI=1S/Np/q+5	InChI=1S/Np/q+5	ERROR	InChI=1S/Np/q+5	False
+1421	[Np+5]	InChI=1S/Np/q+5	InChI=1S/Np/q+5	InChI=1S/Np/q+5	InChI=1S/Np/q+5	True
+1422	[Np5+]	InChI=1S/Np/q+1/i1+23	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1423	[Np++++++]	InChI=1S/Np/q+6	InChI=1S/Np/q+6	ERROR	InChI=1S/Np/q+6	False
+1424	[Np+6]	InChI=1S/Np/q+6	InChI=1S/Np/q+6	InChI=1S/Np/q+6	InChI=1S/Np/q+6	True
+1425	[Np6+]	InChI=1S/Np/q+1/i1+24	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1426	[Np+++++++]	InChI=1S/Np/q+7	InChI=1S/Np/q+7	ERROR	InChI=1S/Np/q+7	False
+1427	[Np+7]	InChI=1S/Np/q+7	InChI=1S/Np/q+7	InChI=1S/Np/q+7	InChI=1S/Np/q+7	True
+1428	[Np7+]	InChI=1S/Np/q+1/i1+25	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1429	[Pu++]	InChI=1S/Pu/q+2	InChI=1S/Pu/q+2	InChI=1S/Pu/q+2	InChI=1S/Pu/q+2	True
+1430	[Pu+2]	InChI=1S/Pu/q+2	InChI=1S/Pu/q+2	InChI=1S/Pu/q+2	InChI=1S/Pu/q+2	True
+1431	[Pu2+]	InChI=1S/Pu/q+1/i1+13	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1432	[Pu+++]	InChI=1S/Pu/q+3	InChI=1S/Pu/q+3	ERROR	InChI=1S/Pu/q+3	False
+1433	[Pu+3]	InChI=1S/Pu/q+3	InChI=1S/Pu/q+3	InChI=1S/Pu/q+3	InChI=1S/Pu/q+3	True
+1434	[Pu3+]	InChI=1S/Pu/q+1/i1+14	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1435	[Pu++++]	InChI=1S/Pu/q+4	InChI=1S/Pu/q+4	ERROR	InChI=1S/Pu/q+4	False
+1436	[Pu+4]	InChI=1S/Pu/q+4	InChI=1S/Pu/q+4	InChI=1S/Pu/q+4	InChI=1S/Pu/q+4	True
+1437	[Pu4+]	InChI=1S/Pu/q+1/i1+15	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1438	[Pu+++++]	InChI=1S/Pu/q+5	InChI=1S/Pu/q+5	ERROR	InChI=1S/Pu/q+5	False
+1439	[Pu+5]	InChI=1S/Pu/q+5	InChI=1S/Pu/q+5	InChI=1S/Pu/q+5	InChI=1S/Pu/q+5	True
+1440	[Pu5+]	InChI=1S/Pu/q+1/i1+16	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1441	[Pu++++++]	InChI=1S/Pu/q+6	InChI=1S/Pu/q+6	ERROR	InChI=1S/Pu/q+6	False
+1442	[Pu+6]	InChI=1S/Pu/q+6	InChI=1S/Pu/q+6	InChI=1S/Pu/q+6	InChI=1S/Pu/q+6	True
+1443	[Pu6+]	InChI=1S/Pu/q+1/i1+17	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1444	[Pu+++++++]	InChI=1S/Pu/q+7	InChI=1S/Pu/q+7	ERROR	InChI=1S/Pu/q+7	False
+1445	[Pu+7]	InChI=1S/Pu/q+7	InChI=1S/Pu/q+7	InChI=1S/Pu/q+7	InChI=1S/Pu/q+7	True
+1446	[Pu7+]	InChI=1S/Pu/q+1/i1+18	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1447	[Am++]	InChI=1S/Am/q+2	InChI=1S/Am/q+2	InChI=1S/Am/q+2	InChI=1S/Am/q+2	True
+1448	[Am+2]	InChI=1S/Am/q+2	InChI=1S/Am/q+2	InChI=1S/Am/q+2	InChI=1S/Am/q+2	True
+1449	[Am2+]	InChI=1S/Am/q+1/i1+14	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1450	[Am+++]	InChI=1S/Am/q+3	InChI=1S/Am/q+3	ERROR	InChI=1S/Am/q+3	False
+1451	[Am+3]	InChI=1S/Am/q+3	InChI=1S/Am/q+3	InChI=1S/Am/q+3	InChI=1S/Am/q+3	True
+1452	[Am3+]	InChI=1S/Am/q+1/i1+15	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1453	[Am++++]	InChI=1S/Am/q+4	InChI=1S/Am/q+4	ERROR	InChI=1S/Am/q+4	False
+1454	[Am+4]	InChI=1S/Am/q+4	InChI=1S/Am/q+4	InChI=1S/Am/q+4	InChI=1S/Am/q+4	True
+1455	[Am4+]	InChI=1S/Am/q+1/i1+16	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1456	[Am+++++]	InChI=1S/Am/q+5	InChI=1S/Am/q+5	ERROR	InChI=1S/Am/q+5	False
+1457	[Am+5]	InChI=1S/Am/q+5	InChI=1S/Am/q+5	InChI=1S/Am/q+5	InChI=1S/Am/q+5	True
+1458	[Am5+]	InChI=1S/Am/q+1/i1+17	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1459	[Am++++++]	InChI=1S/Am/q+6	InChI=1S/Am/q+6	ERROR	InChI=1S/Am/q+6	False
+1460	[Am+6]	InChI=1S/Am/q+6	InChI=1S/Am/q+6	InChI=1S/Am/q+6	InChI=1S/Am/q+6	True
+1461	[Am6+]	InChI=1S/Am/q+1/i1+18	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1462	[Am+++++++]	InChI=1S/Am/q+7	InChI=1S/Am/q+7	ERROR	InChI=1S/Am/q+7	False
+1463	[Am+7]	InChI=1S/Am/q+7	InChI=1S/Am/q+7	InChI=1S/Am/q+7	InChI=1S/Am/q+7	True
+1464	[Am7+]	InChI=1S/Am/q+1/i1+19	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1465	[Cm+++]	InChI=1S/Cm/q+3	InChI=1S/Cm/q+3	ERROR	InChI=1S/Cm/q+3	False
+1466	[Cm+3]	InChI=1S/Cm/q+3	InChI=1S/Cm/q+3	InChI=1S/Cm/q+3	InChI=1S/Cm/q+3	True
+1467	[Cm3+]	InChI=1S/Cm/q+1/i1+11	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1468	[Cm++++]	InChI=1S/Cm/q+4	InChI=1S/Cm/q+4	ERROR	InChI=1S/Cm/q+4	False
+1469	[Cm+4]	InChI=1S/Cm/q+4	InChI=1S/Cm/q+4	InChI=1S/Cm/q+4	InChI=1S/Cm/q+4	True
+1470	[Cm4+]	InChI=1S/Cm/q+1/i1+12	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1471	[Cm+++++]	InChI=1S/Cm/q+5	InChI=1S/Cm/q+5	ERROR	InChI=1S/Cm/q+5	False
+1472	[Cm+5]	InChI=1S/Cm/q+5	InChI=1S/Cm/q+5	InChI=1S/Cm/q+5	InChI=1S/Cm/q+5	True
+1473	[Cm5+]	InChI=1S/Cm/q+1/i1+13	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1474	[Cm++++++]	InChI=1S/Cm/q+6	InChI=1S/Cm/q+6	ERROR	InChI=1S/Cm/q+6	False
+1475	[Cm+6]	InChI=1S/Cm/q+6	InChI=1S/Cm/q+6	InChI=1S/Cm/q+6	InChI=1S/Cm/q+6	True
+1476	[Cm6+]	InChI=1S/Cm/q+1/i1+14	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1477	[Bk+++]	InChI=1S/Bk/q+3	InChI=1S/Bk/q+3	ERROR	InChI=1S/Bk/q+3	False
+1478	[Bk+3]	InChI=1S/Bk/q+3	InChI=1S/Bk/q+3	InChI=1S/Bk/q+3	InChI=1S/Bk/q+3	True
+1479	[Bk3+]	InChI=1S/Bk/q+1/i1+11	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1480	[Bk++++]	InChI=1S/Bk/q+4	InChI=1S/Bk/q+4	ERROR	InChI=1S/Bk/q+4	False
+1481	[Bk+4]	InChI=1S/Bk/q+4	InChI=1S/Bk/q+4	InChI=1S/Bk/q+4	InChI=1S/Bk/q+4	True
+1482	[Bk4+]	InChI=1S/Bk/q+1/i1+12	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1483	[Bk+++++]	InChI=1S/Bk/q+5	InChI=1S/Bk/q+5	ERROR	InChI=1S/Bk/q+5	False
+1484	[Bk+5]	InChI=1S/Bk/q+5	InChI=1S/Bk/q+5	InChI=1S/Bk/q+5	InChI=1S/Bk/q+5	True
+1485	[Bk5+]	InChI=1S/Bk/q+1/i1+13	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1486	[Cf++]	InChI=1S/Cf/q+2	InChI=1S/Cf/q+2	InChI=1S/Cf/q+2	InChI=1S/Cf/q+2	True
+1487	[Cf+2]	InChI=1S/Cf/q+2	InChI=1S/Cf/q+2	InChI=1S/Cf/q+2	InChI=1S/Cf/q+2	True
+1488	[Cf2+]	InChI=1S/Cf/q+1/i1+6	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1489	[Cf+++]	InChI=1S/Cf/q+3	InChI=1S/Cf/q+3	ERROR	InChI=1S/Cf/q+3	False
+1490	[Cf+3]	InChI=1S/Cf/q+3	InChI=1S/Cf/q+3	InChI=1S/Cf/q+3	InChI=1S/Cf/q+3	True
+1491	[Cf3+]	InChI=1S/Cf/q+1/i1+7	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1492	[Cf++++]	InChI=1S/Cf/q+4	InChI=1S/Cf/q+4	ERROR	InChI=1S/Cf/q+4	False
+1493	[Cf+4]	InChI=1S/Cf/q+4	InChI=1S/Cf/q+4	InChI=1S/Cf/q+4	InChI=1S/Cf/q+4	True
+1494	[Cf4+]	InChI=1S/Cf/q+1/i1+8	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1495	[Cf+++++]	InChI=1S/Cf/q+5	InChI=1S/Cf/q+5	ERROR	InChI=1S/Cf/q+5	False
+1496	[Cf+5]	InChI=1S/Cf/q+5	InChI=1S/Cf/q+5	InChI=1S/Cf/q+5	InChI=1S/Cf/q+5	True
+1497	[Cf5+]	InChI=1S/Cf/q+1/i1+9	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1498	[Es++]	InChI=1S/Es/q+2	InChI=1S/Es/q+2	InChI=1S/Es/q+2	InChI=1S/Es/q+2	True
+1499	[Es+2]	InChI=1S/Es/q+2	InChI=1S/Es/q+2	InChI=1S/Es/q+2	InChI=1S/Es/q+2	True
+1500	[Es2+]	InChI=1S/Es/q+1/i1+5	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1501	[Es+++]	InChI=1S/Es/q+3	InChI=1S/Es/q+3	ERROR	InChI=1S/Es/q+3	False
+1502	[Es+3]	InChI=1S/Es/q+3	InChI=1S/Es/q+3	InChI=1S/Es/q+3	InChI=1S/Es/q+3	True
+1503	[Es3+]	InChI=1S/Es/q+1/i1+6	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1504	[Es++++]	InChI=1S/Es/q+4	InChI=1S/Es/q+4	ERROR	InChI=1S/Es/q+4	False
+1505	[Es+4]	InChI=1S/Es/q+4	InChI=1S/Es/q+4	InChI=1S/Es/q+4	InChI=1S/Es/q+4	True
+1506	[Es4+]	InChI=1S/Es/q+1/i1+7	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1507	[Fm++]	InChI=1S/Fm/q+2	InChI=1S/Fm/q+2	InChI=1S/Fm/q+2	InChI=1S/Fm/q+2	True
+1508	[Fm+2]	InChI=1S/Fm/q+2	InChI=1S/Fm/q+2	InChI=1S/Fm/q+2	InChI=1S/Fm/q+2	True
+1509	[Fm2+]	InChI=1S/Fm/q+1/i1+0	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1510	[Fm+++]	InChI=1S/Fm/q+3	InChI=1S/Fm/q+3	ERROR	InChI=1S/Fm/q+3	False
+1511	[Fm+3]	InChI=1S/Fm/q+3	InChI=1S/Fm/q+3	InChI=1S/Fm/q+3	InChI=1S/Fm/q+3	True
+1512	[Fm3+]	InChI=1S/Fm/q+1/i1+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1513	[Md++]	InChI=1S/Md/q+2	InChI=1S/Md/q+2	InChI=1S/Md/q+2	InChI=1S/Md/q+2	True
+1514	[Md+2]	InChI=1S/Md/q+2	InChI=1S/Md/q+2	InChI=1S/Md/q+2	InChI=1S/Md/q+2	True
+1515	[Md2+]	InChI=1S/Md/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1516	[Md+++]	InChI=1S/Md/q+3	InChI=1S/Md/q+3	ERROR	InChI=1S/Md/q+3	False
+1517	[Md+3]	InChI=1S/Md/q+3	InChI=1S/Md/q+3	InChI=1S/Md/q+3	InChI=1S/Md/q+3	True
+1518	[Md3+]	InChI=1S/Md/q+1/i1+0	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1519	[No++]	InChI=1S/No/q+2	InChI=1S/No/q+2	InChI=1S/No/q+2	InChI=1S/No/q+2	True
+1520	[No+2]	InChI=1S/No/q+2	InChI=1S/No/q+2	InChI=1S/No/q+2	InChI=1S/No/q+2	True
+1521	[No2+]	InChI=1S/No/q+1/i1-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1522	[No+++]	InChI=1S/No/q+3	InChI=1S/No/q+3	ERROR	InChI=1S/No/q+3	False
+1523	[No+3]	InChI=1S/No/q+3	InChI=1S/No/q+3	InChI=1S/No/q+3	InChI=1S/No/q+3	True
+1524	[No3+]	InChI=1S/No/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1525	[Lr+++]	InChI=1S/Lr/q+3	InChI=1S/Lr/q+3	ERROR	InChI=1S/Lr/q+3	False
+1526	[Lr+3]	InChI=1S/Lr/q+3	InChI=1S/Lr/q+3	InChI=1S/Lr/q+3	InChI=1S/Lr/q+3	True
+1527	[Lr3+]	InChI=1S/Lr/q+1/i1-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1528	[Rf++++]	InChI=1S/Rf/q+4	InChI=1S/Rf/q+4	ERROR	InChI=1S/Rf/q+4	False
+1529	[Rf+4]	InChI=1S/Rf/q+4	InChI=1S/Rf/q+4	InChI=1S/Rf/q+4	InChI=1S/Rf/q+4	True
+1530	[Rf4+]	InChI=1S/Rf/q+1/i1-1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1531	[Db+++++]	InChI=1S/Db/q+5	InChI=1S/Db/q+5	ERROR	InChI=1S/Db/q+5	False
+1532	[Db+5]	InChI=1S/Db/q+5	InChI=1S/Db/q+5	InChI=1S/Db/q+5	InChI=1S/Db/q+5	True
+1533	[Db5+]	InChI=1S/Db/q+1/i1-9	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1534	[Sg]	InChI=1S/Sg	InChI=1S/Sg	InChI=1S/Sg	InChI=1S/Sg	True
+1535	[Sg++++++]	InChI=1S/Sg/q+6	InChI=1S/Sg/q+6	ERROR	InChI=1S/Sg/q+6	False
+1536	[Sg+6]	InChI=1S/Sg/q+6	InChI=1S/Sg/q+6	InChI=1S/Sg/q+6	InChI=1S/Sg/q+6	True
+1537	[Sg6+]	InChI=1S/Sg/q+1/i1-7	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1538	[Bh+++++++]	InChI=1S/Bh/q+7	InChI=1S/Bh/q+7	ERROR	InChI=1S/Bh/q+7	False
+1539	[Bh+7]	InChI=1S/Bh/q+7	InChI=1S/Bh/q+7	InChI=1S/Bh/q+7	InChI=1S/Bh/q+7	True
+1540	[Bh7+]	InChI=1S/BH7/h1H7/q+1	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1541	[Hs++++++++]	InChI=1S/Hs/q+8	InChI=1S/Hs/q+8	ERROR	InChI=1S/Hs/q+8	False
+1542	[Hs+8]	InChI=1S/Hs/q+8	InChI=1S/Hs/q+8	InChI=1S/Hs/q+8	InChI=1S/Hs/q+8	True
+1543	[Hs8+]	InChI=1S/Hs/q+1/i1-6	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
+1544	[Cn++]	InChI=1S/Cn/q+2	InChI=1S/Cn/q+2	InChI=1S/Cn/q+2	InChI=1S/Cn/q+2	True
+1545	[Cn+2]	InChI=1S/Cn/q+2	InChI=1S/Cn/q+2	InChI=1S/Cn/q+2	InChI=1S/Cn/q+2	True
+1546	[Cn2+]	InChI=1S/CH3/h1H3/q+1/i1-10	ERROR	ERROR	Bad mimetype:chemical/x-inchi	False
