@@ -5,7 +5,7 @@
 
 v0.1,2019-04-15: Working Draft                                   +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
-Copyright &copy; 2019, IUPAC    +
+Copyright &copy; 2020, IUPAC    +
 Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]     +
 
 This IUPAC SMILES+ Specification [working draft] document is a modified derivative
@@ -25,7 +25,6 @@ Geoff Hutchison, Craig A. James, Greg Landrum, Chris Morley, Egon Willighagen, H
 toc::[]
 :toclevels: 5
 :sectnums:
-
 
 == Introduction
 
@@ -1416,139 +1415,17 @@ These terms can be confusing and *should be avoided* due to conflicting definiti
 
 In general the properties encoded in a SMILES can be chosen by a program to suit a particular purpose. You may have the option to independently include or omit stereochemistry, isotopes, or atom map/class in a generated SMILES. When referencing a particular SMILES flavor confusion can be avoided by including the toolkit, version, and options used.
 
-== Proposed Extensions
-
-=== External R-Groups
-
-Daylight proposed, and OpenEye actually implemented, an extension that
-specifies bonds to external R-groups.  An external R-group is specified
-using ampersand `'&'` followed by a ring-closure specification (either a
-digit, or `'%'` and two digits).  However, unlike ring-closures, the bond is to
-an external, unspecified R-group.  Example: `n1c(&1)c(&2)cccc1` - 2,3-substituted pyridine.
-
-=== Polymers and Crystals
-
-Daylight (Weininger) proposed, but never implemented, an extension for crystals and
-polymers.  Daylight also used the ampersand `'&'` character, (which may
-conflict with the R-group proposal, above), but with the added rule that
-if a number appears more than once, it creates a repeating unit.
-
-[options="header",frame="topbot",grid="rows",width="40%"]
-|==============================
-| SMILES          | Name
-| `c1ccccc1C&1&1` | polystyrene
-| `C&1&1&1&1`     | diamond
-| `c&1&1&1`       | graphite
-|==============================
-
-=== Atom-based Double Bond Configuration
-
-The directional `'/'` and `'\'` marks for cis/trans bonds seem simple on
-the surface but are problematic for complex systems. The issue is that
-in conjugated systems one directional bond _can_ be used in defining the
-configuration of two double bonds. When assigning the directional bonds the
-existing labels must be considered or rewritten.  In a long series of
-conjugated double bonds, changing the configuration of one bond can require
-rewriting dozens of bond symbols.
-
-More importantly, there is a theoretical flaw with the use of `'/'` and
-`'\'`.  It is possible to write valid SMILES for the molecule
-http://en.wikipedia.org/wiki/Cyclooctatetraene[cyclooctatetraene] by alternating
-directional assignments for the cis configurations. However, as shown below attempting
-to change one configuration is not possible. Reassigning the directional labels for
-adjacent double bonds will not work as it reassignment propagates around the ring
-and the conflict is not resolved.
-
-Including directional labels to explicit hydrogen atoms is a possible resolution but
-does not follow standard-form and complicates the assignment procedure.
-
-[options="header",frame="topbot",grid="rows",width="90%"]
-|=====================================================================================
-| Depiction                            | SMILES                | Comment
-| image:depict/cyclooctatetraene.gif[] | `C/1=C/C=C\C=C/C=C\1` | cyclooctatetraene
-| Todo								   | `C/1=C/C=C/C=C/C=C\1` | one bond changes two configurations
-|=====================================================================================
-
-The proposed syntax for double bond configurations uses the `'@'` and `'@@'` atom-based
-specification. For example:
-
-[options="header",frame="topbot",grid="rows",width="90%"]
-|=======================================================================================
-| Depiction                                  | SMILES              | Name
-.2+| image:depict/trans-difluoroethene.gif[] | `F[C@@H]=[C@H]F` .2+| trans-difluoroethene
-|                                              `F[C@H]=[C@@H]F`
-.2+| image:depict/cis-difluoroethene.gif[]   | `F[C@H]=[C@H]F`  .2+| cis-difluoroethene
-|                                              `F[C@@H]=[C@@H]F`
-|=======================================================================================
-
-
-Interpretation of `'@'` and `'@@'` follows the tetrahedral convention:
-The atoms, as encountered in the SMILES string, are either in anticlockwise
-`'@'` or clockwise `'@@'` order as viewed on the page.  Since cis/trans
-configurations are planar, they can also be "viewed from underneath the
-page", which results in the two valid SMILES shown for each compound,
-above.
-
-As with the other atom-bases specifications one must consider the relative
-position of implicit atoms. It is not always true that a trans form has
-opposite "clock-ness" (`'@'`,`'@@'` or `'@@'`,`'@'`), and the cis form
-has the same "clock-ness" (`'@'`,`'@'` or `'@@'`,`'@@'`).
-
-[options="header",frame="topbot",grid="rows",width="90%"]
-|=======================================================================================
-| Depiction                                  | SMILES              | Name
-.2+| image:depict/trans-difluoroethene.gif[] | `F[C@@H]=[C@H]F` .2+| trans-difluoroethene
-|                                              `[C@H](F)=[C@H]F`
-.2+| image:depict/cis-difluoroethene.gif[]   | `F[C@H]=[C@H]F`  .2+| cis-difluoroethene
-|                                              `[C@@H](F)=[C@H]F`
-|=======================================================================================
-
-Atom-based `'@'` and `'@@'` for the stereo-specification of double bonds does not
-suffer from the theoretical flaw illustrated with cyclooctatetraene. The assignments
-are not-shared and adjacent configurations do not need to be considered. This is more
-flexible and and simplifies generation of canonical SMILES.
-
-[options="header",frame="topbot",grid="rows",width="100%",cols="1,4,1"]
-|===================================================================================================================
-| Depiction                            | SMILES                                                  | Name
-| image:depict/cyclooctatetraene.gif[] | `[C@H]1=[C@@H][C@@H]=[C@@H][C@@H]=[C@@H][C@@H]=[C@@H]1` | cyclooctatetraene
-|===================================================================================================================
-
-Note that the first stereo-specification carbon must be represented as `'@'` since the
-`'1'` follows the `H`, whereas the rest of the carbons use `'@@'` to characterize the
-cis configuration of each bond.  Since this is a specification on the atom, rather than
-the single bond, no conflict arises at the ring-closure bond.
-
-=== Radical
-
-_This section needs considerable work.  The following text is courtesy Chris Morley, who
-commented: "I guess the last paragraph doesn't look too good in a formal specification. There are
-two reasons for the frailty: lack of proof that the radical and aromatic uses can always be
-unambigous (I doubt anybody has tried); and a known deficiency in the parser."  However, it is a
-good starting point..._
-
-A single lowercase symbol is interpreted as a radical center. `CCc` is an alternative to `CC[CH2]` and
-is the 1-propyl radical; `CcC` or `C[CH]C` is the 2-propyl radical, `Co` is the methoxy radical. An odd
-number of adjacent lowercase symbols is a delocalized conjugated radical. So `Cccccc` is `CC=CC=C[CH2]`
-or `CC=C[CH]C=C` or `C[CH]C=CC=C` Lowercase `'c'` or `'n'` can be used in a ring: `C1cCCCC1` is the cyclohexyl
-radical.
-
-The use of the non-aromatic lowercase symbol is a shorted form with improved intelligibility that
-allows the use of implicit hydrogen in radicals. However it is intended only for simple unambiguous
-molecules and is not reliable when combined with aromatic atoms.
-
-=== Twisted SMILES
-
-An interesting extension that specifies conformational information via
-bond dihedral angles and bond lengths was proposed by McLeod and Peters:
-
-****
-http://www.daylight.com/meetings/mug03/McLeod/MUG03McLeodPeters.pdf[http://www.daylight.com/meetings/mug03/McLeod/MUG03McLeodPeters.pdf]
-****
-
 [[appendix]]
 
-== APPENDIX 1: References and Citations
+== Appendix
+
+=== Appendix 1 - Extensions
+
+Proposed and Known SMILES Extensions (separate document)
+
+[[references]]
+
+== References
 
 === Groups
 
@@ -1669,6 +1546,7 @@ Journal of Chemical Information and Computer Sciences, 1989, 29:97-101.
 | 1.0 | 2019-04-15 | Fixed asciidoc formatting and created derivative of OpenSMILES Document, IUPAC SMILES+ Specification Working Draft   | Vincent F. Scalfani
 | 1.0 | 2020-08-13 | Minor typo corrections | Contribution by Andrius Merkys
 | 1.0 | 2020-08-13 | Added escape symbols to prevent copyright symbol rendering in SMILES and fixed broken image link | Vincent F. Scalfani
+| 1.0 | 2020-09-24 | Moved proposed extensions to a separate document | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
