@@ -1458,22 +1458,17 @@ Many modern molecular editors can read and write SMILES:
 
 === Some Key Scientific Papers
 
-* Anderson, E.; Veith, G.D.; Weininger, D. SMILES: A Line Notation and Computerized Interpreter for Chemical Strcutures. 
-U.S. Environmental Protection Agency, Washington, D.C., EPA/600/M-87/021 (NTIS PB88130034), 1987.
+* Anderson, E.; Veith, G.D.; Weininger, D. SMILES: A Line Notation and Computerized Interpreter for Chemical Strcutures. U.S. Environmental Protection Agency, Washington, D.C., EPA/600/M-87/021 (NTIS PB88130034), 1987.
 
-* Weininger, D. SMILES, a Chemical Language and Information System. 1. Introduction to Methodology and Encoding Rules,
-J. Chem. Inf. Comput. Sci. 1988, 28, 31-36.
+* Weininger, D. SMILES, a Chemical Language and Information System. 1. Introduction to Methodology and Encoding Rules. J. Chem. Inf. Comput. Sci. 1988, 28, 31-36.
 
-* Weininger, D.; Weininger, A. and Weininger, J.L. SMILES 2. Algorithm for Generation of Unique SMILES Notation
-J. Chem. Inf. Comput. Sci. 1989, 29, 97-101.
+* Weininger, D.; Weininger, A. and Weininger, J.L. SMILES 2. Algorithm for Generation of Unique SMILES Notation. J. Chem. Inf. Comput. Sci. 1989, 29, 97-101.
 
 * Weininger, D. SMILES 3. Depict. Graphical Depiction of Chemical Structures. J. Chem. Inf. Comput. Sci. 1990, 30, 237-243.
 
-* Morgan, H.L. The Generation of a Unique Machine Description for Chemical Structures-
-A Technique Developed at Chemical Abstracts Service. J. Chem. Doc. 1965, 5, 107-113.
+* Morgan, H.L. The Generation of a Unique Machine Description for Chemical Structures-A Technique Developed at Chemical Abstracts Service. J. Chem. Doc. 1965, 5, 107-113.
 
-* Downs, G.M.; Gillet, V.J.; Holliday, J.D.; Lynch, M.F. Review of Ring Perception Algorithms for Chemical Graphs. 
-J. Chem. Inf. Comput. Sci. 1989, 29, 172-187.
+* Downs, G.M.; Gillet, V.J.; Holliday, J.D.; Lynch, M.F. Review of Ring Perception Algorithms for Chemical Graphs. J. Chem. Inf. Comput. Sci. 1989, 29, 172-187.
 
 * Balducci, R.; Pearlman, R.S. Efficient exact solution of the ring perception problem. J. Chem. Inf. Comput. Sci. 1994, 34, 822-831.
 
