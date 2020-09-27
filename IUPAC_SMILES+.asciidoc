@@ -1,9 +1,11 @@
 = IUPAC SMILES+ Specification [working draft]
 :toc: macro
 
-*IUPAC SMILES+ Contributors:* Vincent F. Scalfani (Chair), Evan Bolton, Helen Cooke, Chris Grulke, John Irwin, Oliver Koepler, Gregory Landrum, José L. Medina-Franco, Miguel Quirós Olozábal, Susan Richardson, and Issaku Yamada.
+*IUPAC SMILES+ Contributors:* Vincent F. Scalfani (Chair), Evan Bolton, Helen Cooke, Chris Grulke, 
+John Irwin, Oliver Koepler, Gregory Landrum, José L. Medina-Franco, Miguel Quirós Olozábal, 
+Susan Richardson, and Issaku Yamada.
 
-v0.1,2019-04-15: Working Draft                                   +
+v0.1,2020-09-26: Working Draft                                   +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
 Copyright &copy; 2020, IUPAC    +
 Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]     +
@@ -34,17 +36,17 @@ same time improving the science itself; neither can we, on the other
 hand, improve a science, without improving the language or nomenclature
 which belongs to it ..."
 
-http://en.wikipedia.org/wiki/Antoine_Lavoisier[Antoine Lavoiser, 1787]
+https://en.wikipedia.org/wiki/Antoine_Lavoisier[Antoine Lavoiser, 1787]
 ****
 
 === Purpose
 
 This document formally defines an
-http://en.wikipedia.org/wiki/Open_specifications[open specification] version of the
-http://en.wikipedia.org/wiki/Simplified_molecular_input_line_entry_specification[SMILES]
+https://en.wikipedia.org/wiki/Open_specifications[open specification] version of the
+https://en.wikipedia.org/wiki/Simplified_molecular_input_line_entry_specification[SMILES]
 language, a typographical http://en.wikipedia.org/wiki/Line_notation[line notation]
-for specifying chemical structure.  It is hosted under the banner of the
-http://blueobelisk.sourceforge.net[Blue Obelisk]
+for specifying chemical structure. It is hosted under the banner of the
+https://en.wikipedia.org/wiki/Blue_Obelisk[Blue Obelisk]
 project, with the intent to solicit contributions and comments from the
 entire computational chemistry community.
 
@@ -79,11 +81,11 @@ tutorial for those trying to learn SMILES. This document is written with
 
 Before defining the SMILES language, it is important to state the physical model on which it is
 based: the valence model of chemistry, which uses a mathematician's
-http://en.wikipedia.org/wiki/Graph_%28mathematics%29[graph] to
+https://en.wikipedia.org/wiki/Graph_theory[graph] to
 represent a molecule.  In a chemical graph, the *nodes*
 are atoms, and the *edges* are semi-rigid bonds that can be single, double, or
 triple according to the rules of
-http://en.wikipedia.org/wiki/Valence_bond_theory[valence bond theory].
+https://en.wikipedia.org/wiki/Valence_bond_theory[valence bond theory].
 
 This simple mental model has little resemblance to the underlying quantum-mechanical reality of
 electrons, protons and neutrons, yet it has proved to be a remarkably useful approximation of how
@@ -169,12 +171,9 @@ concerned with syntax.
 
 ==== Atomic Symbol
 
-An atom is represented by its atomic symbol, enclosed in square brackets, +[]+.
+An atom is represented by its atomic symbol, enclosed in square brackets, `[]`.
 The first character of the symbol is uppercase and the second (if any) is lowercase,
-except that for aromatic atoms (see below), the first character is lowercase.  There are
-http://www.iupac.org/reports/provisional/abstract04/RB-prs310804/TableI-3.04.pdf[114 valid atomic symbols]
-, as defined by http://www.iupac.org[IUPAC] (see also
-http://www.webelements.com[Web Elements]).
+except that for aromatic atoms (see below), the first character is lowercase.  There are https://iupac.org/what-we-do/periodic-table-of-elements/[118 valid atomic symbols] as defined by https://iupac.org/[IUPAC].
 
 The symbol `'*'` is also accepted as a valid atomic symbol, and represents a "wildcard" or unknown atom.
 
@@ -523,7 +522,7 @@ example, the following are not allowed:
 ==== The Meaning of "Aromaticity" in SMILES
 
 "Aromaticity" in SMILES is primarily for
-http://www.emolecules.com/doc/cheminformatics-101.htm[cheminformatics] purposes.
+https://www.emolecules.com/info/support-cheminformatics-101.html#/cheminformatics-basics[cheminformatics] purposes.
 In a cheminformatics system, we'd like to have a single representation for each molecule.  The
 Kekule form masks the inherent uniformity of the bonds in an aromatic ring.  SMILES uses a
 simplified definition of aromaticity that facilitates substructure and exact-structure
@@ -575,8 +574,8 @@ participate in aromatic systems.*
 A single, isolated ring that meets the following criteria is aromatic:
 
 * All atoms must be sp^2^ hybridized.
-* The number of available "shared" http://en.wikipedia.org/wiki/Pi_electron[&#960; electrons]
-  must equal 4N+2 where N &ge; 0 (http://en.wikipedia.org/wiki/H%C3%BCckel's_rule[Huckel's rule]).
+* The number of available "shared" https://en.wikipedia.org/wiki/Pi_bond[&#960; electrons]
+  must equal 4N+2 where N &ge; 0 (https://en.wikipedia.org/wiki/H%C3%BCckel%27s_rule[Huckel's rule]).
 
 Each element that can participate in an aromatic ring is defined to have the following
 number of &#960; electrons:
@@ -632,8 +631,8 @@ number of &#960; electrons:
 ==== Aromaticity Algorithm
 
 In an aromatic system, all of the aromatic atoms must be sp^2^ hybridized, and the
-number of http://en.wikipedia.org/wiki/Pi_electron[&#960; electrons]
-must meet http://en.wikipedia.org/wiki/H%C3%BCckel's_rule[Huckel's 4n+2 criterion]
+number of https://en.wikipedia.org/wiki/Pi_bond[&#960; electrons]
+must meet https://en.wikipedia.org/wiki/H%C3%BCckel%27s_rule[Huckel's 4n+2 criterion]
 When parsing a SMILES, a parser must note the aromatic designation of each atom on
 input, then when the parsing is complete, the SMILES software must verify that electrons can be
 assigned without violating the valence rules, consistent with the sp^2^ markings, the
@@ -983,8 +982,6 @@ The following SMILES are all equivalent:
 | `F[As@TB15](Cl)(S)(Br)N` | `Br[As@TB20](Cl)(S)(F)N`
 |===================================================
 
-_A tool like http://www.daylight.com/daycgi_tutorials/depictmatch.cgi[Daylight's depict match] can help debugging_
-
 *Background:*
 
 _The trigonal Bipyramidal chirality is considerably more complex than any of the
@@ -1215,7 +1212,7 @@ and one that is human readable (for smaller molecules).
 
 In addition, a normalized SMILES has the important property that it
 matches itself as a
-http://www.daylight.com/dayhtml/doc/theory/theory.smarts.html[SMARTS]
+https://www.daylight.com/dayhtml/doc/theory/theory.smarts.html[SMARTS]
 string.  This is a very important feature of normalized SMILES in
 cheminformatics systems.
 
@@ -1313,7 +1310,7 @@ computer.  Here are a few examples of Canonical versus non-Canonical SMILES:
 // The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 The primary use of Canonical SMILES is in
-http://www.emolecules.com/doc/cheminformatics-101.htm[cheminformatics]
+https://www.emolecules.com/info/support-cheminformatics-101.html#/cheminformatics-basics[cheminformatics]
 systems.  A molecule's structure, when expressed as a canonical SMILES,
 will always yield the same SMILES string, which allows a chemical database
 system to:
@@ -1338,7 +1335,7 @@ canonical SMILES string.  See the <<appendix,Appendix>> for further
 information.
 
 Those considering Canonical SMILES for a database system should also investigate
-http://www.iupac.org/inchi[InChI], a canonical naming system for chemicals that is an
+https://www.inchi-trust.org/[InChI], a canonical naming system for chemicals that is an
 approved IUPAC naming convention.
 
 === SMILES Files
@@ -1398,7 +1395,7 @@ accept.
 == SMILES Flavors
 
 It is an unfortunately common misconception that a Canonical SMILES does not
-contain stereochemistry (http://www.mdpi.com/1420-3049/22/12/2075/htm[Minkiewicz et al. 2017]) or alternatively that all SMILES must be canonical (http://pubs.acs.org/doi/abs/10.1021/ci800135h[Sykora and Leahy, 2008]). SMILES flavors as described by Daylight are summarised below.
+contain stereochemistry or alternatively that all SMILES must be canonical. SMILES flavors as described by Daylight are summarised below.
 
 [options="header",frame="topbot",grid="rows",cols="6,3,3,3"]
 |===============================================================
@@ -1421,7 +1418,7 @@ In general the properties encoded in a SMILES can be chosen by a program to suit
 
 === Appendix 1 - Extensions
 
-Proposed and Known SMILES Extensions (separate document)
+https://github.com/IUPAC/IUPAC_SMILES_plus/blob/spec_rev01/IUPAC_SMILES%2B_Appendix1.asciidoc[Proposed and Known SMILES Extensions]
 
 [[references]]
 
@@ -1429,96 +1426,56 @@ Proposed and Known SMILES Extensions (separate document)
 
 === Groups
 
-*Blue Obelisk*
-
-http://blueobelisk.sourceforge.net/[http://blueobelisk.sourceforge.net/]
+* https://en.wikipedia.org/wiki/Blue_Obelisk[Blue Obelisk]
+* https://iupac.org/who-we-are/committees/committee-details/?body_code=024[IUPAC Committee on Publications and Cheminformatics Data Standards]
 
 === Documentation
 
-*Daylight*
+* https://www.daylight.com/dayhtml/doc/theory/index.html[Daylight Theory Manual v4.9]
+* http://opensmiles.org/[OpenSMILES]
+* https://www.daylight.com/meetings/mug01/Sayle/m4xbondage.html[Roger Sayle Article about PDB files to SMILES]
+* https://docs.eyesopen.com/toolkits/python/oechemtk/SMILES.html[OpenEye SMILES Line Notation]
+* https://open-babel.readthedocs.io/en/latest/FileFormats/SMILES_format.html?highlight=smiles[Open Babel SMILES format]
+* http://rdkit.org/docs/RDKit_Book.html#smiles-support-and-extensions[RDKit SMILES Support and Extensions]
+* https://docs.chemaxon.com/display/docs/SMILES.html[ChemAxon SMILES]
+* http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesGenerator.html[CDK SmilesGenerator Class]
+* https://www.xemistry.com/docs/cactvs_reference.pdf[CACTVS SMILES and SMARTS dialects]
 
-http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html[http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html]
+=== Tools
 
-The most-referenced definition of SMILES on the web.
+==== Cheminformatics Toolkits
 
-http://www.daylight.com/meetings/mug01/Sayle/m4xbondage.html[http://www.daylight.com/meetings/mug01/Sayle/m4xbondage.html]
+There are a variety of commericial and open source cheminformatics toolkits available that support the SMILES format:
 
-Article by Roger Sayle about converting PDB files to SMILES with thorough treatment of aromaticity.
+* https://en.wikipedia.org/wiki/Cheminformatics_toolkits[Wikipedia: Cheminformatics Toolkits]
+* https://opensourcemolecularmodeling.github.io/#toolkits[Open Source Molecular Modeling: Cheminformatics Toolkits]
 
-*OpenEye*
+==== Molecular Editors
 
-http://www.eyesopen.com/docs/html/pyprog/TheSMILESLineNotation.html[http://www.eyesopen.com/docs/html/pyprog/TheSMILESLineNotation.html]
+Many modern molecular editors can read and write SMILES:
 
-http://www.eyesopen.com/docs/html/pyprog/DaylightSMILES.html[http://www.eyesopen.com/docs/html/pyprog/DaylightSMILES.html]
-
-*OpenBabel*
-
-http://openbabel.sourceforge.net/wiki/Radicals_and_SMILES_extensions[http://openbabel.sourceforge.net/wiki/Radicals_and_SMILES_extensions]
-
-http://openbabel.sourceforge.net/wiki/SMILES[http://openbabel.sourceforge.net/wiki/SMILES]
-
-*Wikipedia*
-
-http://en.wikipedia.org/wiki/Simplified_molecular_input_line_entry_specification[http://en.wikipedia.org/wiki/Simplified_molecular_input_line_entry_specification]
-
-Toolkits
-~~~~~~~~
-
-*OpenBabel*
-
-http://openbabel.sourceforge.net/wiki/Main_Page[http://openbabel.sourceforge.net/wiki/Main_Page]
-
-*The Chemistry Development Kit*
-
-http://cdk.sourceforge.net/[http://cdk.sourceforge.net/]
-
-*Marvin*
-
-http://www.chemaxon.com/marvin/doc/user/smiles-doc.html[http://www.chemaxon.com/marvin/doc/user/smiles-doc.html]
-
-*RDKit*
-
-http://www.rdkit.org/[http://www.rdkit.org/]
-
-*Frowns*
-
-http://frowns.sourceforge.net/frowns.html[http://frowns.sourceforge.net/frowns.html]
-
-*PerlMol.org*
-
-http://search.cpan.org/\~itub/Chemistry-File-SMILES-0.45/SMILES.pm[http://search.cpan.org/\~itub/Chemistry-File-SMILES-0.45/SMILES.pm]
-
-*InChI*
-
-http://www.iupac.org/inchi/[http://www.iupac.org/inchi/]
-
-http://inchi.info/[http://inchi.info/]
-
-http://en.wikipedia.org/wiki/International_Chemical_Identifier[http://en.wikipedia.org/wiki/International_Chemical_Identifier]
+* https://en.wikipedia.org/wiki/Molecule_editor[Wikipedia: Molecule Editors]
 
 === Some Key Scientific Papers
 
-* David Weininger, SMILES, a Chemical Language and Information System. 1. Introduction to Methodology and Encoding Rules,
-Journal of Chemical Information and Computer Sciences, 1988, 28:31-36.
+* Anderson, E.; Veith, G.D.; Weininger, D. SMILES: A Line Notation and Computerized Interpreter for Chemical Strcutures. 
+U.S. Environmental Protection Agency, Washington, D.C., EPA/600/M-87/021 (NTIS PB88130034), 1987.
 
-* David Weininger, Arthur Weininger, and Joseph L Weininger,
-SMILES 2. Algorithm for Generation of Unique SMILES Notation
-Journal of Chemical Information and Computer Sciences, 1989, 29:97-101.
+* Weininger, D. SMILES, a Chemical Language and Information System. 1. Introduction to Methodology and Encoding Rules,
+J. Chem. Inf. Comput. Sci. 1988, 28, 31-36.
 
-* Morgan's original canonicalization paper: Morgan, H.L. J.Chem.Doc. 1965, 5, 107
+* Weininger, D.; Weininger, A. and Weininger, J.L. SMILES 2. Algorithm for Generation of Unique SMILES Notation
+J. Chem. Inf. Comput. Sci. 1989, 29, 97-101.
 
-* G.M. Downs et al, Review of Ring Perception Algorithms for Chemical Graphs, J. Chem. Inf. Comput. Cci. 1989, 29, 172-187
+* Weininger, D. SMILES 3. Depict. Graphical Depiction of Chemical Structures. J. Chem. Inf. Comput. Sci. 1990, 30, 237-243.
 
-* R.Balducci and R, Pearlman, Novel Algorithms for the Rapid Perception of a Unique Optimal Set of Rings, J. Am. Chem. Soc. (date?)
+* Morgan, H.L. The Generation of a Unique Machine Description for Chemical Structures-
+A Technique Developed at Chemical Abstracts Service. J. Chem. Doc. 1965, 5, 107-113.
 
-=== Molecule Editors that can produce SMILES
+* Downs, G.M.; Gillet, V.J.; Holliday, J.D.; Lynch, M.F. Review of Ring Perception Algorithms for Chemical Graphs. 
+J. Chem. Inf. Comput. Sci. 1989, 29, 172-187.
 
-* JME
-* CACTVS
-* ISISDraw?
-* ChemDraw
-* ACD/ChemSketch
-* http://www.chemaxon.com/product/msketch.html[MarvinSketch]
+* Balducci, R.; Pearlman, R.S. Efficient exact solution of the ring perception problem. J. Chem. Inf. Comput. Sci. 1994, 34, 822-831.
 
 == Revision History
 
@@ -1547,6 +1504,7 @@ Journal of Chemical Information and Computer Sciences, 1989, 29:97-101.
 | 1.0 | 2020-08-13 | Minor typo corrections | Contribution by Andrius Merkys
 | 1.0 | 2020-08-13 | Added escape symbols to prevent copyright symbol rendering in SMILES and fixed broken image link | Vincent F. Scalfani
 | 1.0 | 2020-09-24 | Moved proposed extensions to a separate document | Vincent F. Scalfani
+| 1.0 | 2020-09-27 | Updated links and references | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
