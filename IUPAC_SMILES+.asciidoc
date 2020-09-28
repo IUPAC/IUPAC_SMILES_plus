@@ -2,7 +2,7 @@
 :toc: macro
 
 *IUPAC SMILES+ Contributors:* Vincent F. Scalfani (Chair), Evan Bolton, Helen Cooke, Chris Grulke, 
-John Irwin, Oliver Koepler, Gregory Landrum, José L. Medina-Franco, Miguel Quirós Olozábal, 
+John Irwin, Oliver Koepler, Greg Landrum, José L. Medina-Franco, Miguel Quirós Olozábal, 
 Susan Richardson, and Issaku Yamada.
 
 v0.1,2020-09-26: Working Draft                                   +
@@ -39,35 +39,43 @@ which belongs to it ..."
 https://en.wikipedia.org/wiki/Antoine_Lavoisier[Antoine Lavoiser, 1787]
 ****
 
-=== Purpose
+=== Purpose and Motivation
 
 This document formally defines an
 https://en.wikipedia.org/wiki/Open_specifications[open specification] version of the
 https://en.wikipedia.org/wiki/Simplified_molecular_input_line_entry_specification[SMILES]
 language, a typographical http://en.wikipedia.org/wiki/Line_notation[line notation]
-for specifying chemical structure. It is hosted under the banner of the
-https://en.wikipedia.org/wiki/Blue_Obelisk[Blue Obelisk]
-project, with the intent to solicit contributions and comments from the
-entire computational chemistry community.
-
-=== Motivation
-
+for specifying chemical structure representation. This specification builds upon the Blue Obelisk
+http://www.opensmiles.org[OpenSMILES] work, and is currently maintained (work in progress draft) 
+within an IUPAC Task Group: 
+https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]. 
+We welcome all contributions and comments from the entire community.
 
 SMILES was originally developed as a proprietary specification by
-http://www.daylight.com[Daylight Chemical Information Systems]
+https://www.daylight.com/[Daylight Chemical Information Systems]
 Since the introduction of SMILES in the late 1980's, it has
-become widely accepted as a defacto standard for exchange of molecular structures.  Many independent
-SMILES software packages have been written in `C`, `C++`, `Java`, `Python`, `LISP`, and probably even
-`FORTRAN`.
+become widely accepted as a defacto standard for exchange of molecular structures.  
+Many independent SMILES software packages have been written in `C`, `C++`, `Java`, `Python`, `LISP`, 
+and probably even `FORTRAN`.
 
-At this point in the history of SMILES, it is appropriate for the chemistry community
-to develop a new, non-proprietary specification for the SMILES language.  Daylight's
-http://www.daylight.com/dayhtml/doc/theory/theory.smiles.html[SMILES Theory Manual]
+Daylight's https://www.daylight.com/dayhtml/doc/theory/index.html[SMILES Theory Manual]
 has long been the "gold standard" for the SMILES language, but as a
-proprietary specification, it limits the universal adoption of SMILES, and has no
-mechanism for contributions from the chemistry community.  We salute Daylight for
+proprietary specification, it limits the universal adoption of SMILES, and has no formal
+mechanism for community contributions and ongoing maintenance. We salute Daylight for
 their past contributions, and the excellent SMILES documentation they provided free
-of charge for the past two decades.
+of charge for the past three decades.
+
+In the early 2000s, the Blue Obelisk community created a new, non-proprietary specification 
+for the SMILES language, namely, http://www.opensmiles.org[OpenSMILES]. 
+Our efforts seek to build open the work of OpenSMILES by further clarifying ambiguities in the 
+SMILES language, creating a formal mechanism for adoption of new extensions (i.e., the `+`), and
+provide on-going maintenance of the specification through IUPAC.
+
+**Importantly, interoperability of reading the SMILES language is the top priority of the IUPAC SMILES+ specification.
+As a result, the IUPAC SMILES+ specification grammar may be considered more strict than the prior Daylight and OpenSMILES
+specifications; that is, in order to remove ambiguity, we needed to make some distinct syntax choices and, for example, not allow
+"relaxed" rules, where a parser may correct or ignore errors in the SMILES syntax. With that in mind, 
+we believe our choices are conservative and have not removed any important functionality of the SMILES language.**
 
 === Audience
 
@@ -82,18 +90,17 @@ tutorial for those trying to learn SMILES. This document is written with
 Before defining the SMILES language, it is important to state the physical model on which it is
 based: the valence model of chemistry, which uses a mathematician's
 https://en.wikipedia.org/wiki/Graph_theory[graph] to
-represent a molecule.  In a chemical graph, the *nodes*
-are atoms, and the *edges* are semi-rigid bonds that can be single, double, or
-triple according to the rules of
+represent a molecule. In a chemical graph, the *nodes* are atoms, and the *edges* are semi-rigid bonds
+that can be single, double, or triple according to the rules of
 https://en.wikipedia.org/wiki/Valence_bond_theory[valence bond theory].
 
 This simple mental model has little resemblance to the underlying quantum-mechanical reality of
 electrons, protons and neutrons, yet it has proved to be a remarkably useful approximation of how
-atoms behave in close proximity to one another.  However, the valence model is an imperfect
+atoms behave in close proximity to one another. However, the valence model is an imperfect
 representation of molecular structure, and the SMILES language inherits these imperfections.
 Chemical bonds are often tautomeric, aromatic or otherwise fractional rather than neat integer
-multiples.  Delocalized bonds, bond-centered bonds, hydrogen bonds and various other inter-atom
-forces that are well characterized by a quantum-mechanics description simply don't fit into the
+multiples. Delocalized bonds, bond-centered bonds, hydrogen bonds and various other inter-atom
+forces that are well characterized by a quantum-mechanics description simply do not fit into the
 valence model.
 
 ****
@@ -103,7 +110,7 @@ http://www.daylight.com/meetings/mug03/McLeod/MUG03McLeodPeters.pdf[McLeod Peter
 ****
 
 McLeod and Peters' quip captures the deficiencies of SMILES well: if you
-*can't* build a molecule from a modeling kit, the deficiencies of SMILES and other
+*can not* build a molecule from a modeling kit, the deficiencies of SMILES and other
 connection-table formats become apparent.
 
 == Formal Grammar
@@ -114,7 +121,7 @@ This SMILES specification is divided into two distinct parts: A
 *syntactic specification* specifies how the atoms,
 bonds, parentheses, digits and so forth are represented, and a *semantic
 specification* that describes how those symbols are interpreted as a sensible
-molecule.  For example, the syntax specifies how <<ringclosure,ring closures>>
+molecule. For example, the syntax specifies how <<ringclosure,ring closures>>
 are written, but the semantics require that they come in pairs.
 Likewise, the syntax specifies how <<atomicsymbol,atomic elements>>
 are written, but the semantics determines whether a particular ring system
@@ -122,7 +129,7 @@ is actually aromatic.
 
 For this specification, the syntax and semantics are explained
 separately; in practice, the syntax and semantics are usually mixed
-together in the code that implements a SMILES parser.  This chapter is only
+together in the code that implements a SMILES parser. This chapter is only
 concerned with syntax.
 
 === Grammar
@@ -137,10 +144,12 @@ concerned with syntax.
 |                            _aromatic_organic_ ::= `'b'` \| `'c'` \| `'n'` \| `'o'` \| `'s'` \| `'p'`
 2+| **BRACKET ATOMS**
 .5+| <<inatoms,Bracket Atoms>>      | _bracket_atom_ ::= `'['` _isotope_? _symbol_ _chiral_? _hcount_? _charge_? _class_? `']'`
-|                            _symbol_ ::= _element_symbols_ \| _aromatic_symbols_ \| `'*'`
+|                            _symbol_ ::= _element_symbols_ \| _element_numbers_ \| _aromatic_symbols_ \| `'element_undefined'`
 |                            _isotope_ ::= _NUMBER_
-|                            _element_symbols_ ::= `'H'` \| `'He'` \| `'Li'` \| `'Be'` \| `'B'` \| `'C'` \| `'N'` \| `'O'` \| `'F'` \| `'Ne'` \| `'Na'` \| `'Mg'` \| `'Al'` \| `'Si'` \| `'P'` \| `'S'` \| `'Cl'` \| `'Ar'` \| `'K'` \| `'Ca'` \| `'Sc'` \| `'Ti'` \| `'V'` \| `'Cr'` \| `'Mn'` \| `'Fe'` \| `'Co'` \| `'Ni'` \| `'Cu'` \| `'Zn'` \| `'Ga'` \| `'Ge'` \| `'As'` \| `'Se'` \| `'Br'` \| `'Kr'` \| `'Rb'` \| `'Sr'` \| `'Y'` \| `'Zr'` \| `'Nb'` \| `'Mo'` \| `'Tc'` \| `'Ru'` \| `'Rh'` \| `'Pd'` \| `'Ag'` \| `'Cd'` \| `'In'` \| `'Sn'` \| `'Sb'` \| `'Te'` \| `'I'` \| `'Xe'` \| `'Cs'` \| `'Ba'` \| `'Hf'` \| `'Ta'` \| `'W'` \| `'Re'` \| `'Os'` \| `'Ir'` \| `'Pt'` \| `'Au'` \| `'Hg'` \| `'Tl'` \| `'Pb'` \| `'Bi'` \| `'Po'` \| `'At'` \| `'Rn'` \| `'Fr'` \| `'Ra'` \| `'Rf'` \| `'Db'` \| `'Sg'` \| `'Bh'` \| `'Hs'` \| `'Mt'` \| `'Ds'` \| `'Rg'` \| `'Cn'` \| `'Fl'` \| `'Lv'` \| `'La'` \| `'Ce'` \| `'Pr'` \| `'Nd'` \| `'Pm'` \| `'Sm'` \| `'Eu'` \| `'Gd'` \| `'Tb'` \| `'Dy'` \| `'Ho'` \| `'Er'` \| `'Tm'` \| `'Yb'` \| `'Lu'` \| `'Ac'` \| `'Th'` \| `'Pa'` \| `'U'` \| `'Np'` \| `'Pu'` \| `'Am'` \| `'Cm'` \| `'Bk'` \| `'Cf'` \| `'Es'` \| `'Fm'` \| `'Md'` \| `'No'` \| `'Lr'`
-|                            _aromatic_symbols_ ::= `'b'` \| `'c'` \| `'n'` \| `'o'` \| `'p'` \| `'s'` \| `'se'` \| `'as'`
+|                            _element_symbols_ ::= `'H'` \| `'He'` \| `'Li'` \| `'Be'` \| `'B'` \| `'C'` \| `'N'` \| `'O'` \| `'F'` \| `'Ne'` \| `'Na'` \| `'Mg'` \| `'Al'` \| `'Si'` \| `'P'` \| `'S'` \| `'Cl'` \| `'Ar'` \| `'K'` \| `'Ca'` \| `'Sc'` \| `'Ti'` \| `'V'` \| `'Cr'` \| `'Mn'` \| `'Fe'` \| `'Co'` \| `'Ni'` \| `'Cu'` \| `'Zn'` \| `'Ga'` \| `'Ge'` \| `'As'` \| `'Se'` \| `'Br'` \| `'Kr'` \| `'Rb'` \| `'Sr'` \| `'Y'` \| `'Zr'` \| `'Nb'` \| `'Mo'` \| `'Tc'` \| `'Ru'` \| `'Rh'` \| `'Pd'` \| `'Ag'` \| `'Cd'` \| `'In'` \| `'Sn'` \| `'Sb'` \| `'Te'` \| `'I'` \| `'Xe'` \| `'Cs'` \| `'Ba'` \| `'La'` \| `'Ce'` \| `'Pr'` \| `'Nd'` \| `'Pm'` \| `'Sm'` \| `'Eu'` \| `'Gd'` \| `'Tb'` \| `'Dy'` \| `'Ho'` \| `'Er'` \| `'Tm'` \| `'Yb'` \| `'Lu'` \| `'Hf'` \| `'Ta'` \| `'W'` \| `'Re'` \| `'Os'` \| `'Ir'` \| `'Pt'` \| `'Au'` \| `'Hg'` \| `'Tl'` \| `'Pb'` \| `'Bi'` \| `'Po'` \| `'At'` \| `'Rn'` \| `'Fr'` \| `'Ra'` \|`'Ac'` \| `'Th'` \| `'Pa'` \| `'U'` \| `'Np'` \| `'Pu'` \| `'Am'` \| `'Cm'` \| `'Bk'` \| `'Cf'` \| `'Es'` \| `'Fm'` \| `'Md'` \| `'No'` \| `'Lr'` \| `'Rf'` \| `'Db'` \| `'Sg'` \| `'Bh'` \| `'Hs'` \| `'Mt'` \| `'Ds'` \| `'Rg'` \| `'Cn'` \| `'Nh'` \| `'Fl'` \| `'Mc'` \| `'Lv'` \| `'Ts'` \| `'Og'`
+|                            _element_numbers_ ::= `'#1'` \|`'#2'` \| `'#3'` \| `'...'` \|`'#118'`
+|                            _aromatic_symbols_ ::= `'b'` \| `'c'` \| `'n'` \| `'o'` \| `'p'` \| `'s'` \| `'se'` \| `'te'` \| `'as'`
+|                            _element_undefined_ ::= `'*'` \| `'#0'`   
 2+| **CHIRALITY**
 | <<chirality,Chirality>>  | _chiral_ ::= `'@'` \| `'@@'` \| `'@TH1'` \| `'@TH2'` \| `'@AL1'` \| `'@AL2'` \| `'@SP1'` \| `'@SP2'` \| `'@SP3'` \| `'@TB1'` \| `'@TB2'` \| `'@TB3'` \| ... \| `'@TB20'` \| `'@OH1'` \| `'@OH2'` \| `'@OH3'` \| ... \| `'@OH30'` \| `'@TB'` _DIGIT_ _DIGIT_ \| `'@OH'` _DIGIT_ _DIGIT_
 2+| **HYDROGENS**
@@ -173,9 +182,14 @@ concerned with syntax.
 
 An atom is represented by its atomic symbol, enclosed in square brackets, `[]`.
 The first character of the symbol is uppercase and the second (if any) is lowercase,
-except that for aromatic atoms (see below), the first character is lowercase.  There are https://iupac.org/what-we-do/periodic-table-of-elements/[118 valid atomic symbols] as defined by https://iupac.org/[IUPAC].
+except that for aromatic atoms (see below), the first character is lowercase. Alternatively, 
+an atom can also be represented by its atomic number preceded by `#` and enclosed in square brackets, `[]`.
+There are https://iupac.org/what-we-do/periodic-table-of-elements/[118 valid atomic symbols] 
+as defined by https://iupac.org/[IUPAC].
 
-The symbol `'*'` is also accepted as a valid atomic symbol, and represents a "wildcard" or unknown atom.
+The symbol `'*'` or `'#0'` are accepted as a valid atomic symbols, and represents a "wildcard" or unknown atom.
+Importantly, `'#0'` must always be written within brackets, while `'*'` is considered part of 
+the <<orgsbst,Organic Subset>> and does not have this requirement.
 
 Examples:
 
@@ -185,14 +199,16 @@ Examples:
 | `[U]`       | Uranium
 | `[Pb]`      | Lead
 | `[He]`      | Helium
-| `[*]`       | Unkwown atom
+| `[*]`       | Unknown atom
+| `[#0]`       | Unknown atom
+| `[#6]`       | Carbon
 |============================
 
 [[hydrogens]]
 
 ==== Hydrogens
 
-Hydrogens inside of brackets are specified as `Hn` where `n` is a number such as `H3`.  If no
+Hydrogens inside of brackets are specified as `Hn` where `n` is a single digit number (0-9) such as `H3`.  If no
 `Hn` is specified, it is identical to `H0`. If `H` is
 specified without a number, it is identical to `H1`.  For example, `[C]` and
 `[CH0]` are identical, and `[CH]` and `[CH1]` are identical.
@@ -210,12 +226,9 @@ Examples:
 | `[ClH1]`  | hydrochloric acid     |
 |=================================================
 
-A hydrogen atom cannot have a hydrogen count, for example, `[HH1]` is illegal.  Hydrogens connected
+A hydrogen atom cannot have a hydrogen count, for example, `[HH1]` is invalid.  Hydrogens connected
 to other hydrogens must be represented as explicit atoms in square brackets. For example molecular
 hydrogen must be written as `[H][H]`.
-
-_Question: are more than 9 hydrogens possible?  Should they be
-supported?_
 
 [[charge]]
 
@@ -1500,6 +1513,10 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2020-08-13 | Added escape symbols to prevent copyright symbol rendering in SMILES and fixed broken image link | Vincent F. Scalfani
 | 1.0 | 2020-09-24 | Moved proposed extensions to a separate document | Vincent F. Scalfani
 | 1.0 | 2020-09-27 | Updated links and references | Vincent F. Scalfani
+| 1.0 | 2020-09-28 | Updated purpose and motivation to reflect IUPAC task group efforts. | Vincent F. Scalfani
+| 1.0 | 2020-09-28 | Added aromatic te | Vincent F. Scalfani
+| 1.0 | 2020-09-28 | Added support for element symbols through Og, element numbers through [#118], and [#0] as undefined | Vincent F. Scalfani
+| 1.0 | 2020-09-28 | Clarified Hydrogen `Hn`, where `n` is a single digit number 0-9 | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
