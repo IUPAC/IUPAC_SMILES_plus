@@ -183,12 +183,12 @@ concerned with syntax.
 An atom is represented by its atomic symbol, enclosed in square brackets, `[]`.
 The first character of the symbol is uppercase and the second (if any) is lowercase,
 except that for aromatic atoms (see below), the first character is lowercase. Alternatively, 
-an atom can also be represented by its atomic number preceded by `#` and enclosed in square brackets, `[]`.
+an atom can also be represented by its atomic number preceded by the `'#'` symbol and enclosed in square brackets, `[]`.
 There are https://iupac.org/what-we-do/periodic-table-of-elements/[118 valid atomic symbols] 
 as defined by https://iupac.org/[IUPAC].
 
-The symbol `+++*+++` or `#0` are accepted as a valid atomic symbols, and represents a "wildcard" or unknown atom.
-Importantly, `#0` must always be written within brackets, while `+++*+++` is considered part of 
+The symbols `+++'*'+++` and `'#0'` are accepted as a valid atomic symbols, and represent a "wildcard" or unknown atom.
+Importantly, `'#0'` must always be written within brackets, while `+++'*'+++` is considered part of 
 the <<orgsbst,Organic Subset>> and does not have this requirement.
 
 // The +++ is used above as a passthrough in the * symbol in order to avoid GitHub from displaying the line as bold.
@@ -240,7 +240,7 @@ Charge is specified by a `+n` or `-n` where `n` is a number; if the
 number is missing, it means either `+1` or `-1` as appropriate.
 
 For backwards compatibility, a general-purpose SMILES parser should
-accept the symbols `--` and `++` to mean charges of `-2` and `+2`, but this
+accept the symbols `'--'` and `'++'` to mean charges of `-2` and `+2`, but this
 is a deprecated form and should be avoided.
 
 Examples:
@@ -333,9 +333,9 @@ Examples:
 
 _Note: The remaining atom properties, chirality and ring-closures, are discussed in later sections._
 
-==== The Wildcard `*` Atomic Symbol
+==== The Wildcard `'*'` Atomic Symbol
 
-The `+++*+++` atom represents an atom whose atomic number is unknown or unspecified.  If it occurs
+The `+++'*'+++` atom represents an atom whose atomic number is unknown or unspecified. If it occurs
 inside brackets, it can have its isotope, chirality, hydrogen count and charge specified.  If it
 occurs outside of brackets, it has no assumed isotope, a mass of zero, unspecified chirality, a
 hydrogen count of zero, and a charge of zero.
@@ -346,14 +346,14 @@ hydrogen count of zero, and a charge of zero.
 | `Oc1c(*)cccc1`      | ortho-substituted phenol
 |==============================================
 
-The `+++*+++` atom does not have any specific electronic properties or
+The `+++'*'+++` atom does not have any specific electronic properties or
 valence.  If specified outside of square brackets, it takes on the valence
 implied by its bonds.  If it is inside square brackets, it takes on the
 valence implied by its bonds, hydrogens and/or charge.
 
-A `+++*+++` atom can be part of an aromatic ring.  When deducing the
+A `+++'*'+++` atom can be part of an aromatic ring.  When deducing the
 aromaticity of a ring system, the ring system is considered aromatic if
-there is an element which could replace the `+++*+++` and make the ring system
+there is an element which could replace the `+++'*'+++` and make the ring system
 meet the aromaticity rules (see <<inaromaticity,Aromaticity>>, below).
 
 // The +++ is used above as a passthrough in the * symbol in order to avoid GitHub from displaying the line as bold.
@@ -407,7 +407,7 @@ Double, triple and quadruple bonds are represented by `'='`, `'#'`, and `'$'` re
 | `[Rh-](Cl)(Cl)(Cl)(Cl)$[Rh-](Cl)(Cl)(Cl)Cl` | octachlorodirhenate (III)
 |========================================================================
 
-A single bond can be explicitely represented with `'-'`, but it is rarely
+A single bond can be explicitly represented with `'-'`, but it is rarely
 necessary.
 
 [options="header",frame="topbot",grid="rows",width="40%"]
@@ -527,9 +527,9 @@ example, the following are not allowed:
 [options="header",frame="topbot",grid="rows",width="70%",cols="1,2"]
 |=====================================================================
 | SMILES              | Comments
-| `C12CCCCC12`        | *illegal, two bonds between one pair of atoms*
-| `C12C2CCC1`         | *illegal, two bonds between one pair of atoms*
-| `C11`               | *illegal, atom bonded to itself*
+| `C12CCCCC12`        | illegal, two bonds between one pair of atoms
+| `C12C2CCC1`         | illegal, two bonds between one pair of atoms
+| `C11`               | illegal, atom bonded to itself
 |=====================================================================
 
 [[inaromaticity]]
@@ -926,7 +926,7 @@ property of the center atom of the extended allene system.
 There are three tags to represent square planar stereochemistry: `@SP1`, `@SP2`
 and `@SP3`. Since there is no way to determine to what chirality class an atom
 belongs based on the SMILES alone, the SP class is not the default class for
-tetravalent stereocenters. Therefore are the shorthand notations (`@`, `@@`) not
+tetravalent stereocenters. Therefore are the shorthand notations (`'@'`, `'@@'`) not
 equivalent to `@SP1` and `@SP2`. That is, the full specification must be there
 (`@SP` followed by 1, 2 or 3). The square planar also differs from the other
 chiral primitives in that it does not use the notion of (anti-)clockwise.
@@ -954,14 +954,14 @@ writers to use any ordering to output the atoms._
 
 ==== Trigonal Bipyramidal Centers
 
-The chiral atom's neighbors are labeled a, `b`, `c`, `d`, and `e` in the order that they
+The chiral atom's neighbors are labeled `a`, `b`, `c`, `d`, and `e` in the order that they
 are parsed. For example, for `S[As@@](F)(Cl)(Br)N` `S` corresponds to `a`, `F` to `b`, `Cl`
 to `c`, `Br` to `d` and `N` to `e`. This order is the unit permutation, represented as the
 ordered set `(a, b, c, d, e)`. In the simplest case `@TB1` viewing from a towards `e`,
-`(b, c, d)` are anti-clockwise (`@`). Likewise, `@TB2` is specified as viewing from `a`
-towards `e`, `(b, c, d)` are ordered clockwise (`@@`). The remaining TB's permute the
+`(b, c, d)` are anti-clockwise (`'@'`). Likewise, `@TB2` is specified as viewing from `a`
+towards `e`, `(b, c, d)` are ordered clockwise (`'@@'`). The remaining TB's permute the
 axis as indicated in the table below. A final example, for `@TB6` the viewing axis is from
-`a` towards `c` and `(b, d, e)` are clockwise (`@@`).
+`a` towards `c` and `(b, d, e)` are clockwise (`'@@'`).
 
 [options="header",frame="topbot",grid="rows",width="40%"]
 |=====================================
@@ -1026,7 +1026,7 @@ correspond to an TB primitive._
 ==== Octahedral Centers
 
 For 6 atoms, the unit permutation is `(a, b, c ,d ,e ,f)`. `@OH1` means when viewing
-from `a` towards `f`, `(b, c, d, e)` are ordered anti-clockwise (`@`). `@OH2` uses the same
+from `a` towards `f`, `(b, c, d, e)` are ordered anti-clockwise (`'@'`). `@OH2` uses the same
 axis but the 4 intermediate atoms are ordered clockwise. The interpretation of the 28
 remaining numbers is more complex though. The concept of shapes (see square planar
 stereochemistry) to describe the orientation of 4 atoms in a plane is reused. However,
@@ -1521,6 +1521,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2020-09-28 | Added aromatic te | Vincent F. Scalfani
 | 1.0 | 2020-09-28 | Added support for element symbols through Og, element numbers through [#118], and [#0] as undefined | Vincent F. Scalfani
 | 1.0 | 2020-09-28 | Clarified Hydrogen `Hn`, where `n` is a single digit number 0-9 | Vincent F. Scalfani
+| 1.0 | 2020-09-28 | General formatting for consistency | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
