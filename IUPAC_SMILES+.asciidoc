@@ -143,8 +143,8 @@ concerned with syntax.
 .2+| <<orgsbst,Organic Subset>>        | _aliphatic_organic_ ::= `'B'` \| `'C'` \| `'N'` \| `'O'` \| `'S'` \| `'P'` \| `'F'` \| `'Cl'` \| `'Br'` \| `'I'`
 |                            _aromatic_organic_ ::= `'b'` \| `'c'` \| `'n'` \| `'o'` \| `'s'` \| `'p'`
 2+| **BRACKET ATOMS**
-.5+| <<inatoms,Bracket Atoms>>      | _bracket_atom_ ::= `'['` _isotope_? _symbol_ _chiral_? _hcount_? _charge_? _class_? `']'`
-|                            _symbol_ ::= _element_symbols_ \| _element_numbers_ \| _aromatic_symbols_ \| `'element_undefined'`
+.6+| <<inatoms,Bracket Atoms>>      | _bracket_atom_ ::= `'['` _isotope_? _symbol_ _chiral_? _hcount_? _charge_? _class_? `']'`
+|                            _symbol_ ::= _element_symbols_ \| _element_numbers_ \| _aromatic_symbols_ \| _element_undefined_
 |                            _isotope_ ::= _NUMBER_
 |                            _element_symbols_ ::= `'H'` \| `'He'` \| `'Li'` \| `'Be'` \| `'B'` \| `'C'` \| `'N'` \| `'O'` \| `'F'` \| `'Ne'` \| `'Na'` \| `'Mg'` \| `'Al'` \| `'Si'` \| `'P'` \| `'S'` \| `'Cl'` \| `'Ar'` \| `'K'` \| `'Ca'` \| `'Sc'` \| `'Ti'` \| `'V'` \| `'Cr'` \| `'Mn'` \| `'Fe'` \| `'Co'` \| `'Ni'` \| `'Cu'` \| `'Zn'` \| `'Ga'` \| `'Ge'` \| `'As'` \| `'Se'` \| `'Br'` \| `'Kr'` \| `'Rb'` \| `'Sr'` \| `'Y'` \| `'Zr'` \| `'Nb'` \| `'Mo'` \| `'Tc'` \| `'Ru'` \| `'Rh'` \| `'Pd'` \| `'Ag'` \| `'Cd'` \| `'In'` \| `'Sn'` \| `'Sb'` \| `'Te'` \| `'I'` \| `'Xe'` \| `'Cs'` \| `'Ba'` \| `'La'` \| `'Ce'` \| `'Pr'` \| `'Nd'` \| `'Pm'` \| `'Sm'` \| `'Eu'` \| `'Gd'` \| `'Tb'` \| `'Dy'` \| `'Ho'` \| `'Er'` \| `'Tm'` \| `'Yb'` \| `'Lu'` \| `'Hf'` \| `'Ta'` \| `'W'` \| `'Re'` \| `'Os'` \| `'Ir'` \| `'Pt'` \| `'Au'` \| `'Hg'` \| `'Tl'` \| `'Pb'` \| `'Bi'` \| `'Po'` \| `'At'` \| `'Rn'` \| `'Fr'` \| `'Ra'` \|`'Ac'` \| `'Th'` \| `'Pa'` \| `'U'` \| `'Np'` \| `'Pu'` \| `'Am'` \| `'Cm'` \| `'Bk'` \| `'Cf'` \| `'Es'` \| `'Fm'` \| `'Md'` \| `'No'` \| `'Lr'` \| `'Rf'` \| `'Db'` \| `'Sg'` \| `'Bh'` \| `'Hs'` \| `'Mt'` \| `'Ds'` \| `'Rg'` \| `'Cn'` \| `'Nh'` \| `'Fl'` \| `'Mc'` \| `'Lv'` \| `'Ts'` \| `'Og'`
 |                            _element_numbers_ ::= `'#1'` \|`'#2'` \| `'#3'` \| `'...'` \|`'#118'`
@@ -187,8 +187,8 @@ an atom can also be represented by its atomic number preceded by `#` and enclose
 There are https://iupac.org/what-we-do/periodic-table-of-elements/[118 valid atomic symbols] 
 as defined by https://iupac.org/[IUPAC].
 
-The symbol `'*'` or `'#0'` are accepted as a valid atomic symbols, and represents a "wildcard" or unknown atom.
-Importantly, `'#0'` must always be written within brackets, while `'*'` is considered part of 
+The symbol `*` or `#0` are accepted as a valid atomic symbols, and represents a "wildcard" or unknown atom.
+Importantly, `#0` must always be written within brackets, while `*` is considered part of 
 the <<orgsbst,Organic Subset>> and does not have this requirement.
 
 Examples:
