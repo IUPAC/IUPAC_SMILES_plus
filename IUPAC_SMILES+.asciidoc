@@ -146,7 +146,7 @@ concerned with syntax.
 |                            _symbol_ ::= _element_symbols_ \| _element_numbers_ \| _aromatic_symbols_ \| _element_undefined_
 |                            _isotope_ ::= _NUMBER_
 |                            _element_symbols_ ::= `'H'` \| `'He'` \| `'Li'` \| `'Be'` \| `'B'` \| `'C'` \| `'N'` \| `'O'` \| `'F'` \| `'Ne'` \| `'Na'` \| `'Mg'` \| `'Al'` \| `'Si'` \| `'P'` \| `'S'` \| `'Cl'` \| `'Ar'` \| `'K'` \| `'Ca'` \| `'Sc'` \| `'Ti'` \| `'V'` \| `'Cr'` \| `'Mn'` \| `'Fe'` \| `'Co'` \| `'Ni'` \| `'Cu'` \| `'Zn'` \| `'Ga'` \| `'Ge'` \| `'As'` \| `'Se'` \| `'Br'` \| `'Kr'` \| `'Rb'` \| `'Sr'` \| `'Y'` \| `'Zr'` \| `'Nb'` \| `'Mo'` \| `'Tc'` \| `'Ru'` \| `'Rh'` \| `'Pd'` \| `'Ag'` \| `'Cd'` \| `'In'` \| `'Sn'` \| `'Sb'` \| `'Te'` \| `'I'` \| `'Xe'` \| `'Cs'` \| `'Ba'` \| `'La'` \| `'Ce'` \| `'Pr'` \| `'Nd'` \| `'Pm'` \| `'Sm'` \| `'Eu'` \| `'Gd'` \| `'Tb'` \| `'Dy'` \| `'Ho'` \| `'Er'` \| `'Tm'` \| `'Yb'` \| `'Lu'` \| `'Hf'` \| `'Ta'` \| `'W'` \| `'Re'` \| `'Os'` \| `'Ir'` \| `'Pt'` \| `'Au'` \| `'Hg'` \| `'Tl'` \| `'Pb'` \| `'Bi'` \| `'Po'` \| `'At'` \| `'Rn'` \| `'Fr'` \| `'Ra'` \|`'Ac'` \| `'Th'` \| `'Pa'` \| `'U'` \| `'Np'` \| `'Pu'` \| `'Am'` \| `'Cm'` \| `'Bk'` \| `'Cf'` \| `'Es'` \| `'Fm'` \| `'Md'` \| `'No'` \| `'Lr'` \| `'Rf'` \| `'Db'` \| `'Sg'` \| `'Bh'` \| `'Hs'` \| `'Mt'` \| `'Ds'` \| `'Rg'` \| `'Cn'` \| `'Nh'` \| `'Fl'` \| `'Mc'` \| `'Lv'` \| `'Ts'` \| `'Og'`
-|                            _element_numbers_ ::= `'#1'` \|`'#2'` \| `'#3'` \| `'...'` \|`'#118'`
+|                            _element_numbers_ ::= `'#1'` \|`'#2'` \| `'#3'` \| ... \|`'#118'`
 |                            _aromatic_symbols_ ::= `'b'` \| `'c'` \| `'n'` \| `'o'` \| `'p'` \| `'s'` \| `'se'` \| `'te'` \| `'as'`
 |                            _element_undefined_ ::= `'*'` \| `'#0'`   
 2+| **CHIRALITY**
@@ -154,7 +154,7 @@ concerned with syntax.
 2+| **HYDROGENS**
 | <<hydrogens,Hydrogens>>  | _hcount_ ::= `'H'` \| `'H'` _DIGIT_
 2+| **CHARGES**
-| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _DIGIT_? _DIGIT_ \| `'+'` \| `'+'` _DIGIT_? _DIGIT_ \| `'--'` deprecated \| `'...'` \| `'---------------'` deprecated \| `'++'` deprecated \| `'...'` \| `'+++++++++++++++'` deprecated
+| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _DIGIT_? _DIGIT_ \| `'+'` \| `'+'` _DIGIT_? _DIGIT_ \| `'--'` deprecated \| ... \| `'---------------'` deprecated \| `'++'` deprecated \| ... \| `'+++++++++++++++'` deprecated
 2+| **ATOM CLASS**
 | <<atomclass,Atom Class>> | _class_ ::= `':'` _NUMBER_
 2+| **BONDS AND CHAINS**
@@ -345,6 +345,7 @@ it has no assumed isotope, a mass of zero, unspecified chirality, a hydrogen cou
 
 The `+++'*'+++` and `'#0'` atom do not have any specific electronic properties or valence. When these symbols
 occur inside of square brackets, they take on the valence implied by its bonds, hydrogens and/or charge.
+
 In the case where the `+++'*'+++`atom can be specified outside of square brackets, it takes on the valence
 implied by its bonds.
 
