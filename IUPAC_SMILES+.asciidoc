@@ -1,4 +1,4 @@
-= IUPAC SMILES+ Specification [work in progress draft, specification is incomplete and not approved yet]
+= IUPAC SMILES+ Specification [work in progress draft - incomplete and not approved yet]
 :toc: macro
 
 *IUPAC SMILES+ Contributors:* Vincent F. Scalfani (Chair), Evan Bolton, Helen Cooke, Chris Grulke, 
@@ -237,7 +237,7 @@ hydrogen must be written as `[H][H]`.
 
 Charge is specified by a `+n` or `-n` where `n` is a number from `0` to `15`. If a charge is specified without
 a number, a `1` is implied. If the number is `0`, the charge is interpreted as no charge. 
-That is, [Ag+0] and [Ag-0] are equivalent to [Ag]. A `0` charge should be avoided and is not recommended 
+That is, `[Ag+0]` and `[Ag-0]` are equivalent to `[Ag]`. A `0` charge should be avoided and is not recommended 
 as a best practice. A charge specification leading with `0` and followed be a second digit such as `[Ag+01]` is invalid.   
 
 For backwards compatibility, a general-purpose SMILES parser should
@@ -259,7 +259,7 @@ Examples:
 |==============================================================
 
 The charge symbol `'-'` or `'+'` must come before the numeric digit. That is, `[Mg+2]` is valid, while
-`[Mg2+]` is invalid. Moreover, providing multiple charge specifications such as `[Li+1-2] or [Li+-] is invalid. 
+`[Mg2+]` is invalid. Moreover, providing multiple charge specifications such as `[Li+1-2]` or `[Li+-]` are invalid. 
 
 ==== Isotopes
 
@@ -274,18 +274,12 @@ preceding the atomic symbol; for example:
 | `[238U]`  | Uranium 238 atom
 |=============================
 
-An isotope is interpreted as a number, so that `[2H]`,
-`[02H]` and `[002H]` all mean deuterium.  If the isotope field
-is not specified then the atom is assumed to have the naturally-occurring isotopic ratios.  The
-isotope value 0 also indicates an isotope of zero, that is
-`[0S]` is *not* the same as `[S]`.
-
-There is no requirement that the isotope is a genuine isotope of the element.  Thus,
-`[36Cl]` is allowed even though ^35^Cl and
-^37^Cl are the actual known stable isotopes of chlorine.
-
-A general-purpose SMILES parser must accept at least three digits for the isotope and values
-from 0 to 999.
+An isotope is interpreted as a number from `0` to `999`. A `0` isotope specification is equivalent
+to undefined, and the atom is assumed to have the naturally-occurring isotopic ratios. For example, 
+`[0S]` is equivalent to `[S]`. An isotopic specification leading with a `0` and followed by digits such as
+`[098Ru]` is invalid. The isotope ^98^Ru is written as `[98Ru]`. 
+There is no requirement that the isotope is a genuine isotope of the element. Thus, `[36Cl]` is allowed 
+even though ^35^Cl and ^37^Cl are the actual known stable isotopes of chlorine.
 
 [[orgsbst]]
 
@@ -1405,8 +1399,6 @@ accept.
 |                                      `C/C=CC` | `CC=CC`
 |                                      `CC/=C/C` | `CC=CC`
 | Conflicting cis/trans specification | `C/C(\F)=C/C` | `CC(F)=CC` | Conflicting cis/trans bonds are ignored. (In this case, both the methyl and fluorine on the left are shown as _trans_ to the methyl on the right, an impossible configuration.)
-.2+| D and T | `D[CH3]` | `[2H][CH3]` .2+| The symbols `D` and `T` are treated as synonyms for `[2H]` and `[3H]`.
-|              `T[CH3]` | `[3H][CH3]`
 .2+| Lowercase as sp^2^ | `CccccC` | `CC=CC=CC` 2,4-hexadiene .2+| Lowercase letters are interpreted as sp^2^, even outside of ring systems.
 |                         `Ccc` | `CC=C` propene
 |==========================================================================================
@@ -1527,6 +1519,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2020-09-28 | Clarified Hydrogen `Hn`, where `n` is a single digit number 0-9 | Vincent F. Scalfani
 | 1.0 | 2020-09-28 | General formatting for consistency | Vincent F. Scalfani
 | 1.0 | 2020-09-28 | Clarified atom charge property syntax and added support for repeated symbols up to 15 and a 0 charge | Vincent F. Scalfani
+| 1.0 | 2020-09-28 | Isotope changes: A 0 isotope is now undefined, leading 0 (e.g., 02) is invalid, and removed D,T symbols  | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
