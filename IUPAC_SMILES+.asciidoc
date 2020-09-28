@@ -154,7 +154,7 @@ concerned with syntax.
 2+| **HYDROGENS**
 | <<hydrogens,Hydrogens>>  | _hcount_ ::= `'H'` \| `'H'` _DIGIT_
 2+| **CHARGES**
-| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _DIGIT_? _DIGIT_ \| `'+'` \| `'+'` _DIGIT_? _DIGIT_ \| `'--'` *deprecated*  \| `'...'` \| `'---------------'` *deprecated*  \| `'++'` *deprecated* \| `'...'` \| `'+++++++++++++++'` *deprecated*
+| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _DIGIT_? _DIGIT_ \| `'+'` \| `'+'` _DIGIT_? _DIGIT_ \| `'--'` deprecated \| `'...'` \| `'---------------'` deprecated \| `'++'` deprecated \| `'...'` \| `'+++++++++++++++'` deprecated
 2+| **ATOM CLASS**
 | <<atomclass,Atom Class>> | _class_ ::= `':'` _NUMBER_
 2+| **BONDS AND CHAINS**
@@ -181,13 +181,13 @@ concerned with syntax.
 
 An atom is represented by its atomic symbol, enclosed in square brackets, `[]`.
 The first character of the symbol is uppercase and the second (if any) is lowercase,
-except that for aromatic atoms (see below), the first character is lowercase. Alternatively, 
+except that for aromatic atoms (see <<inaromaticity, Aromaticity>>), the first character is lowercase. Alternatively, 
 an atom can also be represented using the symbol `'#'` followed by its atomic number enclosed in square brackets, `[]`.
 There are https://iupac.org/what-we-do/periodic-table-of-elements/[118 valid atomic symbols] 
 as defined by https://iupac.org/[IUPAC].
 
 The symbols `+++'*'+++` and `'#0'` are accepted as a valid atomic symbols, and represent a "wildcard" or unknown atom.
-Importantly, `'#0'` must always be written within brackets, while `+++'*'+++` is considered part of 
+Importantly, `'#0'` must always be written within brackets (see <<wildsyms,Wildcard Atoms>>), while `+++'*'+++` is considered part of 
 the <<orgsbst,Organic Subset>> and does not have this requirement.
 
 // The +++ is used above as a passthrough in the * symbol in order to avoid GitHub from displaying the line as bold.
@@ -289,7 +289,7 @@ A special subset of elements called the "organic subset" of
 **B**, **C**, **N**, **O**, **P**, **S**, **F**,
 **Cl**, **Br**, **I**, and ***** (the "wildcard" atom) can be
 written using the only the atomic symbol (that is, without the square
-brackets, H-count, etc.).  An atom is specified this way has the
+brackets, H-count, etc.). An atom is specified this way has the
 following properties:
 
 * "implicit hydrogens" are added such that valence of the atom is in
@@ -301,7 +301,7 @@ following properties:
 The implicit hydrogen count is determined by summing the bond orders
 of the bonds connected to the atom.  If that sum is equal to a known
 valence for the element or is greater than any known valence then the
-implicit hydrogen count is 0.  Otherwise the implicit hydrogen count is the
+implicit hydrogen count is `0`.  Otherwise the implicit hydrogen count is the
 difference between that sum and the next highest known valence.
 
 The "normal valence" for these elements is defined as:
@@ -331,28 +331,40 @@ Examples:
 
 _Note: The remaining atom properties, chirality and ring-closures, are discussed in later sections._
 
-==== The Wildcard `'*'` Atomic Symbol
+[[wildsyms]]
 
-The `+++'*'+++` atom represents an atom whose atomic number is unknown or unspecified. If it occurs
-inside brackets, it can have its isotope, chirality, hydrogen count and charge specified.  If it
-occurs outside of brackets, it has no assumed isotope, a mass of zero, unspecified chirality, a
-hydrogen count of zero, and a charge of zero.
+==== The Wildcard `'*'` Atomic Symbol and `'#0'` Atomic Number Symbol
+
+The `+++'*'+++` and `'#0'` atoms represents an atom whose atomic number is unknown or unspecified. 
+The `+++'*'+++` atom can occur either inside or outside of square brackets, `[]`, as the `+++'*'+++` 
+atom is considered part of the special <<orgsbst,Organic Subset>> elements.
+In contrast, the `'#0'` atom can only occur inside of square brackets.
+When an `+++'*'+++` or `'#0'` atom occur inside of square brackets, the unknown atom can have its isotope, chirality, 
+hydrogen count and charge specified. When an `+++'*'+++` atom occurs outside of brackets, 
+it has no assumed isotope, a mass of zero, unspecified chirality, a hydrogen count of zero, and a charge of zero.
+
+The `+++'*'+++` and `'#0'` atom do not have any specific electronic properties or valence. When these symbols
+occur inside of square brackets, they take on the valence implied by its bonds, hydrogens and/or charge.
+In the case where the `+++'*'+++`atom can be specified outside of square brackets, it takes on the valence
+implied by its bonds.
+
+An `+++'*'+++` or `'#0'` atom can be part of an aromatic ring. When deducing the
+aromaticity of a ring system, the ring system is considered aromatic if
+there is an element which could replace the `+++'*'+++` or `'#0'` atom and make the ring system
+meet the aromaticity rules (see <<inaromaticity,Aromaticity>>, below).
 
 [options="header",frame="topbot",grid="rows",width="40%",cols="2,3"]
 |==============================================
-| SMILES              | Name
-| `Oc1c(*)cccc1`      | ortho-substituted phenol
+| SMILES              | Comments
+| `CCC(*)C`      | any atom at index number 3
+| `CCC([#0])C`      | any atom at index number 3
+| `c1cc[#0]c1`      | five membered arene with any atom
+| `c1cc*c1`      | five membered arene with any atom
+| `CCC[#0-]`      | any atom with charge -1 at index number 3
+| `[73*]`      | any atom with isotope value 73
 |==============================================
 
-The `+++'*'+++` atom does not have any specific electronic properties or
-valence.  If specified outside of square brackets, it takes on the valence
-implied by its bonds.  If it is inside square brackets, it takes on the
-valence implied by its bonds, hydrogens and/or charge.
-
-A `+++'*'+++` atom can be part of an aromatic ring.  When deducing the
-aromaticity of a ring system, the ring system is considered aromatic if
-there is an element which could replace the `+++'*'+++` and make the ring system
-meet the aromaticity rules (see <<inaromaticity,Aromaticity>>, below).
+_Note: the term index in the table comments above is referring to the SMILES string, counting from left to right and starting at 0._
 
 // The +++ is used above as a passthrough in the * symbol in order to avoid GitHub from displaying the line as bold.
 
@@ -1520,6 +1532,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2020-09-28 | General formatting for consistency | Vincent F. Scalfani
 | 1.0 | 2020-09-28 | Clarified atom charge property syntax and added support for repeated symbols up to 15 and a 0 charge | Vincent F. Scalfani
 | 1.0 | 2020-09-28 | Isotope changes: A 0 isotope is now undefined, leading 0 (e.g., 02) is invalid, and removed D,T symbols  | Vincent F. Scalfani
+| 1.0 | 2020-09-28 | Clarified Wildcard atom section with `#0` and more examples.  | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
