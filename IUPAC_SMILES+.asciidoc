@@ -240,7 +240,7 @@ a number, a `1` is implied. If the number is `0`, the charge is interpreted as n
 That is, `[Ag+0]` and `[Ag-0]` are equivalent to `[Ag]`. A `0` charge should be avoided and is not recommended 
 as a best practice. A charge specification leading with `0` and followed be a second digit such as `[Ag+01]` is invalid.   
 
-Repeated symbols such as `'--'` and `'++'` to mean charges of `-2` and `+2` are valid and should be accepted. Symbols can
+Repeated symbols such as `'--'` and `'++'` are valid and interpreted as charges of `-2` and `+2`, respectively. Symbols can
 repeat up to 15 times. However, this form is not recommended as a best practice and should be avoided.
 
 Examples:
@@ -676,10 +676,9 @@ be explicitly represented.  For example:
 | image:depict/biphenyl.gif[] | `c1ccccc1-c2ccccc2`   | biphenyl
 |================================================================
 
-_Note: Some SMILES parsers interpret a lowercase letter as sp^2^ anywhere it appears;
+_Note: Some SMILES parsers interpret a lowercase letter as sp^2^ anywhere it appears, even outside of rings;
 for example, `CccccC` would be interpreted as `CC=CC=CC`.
-The OpenSMILES specification does not allow this interpretation unless
-<<nonstandard,nonstandard parsing>> is explicitely allowed by the user._
+The IUPAC SMILES+ specification does not allow this interpretation.
 
 === More about Hydrogen
 
@@ -1411,8 +1410,6 @@ accept.
 |                                      `C/C=CC` | `CC=CC`
 |                                      `CC/=C/C` | `CC=CC`
 | Conflicting cis/trans specification | `C/C(\F)=C/C` | `CC(F)=CC` | Conflicting cis/trans bonds are ignored. (In this case, both the methyl and fluorine on the left are shown as _trans_ to the methyl on the right, an impossible configuration.)
-.2+| Lowercase as sp^2^ | `CccccC` | `CC=CC=CC` 2,4-hexadiene .2+| Lowercase letters are interpreted as sp^2^, even outside of ring systems.
-|                         `Ccc` | `CC=C` propene
 |==========================================================================================
 
 // The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
@@ -1533,6 +1530,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2020-09-28 | Clarified atom charge property syntax and added support for repeated symbols up to 15 and a 0 charge | Vincent F. Scalfani
 | 1.0 | 2020-09-28 | Isotope changes: A 0 isotope is now undefined, leading 0 (e.g., 02) is invalid, and removed D,T symbols  | Vincent F. Scalfani
 | 1.0 | 2020-09-28 | Clarified Wildcard atom section with `#0` and more examples.  | Vincent F. Scalfani
+| 1.0 | 2020-09-28 | Removed lowercase as sp2 outside of rings  | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
