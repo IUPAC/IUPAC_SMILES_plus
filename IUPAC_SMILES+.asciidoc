@@ -65,7 +65,7 @@ mechanism for community contributions and ongoing maintenance. We salute Dayligh
 their past contributions, and the excellent SMILES documentation they provided free
 of charge for the past three decades.
 
-In the early 2000s, the Blue Obelisk community created a new, non-proprietary specification 
+In the early 2000s, the https://en.wikipedia.org/wiki/Blue_Obelisk[Blue Obelisk] community created a new, non-proprietary specification 
 for the SMILES language, namely, http://www.opensmiles.org[OpenSMILES]. 
 Our efforts seek to build open the work of OpenSMILES by further clarifying ambiguities in the 
 SMILES language, creating a formal mechanism for adoption of new extensions (i.e., the `+` in IUPAC SMILES+), and
@@ -464,7 +464,7 @@ depth. For example, the following SMILES, though peculiar, is legal:
 |==============================================================================
 
 In IUPAC SMILES+ syntax, duplicate, misplaced, or parentheses branching without atom(s) inside are invalid. 
-Some invalid examples include: `C(\(C))O`, `(N1CCCC1)`, `C(1CC1)` `C()`, and `C1CC(1)`. 
+Some invalid examples include: `C\(\(C))O`, `(N1CCCC1)`, `C(1CC1)` `C()`, and `C1CC(1)`. 
 Note that the form `(CO)N` is never allowed, since it is not clear which atom the nitrogen should connect to.
 
 // The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
@@ -488,7 +488,10 @@ forms a cyclic structure.
 
 If a bond symbol is present between the atom and rnum, it can be
 present on *either or both* bonded atoms.  However, if it appears on
-both bonded atoms, the two bond symbols must be the same.
+both bonded atoms, the two bond symbols must be the same. If there are conflicting ring closure bonds defined such as `C=1CCCCC#1`, `C-1CCCCC=1`, or `c=1ccccc:1`, the SMILES are invalid. 
+Two defined bonds must match. In contrast, if only one bond is defined 
+as in `C=1CCCCC1` or `C1CCCC=1`, the SMILES are valid and interpreted with 
+the defined bond at ring closure. The implicit bond is ignored.
 
 [options="header",frame="topbot",grid="rows",width="90%"]
 |=================================================================================================
@@ -529,7 +532,7 @@ as `C%(920)CCCCC%(920)`
 While a ring closure using zero is valid as in `C0CCCCC0`, when multiple digits
 are used, a leading number of `0` is invalid such as in `C%01CCCCC%01` or `C%00CCCCC%00`.
 For notation using `%nn`, start with a `nn` of `10`, and for notation in the form 
-`%nnn` or `%(nnn)`, start with `nnn` as `100`.
+`%nnn` or `%(nnn)`, start with `nnn` of `100`.
 
 A single atom can have several ring-closure numbers, such as this spiro
 atom:
@@ -551,12 +554,6 @@ example, the following are not allowed:
 | `C12C2CCC1`         | illegal, two bonds between one pair of atoms
 | `C11`               | illegal, atom bonded to itself
 |=====================================================================
-
-Finally, if there are conflicting ring closure bonds defined such as 
-`C=1CCCCC#1`, `C-1CCCCC=1`, or `c=1ccccc:1`, the SMILES are invalid. 
-Two defined bonds must match. In contrast, if only one bond is defined 
-as in `C=1CCCCC1` or `C1CCCC=1`, the SMILES are valid and interpreted with 
-the defined bond at ring closure. The implicit bond is ignored.
 
 [[inaromaticity]]
 
@@ -903,7 +900,7 @@ when the fluorine atom moved from the left to the right side of the alkene carbo
 _Note: This point was not well documented in earlier SMILES specifications, and several SMILES
 interpreters are known to interpret the `'/'` and `'\'` symbols incorrectly._
 
-The following types of up/down syntax are considered invalid in IUPAC SMILES+
+The following types of up/down syntax are considered invalid in IUPAC SMILES+:
 
 * conflicting up/down specifications
 * mismatched or incomplete cis/trans specification
@@ -976,7 +973,7 @@ image:depict/SPshapes.png[]
 
 *Background:*
 
-_Also note that each shape starts and ends at specific positions. Both U and Z
+Also note that each shape starts and ends at specific positions. Both U and Z
 start from atoms that are successors or predecessors when arranging the atoms
 in the plane in anti-clockwise or clockwise order. The start and end atoms for
 the Z shape are never adjacent in such an ordering. For each shape there are
@@ -985,7 +982,7 @@ lines, the start and end point can be exchanged. Thus 3 shapes, 4 ways to
 start/end and 2 ways to order the atoms for a shape results in 3 * 4 * 2 or
 24 combinations. This is the same as the number of permutations that can be
 made with 4 numbers (i.e. P(n) = n!). This allows for canonical SMILES
-writers to use any ordering to output the atoms._
+writers to use any ordering to output the atoms.
 
 ==== Trigonal Bipyramidal Centers
 
@@ -1036,7 +1033,7 @@ The following SMILES are all equivalent:
 
 *Background:*
 
-_The trigonal Bipyramidal chirality is considerably more complex than any of the
+The trigonal Bipyramidal chirality is considerably more complex than any of the
 previous classes since the chiral atom has an extra neighbor. This increases the
 number of combinations to order the neighbors in a SMILES string from 24
 to 120. Since every order of the atoms should be representable by a SMILES
@@ -1056,7 +1053,7 @@ as the set {a, b, c, d, e}, there are C(5, 2) = 20 possible combinations
 of 5 things taken 2 at a time. However, the use of the @ and @@ symbols halve
 this to 10. These 10 combinations are the ordered sets (a, e), (a, d) (a, c),
 (a, b), (b, e), (b, d), (b, c), (c, e), (c, d) and (d, e). Each of these pairs
-correspond to an TB primitive._
+correspond to an TB primitive.
 
 ==== Octahedral Centers
 
@@ -1122,7 +1119,7 @@ The following SMILES are all equivalent:
 
 *Background:*
 
-_Octahedral stereochemistry is even more complicated since there is yet another
+Octahedral stereochemistry is even more complicated since there is yet another
 extra neighboring atom. This raises the number of permutations to P(6) = 720.
 There are three axis that can be chosen and the orientation of the remaining
 4 atoms has to be described. To describe these 4 atoms, P(4) = 24 permutations
@@ -1132,7 +1129,7 @@ As a result, each OH number encodes the axis positions, a shape and an order.
 Since all 3 axis can be placed in this positions, the start/end can be exchanged
 and each shape can start from any of the 4 atoms, each number represents
 3 * 2 * 4 = 24 of the 720 permutations. Finally, 24 * 30 = 720 so all permutations
-can be used to write a canonical SMILES._
+can be used to write a canonical SMILES.
 
 ==== Partial Stereochemistry
 
@@ -1174,7 +1171,7 @@ Very few SMILES systems actually implement the rules for `SP`, `TB` or `OH` chir
 
 A SMILES string is terminated by a whitespace terminator character (space, tab, newline,
 carriage-return), or by the end of the string. As a result, and leading space in a SMILES string
-is considered invalid in IUPAC SMILES+ (e.g. ` CCC`). Further an empty SMILES string,`''`, is invalid.
+is considered invalid in IUPAC SMILES+ (e.g. `' CCC'`). Further an empty SMILES string,`''`, is invalid.
 
 Other data or information, such as a name, properties, registration number, etc., may follow the
 SMILES on a line after the whitespace character.  SMILES parsers will ignore this data, although
