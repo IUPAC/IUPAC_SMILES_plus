@@ -1,11 +1,11 @@
-= IUPAC SMILES+ Specification [work in progress draft - incomplete and not approved yet]
+= IUPAC SMILES+ Specification [Work in progress draft - incomplete and not approved yet]
 :toc: macro
 
 *IUPAC SMILES+ Contributors:* Vincent F. Scalfani (Chair), Evan Bolton, Helen Cooke, Chris Grulke, 
 John Irwin, Oliver Koepler, Greg Landrum, José L. Medina-Franco, Miguel Quirós Olozábal, 
 Susan Richardson, and Issaku Yamada.
 
-v0.1,2020-09-26: Working Draft                                   +
+v0.1,2020-09-29: Work in progress draft - incomplete and not approved yet                                   +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
 Copyright &copy; 2020, IUPAC    +
 Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]     +
@@ -372,10 +372,13 @@ _Note: the term index in the table comments above is referring to the SMILES str
 
 ==== Atom Class
 
-An "atom class" is an arbitrary integer, a number that has no chemical
+An "atom class" is an arbitrary integer, a number from `0` to `9999` that has no chemical
 meaning.  It is used by applications to mark atoms in ways that are
-meaningful only to the application.  Multiple atoms may be labeled with the
-same atom class.
+meaningful only to the application. Multiple atoms may be labeled with the same atom class.
+
+If the atom class is not specified, then the atom class is interpreted as zero.
+The atom class can not contain a leading `0`. So for example, `[NH4+:5]` is valid, 
+while `[NH4+:005]` is invalid.
 
 The atom class is specified after all other properties in square brackets. For example:
 
@@ -384,10 +387,6 @@ The atom class is specified after all other properties in square brackets. For e
 | SMILES     | Name
 | `[CH4:2]`  | methane, atom's class is 2
 |========================================
-
-If the atom class is not specified then the atom class is zero.
-The atom class is interpreted as a number, so both `[CH2:5]`
-and `[NH4+:005]` have an atom class of 5.
 
 [[bonds]]
 
@@ -417,6 +416,8 @@ Double, triple and quadruple bonds are represented by `'='`, `'#'`, and `'$'` re
 | `[Rh-](Cl)(Cl)(Cl)(Cl)$[Rh-](Cl)(Cl)(Cl)Cl` | octachlorodirhenate (III)
 |========================================================================
 
+Misplaced bonds such as `CC=` or duplicate bonds such as `C==C` are invalid.
+
 A single bond can be explicitly represented with `'-'`, but it is rarely
 necessary.
 
@@ -428,8 +429,7 @@ necessary.
 | `C-C=C-C`       | same as: `CC=CC`
 |===================================
 
-Note: The remaining bond symbols, `':\/'`, are discussed in
-later sections.
+The remaining bond symbols, `':\/'`, are discussed in later sections.
 
 === Branches
 
@@ -463,13 +463,17 @@ depth. For example, the following SMILES, though peculiar, is legal:
 | `C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C\(C))))))))))))))))))))C`    | C22H46
 |==============================================================================
 
+In IUPAC SMILES+ syntax, duplicate, misplaced, or parentheses branching without atom(s) inside are invalid. 
+Some invalid examples include: `C(\(C))O`, `(N1CCCC1)`, `C(1CC1)` `C()`, and `C1CC(1)`. 
+Note that the form `(CO)N` is never allowed, since it is not clear which atom the nitrogen should connect to.
+
 // The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
 
 [[ringclosure]]
 
 === Rings
 
-In a SMILES string such as "C1CCCCC1", the first occurrence of a ring-closure
+In a SMILES string such as `C1CCCCC1`, the first occurrence of a ring-closure
 number (an "rnum") creates an "open bond" to the atom that precedes the
 ring-closure number (the "rnum").  When that same rnum is encountered
 later in the string, a bond is made between the two atoms, which typically
@@ -495,10 +499,13 @@ both bonded atoms, the two bond symbols must be the same.
 |                                                 `C-1CCCCC=1`    | *invalid*
 |=================================================================================================
 
-Ring closures must be matched pairs in a SMILES string, for example, `C1CCC`
-is not a valid SMILES.
+Note that the ring number zero is valid, for example cyclohexane can be
+written `C0CCCCC0`.
 
-It is permissible to re-use ring-closure numbers.  Once a particular number
+Ring closures must be matched pairs in a SMILES string, for example, `C1CCC` or `C1CCCCC2`
+are not valid SMILES.
+
+It is permissible to re-use ring-closure numbers. Once a particular number
 has been encountered twice, that number is available again for subsequent ring closures.
 
 [options="header",frame="topbot",grid="rows",width="90%",cols="2,2,1,2"]
@@ -508,19 +515,21 @@ has been encountered twice, that number is available again for subsequent ring c
 |                                      `C1CCCCC1C2CCCCC2`  | bicyclohexyl  |
 |=================================================================================================
 
-Note that the ring number zero is valid, for example cyclohexane can be
-written `C0CCCCC0`.
-
 Two-digit ring numbers are permitted, but must be preceded by the percent
-`'%'` symbol, such as `C%25CCCCC%25` for cyclohexane. Three-digit numbers and
-larger are never permitted.  However, note that three digits are not invalid; for
-example, `C%123` is the same as `C3%12`, that is, an atom with two rnum
-specifications.
+`'%'` symbol, such as `C%25CCCCC%25` for cyclohexane. 
 
-The digit(s) representing a ring-closure are interpreted as a number, not a
-symbol, and two rnums match if their numbers match.  Thus, `C1CCCCC%01` is a
-valid SMILES and is the same as `C1CCCCC1`.  Likewise, `C%00CCCCC%00` is a
-valid SMILES.
+Three digits in the form `%nnn` are permitted; for
+example, `C%123` is the same as `C3%12`, that is, an atom with two rnum
+specifications (see example in table below).
+
+Three digits are also permitted in the form `%(nnn)`. When parentheses are used,
+the ring closure is interpreted with one rnum specification, so cylohexane can be represented
+as `C%(920)CCCCC%(920)`
+
+While a ring closure using zero is valid as in `C0CCCCC0`, when multiple digits
+are used, a leading number of `0` is invalid such as in `C%01CCCCC%01` or `C%00CCCCC%00`.
+For notation using `%nn`, start with a `nn` of `10`, and for notation in the form 
+`%nnn` or `%(nnn)`, start with `nnn` as `100`.
 
 A single atom can have several ring-closure numbers, such as this spiro
 atom:
@@ -529,6 +538,7 @@ atom:
 |========================================================================
 | Depiction                  | SMILES                | Name
 | image:depict/spiro.gif[]   | `C12(CCCCC1)CCCCC2`   | spiro[5.5]undecane
+| image:depict/spiro.gif[]   | `C%123(CCCCC3)CCCCC%12`   | spiro[5.5]undecane
 |========================================================================
 
 Two atoms cannot be joined by more than one bond, and an atom cannot be bonded to itself. For
@@ -541,6 +551,12 @@ example, the following are not allowed:
 | `C12C2CCC1`         | illegal, two bonds between one pair of atoms
 | `C11`               | illegal, atom bonded to itself
 |=====================================================================
+
+Finally, if there are conflicting ring closure bonds defined such as 
+`C=1CCCCC#1`, `C-1CCCCC=1`, or `c=1ccccc:1`, the SMILES are invalid. 
+Two defined bonds must match. In contrast, if only one bond is defined 
+as in `C=1CCCCC1` or `C1CCCC=1`, the SMILES are valid and interpreted with 
+the defined bond at ring closure. The implicit bond is ignored.
 
 [[inaromaticity]]
 
@@ -677,8 +693,7 @@ be explicitly represented.  For example:
 |================================================================
 
 _Note: Some SMILES parsers interpret a lowercase letter as sp^2^ anywhere it appears, even outside of rings;
-for example, `CccccC` would be interpreted as `CC=CC=CC`.
-The IUPAC SMILES+ specification does not allow this interpretation.
+for example, `CccccC` would be interpreted as `CC=CC=CC`. The IUPAC SMILES+ specification does not allow this interpretation._
 
 === More about Hydrogen
 
@@ -721,7 +736,7 @@ hydrogens.  For example:
 
 The dot `'.'` symbol (also called a "dot bond") is legal most places where
 a bond symbol would occur, but indicates that the atoms are *not*
-bonded.  The most common use of the dot-bond symbol is to represent
+bonded. The most common use of the dot-bond symbol is to represent
 disconnected and ionic compounds.
 
 [options="header",frame="topbot",grid="rows",width="90%",cols="2,3,2"]
@@ -747,10 +762,12 @@ syntax allows a dot most places a regular bond could appear (the exception
 is that a dot can't appear before a ring-closure digit).
 
 Although dot-bonds are commonly used to represent compounds with disconnected parts, a dot-bond
-does *not* in itself mean that there are disconnected parts in the compound.   See the
+does *not* in itself mean that there are disconnected parts in the compound. See the
 following section regarding ring digits for some examples that illustrate this.
 
-The dot bond cannot be used in front of a ring-closure digit.  For example, `C.1CCCCC.1` is illegal.
+The dot bond cannot be used in front of a ring-closure digit. For example, `C.1CCCCC.1` is invalid.
+Duplicate dot bonds such as `[Na+]..[Cl-]` are invalid. Further, disconnections must occur between 
+exactly two components, and as a result, leading or trailing dots are invalid (e.g., `.CCO` or `CCO.`). 
 
 ==== Other Uses of Ring Numbers and Dot Bond
 
@@ -886,12 +903,21 @@ when the fluorine atom moved from the left to the right side of the alkene carbo
 _Note: This point was not well documented in earlier SMILES specifications, and several SMILES
 interpreters are known to interpret the `'/'` and `'\'` symbols incorrectly._
 
-A SMILES with conflicting up/down specifications is invalid:
+The following types of up/down syntax are considered invalid in IUPAC SMILES+
+
+* conflicting up/down specifications
+* mismatched or incomplete cis/trans specification
+* duplicate up/down specifications sometimes used for escaping characters in computer processing
 
 [options="header",frame="topbot",grid="rows",width="70%",cols="1,3"]
 |=============================================================================================================
 | SMILES        | Comment
 | `C/C(\F)=C/F` | Invalid SMILES: Both the methyl and fluorine are "down" relative to the first allenal carbon
+| `C/C=C` | Invalid SMILES: Mismatched or incomplete cis/trans bonds
+| `C/C=CC` | Invalid SMILES: Mismatched or incomplete cis/trans bonds
+| `CC/=C/C` | Invalid SMILES: Mismatched or incomplete cis/trans bonds
+| `C(/Br)=C\\I` | Invalid SMILES: duplicate up/down
+| `C(\\\\F)=C/F` | Invalid SMILES: duplicate up/down
 |=============================================================================================================
 
 It is permissible, but not required, that every atom attached to a double bond be marked.  As
@@ -1147,7 +1173,8 @@ Very few SMILES systems actually implement the rules for `SP`, `TB` or `OH` chir
 == Parsing Termination
 
 A SMILES string is terminated by a whitespace terminator character (space, tab, newline,
-carriage-return), or by the end of the string.
+carriage-return), or by the end of the string. As a result, and leading space in a SMILES string
+is considered invalid in IUPAC SMILES+ (e.g. ` CCC`). Further an empty SMILES string,`''`, is invalid.
 
 Other data or information, such as a name, properties, registration number, etc., may follow the
 SMILES on a line after the whitespace character.  SMILES parsers will ignore this data, although
@@ -1155,22 +1182,19 @@ applications that use the SMILES parser will often make use of it.
 
 == Programming Practices
 
-OpenSMILES is designed to facilitate exchange of chemical information.  To achieve that goal, it
-SMILES parsers should impose as few limits as possible on the language.
-
 There is no formal limit to the length of a SMILES string; SMILES of over 1 million characters
-have been assembled for various purposes.  There is no requirement that a SMILES parser must be able
+have been assembled for various purposes. There is no requirement that a SMILES parser must be able
 to parse these exceptionally long SMILES, but as a guideline, all implementations of SMILES parsers
-should, at a minimum, accept and correctly parse SMILES strings of 100,000 characters.  If a SMILES
+should, at a minimum, accept and correctly parse SMILES strings of 100,000 characters. If a SMILES
 parser encounters a string that is too long to parse, it should generate a relevant error
 message.
 
 A SMILES parser should accept at least four digits for the <<atomclass,atom class>>,
 and the values 0 to 9999.
 
-There is no formal limit to the number of rings a molecule can contain.  There are only
-100 ring-closure numbers, but since numbers can be reused, a molecule can potentially have more
-than 100 rings.  SMILES parsers should accept and correctly parse molecules with at least 1000 rings;
+There is no formal limit to the number of rings a molecule can contain. There are only
+999 ring-closure numbers, but since numbers can be reused, a molecule can potentially have more
+than 999 rings. SMILES parsers should accept and correctly parse molecules with at least 1000 rings;
 it is preferable to place no limits on the number of rings a molecule can contain.
 
 Branches (parentheses) can be nested to an arbitrary depth.  Some SMILES strings in standard
@@ -1178,7 +1202,7 @@ databases contain over 30 levels of branches, and much deeper nesting is possibl
 purpose parser must handle at least 100 levels; it is preferable to place no limits on nesting
 depth for parentheses.
 
-There is no formal limit on the number of bonds an atom can have.  SMILES parsers should allow at
+There is no formal limit on the number of bonds an atom can have. SMILES parsers should allow at
 least ten bonds to each atom; it is preferable to place no limits on the number of bonds to each
 atom.
 
@@ -1197,7 +1221,7 @@ triggered the error message.
 
 === What is Normalization?
 
-A wide variety of SMILES strings are acceptable as input.  For example, all of the following
+A wide variety of SMILES strings are acceptable as input. For example, all of the following
 represent ethanol:
 
 [options="header",frame="topbot",grid="rows",width="60%",cols="3,1"]
@@ -1242,6 +1266,10 @@ https://www.daylight.com/dayhtml/doc/theory/theory.smarts.html[SMARTS]
 string.  This is a very important feature of normalized SMILES in
 cheminformatics systems.
 
+**In IUPAC SMILES+, there is a strict atom property order within bracket atoms. 
+The valid order from left to right is isotope, atom symbol/number, chirality, hydrogen count, 
+charge, then atom class.**
+
 _Note: In the examples below, some of the "Wrong" SMILES may be valid as per the IUPAC SMILES+ specification, but are "wrong"
 in the sense that they are not the preferred form for standard normalization._
 
@@ -1279,7 +1307,7 @@ in the sense that they are not the preferred form for standard normalization._
 | `c1ccccc1C2CCCC2` | `c0ccccc0C1CCCC1`   | Begin ring numbering with 1, not zero (or any other number)
 | `CC1=CCCCC1`      | `CC=1CCCCC=1`       | Avoid making a ring-closure on a double or triple bond.  For the ring-closure digits, choose a single bond whenever possible.
 | `C1CC2CCCCC2CC1`  | `C12(CCCCC1)CCCCC2` | Avoid starting a ring system on an atom that is in two or more rings, such that two ring-closure bonds will be on the same atom.
-| `C1CCCCC1`        | `C%01CCCCC%01`      | Use the simpler single-digit form for rnums less than 10.
+| `C1CCCCC1`        | `C%10CCCCC%10`      | Use the simpler single-digit form for rnums less than 10.
 |==============================================
 
 ==== Starting Atom and Branches
@@ -1353,6 +1381,14 @@ thus changing the SMILES it produces.  A Canonical SMILES is primarily
 useful in a single database, or a system of related databases or information,
 in which all molecules were created using a single canonicalizer.
 
+It is an unfortunately common misconception that a Canonical SMILES does not (or can not)
+contain stereochemistry/isotopes or alternatively that all SMILES must be canonical.
+
+In general the properties encoded in a SMILES can be chosen by a program to suit 
+a particular purpose. You may have the option to independently include or omit stereochemistry, 
+isotopes, or atom map/class in a generated Canonical SMILES. When referencing a particular SMILES,
+confusion can be avoided by including the toolkit, version, and options used.
+
 The rules (algorithms) by which the canonical ordering of the atoms in a
 SMILES are generated are quite complex, and beyond the scope of this
 document.  There are many chemistry and mathematical graph-theory
@@ -1375,64 +1411,6 @@ character, or by a CR/LF pair of characters (commonly called the "Unix" and "Win
 terminators, respectively).  A SMILES parser must accept either line terminator.  A blank line in
 the SMILES file, or a line that begins with a whitespace character, should be completely ignored by
 a SMILES parser.
-
-[[nonstandard]]
-
-== Nonstandard Forms of SMILES
-
-Several SMILES-generating systems are in use that either generate
-incorrect SMILES, or that interpreted some of the ambiguous features of the
-original SMILES specification in different ways.  Although these SMILES are
-illegal according to this formal OpenSMILES specification, it is often useful to
-parse them, in order to make use of the information that accompanies these
-SMILES.
-
-These "relaxed" SMILES rules should only be allowed when the user
-(presumably after thinking about the consequences) requests it.  A SMILES
-parser that allows any or all of these "relaxed" rules _must
-not do it by default_.  The user must specifically request these relaxed
-rules before a parser can accept such SMILES.
-
-The following table lists "relaxed" rules that SMILES parsers may
-accept.
-
-[options="header",frame="topbot",grid="rows",width="100%",cols="3,2,3,6"]
-|==========================================================================================
-| Rule                 | Example         | Interpreted as ...    | Details
-.3+| Extra parentheses | `C\(\(C))O` | `C\(C)O` .3+| Extra parentheses are ignored in places where there is no ambiguity as to the meaning.  Note that the form `(CO)N` is never allowed, since it isn't clear which atom the nitrogen should connect to.
-|                        `C\(\(C))O` | `C\(C)O`
-|                        `(N1CCCC1)` | `N1CCCCC1`
-.3+| Misplaced dots | `[Na+]..[Cl-]` | `[Na+].[Cl-]` .3+| Two or more dot-bonds in a row are condensed into one.  A leading or trailing dot-bond is ignored.  Note that a dot that starts a branch is _legal_ in strict SMILES; for example, `C1CC(.[Na+])CC1[O-]` is a legal (though strange) SMILES.
-|                     `.CCO` | `CCO`
-|                     `CCO.` | `CCO`
-| Mismatched Ring Bonds | `C1CCC` | `CCCC` | Mismatched ring bonds are ignored.  Note that this is almost always a bad idea.  For example, `C1CCCCC2` is almost certainly supposed to be cyclohexane `C1CCCCC1`, but with "relaxed" parsing would be interpreted as hexane.
-.3+| Invalid Cis/Trans specification | `C/C=C` | `CC=C` .3+| Mismatched or incomplete cis/trans bonds are ignored.
-|                                      `C/C=CC` | `CC=CC`
-|                                      `CC/=C/C` | `CC=CC`
-| Conflicting cis/trans specification | `C/C(\F)=C/C` | `CC(F)=CC` | Conflicting cis/trans bonds are ignored. (In this case, both the methyl and fluorine on the left are shown as _trans_ to the methyl on the right, an impossible configuration.)
-|==========================================================================================
-
-// The (C) in the SMILES above is escaped as \(C) in order to avoid GitHub from displaying a copyright symbol
-
-== SMILES Flavors
-
-It is an unfortunately common misconception that a Canonical SMILES does not
-contain stereochemistry or alternatively that all SMILES must be canonical. SMILES flavors as described by Daylight are summarised below.
-
-[options="header",frame="topbot",grid="rows",cols="6,3,3,3"]
-|===============================================================
-| Flavor           | Atoms and Bonds Distinctly Ordered | Stereochemistry | Isotopes
-| Canonical SMILES | Y    | Y/N             | Y/N
-| Arbitrary SMILES | N    | Y/N             | Y/N
-| Isomeric SMILES  | Y/N  | Y               | Y
-| Unique SMILES    | Y    | N               | N
-| Absolute SMILES  | Y    | Y               | Y
-| Generic SMILES   | N    | N               | N
-|===============================================================
-
-These terms can be confusing and *should be avoided* due to conflicting definitions between vendors and toolkits. For example ChemAxon use the term *Isomeric SMILES* to mean a non-canonical SMILES with stereochemistry and isotopic information specified (see https://docs.chemaxon.com/display/docs/SMILES[SMILES, ChemAxon Documentation]). OEChem use the term *Isomeric SMILES* to mean a canonical SMILES with stereochemistry and isotopic information specified (see https://docs.eyesopen.com/toolkits/cpp/oechemtk/OEChemFunctions/OECreateIsoSmiString.html[+OECreateIsoSmiString+]), *Absolute SMILES* to mean a non-canonical SMILES with stereochemistry and isotopic information specified (see https://docs.eyesopen.com/toolkits/cpp/oechemtk/OEChemFunctions/OECreateAbsSmiString.html[+OECreateAbsSmiString+]), and *Canonical SMILES* to mean a canonical SMILES *without* stereochemistry and isotopic information specified (see https://docs.eyesopen.com/toolkits/cpp/oechemtk/OEChemFunctions/OECreateCanSmiString.html[+OECreateCanSmiString+]).
-
-In general the properties encoded in a SMILES can be chosen by a program to suit a particular purpose. You may have the option to independently include or omit stereochemistry, isotopes, or atom map/class in a generated SMILES. When referencing a particular SMILES flavor confusion can be avoided by including the toolkit, version, and options used.
 
 [[appendix]]
 
@@ -1480,7 +1458,7 @@ Many modern molecular editors can read and write SMILES:
 
 === Some Key Scientific Papers
 
-* Anderson, E.; Veith, G.D.; Weininger, D. SMILES: A Line Notation and Computerized Interpreter for Chemical Strcutures. U.S. Environmental Protection Agency, Washington, D.C., EPA/600/M-87/021 (NTIS PB88130034), 1987.
+* Anderson, E.; Veith, G.D.; Weininger, D. SMILES: A Line Notation and Computerized Interpreter for Chemical Structures. U.S. Environmental Protection Agency, Washington, D.C., EPA/600/M-87/021 (NTIS PB88130034), 1987.
 
 * Weininger, D. SMILES, a Chemical Language and Information System. 1. Introduction to Methodology and Encoding Rules. J. Chem. Inf. Comput. Sci. 1988, 28, 31-36.
 
@@ -1531,6 +1509,13 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2020-09-28 | Isotope changes: A 0 isotope is now undefined, leading 0 (e.g., 02) is invalid, and removed D,T symbols  | Vincent F. Scalfani
 | 1.0 | 2020-09-28 | Clarified Wildcard atom section with `#0` and more examples.  | Vincent F. Scalfani
 | 1.0 | 2020-09-28 | Removed lowercase as sp2 outside of rings  | Vincent F. Scalfani
+| 1.0 | 2020-09-29 | Reworked and simplified SMILES flavors section into the Canonical SMILES section | Vincent F. Scalfani
+| 1.0 | 2020-09-29 | Atom class change: no leading 0 allowed | Vincent F. Scalfani
+| 1.0 | 2020-09-29 | Incorporated Nonstandard forms of SMILES section into main text. These are now considered invalid. | Vincent F. Scalfani
+| 1.0 | 2020-09-29 | Ring rnum change: no leading 0 allowed and clarified when a conflict arises | Vincent F. Scalfani
+| 1.0 | 2020-09-29 | Clarified that escaped up/down configurations are invalid | Vincent F. Scalfani
+| 1.0 | 2020-09-29 | Added that leading spaces in SMILES are invalid as well as empty strings | Vincent F. Scalfani
+| 1.0 | 2020-09-29 | Specified a strict bracket atom order | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
