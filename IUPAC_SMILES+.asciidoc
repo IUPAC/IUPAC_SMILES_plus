@@ -1516,5 +1516,5 @@ Many modern molecular editors can read and write SMILES:
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
+* IUPAC Project Discussion Summary and Notes (GitHub Pull Requests will get linked here).
 
-* link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/DiscussionNotes_IUPAC_SMILES%2B.txt[IUPAC Project Discussion Summary and Notes (IUPAC SMILES+)]
