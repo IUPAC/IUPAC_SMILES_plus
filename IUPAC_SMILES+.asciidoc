@@ -154,7 +154,7 @@ concerned with syntax.
 2+| **HYDROGENS**
 | <<hydrogens,Hydrogens>>  | _hcount_ ::= `'H'` \| `'H'` _DIGIT_
 2+| **CHARGES**
-| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _DIGIT_? _DIGIT_ \| `'+'` \| `'+'` _DIGIT_? _DIGIT_ \| `'--'` \| ... \| `'---------------'` \| `'++'` \| ... \| `'+++++++++++++++'`
+| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _DIGIT_? _DIGIT_ \| `'+'` \| `'+'` _DIGIT_? _DIGIT_ \| `'--'` \| ... \| `'---------------'` \| `'+{plus}'` \| ... \| `'+++{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}'`
 2+| **ATOM CLASS**
 | <<atomclass,Atom Class>> | _class_ ::= `':'` _NUMBER_
 2+| **BONDS AND CHAINS**
