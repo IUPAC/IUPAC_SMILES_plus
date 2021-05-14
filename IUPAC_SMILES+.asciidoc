@@ -1190,8 +1190,8 @@ A SMILES parser should accept at least four digits for the <<atomclass,atom clas
 and the values 0 to 9999.
 
 There is no formal limit to the number of rings a molecule can contain. There are only
-999 ring-closure numbers, but since numbers can be reused, a molecule can potentially have more
-than 999 rings. SMILES parsers should accept and correctly parse molecules with at least 1000 rings;
+1000 ring-closure numbers (0, 1-999), but since numbers can be reused, a molecule can potentially have more
+than 1000 rings. SMILES parsers should accept and correctly parse molecules with at least 1000 rings;
 it is preferable to place no limits on the number of rings a molecule can contain.
 
 Branches (parentheses) can be nested to an arbitrary depth.  Some SMILES strings in standard
