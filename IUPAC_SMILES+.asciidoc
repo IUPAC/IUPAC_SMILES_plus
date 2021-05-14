@@ -7,7 +7,7 @@ Susan Richardson, and Issaku Yamada.
 
 v0.1,2021-05-14: Work in progress draft - incomplete and not approved yet                                   +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
-Copyright &copy; 2020, IUPAC    +
+Copyright &copy; 2021, IUPAC    +
 Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]     +
 
 This IUPAC SMILES+ Specification [working draft] document is a modified derivative
@@ -71,10 +71,10 @@ Our efforts seek to build open the work of OpenSMILES by further clarifying ambi
 SMILES language, creating a formal mechanism for adoption of new extensions (i.e., the `+` in IUPAC SMILES+), and
 provide on-going maintenance of the specification through IUPAC.
 
-**Interoperability of reading the SMILES language is the top priority of the IUPAC SMILES+ specification.
+Interoperability of reading the SMILES language is the priority of the IUPAC SMILES+ specification.
 In order to remove ambiguity, we needed to make some distinct syntax choices and, for example, not allow
 flexibility where a parser may correct or ignore errors in the SMILES syntax. With that in mind, 
-we believe our choices are conservative and have not removed any important functionality of the SMILES language.**
+we believe our choices are conservative and have not removed any important functionality of the SMILES language.
 
 === Audience
 
@@ -448,7 +448,7 @@ Branches can be nested or "stacked" to any depth:
 |============================================================================================================
 | Depiction                                   | SMILES                      | Name
 | image:depict/2-4-dimethyl-3-pentanone.gif[] | `CC\(C)C(=O)C\(C)C`           | 2,4-dimethyl-3-pentanone
-| pic here                                    | `OCC(CCC)C(C\(C)C)CCC`       | 2-propyl-3-isopropyl-1-propanol
+| image:depict/3-isopropyl-2-propylhexan-1-ol.png[]                                    | `OCC(CCC)C(C\(C)C)CCC`       | 3‐isopropyl‐2‐propylhexan‐1‐ol
 | image:depict/thiosulfate.gif[]              | `OS(=O)(=S)O`               | thiosulfate
 |============================================================================================================
 
@@ -563,7 +563,7 @@ example, the following are not allowed:
 
 "Aromaticity" in SMILES is primarily for
 https://www.emolecules.com/info/support-cheminformatics-101.html#/cheminformatics-basics[cheminformatics] purposes.
-In a cheminformatics system, we'd like to have a single representation for each molecule.  The
+In a cheminformatics system, we would like to have a single representation for each molecule.  The
 Kekule form masks the inherent uniformity of the bonds in an aromatic ring.  SMILES uses a
 simplified definition of aromaticity that facilitates substructure and exact-structure
 searches, as well as <<normalization,Normalization>> and <<canonicalization,Canonicalization>> of SMILES.
@@ -1498,6 +1498,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2020-09-24 | Moved proposed extensions to a separate document | Vincent F. Scalfani
 | 1.0 | 2020-09-27 | Updated links and references | Vincent F. Scalfani
 | 1.0 | 2021-05-14 | Updated purpose and motivation to reflect IUPAC task group efforts; Added aromatic te; Added support for element symbols through Og, element numbers through [#118], and [#0] as undefined; Clarified Hydrogen `Hn`, where `n` is a single digit number 0-9; General formatting for consistency; Clarified atom charge property syntax and added support for repeated symbols up to 15 and a 0 charge; Isotope changes: A 0 isotope is now undefined, leading 0 (e.g., 02) is invalid, and removed D,T symbols; Clarified Wildcard atom section with `#0` and more examples.; Removed lowercase as sp2 outside of rings; Reworked and simplified SMILES flavors section into the Canonical SMILES section; Atom class change: no leading 0 allowed; Incorporated Nonstandard forms of SMILES section into main text. These are now considered invalid.; Ring rnum change: no leading 0 allowed and clarified when a conflict arises; Clarified that escaped up/down configurations are invalid; Added that leading spaces in SMILES are invalid; Specified a strict bracket atom order | Vincent F. Scalfani
+| 1.0 | 2021-05-14 | Fixed a few typos and added a missing chemical drawing | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]

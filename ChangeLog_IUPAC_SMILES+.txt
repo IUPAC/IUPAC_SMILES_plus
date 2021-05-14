@@ -1,3 +1,28 @@
+2021-05-14 // Vincent F. Scalfani
+
+Updated purpose and motivation to reflect IUPAC task group efforts; Added aromatic te; Added support for element symbols through Og, element numbers through [#118], and [#0] as undefined; Clarified Hydrogen Hn, where n is a single digit number 0-9; General formatting for consistency; Clarified atom charge property syntax and added support for repeated symbols up to 15 and a 0 charge; Isotope changes: A 0 isotope is now undefined, leading 0 (e.g., 02) is invalid, and removed D,T symbols; Clarified Wildcard atom section with #0 and more examples.; Removed lowercase as sp2 outside of rings; Reworked and simplified SMILES flavors section into the Canonical SMILES section; Atom class change: no leading 0 allowed; Incorporated Nonstandard forms of SMILES section into main text. These are now considered invalid.; Ring rnum change: no leading 0 allowed and clarified when a conflict arises; Clarified that escaped up/down configurations are invalid; Added that leading spaces in SMILES are invalid; Specified a strict bracket atom order
+
+
+2020-09-27 // Vincent F. Scalfani
+
+* Updated links and references
+
+
+2020-09-24 // Vincent F. Scalfani
+
+* Moved proposed extensions to a separate document
+
+
+2020-08-13 // Vincent F. Scalfani
+
+* Added escape symbols to prevent copyright symbol rendering in SMILES and fixed broken image link
+
+
+2020-08-13 // Andrius Merkys
+
+* Minor typo corrections
+
+
 2019-04-15 // Vincent F. Scalfani
 
 * Created derivative of OpenSMILES Document, IUPAC SMILES+ Specification
