@@ -5,7 +5,7 @@
 John Irwin, Oliver Koepler, Greg Landrum, José L. Medina-Franco, Miguel Quirós Olozábal, 
 Susan Richardson, and Issaku Yamada.
 
-v0.1,2020-09-29: Work in progress draft - incomplete and not approved yet                                   +
+v0.1,2021-05-14: Work in progress draft - incomplete and not approved yet                                   +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
 Copyright &copy; 2020, IUPAC    +
 Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]     +
@@ -154,7 +154,7 @@ concerned with syntax.
 2+| **HYDROGENS**
 | <<hydrogens,Hydrogens>>  | _hcount_ ::= `'H'` \| `'H'` _DIGIT_
 2+| **CHARGES**
-| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _DIGIT_? _DIGIT_ \| `'+'` \| `'+'` _DIGIT_? _DIGIT_ \| `'--'` deprecated \| `'++'` deprecated
+| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _DIGIT_? _DIGIT_ \| `'+'` \| `'+'` _DIGIT_? _DIGIT_ \| `'--'` \| ... \| `'---------------'` \| `'++'` \| ... \| `'+++++++++++++++'`
 2+| **ATOM CLASS**
 | <<atomclass,Atom Class>> | _class_ ::= `':'` _NUMBER_
 2+| **BONDS AND CHAINS**
@@ -227,7 +227,7 @@ Examples:
 | `[ClH1]`  | hydrochloric acid     |
 |=================================================
 
-A hydrogen atom cannot have a hydrogen count, for example, `[HH1]` is invalid.  Hydrogens connected
+A hydrogen atom can not have a hydrogen count, for example, `[HH1]` is invalid.  Hydrogens connected
 to other hydrogens must be represented as explicit atoms in square brackets. For example molecular
 hydrogen must be written as `[H][H]`.
 
@@ -544,7 +544,7 @@ atom:
 | image:depict/spiro.gif[]   | `C%123(CCCCC3)CCCCC%12`   | spiro[5.5]undecane
 |========================================================================
 
-Two atoms cannot be joined by more than one bond, and an atom cannot be bonded to itself. For
+Two atoms can not be joined by more than one bond, and an atom can not be bonded to itself. For
 example, the following are not allowed:
 
 [options="header",frame="topbot",grid="rows",width="70%",cols="1,2"]
@@ -756,13 +756,13 @@ can also be written:
 
 The second example above is an odd, but legal, use of parentheses and the dot bond, since the
 syntax allows a dot most places a regular bond could appear (the exception
-is that a dot can't appear before a ring-closure digit).
+is that a dot can not appear before a ring-closure digit).
 
 Although dot-bonds are commonly used to represent compounds with disconnected parts, a dot-bond
 does *not* in itself mean that there are disconnected parts in the compound. See the
 following section regarding ring digits for some examples that illustrate this.
 
-The dot bond cannot be used in front of a ring-closure digit. For example, `C.1CCCCC.1` is invalid.
+The dot bond can not be used in front of a ring-closure digit. For example, `C.1CCCCC.1` is invalid.
 Duplicate dot bonds such as `[Na+]..[Cl-]` are invalid. Further, disconnections must occur between 
 exactly two components, and as a result, leading or trailing dots are invalid (e.g., `.CCO` or `CCO.`). 
 
@@ -796,7 +796,7 @@ A SMILES string can specify the cis/trans configuration around a double bond,
 and can specify the chiral configuration of specific atoms in a molecule.
 
 SMILES strings do *not* represent all types of stereochemistry.  Examples of
-stereochemistry that cannot be encoded into a SMILES include:
+stereochemistry that can not be encoded into a SMILES include:
 
 * Gross conformational left or right handedness such as helices
 * Mechanical interferences, such as rotatable bonds that are
@@ -1170,11 +1170,11 @@ Very few SMILES systems actually implement the rules for `SP`, `TB` or `OH` chir
 == Parsing Termination
 
 A SMILES string is terminated by a whitespace terminator character (space, tab, newline,
-carriage-return), or by the end of the string. As a result, and leading space in a SMILES string
-is considered invalid in IUPAC SMILES+ (e.g. `' CCC'`). Further an empty SMILES string,`''`, is invalid.
+carriage-return), or by the end of the string. As a result, any leading space in a SMILES string
+is considered invalid in IUPAC SMILES+ (e.g. `' CCC'`).
 
 Other data or information, such as a name, properties, registration number, etc., may follow the
-SMILES on a line after the whitespace character.  SMILES parsers will ignore this data, although
+SMILES on a line after the whitespace character. SMILES parsers will ignore this data, although
 applications that use the SMILES parser will often make use of it.
 
 == Programming Practices
@@ -1442,7 +1442,7 @@ https://github.com/IUPAC/IUPAC_SMILES_plus/blob/spec_rev01/IUPAC_SMILES%2B_Appen
 
 ==== Cheminformatics Toolkits
 
-There are a variety of commericial and open source cheminformatics toolkits available that support the SMILES format:
+There are a variety of commercial and open source cheminformatics toolkits available that support the SMILES format:
 
 * https://en.wikipedia.org/wiki/Cheminformatics_toolkits[Wikipedia: Cheminformatics Toolkits]
 * https://opensourcemolecularmodeling.github.io/#toolkits[Open Source Molecular Modeling: Cheminformatics Toolkits]
@@ -1497,9 +1497,9 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2020-08-13 | Added escape symbols to prevent copyright symbol rendering in SMILES and fixed broken image link | Vincent F. Scalfani
 | 1.0 | 2020-09-24 | Moved proposed extensions to a separate document | Vincent F. Scalfani
 | 1.0 | 2020-09-27 | Updated links and references | Vincent F. Scalfani
-| 1.0 | 2020-09-29 | Proposed Changes: Updated purpose and motivation to reflect IUPAC task group efforts; Added aromatic te; Added support for element symbols through Og, element numbers through [#118], and [#0] as undefined; Clarified Hydrogen `Hn`, where `n` is a single digit number 0-9; General formatting for consistency; Clarified atom charge property syntax and added support for repeated symbols up to 15 and a 0 charge; Isotope changes: A 0 isotope is now undefined, leading 0 (e.g., 02) is invalid, and removed D,T symbols; Clarified Wildcard atom section with `#0` and more examples.; Removed lowercase as sp2 outside of rings; Reworked and simplified SMILES flavors section into the Canonical SMILES section; Atom class change: no leading 0 allowed; Incorporated Nonstandard forms of SMILES section into main text. These are now considered invalid.; Ring rnum change: no leading 0 allowed and clarified when a conflict arises; Clarified that escaped up/down configurations are invalid; Added that leading spaces in SMILES are invalid as well as empty strings; Specified a strict bracket atom order | Vincent F. Scalfani
+| 1.0 | 2021-05-14 | Updated purpose and motivation to reflect IUPAC task group efforts; Added aromatic te; Added support for element symbols through Og, element numbers through [#118], and [#0] as undefined; Clarified Hydrogen `Hn`, where `n` is a single digit number 0-9; General formatting for consistency; Clarified atom charge property syntax and added support for repeated symbols up to 15 and a 0 charge; Isotope changes: A 0 isotope is now undefined, leading 0 (e.g., 02) is invalid, and removed D,T symbols; Clarified Wildcard atom section with `#0` and more examples.; Removed lowercase as sp2 outside of rings; Reworked and simplified SMILES flavors section into the Canonical SMILES section; Atom class change: no leading 0 allowed; Incorporated Nonstandard forms of SMILES section into main text. These are now considered invalid.; Ring rnum change: no leading 0 allowed and clarified when a conflict arises; Clarified that escaped up/down configurations are invalid; Added that leading spaces in SMILES are invalid; Specified a strict bracket atom order | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
-* IUPAC Project Discussion Summary and Notes (GitHub Pull Requests will get linked here).
+* Notes are captured in the https://github.com/IUPAC/IUPAC_SMILES_plus/pulls[Pull Requests] and https://github.com/IUPAC/IUPAC_SMILES_plus/issues[Issue Tracker]
 
