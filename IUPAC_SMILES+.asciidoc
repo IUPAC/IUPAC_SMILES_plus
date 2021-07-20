@@ -526,7 +526,7 @@ example, `C%123` is the same as `C3%12`, that is, an atom with two rnum
 specifications (see example in table below).
 
 Three digits are also permitted in the form `%(nnn)`. When parentheses are used,
-the ring closure is interpreted with one rnum specification, so cylohexane can be represented
+the ring closure is interpreted with one rnum specification, so cyclohexane can be represented
 as `C%(920)CCCCC%(920)`
 
 While a ring closure using zero is valid as in `C0CCCCC0`, when multiple digits
@@ -1403,7 +1403,7 @@ _SMILES file_ consists of zero or more SMILES strings, one per line, optionally 
 by at least one whitespace character (space or tab), and other data.  There can be no leading
 whitespace before the SMILES string on a line.  The optional whitespace character and data that
 follows it are not part of the SMILES specification, and interpretation of this data is up to
-applications that use the SMILES file.  Each line of the file is terminated by either a singe LF
+applications that use the SMILES file.  Each line of the file is terminated by either a single LF
 character, or by a CR/LF pair of characters (commonly called the "Unix" and "Windows" line
 terminators, respectively).  A SMILES parser must accept either line terminator.  A blank line in
 the SMILES file, or a line that begins with a whitespace character, should be completely ignored by
