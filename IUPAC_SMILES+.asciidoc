@@ -463,7 +463,7 @@ depth. For example, the following SMILES, though peculiar, is legal:
 | `C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C(C\(C))))))))))))))))))))C`    | C22H46
 |==============================================================================
 
-In IUPAC SMILES+ syntax, duplicate, misplaced, or parentheses branching without atom(s) inside are invalid. 
+In IUPAC SMILES+ syntax, a SMILES can not start with a branch. Duplicate branches and branching without atom(s) inside are also invalid.
 Some invalid examples include: `C\(\(C))O`, `(N1CCCC1)`, `C(1CC1)` `C()`, and `C1CC(1)`. 
 Note that the form `(CO)N` is never allowed, since it is not clear which atom the nitrogen should connect to.
 
@@ -1500,6 +1500,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2021-05-14 | Updated purpose and motivation to reflect IUPAC task group efforts; Added aromatic te; Added support for element symbols through Og, element numbers through [#118], and [#0] as undefined; Clarified Hydrogen `Hn`, where `n` is a single digit number 0-9; General formatting for consistency; Clarified atom charge property syntax and added support for repeated symbols up to 15 and a 0 charge; Isotope changes: A 0 isotope is now undefined, leading 0 (e.g., 02) is invalid, and removed D,T symbols; Clarified Wildcard atom section with `#0` and more examples.; Removed lowercase as sp2 outside of rings; Reworked and simplified SMILES flavors section into the Canonical SMILES section; Atom class change: no leading 0 allowed; Incorporated Nonstandard forms of SMILES section into main text. These are now considered invalid.; Ring rnum change: no leading 0 allowed and clarified when a conflict arises; Clarified that escaped up/down configurations are invalid; Added that leading spaces in SMILES are invalid; Specified a strict bracket atom order | Vincent F. Scalfani
 | 1.0 | 2021-05-14 | Fixed a few typos and added a missing chemical drawing | Vincent F. Scalfani
 | 1.0 | 2021-09-28 | Fixed ring bond typos https://github.com/IUPAC/IUPAC_SMILES_plus/issues/19[GitHub Issue #19] | Vincent F. Scalfani
+| 1.0 | 2021-09-28 | Clarified branching https://github.com/IUPAC/IUPAC_SMILES_plus/issues/11[GitHub Issue #11] | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
