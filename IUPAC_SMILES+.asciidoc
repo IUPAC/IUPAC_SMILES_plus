@@ -98,7 +98,7 @@ electrons, protons and neutrons, yet it has proved to be a remarkably useful app
 atoms behave in close proximity to one another. However, the valence model is an imperfect
 representation of molecular structure, and the SMILES language inherits these imperfections.
 Chemical bonds are often tautomeric, aromatic or otherwise fractional rather than neat integer
-multiples. Delocalized bonds, bond-centered bonds, hydrogen bonds and various other inter-atom
+multiples. Delocalized bonds, multi-centered bonds, hydrogen bonds and various other inter-atom
 forces that are well characterized by a quantum-mechanics description simply do not fit into the
 valence model.
 
@@ -159,7 +159,7 @@ concerned with syntax.
 | <<atomclass,Atom Class>> | _class_ ::= `':'` _NUMBER_
 2+| **BONDS AND CHAINS**
 .6+| <<bonds,Bonds>>       | _bond_ ::= `'-'` \| `'='` \| `'#'` \| `'$'` \| `':'` \| `'/'` \| `'\'`
-|                            _ringbond_ ::= _bond_? _DIGIT_ \| _bond_? `'%'` _DIGIT_ _DIGIT_
+|                            _ringbond_ ::= _bond_? _DIGIT_ \| _bond_? `'%'` _DIGIT_? _DIGIT_ _DIGIT_ \| _bond_? `'%'` `'('` _DIGIT_ _DIGIT_ _DIGIT_ `')'`
 |                            _branched_atom_ ::= _atom_ _ringbond_* _branch_*
 |                            _branch_ ::= `'('` _chain_ `')'` \| `'('` _bond_ _chain_ `')'` \| `'('` _dot_ _chain_ `')'`
 |                            _chain_ ::= _branched_atom_ \| _chain_ _branched_atom_ \| _chain_ _bond_ _branched_atom_ \| _chain_ _dot_ _branched_atom_
@@ -1499,6 +1499,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2020-09-27 | Updated links and references | Vincent F. Scalfani
 | 1.0 | 2021-05-14 | Updated purpose and motivation to reflect IUPAC task group efforts; Added aromatic te; Added support for element symbols through Og, element numbers through [#118], and [#0] as undefined; Clarified Hydrogen `Hn`, where `n` is a single digit number 0-9; General formatting for consistency; Clarified atom charge property syntax and added support for repeated symbols up to 15 and a 0 charge; Isotope changes: A 0 isotope is now undefined, leading 0 (e.g., 02) is invalid, and removed D,T symbols; Clarified Wildcard atom section with `#0` and more examples.; Removed lowercase as sp2 outside of rings; Reworked and simplified SMILES flavors section into the Canonical SMILES section; Atom class change: no leading 0 allowed; Incorporated Nonstandard forms of SMILES section into main text. These are now considered invalid.; Ring rnum change: no leading 0 allowed and clarified when a conflict arises; Clarified that escaped up/down configurations are invalid; Added that leading spaces in SMILES are invalid; Specified a strict bracket atom order | Vincent F. Scalfani
 | 1.0 | 2021-05-14 | Fixed a few typos and added a missing chemical drawing | Vincent F. Scalfani
+| 1.0 | 2021-09-28 | Fixed ring bond typos https://github.com/IUPAC/IUPAC_SMILES_plus/issues/19[GitHub Issue #19] | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
