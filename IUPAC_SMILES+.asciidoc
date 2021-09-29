@@ -144,7 +144,7 @@ concerned with syntax.
 2+| **BRACKET ATOMS**
 .7+| <<inatoms,Bracket Atoms>>      | _bracket_atom_ ::= `'['` _isotope_? _symbol_ _chiral_? _hcount_? _charge_? _class_? `']'`
 |                            _symbol_ ::= _element_symbols_ \| _element_numbers_ \| _aromatic_symbols_ \| _element_undefined_
-|                            _isotope_ ::= _NUMBER_
+|                            _isotope_ ::= _digit_ \| _digit_nonzero_ _digit_ \| _digit_nonzero_ _digit_ _digit_
 |                            _element_symbols_ ::= `'H'` \| `'He'` \| `'Li'` \| `'Be'` \| `'B'` \| `'C'` \| `'N'` \| `'O'` \| `'F'` \| `'Ne'` \| `'Na'` \| `'Mg'` \| `'Al'` \| `'Si'` \| `'P'` \| `'S'` \| `'Cl'` \| `'Ar'` \| `'K'` \| `'Ca'` \| `'Sc'` \| `'Ti'` \| `'V'` \| `'Cr'` \| `'Mn'` \| `'Fe'` \| `'Co'` \| `'Ni'` \| `'Cu'` \| `'Zn'` \| `'Ga'` \| `'Ge'` \| `'As'` \| `'Se'` \| `'Br'` \| `'Kr'` \| `'Rb'` \| `'Sr'` \| `'Y'` \| `'Zr'` \| `'Nb'` \| `'Mo'` \| `'Tc'` \| `'Ru'` \| `'Rh'` \| `'Pd'` \| `'Ag'` \| `'Cd'` \| `'In'` \| `'Sn'` \| `'Sb'` \| `'Te'` \| `'I'` \| `'Xe'` \| `'Cs'` \| `'Ba'` \| `'La'` \| `'Ce'` \| `'Pr'` \| `'Nd'` \| `'Pm'` \| `'Sm'` \| `'Eu'` \| `'Gd'` \| `'Tb'` \| `'Dy'` \| `'Ho'` \| `'Er'` \| `'Tm'` \| `'Yb'` \| `'Lu'` \| `'Hf'` \| `'Ta'` \| `'W'` \| `'Re'` \| `'Os'` \| `'Ir'` \| `'Pt'` \| `'Au'` \| `'Hg'` \| `'Tl'` \| `'Pb'` \| `'Bi'` \| `'Po'` \| `'At'` \| `'Rn'` \| `'Fr'` \| `'Ra'` \|`'Ac'` \| `'Th'` \| `'Pa'` \| `'U'` \| `'Np'` \| `'Pu'` \| `'Am'` \| `'Cm'` \| `'Bk'` \| `'Cf'` \| `'Es'` \| `'Fm'` \| `'Md'` \| `'No'` \| `'Lr'` \| `'Rf'` \| `'Db'` \| `'Sg'` \| `'Bh'` \| `'Hs'` \| `'Mt'` \| `'Ds'` \| `'Rg'` \| `'Cn'` \| `'Nh'` \| `'Fl'` \| `'Mc'` \| `'Lv'` \| `'Ts'` \| `'Og'`
 |                            _element_numbers_ ::= `'#1'` \|`'#2'` \| `'#3'` \| ... \|`'#118'`
 |                            _aromatic_symbols_ ::= `'b'` \| `'c'` \| `'n'` \| `'o'` \| `'p'` \| `'s'` \| `'se'` \| `'te'` \| `'as'`
@@ -152,18 +152,21 @@ concerned with syntax.
 2+| **CHIRALITY**
 | <<chirality,Chirality>>  | _chiral_ ::= `'@'` \| `'@@'` \| `'@TH1'` \| `'@TH2'` \| `'@AL1'` \| `'@AL2'` \| `'@SP1'` \| `'@SP2'` \| `'@SP3'` \| `'@TB1'` \| `'@TB2'` \| `'@TB3'` \| ... \| `'@TB20'` \| `'@OH1'` \| `'@OH2'` \| `'@OH3'` \| ... \| `'@OH30'` \| `'@TB'` _DIGIT_ _DIGIT_ \| `'@OH'` _DIGIT_ _DIGIT_
 2+| **HYDROGENS**
-| <<hydrogens,Hydrogens>>  | _hcount_ ::= `'H'` \| `'H'` _DIGIT_
+| <<hydrogens,Hydrogens>>  | _hcount_ ::= `'H'` \| `'H'` _digit_ \| `'H'` _digit_nonzero_ _digit_
 2+| **CHARGES**
-| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _DIGIT_? _DIGIT_ \| `'+'` \| `'+'` _DIGIT_? _DIGIT_ \| `'--'` \| ... \| `'---------------'` \| `'+{plus}'` \| ... \| `'+++{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}'`
+| <<charge,Charge>>        | _charge_ ::= `'-'` \| `'-'` _digit_ \| `'-'` _digit_nonzero_ _digit_ \|`'+'` \| `'+'` _digit_ \| `'+'` _digit_nonzero_ _digit_ \|`'--'` \| ... \| `'---------------'` \| `'+{plus}'` \| ... \| `'+++{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}{plus}'`
 2+| **ATOM CLASS**
-| <<atomclass,Atom Class>> | _class_ ::= `':'` _NUMBER_
+| <<atomclass,Atom Class>> | _class_ ::= `':'` _digit_ \| `':'` _digit_nonzero_ _digit_ \| `':'` _digit_nonzero_ _digit_ _digit_ \| `':'` _digit_nonzero_ _digit_ _digit_ _digit_
 2+| **BONDS AND CHAINS**
 .6+| <<bonds,Bonds>>       | _bond_ ::= `'-'` \| `'='` \| `'#'` \| `'$'` \| `':'` \| `'/'` \| `'\'`
-|                            _ringbond_ ::= _bond_? _DIGIT_ \| _bond_? `'%'` _DIGIT_? _DIGIT_ _DIGIT_ \| _bond_? `'%'` `'('` _DIGIT_ _DIGIT_ _DIGIT_ `')'`
+|                            _ringbond_ ::= _bond_? _digit_ \| _bond_? `'%'` _digit_nonzero_ _digit_ \| _bond_? `'%'` _digit_nonzero_ _digit_ _digit_ \| _bond_? `'%'` `'('` _digit_nonzero_ _digit_ _digit_ `')'`
 |                            _branched_atom_ ::= _atom_ _ringbond_* _branch_*
 |                            _branch_ ::= `'('` _chain_ `')'` \| `'('` _bond_ _chain_ `')'` \| `'('` _dot_ _chain_ `')'`
 |                            _chain_ ::= _branched_atom_ \| _chain_ _branched_atom_ \| _chain_ _bond_ _branched_atom_ \| _chain_ _dot_ _branched_atom_
 |                            _dot_ ::= `'.'`
+2+| **DIGITS**
+.2+|                       | _digit_ ::= `'0'` \| `'1'` \| `'2'` \| `'3'` \| `'4'` \| `'5'` \| `'6'` \| `'7'` \| `'8'` \| `'9'`
+|                            _digit_nonzero_ ::= `'1'` \| `'2'` \| `'3'` \| `'4'` \| `'5'` \| `'6'` \| `'7'` \| `'8'` \| `'9'`
 2+| **SMILES STRINGS**
 .2+|                       | _smiles_ ::= _terminator_ \| _chain_ _terminator_
 |                            _terminator_ ::= _SPACE_ \| _TAB_ \| _LINEFEED_ \| _CARRIAGE_RETURN_ \| _END_OF_STRING_
@@ -209,10 +212,10 @@ Examples:
 
 ==== Hydrogens
 
-Hydrogens inside of brackets are specified as `Hn` where `n` is a single digit number from `0` to `9` such as `H3`.  If no
-`Hn` is specified, it is identical to `H0`. If `H` is
-specified without a number, it is identical to `H1`.  For example, `[C]` and
-`[CH0]` are identical, and `[CH]` and `[CH1]` are identical.
+Hydrogens inside of brackets are specified as `Hn` or `Hnn`. In the case of a single digit, 
+`Hn`, `n` is a digit number from `0` to `9`. When two-digit numbers are used, leading zeros are not permitted,
+so `Hnn` is valid in the range of `10` through `99`. If `Hn` is not specified, it is identical to `H0`. If `H` is
+specified without a number, it is identical to `H1`. For example, `[C]` and `[CH0]` are identical, and `[CH]` and `[CH1]` are identical.
 
 Hydrogens that are specified in brackets with this notation have undefined isotope, no chirality,
 no other bound hydrogen, neutral charge, and an undefined atom class.
@@ -235,10 +238,13 @@ hydrogen must be written as `[H][H]`.
 
 ==== Charge
 
-Charge is specified by a `+n` or `-n` where `n` is a number from `0` to `15`. If a charge is specified without
-a number, a `1` is implied. If the number is `0`, the charge is interpreted as no charge. 
+Charge is specified by a `+n`,`+nn`,`-n`, or `-nn`. In the case of a single digit,`n`
+is a digit number from `0` to `9`. When two-digit numbers are used, leading zeros are not permitted and `nn` is valid
+in the range of `10` through `99`. For example, a charge specification such as `[Ag+01]` is invalid. 
+
+If a charge is specified without a number, a `1` is implied. If the number is `0`, the charge is interpreted as no charge. 
 That is, `[Ag+0]` and `[Ag-0]` are equivalent to `[Ag]`. A `0` charge should be avoided and is not recommended 
-as a best practice. A charge specification leading with `0` and followed be a second digit such as `[Ag+01]` is invalid.   
+as a best practice.
 
 Repeated symbols such as `'--'` and `'++'` are valid and interpreted as charges of `-2` and `+2`, respectively. Symbols can
 repeat up to 15 times. However, this form is not recommended as a best practice and should be avoided.
@@ -273,10 +279,15 @@ preceding the atomic symbol; for example:
 | `[238U]`  | Uranium 238 atom
 |=============================
 
-An isotope is interpreted as a number from `0` to `999`. A `0` isotope specification is equivalent
-to undefined, and the atom is assumed to have the naturally-occurring isotopic ratios. For example, 
-`[0S]` is equivalent to `[S]`. An isotopic specification leading with a `0` and followed by digits such as
-`[098Ru]` is invalid. The isotope ^98^Ru is written as `[98Ru]`. 
+An isotope is interpreted as a digit number specified as `n`, `nn`, or `nnn`. In the case of a single digit, 
+`n` is a digit number from `0` to `9`. When two-digit or three-digit numbers are used, leading zeros are not permitted,
+so `nn` is valid in the range of `10` through `99`, and `nnn` in the range of `100` through `999`.
+As a result, an isotopic specification leading with a `0` and followed by digits such as
+`[098Ru]` is invalid. The isotope ^98^Ru is written as `[98Ru]`.
+
+A `0` isotope specification is equivalent to undefined, and the atom is assumed to have the naturally-occurring isotopic ratios. 
+For example, `[0S]` is equivalent to `[S]`.
+
 There is no requirement that the isotope is a genuine isotope of the element. Thus, `[36Cl]` is allowed 
 even though ^35^Cl and ^37^Cl are the actual known stable isotopes of chlorine.
 
@@ -372,13 +383,15 @@ _Note: the term index in the table comments above is referring to the SMILES str
 
 ==== Atom Class
 
-An "atom class" is an arbitrary integer, a number from `0` to `9999` that has no chemical
-meaning.  It is used by applications to mark atoms in ways that are
-meaningful only to the application. Multiple atoms may be labeled with the same atom class.
+An "atom class" is an arbitrary integer that has no chemical meaning. It is used by applications 
+to mark atoms in ways that are meaningful only to the application. Multiple atoms may be labeled with the same atom class. 
+
+The atom class is specified as a digit number `n`, `nn`, `nnn`, or `nnnn`. In the case of a single digit, 
+`n` is a digit number from `0` to `9`. When two-digit, three-digit, or four-digit numbers are used, leading zeros are not permitted,
+so `nn` is valid in the range of `10` through `99`, `nnn` in the range of `100` through `999`, and `nnnn` in the range of `1000`
+to `9999`. So for example, `[NH4+:5]` is valid, while `[NH4+:005]` is invalid.
 
 If the atom class is not specified, then the atom class is interpreted as zero.
-The atom class can not contain a leading `0`. So for example, `[NH4+:5]` is valid, 
-while `[NH4+:005]` is invalid.
 
 The atom class is specified after all other properties in square brackets. For example:
 
@@ -488,7 +501,8 @@ forms a cyclic structure.
 
 If a bond symbol is present between the atom and rnum, it can be
 present on *either or both* bonded atoms.  However, if it appears on
-both bonded atoms, the two bond symbols must be the same. If there are conflicting ring closure bonds defined such as `C=1CCCCC#1`, `C-1CCCCC=1`, or `c=1ccccc:1`, the SMILES are invalid. 
+both bonded atoms, the two bond symbols must be the same. If there are conflicting ring 
+closure bonds defined such as `C=1CCCCC#1`, `C-1CCCCC=1`, or `c=1ccccc:1`, the SMILES are invalid. 
 Two defined bonds must match. In contrast, if only one bond is defined 
 as in `C=1CCCCC1` or `C1CCCC=1`, the SMILES are valid and interpreted with 
 the defined bond at ring closure. The implicit bond is ignored.
@@ -529,8 +543,8 @@ Three digits are also permitted in the form `%(nnn)`. When parentheses are used,
 the ring closure is interpreted with one rnum specification, so cyclohexane can be represented
 as `C%(920)CCCCC%(920)`
 
-While a ring closure using zero is valid as in `C0CCCCC0`, when multiple digits
-are used, a leading number of `0` is invalid such as in `C%01CCCCC%01` or `C%00CCCCC%00`.
+While a ring closure with a single digit using zero is valid as in `C0CCCCC0`, when multiple digits
+are used in the case of `%nn`, %nnn, or `%(nnn)`, a leading number of `0` is invalid, such as `C%01CCCCC%01` or `C%00CCCCC%00`.
 For notation using `%nn`, start with a `nn` of `10`, and for notation in the form 
 `%nnn` or `%(nnn)`, start with `nnn` of `100`.
 
@@ -1501,6 +1515,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2021-05-14 | Fixed a few typos and added a missing chemical drawing | Vincent F. Scalfani
 | 1.0 | 2021-09-28 | Fixed ring bond typos https://github.com/IUPAC/IUPAC_SMILES_plus/issues/19[GitHub Issue #19] | Vincent F. Scalfani
 | 1.0 | 2021-09-28 | Clarified branching https://github.com/IUPAC/IUPAC_SMILES_plus/issues/11[GitHub Issue #11] | Vincent F. Scalfani
+| 1.0 | 2021-09-29 | Adjusted consistency and support of atom property digits https://github.com/IUPAC/IUPAC_SMILES_plus/issues/14[GitHub Issue #14] | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
