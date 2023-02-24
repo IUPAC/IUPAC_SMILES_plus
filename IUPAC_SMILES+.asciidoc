@@ -5,7 +5,7 @@
 John Irwin, Oliver Koepler, Greg Landrum, José L. Medina-Franco, Miguel Quirós Olozábal, 
 Susan Richardson, and Issaku Yamada.
 
-v0.1,2021-05-14: Work in progress draft - incomplete and not approved yet                                   +
+v0.1,2023: Work in progress draft - incomplete and not approved yet                                   +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
 Copyright &copy; 2021, IUPAC    +
 Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]     +
@@ -159,7 +159,7 @@ concerned with syntax.
 | <<atomclass,Atom Class>> | _class_ ::= `':'` _digit_ \| `':'` _digit_nonzero_ _digit_ \| `':'` _digit_nonzero_ _digit_ _digit_ \| `':'` _digit_nonzero_ _digit_ _digit_ _digit_
 2+| **BONDS AND CHAINS**
 .6+| <<bonds,Bonds>>       | _bond_ ::= `'-'` \| `'='` \| `'#'` \| `'$'` \| `':'` \| `'/'` \| `'\'`
-|                            _ringbond_ ::= _bond_? _digit_ \| _bond_? `'%'` _digit_nonzero_ _digit_ \| _bond_? `'%'` _digit_nonzero_ _digit_ _digit_ \| _bond_? `'%'` `'('` _digit_nonzero_ _digit_ _digit_ `')'`
+|                            _ringbond_ ::= _bond_? _digit_nonzero_ \| _bond_? `'%'` _digit_nonzero_ _digit_ \| _bond_? `'%'` _digit_nonzero_ _digit_ _digit_ \| _bond_? `'%'` `'('` _digit_nonzero_ _digit_ _digit_ `')'`
 |                            _branched_atom_ ::= _atom_ _ringbond_* _branch_*
 |                            _branch_ ::= `'('` _chain_ `')'` \| `'('` _bond_ _chain_ `')'` \| `'('` _dot_ _chain_ `')'`
 |                            _chain_ ::= _branched_atom_ \| _chain_ _branched_atom_ \| _chain_ _bond_ _branched_atom_ \| _chain_ _dot_ _branched_atom_
@@ -516,8 +516,6 @@ the defined bond at ring closure. The implicit bond is ignored.
 |                                                 `C-1CCCCC=1`    | *invalid*
 |=================================================================================================
 
-Note that the ring number zero is valid, for example cyclohexane can be
-written `C0CCCCC0`.
 
 Ring closures must be matched pairs in a SMILES string, for example, `C1CCC` or `C1CCCCC2`
 are not valid SMILES.
@@ -543,9 +541,9 @@ Three digits are also permitted in the form `%(nnn)`. When parentheses are used,
 the ring closure is interpreted with one rnum specification, so cyclohexane can be represented
 as `C%(920)CCCCC%(920)`
 
-While a ring closure with a single digit using zero is valid as in `C0CCCCC0`, when multiple digits
-are used in the case of `%nn`, %nnn, or `%(nnn)`, a leading number of `0` is invalid, such as `C%01CCCCC%01` or `C%00CCCCC%00`.
-For notation using `%nn`, start with a `nn` of `10`, and for notation in the form 
+Note that the ring number zero is invalid (e.g., `C0CCCCC0`) in IUPAC SMILES+. Ring numbers must start at `n=1`. 
+In addition, when multiple digits are used in the case of `%nn`, %nnn, or `%(nnn)`, a leading number of `0` is invalid, 
+such as `C%01CCCCC%01` or `C%00CCCCC%00`. For notation using `%nn`, start with a `nn` of `10`, and for notation in the form 
 `%nnn` or `%(nnn)`, start with `nnn` of `100`.
 
 A single atom can have several ring-closure numbers, such as this spiro
@@ -1516,6 +1514,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2021-09-28 | Fixed ring bond typos https://github.com/IUPAC/IUPAC_SMILES_plus/issues/19[GitHub Issue #19] | Vincent F. Scalfani
 | 1.0 | 2021-09-28 | Clarified branching https://github.com/IUPAC/IUPAC_SMILES_plus/issues/11[GitHub Issue #11] | Vincent F. Scalfani
 | 1.0 | 2021-09-29 | Adjusted consistency and support of atom property digits https://github.com/IUPAC/IUPAC_SMILES_plus/issues/14[GitHub Issue #14] | Vincent F. Scalfani
+| 1.0 | 2023-02-24 | Changed ring number 0 as invalid https://github.com/IUPAC/IUPAC_SMILES_plus/issues/27[GitHub Issue #27] | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
