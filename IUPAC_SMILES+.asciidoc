@@ -678,7 +678,7 @@ Aromatic bonds are equivalent to single bond orders for the purposes of hydrogen
 If that sum is equal to a known valence for the element or is greater than any known 
 valence then the implicit hydrogen count is 0. Otherwise the implicit hydrogen count 
 is the difference between that sum and the next highest known valence, minus 1 
-(e.g., for `c1ccccc1``, benzene, each `'c' is `4-2 = 2, then 2-1 = 1` hydrogen).
+(e.g., for `c1ccccc1``, benzene, each `'c'` is `4 (valence) - 2 (bond order) - 1 (aromatic rule) = 1 (hydrogen)`).
 
 If the hydrogens can not be assigned based on steps 1-3 above without invalid valencies 
 occuring (e.g., to fulfill a particular aromaticity model), then the SMILES is invalid.
@@ -1444,7 +1444,7 @@ https://github.com/IUPAC/IUPAC_SMILES_plus/blob/spec_rev01/IUPAC_SMILES%2B_Appen
 * http://www.dalkescientific.com/writings/diary/archive/2007/11/30/opensmiles_and_aromaticity.html[Andrew Dalke - OpenSMILES and Aromaticity]
 * https://www.nextmovesoftware.com/talks/OBoyle_SmilesBenchmark_ACS_201808.pdf[Noel O\'Boyle, John Mayfield, and Roger Sayle - A de facto standard or a free-for-all? A benchmark for reading SMILES]
 
-== Aromaticity Perception
+=== Aromaticity Perception
 
 * https://docs.eyesopen.com/toolkits/cpp/oechemtk/aromaticity.html[OpenEye Aromaticity Perception]
 * https://www.daylight.com/meetings/summerschool98/course/dave/smiles-convent.html[Daylight Aromaticity]
