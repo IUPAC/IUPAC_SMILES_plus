@@ -1515,7 +1515,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2021-09-28 | Clarified branching https://github.com/IUPAC/IUPAC_SMILES_plus/issues/11[GitHub Issue #11] | Vincent F. Scalfani
 | 1.0 | 2021-09-29 | Adjusted consistency and support of atom property digits https://github.com/IUPAC/IUPAC_SMILES_plus/issues/14[GitHub Issue #14] | Vincent F. Scalfani
 | 1.0 | 2023-02-24 | Changed ring number 0 as invalid https://github.com/IUPAC/IUPAC_SMILES_plus/issues/27[GitHub Issue #27] | Vincent F. Scalfani
-| 1.0 | 2023-10-20 | Major revision of aromaticity section https://github.com/IUPAC/IUPAC_SMILES_plus/pull/30  | Vincent F. Scalfani
+| 1.0 | 2023-10-20 | Major revision of aromaticity section https://github.com/IUPAC/IUPAC_SMILES_plus/pull/30[GitHub Pull Request #30]  | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
