@@ -184,7 +184,7 @@ concerned with syntax.
 
 An atom is represented by its atomic symbol, enclosed in square brackets, `[]`.
 The first character of the symbol is uppercase and the second (if any) is lowercase,
-except that for aromatic atoms (see <<inaromaticity, Aromaticity>>), the first character is lowercase. Alternatively, 
+except that for aromatic atoms (see <<Aromaticity>>), the first character is lowercase. Alternatively, 
 an atom can also be represented using the symbol `'#'` followed by its atomic number enclosed in square brackets, `[]`.
 There are https://iupac.org/what-we-do/periodic-table-of-elements/[118 valid atomic symbols] 
 as defined by https://iupac.org/[IUPAC].
@@ -566,8 +566,6 @@ example, the following are not allowed:
 | `C12C2CCC1`         | illegal, two bonds between one pair of atoms
 | `C11`               | illegal, atom bonded to itself
 |=====================================================================
-
-[[inaromaticity]]
 
 === Aromaticity
 
