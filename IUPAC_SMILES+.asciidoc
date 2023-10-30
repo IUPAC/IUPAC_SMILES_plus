@@ -26,7 +26,7 @@ Geoff Hutchison, Craig A. James, Greg Landrum, Chris Morley, Egon Willighagen, H
 
 toc::[]
 :toclevels: 5
-:sectnums:
+// :sectnums: // need to disable section numbers on GitHub for links to work...
 
 == Introduction
 
