@@ -5,7 +5,7 @@
 John Irwin, Oliver Koepler, Greg Landrum, José L. Medina-Franco, Miguel Quirós Olozábal, 
 Susan Richardson, and Issaku Yamada.
 
-v0.1,2023: Work in progress draft - incomplete and not approved yet                                   +
+v0.1, 2023: Work in progress draft - incomplete and not approved yet                                   +
 https://iupac.org/projects/project-details/?project_nr=2019-002-2-024[IUPAC SMILES+ Project No. 2019-002-024]    +
 Copyright &copy; 2021, IUPAC    +
 Content is available under http://www.gnu.org/copyleft/fdl.html[GNU Free Documentation License 1.2]     +
@@ -26,7 +26,7 @@ Geoff Hutchison, Craig A. James, Greg Landrum, Chris Morley, Egon Willighagen, H
 
 toc::[]
 :toclevels: 5
-:sectnums:
+// :sectnums: // need to disable section numbers on GitHub for links to work...
 
 == Introduction
 
@@ -184,7 +184,7 @@ concerned with syntax.
 
 An atom is represented by its atomic symbol, enclosed in square brackets, `[]`.
 The first character of the symbol is uppercase and the second (if any) is lowercase,
-except that for aromatic atoms (see <<inaromaticity, Aromaticity>>), the first character is lowercase. Alternatively, 
+except that for aromatic atoms (see <<Aromaticity>>), the first character is lowercase. Alternatively, 
 an atom can also be represented using the symbol `'#'` followed by its atomic number enclosed in square brackets, `[]`.
 There are https://iupac.org/what-we-do/periodic-table-of-elements/[118 valid atomic symbols] 
 as defined by https://iupac.org/[IUPAC].
@@ -567,8 +567,6 @@ example, the following are not allowed:
 | `C11`               | illegal, atom bonded to itself
 |=====================================================================
 
-[[inaromaticity]]
-
 === Aromaticity
 
 ==== The Meaning of "Aromaticity" in SMILES
@@ -588,13 +586,18 @@ aromaticity will match the chemist's notion of what is aromatic, but in some cas
 
 Aromaticity can be represented in one of two ways in a SMILES.
 
-* In the Kekule form, using alternating single and double bonds, with
-  uppercase symbols for the atoms.
-* An atomic symbol that begins with a lowercase letter is an aromatic atom, such as `'c'`
-  for aromatic carbon.  When aromatic symbols are used, no bond symbols are needed.
+* In the Kekule form, using alternating single and double bonds, with uppercase symbols for the atoms.
+* In the aromatic form, using aromatic atomic symbols that begin with a lowercase letter, such as 
+`'c'` for aromatic carbon. Aromatic bond symbols, `':'`, can be optionally used as well.
 
-A lowercase aromatic symbol is defined as an atom in the sp^2^ configuration in an
-aromatic or anti-aromatic ring system.  For example:
+==== Aromatic Atom and Bond Rules
+
+*Rule #1:* Avoid sharing aromatic SMILES. It is strongly recommended to Kekulize all SMILES prior to
+exchanging data, as doing so removes ambiguity in the interpretation of an aromaticity data model.
+There is no standard aromaticity model or consistent encoding and decoding approach.
+
+*Rule #2:* A lowercase aromatic symbol is defined as an atom in the sp^2^ configuration in a ring system.
+For example:
 
 [options="header",frame="topbot",grid="rows",width="90%"]
 |=========================================================================================
@@ -609,100 +612,84 @@ aromatic or anti-aromatic ring system.  For example:
 |                                             `C1=CC=C1`
 |=========================================================================================
 
-The Kekule form is always acceptable for SMILES input.  For output, the aromatic form
-(using lowercase letters) <<outaromaticity,is preferred>>.  The lowercase
-symbols eliminate the arbitrary choice of how to assign the single and double bonds, and provide a
-<<normalization,normalized form>> that more accurately reflects the electronic configuration.
+*Rule #3:* The allowed aromatic atoms are `'b'` | `'c'` | `'n'` | `'o'` | `'p'` | `'s'` | `'se'` | `'te'` | `'as'`
 
-==== Extended Hueckel's Rule
+*Rule #4:* The aromatic-bond symbol `':'` can be used between aromatic atoms, although
+it is rarely or never necessary to specify a chemical structure
+(e.g., both `c1ccccc1` and `c:1:c:c:c:c:c:1` are acceptable)
 
-[red]*THIS SECTION IS UNDER MAJOR REVISION, AND AT THIS POINT IS ONLY FOR
-DISCUSSION PURPOSES.*
+*Rule #5:* Aromatic bonds must be connected to aromatic atoms. As such, it is invalid
+syntax to define an aromatic bond between non-aromatic atoms (e.g., `C:1:C:C:C:C:C:1`). 
 
-[red]*This proposed section is an attempt to simplify the rule-based
-system by enumerating all atom/bond configurations that are known to
-participate in aromatic systems.*
+*Rule #6:* Aromatic atoms must have at least two and no more than three aromatic bonds. As such, 
+the following example notations are invalid: `c-1-c-c-c-c-c-1`, `c-1=c-c=c-c=c-1`.
 
-A single, isolated ring that meets the following criteria is aromatic:
+*Rule #7* Aromatic atoms must be within rings. Aromatic atoms outside of rings are invalid. 
+For example, the use of notation such as `CCc` or `CccccC` are invalid.
 
-* All atoms must be sp^2^ hybridized.
-* The number of available "shared" https://en.wikipedia.org/wiki/Pi_bond[&#960; electrons]
-  must equal 4N+2 where N &ge; 0 (https://en.wikipedia.org/wiki/H%C3%BCckel%27s_rule[Huckel's rule]).
+*Rule #8* Aromaticity must be continuous; that is, notation such as `c1ccCCc1` is 
+invalid as the aromaticity is “broken”.
 
-Each element that can participate in an aromatic ring is defined to have the following
-number of &#960; electrons:
-
-:valign: middle
-:halign: center
-
-[options="header",frame="topbot",grid="rows",width="60%",cols="1,1,1,<3e"]
-|===========================================================================================================================================
-| Configuration                       | &#960; Electrons | Example                             | Comment
-|                                     |                  |                                     |
-| image:depict/aromtype/BX3v3n.svg[]  | 0                | image:depict/arom/BX3v3n_ex1.svg[]  | OpenSMILES extension
-| image:depict/aromtype/BX2v3n.svg[]  | 1                | image:depict/arom/BX2v3n_ex1.svg[]  | OpenSMILES extension
-|                                     |                  |                                     |
-| image:depict/aromtype/CX3v3m.svg[]  | 2                | image:depict/arom/CX3v3m_ex1.svg[]  |
-| image:depict/aromtype/CX3v4o.svg[]  | 0                | image:depict/arom/CX3v4o_ex1.svg[]  |
-| image:depict/aromtype/CX3v3p.svg[]  | 0                | image:depict/arom/CX3v3p_ex1.svg[]  |
-| image:depict/aromtype/CX2v3m.svg[]  | 1                | image:depict/arom/CX2v3m_ex1.svg[]  |
-| image:depict/aromtype/CX3v4.svg[]   | 1                | image:depict/arom/CX3v4_ex1.svg[]   |
-| image:depict/aromtype/CX2v3p.svg[]  | 1                | image:depict/arom/CX2v3p_ex1.svg[]  |
-|                                     |                  |                                     |
-| image:depict/aromtype/NX2v2.svg[]   | 2                | image:depict/arom/NX2v2_ex1.svg[]   |
-| image:depict/aromtype/NX3v3.svg[]   | 2                | image:depict/arom/NX3v3_ex1.svg[]   |
-| image:depict/aromtype/NX2v3.svg[]   | 1                | image:depict/arom/NX2v3_ex1.svg[]   |
-| image:depict/aromtype/NX3v4.svg[]   | 1                | image:depict/arom/NX3v4_ex1.svg[]   |
-| image:depict/aromtype/NX3v5.svg[]   | 1                | image:depict/arom/NX3v5_ex1.svg[]   | Non-oxide contributes 2 in Daylight toolkit
-|                                     |                  |                                     |
-| image:depict/aromtype/PX2v2.svg[]   | 2                | image:depict/arom/PX2v2_ex1.svg[]   |
-| image:depict/aromtype/PX3v3.svg[]   | 2                | image:depict/arom/PX3v3_ex1.svg[]   |
-| image:depict/aromtype/PX2v3.svg[]   | 1                | image:depict/arom/PX2v3_ex1.svg[]   |
-| image:depict/aromtype/PX3v4.svg[]   | 1                | image:depict/arom/PX3v4_ex1.svg[]   |
-| image:depict/aromtype/PX3v5.svg[]   | 1                | image:depict/arom/PX3v5_ex1.svg[]   | Non-oxide contributes 2 in Daylight toolkit
-|                                     |                  |                                     |
-| image:depict/aromtype/AsX3v3.svg[]  | 2                | image:depict/arom/AsX3v3_ex1.svg[]  |
-| image:depict/aromtype/AsX2v3.svg[]  | 1                | image:depict/arom/AsX2v3_ex1.svg[]  | OpenSMILES extension
-| image:depict/aromtype/AsX3v4.svg[]  | 1                | image:depict/arom/AsX3v4_ex1.svg[]  | OpenSMILES extension
-|                                     |                  |                                     |
-| image:depict/aromtype/OX2v2.svg[]   | 2                | image:depict/arom/OX2v2_ex1.svg[]   |
-| image:depict/aromtype/OX2v3.svg[]   | 1                | image:depict/arom/OX2v3_ex1.svg[]   |
-|                                     |                  |                                     |
-| image:depict/aromtype/SX2v2.svg[]   | 2                | image:depict/arom/SX2v2_ex1.svg[]   |
-| image:depict/aromtype/SX2v3.svg[]   | 1                | image:depict/arom/SX2v3_ex1.svg[]   |
-| image:depict/aromtype/SX3v4.svg[]   | 2                | image:depict/arom/SX3v4_ex1.svg[]   | Possibly chiral
-| image:depict/aromtype/SX3v3p.svg[]  | 2                | image:depict/arom/SX3v3p_ex1.svg[]  | Possibly chiral, OpenSMILES extension
-|                                     |                  |                                     |
-| image:depict/aromtype/SeX2v2.svg[]  | 2                | image:depict/arom/SeX2v2_ex1.svg[]  |
-| image:depict/aromtype/SeX2v3.svg[]  | 1                | image:depict/arom/SeX2v3_ex1.svg[]  |
-| image:depict/aromtype/SeX3v4.svg[]  | 2                | image:depict/arom/SeX3v4_ex1.svg[]  | Possibly chiral
-| image:depict/aromtype/SeX3v3p.svg[] | 2                | image:depict/arom/SeX3v3p_ex1.svg[] | Possibly chiral, OpenSMILES extension
-|                                     |                  |                                     |
-|===========================================================================================================================================
-
-==== Aromaticity Algorithm
-
-In an aromatic system, all of the aromatic atoms must be sp^2^ hybridized, and the
-number of https://en.wikipedia.org/wiki/Pi_bond[&#960; electrons]
-must meet https://en.wikipedia.org/wiki/H%C3%BCckel%27s_rule[Huckel's 4n+2 criterion]
-When parsing a SMILES, a parser must note the aromatic designation of each atom on
-input, then when the parsing is complete, the SMILES software must verify that electrons can be
-assigned without violating the valence rules, consistent with the sp^2^ markings, the
-specified or implied hydrogens, external bonds, and charges on the atoms.
-
-The aromatic-bond symbol `':'` can be used between aromatic atoms, but it is never necessary; a
-bond between two aromatic atoms is assumed to be aromatic unless it is explicitly represented as a
-single bond `'-'`.  However, a single bond (nonaromatic bond) between two aromatic atoms *must*
-be explicitly represented.  For example:
+*Rule #9* A bond between two aromatic atoms is assumed to be aromatic unless it is explicitly 
+represented as a single bond `'-'`, which is required when there is a single bond between 
+two aromatic atoms or a single bond that is part of an aliphatic ring. In these cases, 
+a single bond must be explicitly represented in aromatic SMILES. 
+See https://baoilleach.blogspot.com/2017/08/my-acs-talk-on-kekulization-and.html[Noel O\'Boyle and John Mayfield\'s ACS Talk on Kekulization and Aromaticity]. For example:
 
 [options="header",frame="topbot",grid="rows",width="90%"]
 |================================================================
 | Depiction                   | SMILES                 | Name
-| image:depict/biphenyl.gif[] | `c1ccccc1-c2ccccc2`   | biphenyl
+| image:depict/biphenyl.png[] | `c1ccccc1-c2ccccc2`   | biphenyl
+| image:depict/910-dihydrophenanthrene.png[] | `C1Cc2ccccc2-c2ccccc12`   | 9,10-dihydrophenanthrene
+| image:depict/biphenylene.png[] | `c1ccc2c(c1)-c1ccccc1-2`   | biphenylene
 |================================================================
 
-_Note: Some SMILES parsers interpret a lowercase letter as sp^2^ anywhere it appears, even outside of rings;
-for example, `CccccC` would be interpreted as `CC=CC=CC`. The IUPAC SMILES+ specification does not allow this interpretation._
+*Rule #10* - Unsubstituted aromatic heteroatoms with a non-zero hydrogen count must
+indicate the hydrogen count explicitly, for example in the case of imidazole and
+2-methylbenzimidazole, the aromatic nitrogen is written as `c1c[nH]cn1` and
+`Cc1nc2ccccc2[nH]1`, respectively (e.g., https://doi.org/10.1186/s13321-015-0061-y)
+
+==== Reading Aromatic SMILES
+
+The concept of aromaticity in SMILES has led to considerable discussion over the
+past two decades (<<Aromaticity Discussion, See Aromaticity Discussion References >>).
+In short, ambiguities and differences in aromaticity perception, via kekulization algorithms,
+has led to inconsistent SMILES interpretation across toolkits. A common area of disagreement
+is the number of hydrogen and double bond counts (absence or loss of `H~2~`, or in other words
+addition or subtraction of double bond). As the main goal of IUPAC SMILES+ is to promote 
+consistent data exchange of SMILES, exchanging aromatic SMILES is strongly discouraged 
+(due to inconsistencies of interpretation between toolkit versions and between different toolkits). 
+However, if it is necessary to read aromatic SMILES, the aromaticity as defined in the SMILES atoms 
+and bonds should be preserved. By preserving the defined aromaticity, no special chemical perception is necessary:
+
+. An atom specified in lower case is aromatic and unspecified bonds between two aromatic atoms are aromatic.
+. A bond specified with `':'` is aromatic.
+. To determine the hydrogen count for aromatic atoms, follow the below steps 
+(adapted from 
+https://baoilleach.blogspot.com/2017/08/my-acs-talk-on-kekulization-and.html[Noel O\'Boyle and John Mayfield\'s ACS Talk on Kekulization and Aromaticity]):
+.. Non zero heteroatom hydrogen count must be explicitly specified using brackets (*Rule 10*). 
+As such, if the aromatic atom is within square brackets, 
+the hydrogen count is explicit (e.g., for `[nH]`, the hydrogen count is 1)
+.. If an aromatic carbon atom does not contain an explicit hydrogen count (no brackets) 
+and has 2-3 aromatic bonds (meets *Rule #6*), then the standard valence rules apply. 
+The implicit hydrogen count is determined by summing the bond orders of the connected 
+bonds to the carbon atom (as all aromatic heteroatom hydrogen counts must be explicit). 
+Aromatic bonds are equivalent to single bond orders for the purposes of hydrogen counting. 
+If that sum is equal to a known valence for the element or is greater than any known 
+valence then the implicit hydrogen count is 0. Otherwise the implicit hydrogen count 
+is the difference between that sum and the next highest known valence, minus 1 
+(e.g., for `c1ccccc1``, benzene, each `'c'` is `4 (valence) - 2 (bond order) - 1 (aromatic rule) = 1 (hydrogen)`).
+
+If the hydrogens can not be assigned based on steps 1-3 above without invalid valencies 
+occuring (e.g., to fulfill a particular aromaticity model), then the SMILES is invalid.
+
+==== Aromaticity Models
+
+Users may choose to apply an aromaticity algorithm depending on the specific SMILES 
+input and desired downstream cheminformatics computations. See <<Aromaticity Perception>> 
+references for example aromaticity models. However, the use of aromatic SMILES should be temporary 
+and for internal use only within the specific toolkit and version; that is, aromatic SMILES may 
+be required for certain cheminformatics tasks, but upon sharing data, they should be kekulized.
 
 === More about Hydrogen
 
@@ -1450,6 +1437,19 @@ https://github.com/IUPAC/IUPAC_SMILES_plus/blob/spec_rev01/IUPAC_SMILES%2B_Appen
 * http://cdk.github.io/cdk/2.2/docs/api/org/openscience/cdk/smiles/SmilesGenerator.html[CDK SmilesGenerator Class]
 * https://www.xemistry.com/docs/cactvs_reference.pdf[CACTVS SMILES and SMARTS dialects]
 
+=== Aromaticity Discussion
+
+* https://baoilleach.blogspot.com/2017/08/my-acs-talk-on-kekulization-and.html[Noel O\'Boyle and John Mayfield\'- Kekulization and Aromaticity]
+* https://depth-first.com/articles/2020/02/10/a-comprehensive-treatment-of-aromaticity-in-the-smiles-language/[Richard Apodaca - A Comprehensive Treatment of Aromaticity in the SMILES Language ]
+* http://www.dalkescientific.com/writings/diary/archive/2007/11/30/opensmiles_and_aromaticity.html[Andrew Dalke - OpenSMILES and Aromaticity]
+* https://www.nextmovesoftware.com/talks/OBoyle_SmilesBenchmark_ACS_201808.pdf[Noel O\'Boyle, John Mayfield, and Roger Sayle - A de facto standard or a free-for-all? A benchmark for reading SMILES]
+
+=== Aromaticity Perception
+
+* https://docs.eyesopen.com/toolkits/cpp/oechemtk/aromaticity.html[OpenEye Aromaticity Perception]
+* https://www.daylight.com/meetings/summerschool98/course/dave/smiles-convent.html[Daylight Aromaticity]
+* https://www.rdkit.org/docs/RDKit_Book.html[RDKit Aromaticity]
+
 === Tools
 
 ==== Cheminformatics Toolkits
@@ -1515,6 +1515,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2021-09-28 | Clarified branching https://github.com/IUPAC/IUPAC_SMILES_plus/issues/11[GitHub Issue #11] | Vincent F. Scalfani
 | 1.0 | 2021-09-29 | Adjusted consistency and support of atom property digits https://github.com/IUPAC/IUPAC_SMILES_plus/issues/14[GitHub Issue #14] | Vincent F. Scalfani
 | 1.0 | 2023-02-24 | Changed ring number 0 as invalid https://github.com/IUPAC/IUPAC_SMILES_plus/issues/27[GitHub Issue #27] | Vincent F. Scalfani
+| 1.0 | 2023-10-20 | Major revision of aromaticity section https://github.com/IUPAC/IUPAC_SMILES_plus/pull/30[GitHub Pull Request #30]  | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
