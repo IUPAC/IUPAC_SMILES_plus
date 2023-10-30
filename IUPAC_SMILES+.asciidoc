@@ -159,7 +159,7 @@ concerned with syntax.
 | <<atomclass,Atom Class>> | _class_ ::= `':'` _digit_ \| `':'` _digit_nonzero_ _digit_ \| `':'` _digit_nonzero_ _digit_ _digit_ \| `':'` _digit_nonzero_ _digit_ _digit_ _digit_
 2+| **BONDS AND CHAINS**
 .6+| <<bonds,Bonds>>       | _bond_ ::= `'-'` \| `'='` \| `'#'` \| `'$'` \| `':'` \| `'/'` \| `'\'`
-|                            _ringbond_ ::= _bond_? _digit_nonzero_ \| _bond_? `'%'` _digit_nonzero_ _digit_ \| _bond_? `'%'` _digit_nonzero_ _digit_ _digit_ \| _bond_? `'%'` `'('` _digit_nonzero_ _digit_ _digit_ `')'`
+|                            _ringbond_ ::= _bond_? _digit_nonzero_ \| _bond_? `'%'` _digit_nonzero_ _digit_ \| _bond_? `'%'` `'('` _digit_nonzero_ _digit_ _digit_ `')'`
 |                            _branched_atom_ ::= _atom_ _ringbond_* _branch_*
 |                            _branch_ ::= `'('` _chain_ `')'` \| `'('` _bond_ _chain_ `')'` \| `'('` _dot_ _chain_ `')'`
 |                            _chain_ ::= _branched_atom_ \| _chain_ _branched_atom_ \| _chain_ _bond_ _branched_atom_ \| _chain_ _dot_ _branched_atom_
@@ -569,35 +569,31 @@ the defined bond at ring closure. The implicit bond is ignored.
 |                                                 `C-1CCCCC=1`    | *invalid*
 |=================================================================================================
 
-
 Ring closures must be matched pairs in a SMILES string, for example, `C1CCC` or `C1CCCCC2`
 are not valid SMILES.
 
-It is permissible to re-use ring-closure numbers. Once a particular number
+It is permissible to re-use ring-closure numbers, but is not recommended as a best practice. Once a particular number
 has been encountered twice, that number is available again for subsequent ring closures.
 
 [options="header",frame="topbot",grid="rows",width="90%",cols="2,2,1,2"]
 |=================================================================================================
 | Depiction                          | SMILES              | Name          | Comment
-.2+| image:depict/dicyclohexyl.gif[] | `C1CCCCC1C1CCCCC1`  | bicyclohexyl  | both SMILES are valid
-|                                      `C1CCCCC1C2CCCCC2`  | bicyclohexyl  |
+.2+| image:depict/dicyclohexyl.gif[] | `C1CCCCC1C1CCCCC1`  | bicyclohexyl  | 
+|                                      `C1CCCCC1C2CCCCC2`  | bicyclohexyl  | recommended form
 |=================================================================================================
 
 Two-digit ring numbers are permitted, but must be preceded by the percent
 `'%'` symbol, such as `C%25CCCCC%25` for cyclohexane. 
 
-Three digits in the form `%nnn` are permitted; for
-example, `C%123` is the same as `C3%12`, that is, an atom with two rnum
-specifications (see example in table below).
-
-Three digits are also permitted in the form `%(nnn)`. When parentheses are used,
-the ring closure is interpreted with one rnum specification, so cyclohexane can be represented
-as `C%(920)CCCCC%(920)`
+Three digit ring numbers must use parentheses, `%(nnn)`, and start with `100`. This is to avoid
+the ambiguity of, for example `C%123` being interpreted as one ring closure (`%123`) or two (`%12` and `3`).
+When parentheses are used, the ring closure is interpreted with one rnum specification, so cyclohexane
+can be represented as `C%(123)CCCCC%(123)`
 
 Note that the ring number zero is invalid (e.g., `C0CCCCC0`) in IUPAC SMILES+. Ring numbers must start at `n=1`. 
-In addition, when multiple digits are used in the case of `%nn`, %nnn, or `%(nnn)`, a leading number of `0` is invalid, 
-such as `C%01CCCCC%01` or `C%00CCCCC%00`. For notation using `%nn`, start with a `nn` of `10`, and for notation in the form 
-`%nnn` or `%(nnn)`, start with `nnn` of `100`.
+In addition, when multiple digits are used in the case of `%nn` or `%(nnn)`, a leading number of `0` is invalid, 
+such as `C%01CCCCC%01` or `C%00CCCCC%00`. For notation using `%nn`, start with a `nn` of `10`, and for 
+notation in the form `%(nnn)`, start with `nnn` of `100`.
 
 A single atom can have several ring-closure numbers, such as this spiro
 atom:
@@ -606,7 +602,7 @@ atom:
 |========================================================================
 | Depiction                  | SMILES                | Name
 | image:depict/spiro.gif[]   | `C12(CCCCC1)CCCCC2`   | spiro[5.5]undecane
-| image:depict/spiro.gif[]   | `C%123(CCCCC3)CCCCC%12`   | spiro[5.5]undecane
+| image:depict/spiro.gif[]   | `C3%12(CCCCC3)CCCCC%12`   | spiro[5.5]undecane
 |========================================================================
 
 Two atoms can not be joined by more than one bond, and an atom can not be bonded to itself. For
@@ -1533,6 +1529,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2023-02-24 | Changed ring number 0 as invalid https://github.com/IUPAC/IUPAC_SMILES_plus/issues/27[GitHub Issue #27] | Vincent F. Scalfani
 | 1.0 | 2023-10-20 | Major revision of aromaticity section https://github.com/IUPAC/IUPAC_SMILES_plus/pull/30[GitHub Pull Request #30]  | Vincent F. Scalfani
 | 1.0 | 2023-10-20 | Revised Atom Valence and Hydrogens section | Vincent F. Scalfani
+| 1.0 | 2023-10-20 | Removed support of %nnn and added a recommendation to not reuse rnum | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
