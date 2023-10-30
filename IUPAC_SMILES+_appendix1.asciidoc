@@ -24,7 +24,7 @@ Geoff Hutchison, Craig A. James, Greg Landrum, Chris Morley, Egon Willighagen, H
 
 toc::[]
 :toclevels: 5
-:sectnums:
+//:sectnums:
 
 
 == Known Extensions
