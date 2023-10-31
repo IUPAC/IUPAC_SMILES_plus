@@ -322,22 +322,18 @@ is the difference between that sum and the next highest known valence.
 
 ==== Atom Valence and Hydrogens
 
-The "normal valence" for the organic subset elements is as follows
-(adapted from OpenSmiles and https://github.com/vfscalfani/CEX/blob/master/src/molecule/cx_hydrogens.c[CEX implicit Hydrogen table])
-
+The "normal valence" for the organic subset elements is as follows:
 
 [frame="topbot",grid="rows",width="65%", cols="3,1,1,1,1,2,1,2,2"]
 |===================================================================================================
-| *Element*             |  B     | C    |  N   |  O  | F, Cl, Br, I  |  P    |  S     | *
-| *Neutral Valence*     |  3     | 4    |  3   |  2  |      1        |  3,5  | 2,4,6  | unspecified
-| *+1 valence*          |  -     | 3    |  4   |  3  |      -        |   4   |   -    | unspecified
-| *-1 valence*          |  4     | 3    |  2   |  1  |      0        |   -   |   -    | unspecified
-| *Notes*               |  _b_   |  _a_ |      |     |     _a_       |   _a_ |        |
+| *Element*             |  B   | C    |  N   |  O  | F, Cl, Br, I  |  P    |  S     | *
+| *Neutral Valence*     |  3   | 4    |  3   |  2  |      1        |  3,5  | 2,4,6  | unspecified
+| *Notes*               |      |      | _b_  |     |               |  _a_  |  _a_   |
 |===================================================================================================
 
 _a_: In IUPAC SMILES+, any atom that is above its lowest valence state will not have implicit hydrogens.
 
-_b_: Need to double check Boron charged states...
+_b_: In IUPAC SMILES+, 5 valent Nitrogen is not permitted.
 
 Examples of valence:
 
@@ -1530,6 +1526,7 @@ Many modern molecular editors can read and write SMILES:
 | 1.0 | 2023-10-20 | Major revision of aromaticity section https://github.com/IUPAC/IUPAC_SMILES_plus/pull/30[GitHub Pull Request #30]  | Vincent F. Scalfani
 | 1.0 | 2023-10-20 | Revised Atom Valence and Hydrogens section | Vincent F. Scalfani
 | 1.0 | 2023-10-20 | Removed support of %nnn and added a recommendation to not reuse rnum | Vincent F. Scalfani
+| 1.0 | 2023-10-31 | Clarified normal Atom Valence table | Vincent F. Scalfani
 |======================
 
 * link:https://github.com/vfscalfani/IUPAC_SMILES_plus/blob/master/ChangeLog_IUPAC_SMILES%2B.txt[ChangeLog (IUPAC SMILES+)]
